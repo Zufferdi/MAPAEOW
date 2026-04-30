@@ -33,21 +33,21 @@
     "class": "office"
   },
   "afrique centrale": {
-    "lat": 8.9822897,
-    "lng": 1.1388154,
+    "lat": 8.9868127,
+    "lng": 1.1396676,
     "country": "Togo",
-    "display": "Action pour la jeunesse d Afrique, Lomé - Cinkassé, Sokodé, Préfecture de Tchaoudjo, Région Centrale, Togo",
-    "type": "ngo",
-    "class": "office"
+    "display": "Ets Afrique Pro, Rue de l'Église, ZONGO, Sokodé, Préfecture de Tchaoudjo, Région Centrale, Togo",
+    "type": "mobile_phone",
+    "class": "shop"
   },
   "afrique de prigojine": null,
   "afrique de l’ouest": {
-    "lat": 45.4203354,
-    "lng": -75.6944061,
-    "country": "Canada",
-    "display": "D'Afrique, 164, avenue Laurier Ouest, Centre-ville, Somerset, Ottawa, Est de l'Ontario, Ontario, K1P 5J2, Canada",
-    "type": "restaurant",
-    "class": "amenity"
+    "lat": 5.5238575,
+    "lng": 10.1256764,
+    "country": "Cameroun",
+    "display": "Ferme EPA, Nkong-Zem, Menoua, Région de l'Ouest, Cameroun",
+    "type": "farmyard",
+    "class": "landuse"
   },
   "afrique du nord": {
     "lat": 41.362599,
@@ -94,17 +94,9 @@
     "lat": 55.7497601,
     "lng": 52.0129175,
     "country": "Russie",
-    "display": "RCF Старт, проспект Нефтяников, Хлебный городок, Ielabouga, городское поселение Елабуга, Yelabuzhsky District, Tatarstan, District fédéral de la Volga, 423600, Russie",
+    "display": "RCF Старт, проспект Нефтяников, Ielabouga, городское поселение Елабуга, Yelabuzhsky District, Tatarstan, District fédéral de la Volga, 423600, Russie",
     "type": "shoes",
     "class": "shop"
-  },
-  "algeria": {
-    "lat": 36.7729333,
-    "lng": 3.0588445,
-    "country": "Algérie",
-    "display": "Alger, Daïra Sidi M'Hamed, Alger, 16007, Algérie",
-    "type": "city",
-    "class": "place"
   },
   "algérie": {
     "lat": 28.0000272,
@@ -114,19 +106,19 @@
     "type": "administrative",
     "class": "boundary"
   },
-  "aliou": {
-    "lat": 8.4538722,
-    "lng": 20.6938037,
-    "country": "République centrafricaine",
-    "display": "Aliou, Bamingui-Bangoran, République centrafricaine",
-    "type": "village",
-    "class": "place"
+  "allemagne": {
+    "lat": 51.1638175,
+    "lng": 10.4478313,
+    "country": "Allemagne",
+    "display": "Allemagne",
+    "type": "administrative",
+    "class": "boundary"
   },
   "amman": {
     "lat": 31.9515694,
     "lng": 35.9239625,
     "country": "Jordanie",
-    "display": "Amman, Amman Sub-District, Amman Qasabah District, Gouvernorat d'Amman, 11110, Jordanie",
+    "display": "Amman, Amman Sub-District, Amman Qasabah District, Gouvernorat d'Amman, 11118, Jordanie",
     "type": "city",
     "class": "place"
   },
@@ -162,7 +154,7 @@
     "type": "administrative",
     "class": "boundary"
   },
-  "argentina": {
+  "argentine": {
     "lat": -34.9964963,
     "lng": -64.9672817,
     "country": "Argentine",
@@ -178,7 +170,7 @@
     "type": "city",
     "class": "place"
   },
-  "asie": {
+  "asia": {
     "lat": 51.2086975,
     "lng": 89.2343748,
     "country": "—",
@@ -194,15 +186,7 @@
     "type": "peninsula",
     "class": "natural"
   },
-  "brics": {
-    "lat": 41.9473421,
-    "lng": 1.5118973,
-    "country": "Espagne",
-    "display": "Brics, Olius, Solsonais, Lérida, Catalogne, 25287, Espagne",
-    "type": "hamlet",
-    "class": "place"
-  },
-  "bahrain": {
+  "bahreïn": {
     "lat": 26.1551249,
     "lng": 50.5344606,
     "country": "Bahreïn",
@@ -211,7 +195,7 @@
     "class": "boundary"
   },
   "balkans": {
-    "lat": 41.7785017,
+    "lat": 41.7785016,
     "lng": 23.814677,
     "country": "Bulgarie",
     "display": "Balkans, Bulgarie",
@@ -255,8 +239,8 @@
     "lng": 20.0812174,
     "country": "Libye",
     "display": "Benghazi, Libye",
-    "type": "city",
-    "class": "place"
+    "type": "administrative",
+    "class": "boundary"
   },
   "berlin": {
     "lat": 52.5173885,
@@ -315,8 +299,8 @@
     "class": "landuse"
   },
   "bruxelles": {
-    "lat": 50.8467372,
-    "lng": 4.352493,
+    "lat": 50.8551025,
+    "lng": 4.3510915,
     "country": "Belgique",
     "display": "Bruxelles, Bruxelles-Capitale, Belgique",
     "type": "administrative",
@@ -337,14 +321,6 @@
     "display": "Bénin",
     "type": "administrative",
     "class": "boundary"
-  },
-  "cairo": {
-    "lat": 30.0443879,
-    "lng": 31.2357257,
-    "country": "Égypte",
-    "display": "Le Caire, Caire, Égypte",
-    "type": "city",
-    "class": "place"
   },
   "cameroun": {
     "lat": 4.6125522,
@@ -377,14 +353,6 @@
     "display": "Central Asia, Jalan Yap Kwan Seng, Kampung Sungai Baru, Kampung Cendana, Kuala Lumpur, 50450, Malaisie",
     "type": "restaurant",
     "class": "amenity"
-  },
-  "centre": {
-    "lat": 47.5490251,
-    "lng": 1.7324062,
-    "country": "France",
-    "display": "Centre-Val de Loire, France métropolitaine, France",
-    "type": "administrative",
-    "class": "boundary"
   },
   "chine": {
     "lat": 35.000074,
@@ -419,7 +387,7 @@
     "type": "administrative",
     "class": "boundary"
   },
-  "côte d’ivoire": {
+  "côte d'ivoire": {
     "lat": 7.9897371,
     "lng": -5.5679458,
     "country": "Côte d’Ivoire",
@@ -435,22 +403,6 @@
     "display": "Doubaï, Émirats arabes unis",
     "type": "city",
     "class": "place"
-  },
-  "equatorial guinea": {
-    "lat": 1.613172,
-    "lng": 10.5170357,
-    "country": "Guinée équatoriale",
-    "display": "Guinée équatoriale",
-    "type": "administrative",
-    "class": "boundary"
-  },
-  "ethiopia": {
-    "lat": 10.2116702,
-    "lng": 38.6521203,
-    "country": "Éthiopie",
-    "display": "Éthiopie",
-    "type": "administrative",
-    "class": "boundary"
   },
   "evropolis": {
     "lat": 43.2121971,
@@ -469,30 +421,6 @@
     "class": "boundary"
   },
   "gpci": null,
-  "gao": {
-    "lat": 16.2788129,
-    "lng": -0.0412392,
-    "country": "Mali",
-    "display": "Gao, Cercle de Gao, Gao, Mali",
-    "type": "city",
-    "class": "place"
-  },
-  "gaza": {
-    "lat": -23.328398,
-    "lng": 32.8066057,
-    "country": "Mozambique",
-    "display": "Province de Gaza, Zona Sul, Mozambique",
-    "type": "administrative",
-    "class": "boundary"
-  },
-  "germany": {
-    "lat": 51.1638175,
-    "lng": 10.4478313,
-    "country": "Allemagne",
-    "display": "Allemagne",
-    "type": "administrative",
-    "class": "boundary"
-  },
   "ghana": {
     "lat": 8.0300284,
     "lng": -1.0800271,
@@ -510,22 +438,6 @@
     "type": "yes",
     "class": "office"
   },
-  "gouni": {
-    "lat": 12.872607,
-    "lng": -7.5344274,
-    "country": "Mali",
-    "display": "Gouni, Cercle de Koulikoro, Koulikoro, Mali",
-    "type": "village",
-    "class": "place"
-  },
-  "gouni habé": {
-    "lat": 14.1154785,
-    "lng": -3.9750676,
-    "country": "Mali",
-    "display": "Goumi-Habe, Cercle de Bandiagara, Mopti, Mali",
-    "type": "village",
-    "class": "place"
-  },
   "gouni-habé": {
     "lat": 14.1154785,
     "lng": -3.9750676,
@@ -540,6 +452,14 @@
     "lng": -10.7083587,
     "country": "Guinée",
     "display": "Guinée",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "guinée équatoriale": {
+    "lat": 1.613172,
+    "lng": 10.5170357,
+    "country": "Guinée équatoriale",
+    "display": "Guinée équatoriale",
     "type": "administrative",
     "class": "boundary"
   },
@@ -610,14 +530,6 @@
     "type": "administrative",
     "class": "boundary"
   },
-  "kassai": {
-    "lat": 5.090987,
-    "lng": 14.5274019,
-    "country": "Cameroun",
-    "display": "Kassai, Ouli, Kadey, Région de l'Est, Cameroun",
-    "type": "village",
-    "class": "place"
-  },
   "kazakhstan": {
     "lat": 48.1012954,
     "lng": 66.7780818,
@@ -631,6 +543,14 @@
     "lng": 38.4313975,
     "country": "Kenya",
     "display": "Kenya",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "kiev": {
+    "lat": 50.4500336,
+    "lng": 30.5241361,
+    "country": "Ukraine",
+    "display": "Kyiv, Ukraine",
     "type": "administrative",
     "class": "boundary"
   },
@@ -650,21 +570,21 @@
     "type": "town",
     "class": "place"
   },
-  "kyiv": {
-    "lat": 50.4500336,
-    "lng": 30.5241361,
-    "country": "Ukraine",
-    "display": "Kyiv, Ukraine",
-    "type": "administrative",
-    "class": "boundary"
-  },
   "latin america": {
     "lat": 33.9709393,
     "lng": -117.3198639,
     "country": "États-Unis d'Amérique",
-    "display": "Latin America, University, Riverside, Riverside County, Californie, 92521, États-Unis d'Amérique",
+    "display": "Latin America, University, Riverside, Riverside County, Californie, 92507, États-Unis d'Amérique",
     "type": "garden",
     "class": "leisure"
+  },
+  "le caire": {
+    "lat": 44.370353,
+    "lng": 6.0608068,
+    "country": "France",
+    "display": "Le Caire, Forcalquier, Alpes-de-Haute-Provence, Provence-Alpes-Côte d'Azur, France métropolitaine, 04250, France",
+    "type": "administrative",
+    "class": "boundary"
   },
   "lengo songo": null,
   "liban": {
@@ -691,7 +611,7 @@
     "type": "administrative",
     "class": "boundary"
   },
-  "london": {
+  "londres": {
     "lat": 51.5074456,
     "lng": -0.1277653,
     "country": "Royaume-Uni",
@@ -723,14 +643,6 @@
     "type": "arts_centre",
     "class": "amenity"
   },
-  "maisons": {
-    "lat": 49.3188308,
-    "lng": -0.7568691,
-    "country": "France",
-    "display": "Maisons, Bayeux, Calvados, Normandie, France métropolitaine, 14400, France",
-    "type": "administrative",
-    "class": "boundary"
-  },
   "mali": {
     "lat": 16.3700359,
     "lng": -2.2900239,
@@ -747,36 +659,12 @@
     "type": "claimed_administrative",
     "class": "boundary"
   },
-  "marran": {
-    "lat": 36.2217,
-    "lng": 46.9703,
-    "country": "Iran",
-    "display": "Marran-e `Olya, دهستان اوباتو, بخش کرفتو, Divandarreh County, Kurdistan, Iran",
-    "type": "village",
-    "class": "place"
-  },
   "mashkevich": null,
   "mauritanie": {
     "lat": 20.2540382,
     "lng": -9.2399263,
     "country": "Mauritanie",
     "display": "Mauritanie",
-    "type": "administrative",
-    "class": "boundary"
-  },
-  "mer méditerranée": {
-    "lat": 35.0000035,
-    "lng": 19.9999957,
-    "country": "—",
-    "display": "Mer Méditerranée",
-    "type": "sea",
-    "class": "place"
-  },
-  "mer rouge": {
-    "lat": 24.6601831,
-    "lng": 34.1399929,
-    "country": "Égypte",
-    "display": "Mer-Rouge, Égypte",
     "type": "administrative",
     "class": "boundary"
   },
@@ -813,14 +701,6 @@
     "class": "boundary"
   },
   "moscou": {
-    "lat": 55.625578,
-    "lng": 37.6063916,
-    "country": "Russie",
-    "display": "Moscou, District fédéral central, Russie",
-    "type": "administrative",
-    "class": "boundary"
-  },
-  "moscow": {
     "lat": 55.625578,
     "lng": 37.6063916,
     "country": "Russie",
@@ -958,14 +838,6 @@
     "type": "university",
     "class": "amenity"
   },
-  "rdc": {
-    "lat": -2.9814344,
-    "lng": 23.8222636,
-    "country": "République démocratique du Congo",
-    "display": "République démocratique du Congo",
-    "type": "administrative",
-    "class": "boundary"
-  },
   "radio svoboda": {
     "lat": 50.0789633,
     "lng": 14.4785153,
@@ -1090,7 +962,7 @@
     "lat": 59.22264,
     "lng": 39.8843492,
     "country": "Russie",
-    "display": "Sytyi kot, 20, проспект Победы, Заречье, Vologda, Oblast de Vologda, District fédéral du Nord-Ouest, 160000, Russie",
+    "display": "Sytyi kot, проспект Победы, Заречье, Vologda, Oblast de Vologda, District fédéral du Nord-Ouest, 160000, Russie",
     "type": "cafe",
     "class": "amenity"
   },
@@ -1107,14 +979,6 @@
     "lng": 120.9820179,
     "country": "Taïwan",
     "display": "Taïwan",
-    "type": "administrative",
-    "class": "boundary"
-  },
-  "tatarstan": {
-    "lat": 55.448217,
-    "lng": 50.4763591,
-    "country": "Russie",
-    "display": "Tatarstan, District fédéral de la Volga, Russie",
     "type": "administrative",
     "class": "boundary"
   },
@@ -1263,12 +1127,12 @@
     "class": "tourism"
   },
   "galaxie prigojine": null,
-  "la chine": {
-    "lat": 48.0839536,
-    "lng": -1.3786545,
-    "country": "France",
-    "display": "La Chine, Domagné, Fougères-Vitré, Ille-et-Vilaine, Bretagne, France métropolitaine, 35113, France",
-    "type": "hamlet",
+  "la france": {
+    "lat": 34.6122634,
+    "lng": -82.7654934,
+    "country": "États-Unis d'Amérique",
+    "display": "La France, Anderson County, Caroline du Sud, 29677, États-Unis d'Amérique",
+    "type": "village",
     "class": "place"
   },
   "le roskomnadzor": null,
@@ -1304,14 +1168,6 @@
     "type": "information",
     "class": "tourism"
   },
-  "the middle east": {
-    "lat": 55.4142529,
-    "lng": -2.201099,
-    "country": "Royaume-Uni",
-    "display": "The Middle, Alwinton, Northumberland, North East, Angleterre, NE65 7BU, Royaume-Uni",
-    "type": "locality",
-    "class": "place"
-  },
   "the red sea": {
     "lat": 50.8400976,
     "lng": -0.2857862,
@@ -1324,16 +1180,16 @@
     "lat": 38.9243135,
     "lng": -77.0744826,
     "country": "États-Unis d'Amérique",
-    "display": "Ambassade de Russie, 2650, Wisconsin Avenue Northwest, Ward 3, Washington, District de Columbia, 20007, États-Unis d'Amérique",
+    "display": "Ambassade de Russie, 2650, Wisconsin Avenue Northwest, Massachusetts Avenue Heights, Glover Park, Ward 3, Washington, District de Columbia, 20007, États-Unis d'Amérique",
     "type": "diplomatic",
     "class": "office"
   },
   "the soviet union": {
-    "lat": 56.3456965,
-    "lng": 43.844463,
-    "country": "Russie",
-    "display": "Decorative Stone in honor of the hero of the Soviet Union Ryazanov V.G, улица Шимборского, Сормовский район, Nijni Novgorod, Nizhny Novgorod, Oblast de Nijni Novgorod, District fédéral de la Volga, 603037, Russie",
-    "type": "monument",
+    "lat": 50.5269282,
+    "lng": 16.0906248,
+    "country": "Tchéquie",
+    "display": "Cannon Red Army as liberators from the Soviet Union, Path of liberation by the Red Army, Odolov, Malé Svatoňovice, okres Trutnov, Hradec Králové Region, Nord-Est, 542 33, Tchéquie",
+    "type": "vehicle",
     "class": "historic"
   },
   "the united arab emirates": {
@@ -1392,14 +1248,14 @@
     "type": "administrative",
     "class": "boundary"
   },
-  "объединенных арабских эмиратах": null,
-  "россии": {
-    "lat": 55.7946485,
-    "lng": 49.1115022,
-    "country": "Russie",
-    "display": "Kazan, городской округ Казань, Tatarstan, District fédéral de la Volga, Russie",
-    "type": "city",
-    "class": "place"
+  "éthiopie": {
+    "lat": 10.2116702,
+    "lng": 38.6521203,
+    "country": "Éthiopie",
+    "display": "Éthiopie",
+    "type": "administrative",
+    "class": "boundary"
   },
+  "объединенных арабских эмиратах": null,
   "центральноафриканской республике": null
 }
