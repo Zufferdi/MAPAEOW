@@ -1,8 +1,5 @@
 name: Update map data
 
-# Quand le workflow tourne :
-#   - manuellement depuis l'onglet Actions
-#   - tous les lundis à 04:00 UTC
 on:
   workflow_dispatch:
   schedule:
@@ -14,7 +11,7 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
 
     steps:
       - name: Checkout (avec history)
@@ -31,14 +28,6 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      # Cache des modèles spaCy (~1 GB cumulés). Évite de retélécharger à chaque run.
-      - name: Restore spaCy models cache
-        id: spacy-cache
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip/wheels
-          key: spacy-models-v1-fr-en-ru-xx
-
       - name: Download spaCy models
         run: |
           python -m spacy download fr_core_news_lg
@@ -47,13 +36,35 @@ jobs:
           python -m spacy download xx_ent_wiki_sm
 
       - name: Run pipeline
-        run: python pipeline.py
+        run: |
+          set -x
+          python -u pipeline.py
+        continue-on-error: false
+
+      - name: Inspect outputs
+        if: always()
+        run: |
+          echo "=== Working dir contents ==="
+          ls -la
+          echo "=== data.json size ==="
+          [ -f data.json ] && wc -c data.json || echo "data.json absent"
+          echo "=== cache/ contents ==="
+          [ -d cache ] && ls -la cache/ || echo "cache/ absent"
+          echo "=== data.json _meta ==="
+          [ -f data.json ] && python -c "import json; print(json.dumps(json.load(open('data.json'))['_meta'], indent=2))" || true
 
       - name: Commit & push si des changements
+        if: success()
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data.json cache/ place_aliases.json
+
+          # Ajoute seulement ce qui existe vraiment
+          [ -f data.json ] && git add data.json
+          [ -d cache ] && git ls-files --others --exclude-standard cache/ | xargs -r git add
+          [ -d cache ] && git add -u cache/
+          [ -f place_aliases.json ] && git add place_aliases.json
+
           if git diff --staged --quiet; then
             echo "Pas de changement, rien à commiter."
           else
