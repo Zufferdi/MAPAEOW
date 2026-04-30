@@ -3,7 +3,7 @@
     "generated": "2026-04-30",
     "source": "https://public-api.wordpress.com/wp/v2/sites/alleyesonwagner.org",
     "articles_count": 102,
-    "places_count": 185,
+    "places_count": 136,
     "languages": {
       "fr": 51,
       "en": 49,
@@ -15,7 +15,7 @@
       "type_filter": true
     },
     "filter_stats": {
-      "dropped_by_frequency": 585,
+      "dropped_by_frequency": 584,
       "dropped_by_type": 44
     }
   },
@@ -1097,57 +1097,6 @@
       ]
     },
     {
-      "id": "moscou",
-      "name": "Moscou",
-      "country": "Russie",
-      "lat": 55.625578,
-      "lng": 37.6063916,
-      "articles": [
-        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "after-wagner-russias-spin-doctors-take-over-in-africa",
-        "al-khadim-airbase-an-essential-russian-outpost-in-libya",
-        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
-        "anatomy-of-deception-engineering-covert-influence-operations",
-        "apres-wagner-les-spin-doctors-russes-prennent-le-relai-en-afrique",
-        "architecture-du-silence-comment-la-russie-censure-son-internet",
-        "beyond-the-sahelian-illusion",
-        "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
-        "denis-pavlov-lhomme-de-bangui",
-        "denis-pavlov-the-man-in-bangui",
-        "following-the-syrian-money-and-circling-back-to-torture",
-        "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses",
-        "gru-inc-chasse-les-actifs-petroliers-de-prigojine-en-syrie",
-        "gru-inc-hunting-for-prigozhins-oil-assets-in-syria",
-        "influence-as-a-service-lillustration-de-la-dame-de-sochi",
-        "la-base-aerienne-dal-khadim-un-avant-poste-russe-incontournable-en-libye",
-        "la-chasse-continue",
-        "lazawad-caillou-dans-la-botte-russe",
-        "le-double-jeu-de-moscou-au-yemen",
-        "le-forum-international-sur-la-securite-de-la-russie-le-temps-de-la-confrontation",
-        "le-reseau-catrosa-des-societes-europeennes-liees-aux-developpeurs-darmes-chimiques-russes",
-        "les-filieres-dacquisition-asiatiques-du-groupe-wagner",
-        "love-me-alone-russias-no-rivals-doctrine",
-        "mediterranean-sea-objective-for-the-african-corps",
-        "moscow-double-dealing-in-yemen",
-        "objectif-mediterranee-pour-african-corps",
-        "opa-russe-sur-le-burkina",
-        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
-        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan",
-        "recruitment-of-africans-in-ukraine-governments-act-in-the-face-of-growing-evidence",
-        "reorganisation-du-groupe-wagner-a-lere-post-prigojine",
-        "russia-africa-a-forum-with-mixed-results-overshadowed-by-the-war-in-ukraine",
-        "russias-international-security-forum-time-for-confrontation",
-        "russie-afrique-un-forum-en-demi-teinte-a-lombre-de-la-guerre-en-ukraine",
-        "satellites-missiles-drones-les-dessous-du-soutien-russe-a-liran",
-        "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa",
-        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers",
-        "the-legacy-of-influence-the-south-african-chapter",
-        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global",
-        "une-influence-pas-si-orthodoxe-la-religion-comme-arme-du-kremlin",
-        "wagner-group-reorganisation-in-the-post-prigozhin-era"
-      ]
-    },
-    {
       "id": "mali",
       "name": "Mali",
       "country": "Mali",
@@ -1189,11 +1138,141 @@
       ]
     },
     {
+      "id": "syrie",
+      "name": "Syrie",
+      "country": "Syrie",
+      "lat": 34.6401861,
+      "lng": 39.0494106,
+      "articles": [
+        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
+        "africa-flop",
+        "disarray-in-azawad",
+        "following-the-syrian-money-and-circling-back-to-torture",
+        "gold-thirst",
+        "gru-inc-chasse-les-actifs-petroliers-de-prigojine-en-syrie",
+        "gru-inc-hunting-for-prigozhins-oil-assets-in-syria",
+        "human-rights-abuses-status-report-feb-2022",
+        "la-libye-de-la-deuxieme-chance-pour-la-russie",
+        "le-reseau-catrosa-des-societes-europeennes-liees-aux-developpeurs-darmes-chimiques-russes",
+        "libya-wagner-groups-logistics-platform",
+        "libye-plateforme-logistique-du-groupe-wagner",
+        "mediterranean-sea-objective-for-the-african-corps",
+        "objectif-mediterranee-pour-african-corps",
+        "ordre-de-debandade-en-azawad",
+        "pioneer-asipovichy-base-commander-for-wagner-in-belarus",
+        "pioneer-commandant-de-la-base-dasipovichy-pour-wagner-en-bielorussie",
+        "point-a-date-fevrier-2022-abus-de-droits-humains",
+        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
+        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan",
+        "spaghetti-de-lampedusa",
+        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers",
+        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global",
+        "wagner-like-nobodys-business",
+        "wagner-peau-de-chagrin"
+      ]
+    },
+    {
+      "id": "soudan",
+      "name": "Soudan",
+      "country": "Soudan",
+      "lat": 14.5844444,
+      "lng": 29.4917691,
+      "articles": [
+        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
+        "al-khadim-airbase-an-essential-russian-outpost-in-libya",
+        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
+        "anatomy-of-deception-engineering-covert-influence-operations",
+        "come-follow-the-redwood-trees-tracking-wagners-forestry-business-in-car",
+        "denis-pavlov-lhomme-de-bangui",
+        "denis-pavlov-the-man-in-bangui",
+        "disarray-in-azawad",
+        "du-soudan-a-la-moldavie-lexportation-du-savoir-faire-wagner-pour-la-guerre-hybride-en-europe",
+        "la-base-aerienne-dal-khadim-un-avant-poste-russe-incontournable-en-libye",
+        "libya-wagner-groups-logistics-platform",
+        "libye-plateforme-logistique-du-groupe-wagner",
+        "love-me-alone-russias-no-rivals-doctrine",
+        "mediterranean-sea-objective-for-the-african-corps",
+        "objectif-mediterranee-pour-african-corps",
+        "ordre-de-debandade-en-azawad",
+        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
+        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan",
+        "russia-africa-a-forum-with-mixed-results-overshadowed-by-the-war-in-ukraine",
+        "russie-afrique-un-forum-en-demi-teinte-a-lombre-de-la-guerre-en-ukraine",
+        "smile-and-wave-at-viktor-lukovenko-from-convict-to-african-political-strategist-and-expert",
+        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global",
+        "wagner-like-nobodys-business",
+        "wagner-peau-de-chagrin"
+      ]
+    },
+    {
+      "id": "libye",
+      "name": "Libye",
+      "country": "Libye",
+      "lat": 26.8234472,
+      "lng": 18.1236723,
+      "articles": [
+        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
+        "africa-flop",
+        "africa-flop-saison-2",
+        "after-wagner-russias-spin-doctors-take-over-in-africa",
+        "al-khadim-airbase-an-essential-russian-outpost-in-libya",
+        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
+        "anatomy-of-deception-engineering-covert-influence-operations",
+        "apres-wagner-les-spin-doctors-russes-prennent-le-relai-en-afrique",
+        "disarray-in-azawad",
+        "human-rights-abuses-status-report-feb-2022",
+        "la-base-aerienne-dal-khadim-un-avant-poste-russe-incontournable-en-libye",
+        "la-libye-de-la-deuxieme-chance-pour-la-russie",
+        "libya-wagner-groups-logistics-platform",
+        "libye-plateforme-logistique-du-groupe-wagner",
+        "love-me-alone-russias-no-rivals-doctrine",
+        "mediterranean-sea-objective-for-the-african-corps",
+        "objectif-mediterranee-pour-african-corps",
+        "ordre-de-debandade-en-azawad",
+        "point-a-date-fevrier-2022-abus-de-droits-humains",
+        "spaghetti-de-lampedusa",
+        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global",
+        "wagner-legion-istra-le-retour-des-veterans-en-concert",
+        "wagner-legion-istra-the-return-of-veterans-in-concert"
+      ]
+    },
+    {
+      "id": "moscou",
+      "name": "Moscou",
+      "country": "Russie",
+      "lat": 55.625578,
+      "lng": 37.6063916,
+      "articles": [
+        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
+        "apres-wagner-les-spin-doctors-russes-prennent-le-relai-en-afrique",
+        "architecture-du-silence-comment-la-russie-censure-son-internet",
+        "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
+        "denis-pavlov-lhomme-de-bangui",
+        "gru-inc-chasse-les-actifs-petroliers-de-prigojine-en-syrie",
+        "influence-as-a-service-lillustration-de-la-dame-de-sochi",
+        "la-base-aerienne-dal-khadim-un-avant-poste-russe-incontournable-en-libye",
+        "la-chasse-continue",
+        "lazawad-caillou-dans-la-botte-russe",
+        "le-double-jeu-de-moscou-au-yemen",
+        "le-forum-international-sur-la-securite-de-la-russie-le-temps-de-la-confrontation",
+        "le-reseau-catrosa-des-societes-europeennes-liees-aux-developpeurs-darmes-chimiques-russes",
+        "les-filieres-dacquisition-asiatiques-du-groupe-wagner",
+        "objectif-mediterranee-pour-african-corps",
+        "opa-russe-sur-le-burkina",
+        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan",
+        "reorganisation-du-groupe-wagner-a-lere-post-prigojine",
+        "russie-afrique-un-forum-en-demi-teinte-a-lombre-de-la-guerre-en-ukraine",
+        "satellites-missiles-drones-les-dessous-du-soutien-russe-a-liran",
+        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global",
+        "une-influence-pas-si-orthodoxe-la-religion-comme-arme-du-kremlin"
+      ]
+    },
+    {
       "id": "niger",
       "name": "Niger",
       "country": "Niger",
-      "lat": 17.7356214,
-      "lng": 9.3238432,
+      "lat": 17.6078,
+      "lng": 8.0817,
       "articles": [
         "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
         "a-niamey-lattaque-nocturne-qui-revele-lengagement-russe",
@@ -1219,11 +1298,40 @@
       ]
     },
     {
+      "id": "moscow",
+      "name": "Moscow",
+      "country": "Russie",
+      "lat": 55.625578,
+      "lng": 37.6063916,
+      "articles": [
+        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
+        "after-wagner-russias-spin-doctors-take-over-in-africa",
+        "al-khadim-airbase-an-essential-russian-outpost-in-libya",
+        "anatomy-of-deception-engineering-covert-influence-operations",
+        "beyond-the-sahelian-illusion",
+        "denis-pavlov-the-man-in-bangui",
+        "following-the-syrian-money-and-circling-back-to-torture",
+        "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses",
+        "gru-inc-hunting-for-prigozhins-oil-assets-in-syria",
+        "love-me-alone-russias-no-rivals-doctrine",
+        "mediterranean-sea-objective-for-the-african-corps",
+        "moscow-double-dealing-in-yemen",
+        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
+        "recruitment-of-africans-in-ukraine-governments-act-in-the-face-of-growing-evidence",
+        "russia-africa-a-forum-with-mixed-results-overshadowed-by-the-war-in-ukraine",
+        "russias-international-security-forum-time-for-confrontation",
+        "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa",
+        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers",
+        "the-legacy-of-influence-the-south-african-chapter",
+        "wagner-group-reorganisation-in-the-post-prigozhin-era"
+      ]
+    },
+    {
       "id": "sahel",
       "name": "Sahel",
-      "country": "Burkina Faso",
-      "lat": 14.0279165,
-      "lng": -0.7717776,
+      "country": "—",
+      "lat": 15.5,
+      "lng": 0.0,
       "articles": [
         "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
         "africa-flop",
@@ -1255,7 +1363,6 @@
       "lng": -1.6880314,
       "articles": [
         "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "africa-flop",
         "africa-flop-saison-2",
         "after-wagner-russias-spin-doctors-take-over-in-africa",
         "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
@@ -1276,137 +1383,97 @@
       ]
     },
     {
-      "id": "kremlin",
-      "name": "Kremlin",
+      "id": "etats-unis",
+      "name": "États-Unis",
       "country": "États-Unis d'Amérique",
-      "lat": 36.5472537,
-      "lng": -97.8314456,
+      "lat": 39.7837304,
+      "lng": -100.445882,
       "articles": [
         "a-madagascar-la-russie-relance-son-operation-seduction-armes-drones-culture-et-offres-financieres-orchestrees-par-ses-emissaires",
-        "alabuga-noeud-central-de-la-menace-hybride-russe",
-        "apres-wagner-les-spin-doctors-russes-prennent-le-relai-en-afrique",
-        "architecture-du-silence-comment-la-russie-censure-son-internet",
-        "gru-inc-chasse-les-actifs-petroliers-de-prigojine-en-syrie",
-        "influence-as-a-service-lillustration-de-la-dame-de-sochi",
-        "la-chasse-continue",
-        "le-business-du-desespoir",
-        "le-double-jeu-de-moscou-au-yemen",
-        "les-filieres-dacquisition-asiatiques-du-groupe-wagner",
-        "objectif-mediterranee-pour-african-corps",
-        "opa-russe-sur-le-burkina",
-        "ordre-de-debandade-en-azawad",
-        "projet-putin-2024",
-        "reorganisation-du-groupe-wagner-a-lere-post-prigojine",
-        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global",
-        "une-influence-pas-si-orthodoxe-la-religion-comme-arme-du-kremlin"
-      ]
-    },
-    {
-      "id": "libye",
-      "name": "Libye",
-      "country": "Libye",
-      "lat": 26.8234472,
-      "lng": 18.1236723,
-      "articles": [
-        "africa-flop",
-        "africa-flop-saison-2",
+        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
         "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
         "apres-wagner-les-spin-doctors-russes-prennent-le-relai-en-afrique",
-        "la-base-aerienne-dal-khadim-un-avant-poste-russe-incontournable-en-libye",
-        "la-libye-de-la-deuxieme-chance-pour-la-russie",
-        "libye-plateforme-logistique-du-groupe-wagner",
-        "objectif-mediterranee-pour-african-corps",
-        "ordre-de-debandade-en-azawad",
-        "point-a-date-fevrier-2022-abus-de-droits-humains",
-        "spaghetti-de-lampedusa",
-        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global",
-        "wagner-legion-istra-le-retour-des-veterans-en-concert"
-      ]
-    },
-    {
-      "id": "sudan",
-      "name": "Sudan",
-      "country": "Soudan",
-      "lat": 14.5844444,
-      "lng": 29.4917691,
-      "articles": [
-        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "al-khadim-airbase-an-essential-russian-outpost-in-libya",
-        "anatomy-of-deception-engineering-covert-influence-operations",
-        "come-follow-the-redwood-trees-tracking-wagners-forestry-business-in-car",
-        "denis-pavlov-the-man-in-bangui",
-        "disarray-in-azawad",
-        "libya-wagner-groups-logistics-platform",
-        "love-me-alone-russias-no-rivals-doctrine",
-        "mediterranean-sea-objective-for-the-african-corps",
-        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
-        "russia-africa-a-forum-with-mixed-results-overshadowed-by-the-war-in-ukraine",
-        "smile-and-wave-at-viktor-lukovenko-from-convict-to-african-political-strategist-and-expert",
-        "wagner-like-nobodys-business"
-      ]
-    },
-    {
-      "id": "syrie",
-      "name": "Syrie",
-      "country": "Syrie",
-      "lat": 34.6401861,
-      "lng": 39.0494106,
-      "articles": [
-        "africa-flop",
-        "gru-inc-chasse-les-actifs-petroliers-de-prigojine-en-syrie",
-        "la-libye-de-la-deuxieme-chance-pour-la-russie",
+        "architecture-du-silence-comment-la-russie-censure-son-internet",
+        "beyond-the-sahelian-illusion",
+        "dimitri-sytyi-cadre-de-wagner-en-centrafrique",
+        "global-kombat",
         "le-reseau-catrosa-des-societes-europeennes-liees-aux-developpeurs-darmes-chimiques-russes",
-        "libye-plateforme-logistique-du-groupe-wagner",
-        "objectif-mediterranee-pour-african-corps",
-        "ordre-de-debandade-en-azawad",
-        "pioneer-commandant-de-la-base-dasipovichy-pour-wagner-en-bielorussie",
-        "point-a-date-fevrier-2022-abus-de-droits-humains",
+        "love-me-alone-russias-no-rivals-doctrine",
+        "opa-russe-sur-le-burkina",
+        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
         "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan",
-        "spaghetti-de-lampedusa",
-        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global",
-        "wagner-peau-de-chagrin"
+        "satellites-missiles-drones-les-dessous-du-soutien-russe-a-liran",
+        "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa",
+        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers",
+        "touche-coule",
+        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
       ]
     },
     {
-      "id": "centrafrique",
-      "name": "Centrafrique",
+      "id": "republique-centrafricaine",
+      "name": "République centrafricaine",
       "country": "République centrafricaine",
       "lat": 7.0323598,
       "lng": 19.9981227,
       "articles": [
         "africa-politology-loffensive-feutree-de-moscou",
+        "allez-creuse-bebe-contes-russes-de-lor-en-afrique-centrale",
         "denis-pavlov-lhomme-de-bangui",
         "dimitri-sytyi-cadre-de-wagner-en-centrafrique",
         "du-soudan-a-la-moldavie-lexportation-du-savoir-faire-wagner-pour-la-guerre-hybride-en-europe",
+        "gru-inc-chasse-les-actifs-petroliers-de-prigojine-en-syrie",
         "la-base-aerienne-dal-khadim-un-avant-poste-russe-incontournable-en-libye",
         "la-chasse-continue",
         "le-burkina-faso-sous-influence",
+        "le-forum-international-sur-la-securite-de-la-russie-le-temps-de-la-confrontation",
         "les-visages-du-reseau-gpci",
         "libye-plateforme-logistique-du-groupe-wagner",
         "ordre-de-debandade-en-azawad",
         "pioneer-commandant-de-la-base-dasipovichy-pour-wagner-en-bielorussie",
+        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global",
         "wagner-peau-de-chagrin"
       ]
     },
     {
-      "id": "syria",
-      "name": "Syria",
-      "country": "Syrie",
-      "lat": 34.6401861,
-      "lng": 39.0494106,
+      "id": "bielorussie",
+      "name": "Biélorussie",
+      "country": "Bélarus",
+      "lat": 53.4250605,
+      "lng": 27.6971358,
+      "articles": [
+        "disarray-in-azawad",
+        "la-chasse-continue",
+        "le-reseau-catrosa-des-societes-europeennes-liees-aux-developpeurs-darmes-chimiques-russes",
+        "mediterranean-sea-objective-for-the-african-corps",
+        "objectif-mediterranee-pour-african-corps",
+        "ordre-de-debandade-en-azawad",
+        "pioneer-asipovichy-base-commander-for-wagner-in-belarus",
+        "pioneer-commandant-de-la-base-dasipovichy-pour-wagner-en-bielorussie",
+        "spaghetti-de-lampedusa",
+        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers",
+        "wagner-like-nobodys-business",
+        "wagner-peau-de-chagrin"
+      ]
+    },
+    {
+      "id": "chine",
+      "name": "Chine",
+      "country": "Chine",
+      "lat": 35.000074,
+      "lng": 104.999927,
       "articles": [
         "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "disarray-in-azawad",
-        "following-the-syrian-money-and-circling-back-to-torture",
-        "gold-thirst",
-        "gru-inc-hunting-for-prigozhins-oil-assets-in-syria",
-        "human-rights-abuses-status-report-feb-2022",
-        "libya-wagner-groups-logistics-platform",
-        "mediterranean-sea-objective-for-the-african-corps",
-        "pioneer-asipovichy-base-commander-for-wagner-in-belarus",
+        "alabuga-noeud-central-de-la-menace-hybride-russe",
+        "alabuga-the-central-hub-of-the-russian-hybrid-threat",
+        "china-gets-nvidia-gpu-for-the-ai-race-through-vietnam-and-malaysia",
+        "hit-and-sunk",
+        "la-chasse-continue",
         "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
-        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers",
-        "wagner-like-nobodys-business"
+        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan",
+        "spaghetti-de-lampedusa",
+        "the-legacy-of-influence-the-south-african-chapter",
+        "touche-coule",
+        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
       ]
     },
     {
@@ -1427,26 +1494,6 @@
         "lazawad-caillou-dans-la-botte-russe",
         "love-me-alone-russias-no-rivals-doctrine",
         "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
-      ]
-    },
-    {
-      "id": "soudan",
-      "name": "Soudan",
-      "country": "Soudan",
-      "lat": 14.5844444,
-      "lng": 29.4917691,
-      "articles": [
-        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
-        "denis-pavlov-lhomme-de-bangui",
-        "du-soudan-a-la-moldavie-lexportation-du-savoir-faire-wagner-pour-la-guerre-hybride-en-europe",
-        "la-base-aerienne-dal-khadim-un-avant-poste-russe-incontournable-en-libye",
-        "libye-plateforme-logistique-du-groupe-wagner",
-        "objectif-mediterranee-pour-african-corps",
-        "ordre-de-debandade-en-azawad",
-        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan",
-        "russie-afrique-un-forum-en-demi-teinte-a-lombre-de-la-guerre-en-ukraine",
-        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global",
-        "wagner-peau-de-chagrin"
       ]
     },
     {
@@ -1472,8 +1519,8 @@
       "id": "kidal",
       "name": "Kidal",
       "country": "Mali",
-      "lat": 19.802089,
-      "lng": 0.7253125,
+      "lat": 18.4411,
+      "lng": 1.4078,
       "articles": [
         "africa-flop",
         "africa-flop-saison-2",
@@ -1488,41 +1535,21 @@
       ]
     },
     {
-      "id": "libya",
-      "name": "Libya",
-      "country": "Libye",
-      "lat": 26.8234472,
-      "lng": 18.1236723,
+      "id": "asie",
+      "name": "Asie",
+      "country": "—",
+      "lat": 51.2086975,
+      "lng": 89.2343748,
       "articles": [
-        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "after-wagner-russias-spin-doctors-take-over-in-africa",
-        "al-khadim-airbase-an-essential-russian-outpost-in-libya",
-        "anatomy-of-deception-engineering-covert-influence-operations",
-        "disarray-in-azawad",
-        "human-rights-abuses-status-report-feb-2022",
-        "libya-wagner-groups-logistics-platform",
-        "love-me-alone-russias-no-rivals-doctrine",
-        "mediterranean-sea-objective-for-the-african-corps",
-        "wagner-legion-istra-the-return-of-veterans-in-concert"
-      ]
-    },
-    {
-      "id": "la-france",
-      "name": "la France",
-      "country": "États-Unis d'Amérique",
-      "lat": 34.6122634,
-      "lng": -82.7654934,
-      "articles": [
-        "africa-flop-saison-2",
-        "africa-politology-loffensive-feutree-de-moscou",
-        "dimitri-sytyi-cadre-de-wagner-en-centrafrique",
-        "influence-as-a-service-lillustration-de-la-dame-de-sochi",
-        "le-business-du-desespoir",
-        "les-visages-du-reseau-gpci",
-        "opa-russe-sur-le-burkina",
-        "russie-afrique-un-forum-en-demi-teinte-a-lombre-de-la-guerre-en-ukraine",
-        "un-an-de-wagner-au-mali",
-        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
+        "a-madagascar-la-russie-relance-son-operation-seduction-armes-drones-culture-et-offres-financieres-orchestrees-par-ses-emissaires",
+        "china-gets-nvidia-gpu-for-the-ai-race-through-vietnam-and-malaysia",
+        "le-forum-international-sur-la-securite-de-la-russie-le-temps-de-la-confrontation",
+        "le-reseau-catrosa-des-societes-europeennes-liees-aux-developpeurs-darmes-chimiques-russes",
+        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
+        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan",
+        "russias-international-security-forum-time-for-confrontation",
+        "russias-renewed-charm-for-madagascar-weapons-drones-culture-and-financial-propositions-delivered-by-top-henchmen",
+        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers"
       ]
     },
     {
@@ -1544,21 +1571,38 @@
       ]
     },
     {
-      "id": "etat",
-      "name": "État",
-      "country": "Japon",
-      "lat": 36.5748441,
-      "lng": 139.2394179,
+      "id": "egypte",
+      "name": "Égypte",
+      "country": "Égypte",
+      "lat": 26.2540493,
+      "lng": 29.2675469,
       "articles": [
-        "a-madagascar-la-russie-relance-son-operation-seduction-armes-drones-culture-et-offres-financieres-orchestrees-par-ses-emissaires",
-        "allez-creuse-bebe-contes-russes-de-lor-en-afrique-centrale",
         "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
-        "apres-wagner-les-spin-doctors-russes-prennent-le-relai-en-afrique",
-        "architecture-du-silence-comment-la-russie-censure-son-internet",
-        "influence-as-a-service-lillustration-de-la-dame-de-sochi",
-        "opa-russe-sur-le-burkina",
-        "satellites-missiles-drones-les-dessous-du-soutien-russe-a-liran",
-        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
+        "anatomy-of-deception-engineering-covert-influence-operations",
+        "libya-wagner-groups-logistics-platform",
+        "libye-plateforme-logistique-du-groupe-wagner",
+        "recruitment-of-africans-in-ukraine-governments-act-in-the-face-of-growing-evidence",
+        "russia-africa-a-forum-with-mixed-results-overshadowed-by-the-war-in-ukraine",
+        "russie-afrique-un-forum-en-demi-teinte-a-lombre-de-la-guerre-en-ukraine",
+        "smile-and-wave-at-viktor-lukovenko-from-convict-to-african-political-strategist-and-expert",
+        "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa"
+      ]
+    },
+    {
+      "id": "cameroun",
+      "name": "Cameroun",
+      "country": "Cameroun",
+      "lat": 4.6125522,
+      "lng": 13.1535811,
+      "articles": [
+        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
+        "anatomy-of-deception-engineering-covert-influence-operations",
+        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
+        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan",
+        "recruitment-of-africans-in-ukraine-governments-act-in-the-face-of-growing-evidence",
+        "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa",
+        "wagner-peau-de-chagrin",
+        "wood-for-mercenaries-on-the-road-to-international-markets"
       ]
     },
     {
@@ -1613,19 +1657,35 @@
       ]
     },
     {
-      "id": "bielorussie",
-      "name": "Biélorussie",
-      "country": "Bélarus",
-      "lat": 53.4250605,
-      "lng": 27.6971358,
+      "id": "afrique-du-sud",
+      "name": "Afrique du Sud",
+      "country": "Afrique du Sud",
+      "lat": -28.8166236,
+      "lng": 24.991639,
       "articles": [
-        "la-chasse-continue",
-        "le-reseau-catrosa-des-societes-europeennes-liees-aux-developpeurs-darmes-chimiques-russes",
-        "objectif-mediterranee-pour-african-corps",
-        "ordre-de-debandade-en-azawad",
-        "pioneer-commandant-de-la-base-dasipovichy-pour-wagner-en-bielorussie",
-        "spaghetti-de-lampedusa",
-        "wagner-peau-de-chagrin"
+        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
+        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
+        "anatomy-of-deception-engineering-covert-influence-operations",
+        "recruitment-of-africans-in-ukraine-governments-act-in-the-face-of-growing-evidence",
+        "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa",
+        "the-legacy-of-influence-the-south-african-chapter",
+        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
+      ]
+    },
+    {
+      "id": "coree-du-nord",
+      "name": "Corée du Nord",
+      "country": "Corée du Nord",
+      "lat": 40.3736611,
+      "lng": 127.0870417,
+      "articles": [
+        "3-ans-au-dela-de-lukraine",
+        "3-years-beyond-ukraine",
+        "alabuga-noeud-central-de-la-menace-hybride-russe",
+        "alabuga-the-central-hub-of-the-russian-hybrid-threat",
+        "les-filieres-dacquisition-asiatiques-du-groupe-wagner",
+        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
+        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan"
       ]
     },
     {
@@ -1645,19 +1705,19 @@
       ]
     },
     {
-      "id": "etats-unis",
-      "name": "États-Unis",
-      "country": "États-Unis d'Amérique",
-      "lat": 39.7837304,
-      "lng": -100.445882,
+      "id": "yemen",
+      "name": "Yémen",
+      "country": "Yémen",
+      "lat": 16.3471243,
+      "lng": 47.8915271,
       "articles": [
-        "a-madagascar-la-russie-relance-son-operation-seduction-armes-drones-culture-et-offres-financieres-orchestrees-par-ses-emissaires",
-        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
+        "after-wagner-russias-spin-doctors-take-over-in-africa",
         "apres-wagner-les-spin-doctors-russes-prennent-le-relai-en-afrique",
-        "architecture-du-silence-comment-la-russie-censure-son-internet",
-        "le-reseau-catrosa-des-societes-europeennes-liees-aux-developpeurs-darmes-chimiques-russes",
-        "opa-russe-sur-le-burkina",
-        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
+        "le-double-jeu-de-moscou-au-yemen",
+        "mediterranean-sea-objective-for-the-african-corps",
+        "moscow-double-dealing-in-yemen",
+        "objectif-mediterranee-pour-african-corps",
+        "touche-coule"
       ]
     },
     {
@@ -1676,93 +1736,63 @@
       ]
     },
     {
-      "id": "belarus",
-      "name": "Belarus",
-      "country": "Bélarus",
-      "lat": 53.4250605,
-      "lng": 27.6971358,
+      "id": "benin",
+      "name": "Bénin",
+      "country": "Bénin",
+      "lat": 9.5293472,
+      "lng": 2.2584408,
       "articles": [
-        "disarray-in-azawad",
-        "mediterranean-sea-objective-for-the-african-corps",
-        "pioneer-asipovichy-base-commander-for-wagner-in-belarus",
-        "spaghetti-de-lampedusa",
-        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers",
-        "wagner-like-nobodys-business"
+        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
+        "anatomy-of-deception-engineering-covert-influence-operations",
+        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
+        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan",
+        "the-madmax-uranium-express-le-convoi-de-tous-les-dangers",
+        "the-madmax-uranium-express-the-convoy-of-all-dangers"
       ]
     },
     {
-      "id": "china",
-      "name": "China",
-      "country": "Chine",
-      "lat": 35.000074,
-      "lng": 104.999927,
+      "id": "dubai",
+      "name": "Dubaï",
+      "country": "Émirats arabes unis",
+      "lat": 25.2296341,
+      "lng": 55.289585,
       "articles": [
         "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "alabuga-the-central-hub-of-the-russian-hybrid-threat",
-        "china-gets-nvidia-gpu-for-the-ai-race-through-vietnam-and-malaysia",
-        "hit-and-sunk",
-        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
-        "the-legacy-of-influence-the-south-african-chapter"
-      ]
-    },
-    {
-      "id": "chine",
-      "name": "Chine",
-      "country": "Chine",
-      "lat": 35.000074,
-      "lng": 104.999927,
-      "articles": [
-        "alabuga-noeud-central-de-la-menace-hybride-russe",
-        "la-chasse-continue",
-        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan",
-        "spaghetti-de-lampedusa",
-        "touche-coule",
+        "gold-thirst",
+        "le-double-jeu-de-moscou-au-yemen",
+        "moscow-double-dealing-in-yemen",
+        "the-legacy-of-influence-the-south-african-chapter",
         "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
       ]
     },
     {
-      "id": "concord",
-      "name": "Concord",
-      "country": "États-Unis d'Amérique",
-      "lat": 43.207178,
-      "lng": -71.537476,
+      "id": "kirghizistan",
+      "name": "Kirghizistan",
+      "country": "Kirghizistan",
+      "lat": 41.5089324,
+      "lng": 74.724091,
       "articles": [
+        "after-wagner-russias-spin-doctors-take-over-in-africa",
+        "apres-wagner-les-spin-doctors-russes-prennent-le-relai-en-afrique",
+        "architecture-du-silence-comment-la-russie-censure-son-internet",
+        "du-soudan-a-la-moldavie-lexportation-du-savoir-faire-wagner-pour-la-guerre-hybride-en-europe",
+        "le-reseau-catrosa-des-societes-europeennes-liees-aux-developpeurs-darmes-chimiques-russes",
+        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers"
+      ]
+    },
+    {
+      "id": "saint-petersbourg",
+      "name": "Saint-Pétersbourg",
+      "country": "Russie",
+      "lat": 59.9311,
+      "lng": 30.3609,
+      "articles": [
+        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
+        "anatomy-of-deception-engineering-covert-influence-operations",
+        "come-follow-the-redwood-trees-tracking-wagners-forestry-business-in-car",
         "dimitri-sytyi-cadre-de-wagner-en-centrafrique",
-        "gru-inc-chasse-les-actifs-petroliers-de-prigojine-en-syrie",
-        "influence-as-a-service-lillustration-de-la-dame-de-sochi",
-        "les-filieres-dacquisition-asiatiques-du-groupe-wagner",
         "wagner-like-nobodys-business",
         "wagner-peau-de-chagrin"
-      ]
-    },
-    {
-      "id": "egypt",
-      "name": "Egypt",
-      "country": "Égypte",
-      "lat": 26.2540493,
-      "lng": 29.2675469,
-      "articles": [
-        "anatomy-of-deception-engineering-covert-influence-operations",
-        "libya-wagner-groups-logistics-platform",
-        "recruitment-of-africans-in-ukraine-governments-act-in-the-face-of-growing-evidence",
-        "russia-africa-a-forum-with-mixed-results-overshadowed-by-the-war-in-ukraine",
-        "smile-and-wave-at-viktor-lukovenko-from-convict-to-african-political-strategist-and-expert",
-        "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa"
-      ]
-    },
-    {
-      "id": "federation-de-russie",
-      "name": "Fédération de Russie",
-      "country": "Russie",
-      "lat": 64.6863136,
-      "lng": 97.7453061,
-      "articles": [
-        "africa-flop-saison-2",
-        "architecture-du-silence-comment-la-russie-censure-son-internet",
-        "campagne-de-recrutement-en-ukraine-et-sur-la-zone-afrique-moyen-orient",
-        "denis-pavlov-lhomme-de-bangui",
-        "influence-as-a-service-lillustration-de-la-dame-de-sochi",
-        "le-business-du-desespoir"
       ]
     },
     {
@@ -1823,20 +1853,6 @@
       ]
     },
     {
-      "id": "asia",
-      "name": "Asia",
-      "country": "—",
-      "lat": 51.2086975,
-      "lng": 89.2343748,
-      "articles": [
-        "china-gets-nvidia-gpu-for-the-ai-race-through-vietnam-and-malaysia",
-        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
-        "russias-international-security-forum-time-for-confrontation",
-        "russias-renewed-charm-for-madagascar-weapons-drones-culture-and-financial-propositions-delivered-by-top-henchmen",
-        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers"
-      ]
-    },
-    {
       "id": "bangui",
       "name": "Bangui",
       "country": "République centrafricaine",
@@ -1851,17 +1867,17 @@
       ]
     },
     {
-      "id": "cameroon",
-      "name": "Cameroon",
-      "country": "Cameroun",
-      "lat": 4.6125522,
-      "lng": 13.1535811,
+      "id": "bruxelles",
+      "name": "Bruxelles",
+      "country": "Belgique",
+      "lat": 50.8467372,
+      "lng": 4.352493,
       "articles": [
-        "anatomy-of-deception-engineering-covert-influence-operations",
-        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
-        "recruitment-of-africans-in-ukraine-governments-act-in-the-face-of-growing-evidence",
-        "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa",
-        "wood-for-mercenaries-on-the-road-to-international-markets"
+        "denis-pavlov-lhomme-de-bangui",
+        "denis-pavlov-the-man-in-bangui",
+        "le-forum-international-sur-la-securite-de-la-russie-le-temps-de-la-confrontation",
+        "love-me-alone-russias-no-rivals-doctrine",
+        "russias-international-security-forum-time-for-confrontation"
       ]
     },
     {
@@ -1893,6 +1909,34 @@
       ]
     },
     {
+      "id": "guinee",
+      "name": "Guinée",
+      "country": "Guinée",
+      "lat": 10.7226226,
+      "lng": -10.7083587,
+      "articles": [
+        "africa-flop",
+        "after-wagner-russias-spin-doctors-take-over-in-africa",
+        "apres-wagner-les-spin-doctors-russes-prennent-le-relai-en-afrique",
+        "beyond-the-sahelian-illusion",
+        "opa-russe-sur-le-burkina"
+      ]
+    },
+    {
+      "id": "israel",
+      "name": "Israël",
+      "country": "Israël",
+      "lat": 30.8124247,
+      "lng": 34.8594762,
+      "articles": [
+        "hit-and-sunk",
+        "le-double-jeu-de-moscou-au-yemen",
+        "moscow-double-dealing-in-yemen",
+        "satellites-missiles-drones-les-dessous-du-soutien-russe-a-liran",
+        "touche-coule"
+      ]
+    },
+    {
       "id": "kazakhstan",
       "name": "Kazakhstan",
       "country": "Kazakhstan",
@@ -1907,45 +1951,59 @@
       ]
     },
     {
-      "id": "republique-centrafricaine",
-      "name": "République centrafricaine",
-      "country": "République centrafricaine",
-      "lat": 7.0323598,
-      "lng": 19.9981227,
+      "id": "royaume-uni",
+      "name": "Royaume-Uni",
+      "country": "Royaume-Uni",
+      "lat": 54.7023545,
+      "lng": -3.2765753,
       "articles": [
-        "allez-creuse-bebe-contes-russes-de-lor-en-afrique-centrale",
-        "gru-inc-chasse-les-actifs-petroliers-de-prigojine-en-syrie",
-        "la-base-aerienne-dal-khadim-un-avant-poste-russe-incontournable-en-libye",
-        "les-visages-du-reseau-gpci",
+        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
+        "global-kombat",
+        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan",
+        "touche-coule",
         "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
       ]
     },
     {
-      "id": "south-africa",
-      "name": "South Africa",
-      "country": "Afrique du Sud",
-      "lat": -28.8166236,
-      "lng": 24.991639,
+      "id": "senegal",
+      "name": "Sénégal",
+      "country": "Sénégal",
+      "lat": 14.4750607,
+      "lng": -14.4529612,
       "articles": [
         "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "anatomy-of-deception-engineering-covert-influence-operations",
-        "recruitment-of-africans-in-ukraine-governments-act-in-the-face-of-growing-evidence",
-        "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa",
-        "the-legacy-of-influence-the-south-african-chapter"
+        "africa-flop-saison-2",
+        "after-wagner-russias-spin-doctors-take-over-in-africa",
+        "apres-wagner-les-spin-doctors-russes-prennent-le-relai-en-afrique",
+        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
       ]
     },
     {
-      "id": "usa",
-      "name": "USA",
-      "country": "États-Unis d'Amérique",
-      "lat": 39.7837304,
-      "lng": -100.445882,
+      "id": "tchad",
+      "name": "Tchad",
+      "country": "Tchad",
+      "lat": 15.6134137,
+      "lng": 19.0156172,
       "articles": [
-        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
+        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
+        "anatomy-of-deception-engineering-covert-influence-operations",
+        "gold-thirst",
         "love-me-alone-russias-no-rivals-doctrine",
-        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
-        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan",
-        "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa"
+        "spaghetti-de-lampedusa"
+      ]
+    },
+    {
+      "id": "turquie",
+      "name": "Turquie",
+      "country": "Turquie",
+      "lat": 39.294076,
+      "lng": 35.2316631,
+      "articles": [
+        "africa-flop-saison-2",
+        "beyond-the-sahelian-illusion",
+        "le-reseau-catrosa-des-societes-europeennes-liees-aux-developpeurs-darmes-chimiques-russes",
+        "love-me-alone-russias-no-rivals-doctrine",
+        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers"
       ]
     },
     {
@@ -1960,6 +2018,20 @@
         "moscow-double-dealing-in-yemen",
         "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
         "recruitment-campaigns-in-ukraine-and-africa-middle-east"
+      ]
+    },
+    {
+      "id": "emirats-arabes-unis",
+      "name": "Émirats arabes unis",
+      "country": "Émirats arabes unis",
+      "lat": 24.0002488,
+      "lng": 53.9994829,
+      "articles": [
+        "africa-politology-loffensive-feutree-de-moscou",
+        "allez-creuse-bebe-contes-russes-de-lor-en-afrique-centrale",
+        "libye-plateforme-logistique-du-groupe-wagner",
+        "satellites-missiles-drones-les-dessous-du-soutien-russe-a-liran",
+        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
       ]
     },
     {
@@ -1989,16 +2061,16 @@
       ]
     },
     {
-      "id": "asie",
-      "name": "Asie",
-      "country": "—",
-      "lat": 51.2086975,
-      "lng": 89.2343748,
+      "id": "arabie-saoudite",
+      "name": "Arabie saoudite",
+      "country": "Arabie saoudite",
+      "lat": 25.6242618,
+      "lng": 42.3528328,
       "articles": [
-        "a-madagascar-la-russie-relance-son-operation-seduction-armes-drones-culture-et-offres-financieres-orchestrees-par-ses-emissaires",
-        "le-forum-international-sur-la-securite-de-la-russie-le-temps-de-la-confrontation",
-        "le-reseau-catrosa-des-societes-europeennes-liees-aux-developpeurs-darmes-chimiques-russes",
-        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan"
+        "le-double-jeu-de-moscou-au-yemen",
+        "libya-wagner-groups-logistics-platform",
+        "libye-plateforme-logistique-du-groupe-wagner",
+        "moscow-double-dealing-in-yemen"
       ]
     },
     {
@@ -2015,6 +2087,19 @@
       ]
     },
     {
+      "id": "bolivie",
+      "name": "Bolivie",
+      "country": "Bolivie",
+      "lat": -17.0568696,
+      "lng": -64.9912286,
+      "articles": [
+        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
+        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
+        "anatomy-of-deception-engineering-covert-influence-operations",
+        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
+      ]
+    },
+    {
       "id": "centre",
       "name": "Centre",
       "country": "France",
@@ -2028,42 +2113,42 @@
       ]
     },
     {
-      "id": "coree-du-nord",
-      "name": "Corée du Nord",
-      "country": "Corée du Nord",
-      "lat": 40.3736611,
-      "lng": 127.0870417,
+      "id": "chypre",
+      "name": "Chypre",
+      "country": "Chypre",
+      "lat": 34.9823018,
+      "lng": 33.1451285,
       "articles": [
-        "3-ans-au-dela-de-lukraine",
-        "alabuga-noeud-central-de-la-menace-hybride-russe",
-        "les-filieres-dacquisition-asiatiques-du-groupe-wagner",
-        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan"
+        "libya-wagner-groups-logistics-platform",
+        "libye-plateforme-logistique-du-groupe-wagner",
+        "mediterranean-sea-objective-for-the-african-corps",
+        "objectif-mediterranee-pour-african-corps"
       ]
     },
     {
-      "id": "dubai",
-      "name": "Dubai",
-      "country": "Émirats arabes unis",
-      "lat": 25.0742823,
-      "lng": 55.1885387,
+      "id": "italie",
+      "name": "Italie",
+      "country": "Italie",
+      "lat": 42.6384261,
+      "lng": 12.674297,
       "articles": [
-        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "gold-thirst",
-        "moscow-double-dealing-in-yemen",
-        "the-legacy-of-influence-the-south-african-chapter"
-      ]
-    },
-    {
-      "id": "kyrgyzstan",
-      "name": "Kyrgyzstan",
-      "country": "Kirghizistan",
-      "lat": 41.5089324,
-      "lng": 74.724091,
-      "articles": [
-        "after-wagner-russias-spin-doctors-take-over-in-africa",
-        "apres-wagner-les-spin-doctors-russes-prennent-le-relai-en-afrique",
-        "du-soudan-a-la-moldavie-lexportation-du-savoir-faire-wagner-pour-la-guerre-hybride-en-europe",
+        "architecture-du-silence-comment-la-russie-censure-son-internet",
+        "le-reseau-catrosa-des-societes-europeennes-liees-aux-developpeurs-darmes-chimiques-russes",
+        "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa",
         "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers"
+      ]
+    },
+    {
+      "id": "liban",
+      "name": "Liban",
+      "country": "Liban",
+      "lat": 33.8750629,
+      "lng": 35.843409,
+      "articles": [
+        "gru-inc-chasse-les-actifs-petroliers-de-prigojine-en-syrie",
+        "gru-inc-hunting-for-prigozhins-oil-assets-in-syria",
+        "hit-and-sunk",
+        "touche-coule"
       ]
     },
     {
@@ -2077,6 +2162,45 @@
         "les-visages-du-reseau-gpci",
         "the-madmax-uranium-express-le-convoi-de-tous-les-dangers",
         "the-madmax-uranium-express-the-convoy-of-all-dangers"
+      ]
+    },
+    {
+      "id": "mauritanie",
+      "name": "Mauritanie",
+      "country": "Mauritanie",
+      "lat": 20.2540382,
+      "lng": -9.2399263,
+      "articles": [
+        "mediterranean-sea-objective-for-the-african-corps",
+        "objectif-mediterranee-pour-african-corps",
+        "russia-africa-a-forum-with-mixed-results-overshadowed-by-the-war-in-ukraine",
+        "russie-afrique-un-forum-en-demi-teinte-a-lombre-de-la-guerre-en-ukraine"
+      ]
+    },
+    {
+      "id": "mer-mediterranee",
+      "name": "Mer Méditerranée",
+      "country": "—",
+      "lat": 35.0000035,
+      "lng": 19.9999957,
+      "articles": [
+        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
+        "la-base-aerienne-dal-khadim-un-avant-poste-russe-incontournable-en-libye",
+        "mediterranean-sea-objective-for-the-african-corps",
+        "objectif-mediterranee-pour-african-corps"
+      ]
+    },
+    {
+      "id": "namibie",
+      "name": "Namibie",
+      "country": "Namibie",
+      "lat": -23.2335499,
+      "lng": 17.3231107,
+      "articles": [
+        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
+        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
+        "anatomy-of-deception-engineering-covert-influence-operations",
+        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
       ]
     },
     {
@@ -2109,13 +2233,26 @@
       "id": "paris",
       "name": "Paris",
       "country": "France",
-      "lat": 48.8534951,
-      "lng": 2.3483915,
+      "lat": 48.8588897,
+      "lng": 2.320041,
       "articles": [
         "africa-politology-loffensive-feutree-de-moscou",
         "denis-pavlov-lhomme-de-bangui",
         "denis-pavlov-the-man-in-bangui",
         "love-me-alone-russias-no-rivals-doctrine"
+      ]
+    },
+    {
+      "id": "pekin",
+      "name": "Pékin",
+      "country": "Chine",
+      "lat": 39.9057136,
+      "lng": 116.3912972,
+      "articles": [
+        "china-gets-nvidia-gpu-for-the-ai-race-through-vietnam-and-malaysia",
+        "influence-as-a-service-lillustration-de-la-dame-de-sochi",
+        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
+        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan"
       ]
     },
     {
@@ -2132,32 +2269,6 @@
       ]
     },
     {
-      "id": "u-s",
-      "name": "U.S",
-      "country": "États-Unis d'Amérique",
-      "lat": 39.7837304,
-      "lng": -100.445882,
-      "articles": [
-        "beyond-the-sahelian-illusion",
-        "love-me-alone-russias-no-rivals-doctrine",
-        "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa",
-        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers"
-      ]
-    },
-    {
-      "id": "yemen",
-      "name": "Yemen",
-      "country": "Yémen",
-      "lat": 16.3471243,
-      "lng": 47.8915271,
-      "articles": [
-        "after-wagner-russias-spin-doctors-take-over-in-africa",
-        "mediterranean-sea-objective-for-the-african-corps",
-        "moscow-double-dealing-in-yemen",
-        "objectif-mediterranee-pour-african-corps"
-      ]
-    },
-    {
       "id": "abidjan",
       "name": "Abidjan",
       "country": "Côte d’Ivoire",
@@ -2167,18 +2278,6 @@
         "goni-habe-civilian-massacre-and-influence-operation",
         "goni-habe-entre-massacre-civil-et-operation-dinfluence",
         "influence-as-a-service-lillustration-de-la-dame-de-sochi"
-      ]
-    },
-    {
-      "id": "amerique",
-      "name": "Amérique",
-      "country": "—",
-      "lat": 9.2548361,
-      "lng": -79.8805617,
-      "articles": [
-        "a-madagascar-la-russie-relance-son-operation-seduction-armes-drones-culture-et-offres-financieres-orchestrees-par-ses-emissaires",
-        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
-        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
       ]
     },
     {
@@ -2206,18 +2305,6 @@
       ]
     },
     {
-      "id": "benin",
-      "name": "Benin",
-      "country": "Bénin",
-      "lat": 9.5293472,
-      "lng": 2.2584408,
-      "articles": [
-        "anatomy-of-deception-engineering-covert-influence-operations",
-        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
-        "the-madmax-uranium-express-the-convoy-of-all-dangers"
-      ]
-    },
-    {
       "id": "berlin",
       "name": "Berlin",
       "country": "Allemagne",
@@ -2227,30 +2314,6 @@
         "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
         "anatomy-of-deception-engineering-covert-influence-operations",
         "influence-as-a-service-lillustration-de-la-dame-de-sochi"
-      ]
-    },
-    {
-      "id": "brussels",
-      "name": "Brussels",
-      "country": "Belgique",
-      "lat": 50.8467372,
-      "lng": 4.352493,
-      "articles": [
-        "denis-pavlov-the-man-in-bangui",
-        "love-me-alone-russias-no-rivals-doctrine",
-        "russias-international-security-forum-time-for-confrontation"
-      ]
-    },
-    {
-      "id": "benin",
-      "name": "Bénin",
-      "country": "Bénin",
-      "lat": 9.5293472,
-      "lng": 2.2584408,
-      "articles": [
-        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
-        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan",
-        "the-madmax-uranium-express-le-convoi-de-tous-les-dangers"
       ]
     },
     {
@@ -2266,30 +2329,6 @@
       ]
     },
     {
-      "id": "cameroun",
-      "name": "Cameroun",
-      "country": "Cameroun",
-      "lat": 4.6125522,
-      "lng": 13.1535811,
-      "articles": [
-        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
-        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan",
-        "wagner-peau-de-chagrin"
-      ]
-    },
-    {
-      "id": "chad",
-      "name": "Chad",
-      "country": "Tchad",
-      "lat": 15.6134137,
-      "lng": 19.0156172,
-      "articles": [
-        "anatomy-of-deception-engineering-covert-influence-operations",
-        "gold-thirst",
-        "love-me-alone-russias-no-rivals-doctrine"
-      ]
-    },
-    {
       "id": "cote-divoire",
       "name": "Côte d’Ivoire",
       "country": "Côte d’Ivoire",
@@ -2302,47 +2341,11 @@
       ]
     },
     {
-      "id": "emirats-arabes-unis",
-      "name": "Emirats Arabes Unis",
-      "country": "Émirats arabes unis",
-      "lat": 24.0002488,
-      "lng": 53.9994829,
-      "articles": [
-        "africa-politology-loffensive-feutree-de-moscou",
-        "libye-plateforme-logistique-du-groupe-wagner",
-        "satellites-missiles-drones-les-dessous-du-soutien-russe-a-liran"
-      ]
-    },
-    {
-      "id": "etat",
-      "name": "Etat",
-      "country": "Japon",
-      "lat": 36.5748441,
-      "lng": 139.2394179,
-      "articles": [
-        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
-        "gru-inc-chasse-les-actifs-petroliers-de-prigojine-en-syrie",
-        "la-chasse-continue"
-      ]
-    },
-    {
-      "id": "etats-unis",
-      "name": "Etats-Unis",
-      "country": "États-Unis d'Amérique",
-      "lat": 39.7837304,
-      "lng": -100.445882,
-      "articles": [
-        "dimitri-sytyi-cadre-de-wagner-en-centrafrique",
-        "satellites-missiles-drones-les-dessous-du-soutien-russe-a-liran",
-        "touche-coule"
-      ]
-    },
-    {
       "id": "gao",
       "name": "Gao",
-      "country": "Mali",
-      "lat": 16.2788129,
-      "lng": -0.0412392,
+      "country": "Burkina Faso",
+      "lat": 11.642308,
+      "lng": -2.1800254,
       "articles": [
         "africa-flop",
         "africa-flop-saison-2",
@@ -2362,39 +2365,15 @@
       ]
     },
     {
-      "id": "guinee",
-      "name": "Guinée",
-      "country": "Guinée",
-      "lat": 10.7226226,
-      "lng": -10.7083587,
-      "articles": [
-        "africa-flop",
-        "apres-wagner-les-spin-doctors-russes-prennent-le-relai-en-afrique",
-        "opa-russe-sur-le-burkina"
-      ]
-    },
-    {
       "id": "hong-kong",
       "name": "Hong Kong",
       "country": "Chine",
-      "lat": 22.3492155,
-      "lng": 114.1857978,
+      "lat": 22.2792968,
+      "lng": 114.1628907,
       "articles": [
         "china-gets-nvidia-gpu-for-the-ai-race-through-vietnam-and-malaysia",
         "gru-inc-chasse-les-actifs-petroliers-de-prigojine-en-syrie",
         "gru-inc-hunting-for-prigozhins-oil-assets-in-syria"
-      ]
-    },
-    {
-      "id": "israel",
-      "name": "Israël",
-      "country": "Israël",
-      "lat": 30.8124247,
-      "lng": 34.8594762,
-      "articles": [
-        "le-double-jeu-de-moscou-au-yemen",
-        "satellites-missiles-drones-les-dessous-du-soutien-russe-a-liran",
-        "touche-coule"
       ]
     },
     {
@@ -2482,18 +2461,6 @@
       ]
     },
     {
-      "id": "north-korea",
-      "name": "North Korea",
-      "country": "Corée du Nord",
-      "lat": 40.3736611,
-      "lng": 127.0870417,
-      "articles": [
-        "3-years-beyond-ukraine",
-        "alabuga-the-central-hub-of-the-russian-hybrid-threat",
-        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan"
-      ]
-    },
-    {
       "id": "ouagadougou",
       "name": "Ouagadougou",
       "country": "Burkina Faso",
@@ -2518,18 +2485,6 @@
       ]
     },
     {
-      "id": "republique-centrafricaine",
-      "name": "République Centrafricaine",
-      "country": "République centrafricaine",
-      "lat": 7.0323598,
-      "lng": 19.9981227,
-      "articles": [
-        "denis-pavlov-lhomme-de-bangui",
-        "la-base-aerienne-dal-khadim-un-avant-poste-russe-incontournable-en-libye",
-        "le-forum-international-sur-la-securite-de-la-russie-le-temps-de-la-confrontation"
-      ]
-    },
-    {
       "id": "sochi",
       "name": "Sochi",
       "country": "Russie",
@@ -2539,66 +2494,6 @@
         "dimitri-sytyi-cadre-de-wagner-en-centrafrique",
         "influence-as-a-service-lillustration-de-la-dame-de-sochi",
         "mediterranean-sea-objective-for-the-african-corps"
-      ]
-    },
-    {
-      "id": "st-petersburg",
-      "name": "St. Petersburg",
-      "country": "Russie",
-      "lat": 59.9606739,
-      "lng": 30.1586551,
-      "articles": [
-        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "come-follow-the-redwood-trees-tracking-wagners-forestry-business-in-car",
-        "wagner-like-nobodys-business"
-      ]
-    },
-    {
-      "id": "senegal",
-      "name": "Sénégal",
-      "country": "Sénégal",
-      "lat": 14.4750607,
-      "lng": -14.4529612,
-      "articles": [
-        "africa-flop-saison-2",
-        "apres-wagner-les-spin-doctors-russes-prennent-le-relai-en-afrique",
-        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
-      ]
-    },
-    {
-      "id": "turkey",
-      "name": "Turkey",
-      "country": "Turquie",
-      "lat": 39.294076,
-      "lng": 35.2316631,
-      "articles": [
-        "beyond-the-sahelian-illusion",
-        "love-me-alone-russias-no-rivals-doctrine",
-        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers"
-      ]
-    },
-    {
-      "id": "yemen",
-      "name": "Yémen",
-      "country": "Yémen",
-      "lat": 16.3471243,
-      "lng": 47.8915271,
-      "articles": [
-        "apres-wagner-les-spin-doctors-russes-prennent-le-relai-en-afrique",
-        "le-double-jeu-de-moscou-au-yemen",
-        "touche-coule"
-      ]
-    },
-    {
-      "id": "du-nord",
-      "name": "du Nord",
-      "country": "Royaume-Uni",
-      "lat": 54.7023545,
-      "lng": -3.2765753,
-      "articles": [
-        "africa-flop",
-        "africa-flop-saison-2",
-        "ordre-de-debandade-en-azawad"
       ]
     },
     {
@@ -2614,18 +2509,6 @@
       ]
     },
     {
-      "id": "emirats-arabes-unis",
-      "name": "Émirats arabes unis",
-      "country": "Émirats arabes unis",
-      "lat": 24.0002488,
-      "lng": 53.9994829,
-      "articles": [
-        "allez-creuse-bebe-contes-russes-de-lor-en-afrique-centrale",
-        "satellites-missiles-drones-les-dessous-du-soutien-russe-a-liran",
-        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
-      ]
-    },
-    {
       "id": "aden",
       "name": "Aden",
       "country": "Yémen",
@@ -2634,17 +2517,6 @@
       "articles": [
         "le-double-jeu-de-moscou-au-yemen",
         "moscow-double-dealing-in-yemen"
-      ]
-    },
-    {
-      "id": "afrique-du-sud",
-      "name": "Afrique du Sud",
-      "country": "Afrique du Sud",
-      "lat": -28.8166236,
-      "lng": 24.991639,
-      "articles": [
-        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
-        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
       ]
     },
     {
@@ -2692,17 +2564,6 @@
       ]
     },
     {
-      "id": "arabie-saoudite",
-      "name": "Arabie Saoudite",
-      "country": "Arabie saoudite",
-      "lat": 25.6242618,
-      "lng": 42.3528328,
-      "articles": [
-        "le-double-jeu-de-moscou-au-yemen",
-        "libye-plateforme-logistique-du-groupe-wagner"
-      ]
-    },
-    {
       "id": "argentina",
       "name": "Argentina",
       "country": "Argentine",
@@ -2747,17 +2608,6 @@
       ]
     },
     {
-      "id": "beijing",
-      "name": "Beijing",
-      "country": "Chine",
-      "lat": 39.9057136,
-      "lng": 116.3912972,
-      "articles": [
-        "china-gets-nvidia-gpu-for-the-ai-race-through-vietnam-and-malaysia",
-        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan"
-      ]
-    },
-    {
       "id": "bishkek",
       "name": "Bishkek",
       "country": "Kirghizistan",
@@ -2766,28 +2616,6 @@
       "articles": [
         "after-wagner-russias-spin-doctors-take-over-in-africa",
         "apres-wagner-les-spin-doctors-russes-prennent-le-relai-en-afrique"
-      ]
-    },
-    {
-      "id": "bolivia",
-      "name": "Bolivia",
-      "country": "Bolivie",
-      "lat": -17.0568696,
-      "lng": -64.9912286,
-      "articles": [
-        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "anatomy-of-deception-engineering-covert-influence-operations"
-      ]
-    },
-    {
-      "id": "bolivie",
-      "name": "Bolivie",
-      "country": "Bolivie",
-      "lat": -17.0568696,
-      "lng": -64.9912286,
-      "articles": [
-        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
-        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
       ]
     },
     {
@@ -2802,17 +2630,6 @@
       ]
     },
     {
-      "id": "bruxelles",
-      "name": "Bruxelles",
-      "country": "Belgique",
-      "lat": 50.8467372,
-      "lng": 4.352493,
-      "articles": [
-        "denis-pavlov-lhomme-de-bangui",
-        "le-forum-international-sur-la-securite-de-la-russie-le-temps-de-la-confrontation"
-      ]
-    },
-    {
       "id": "casablanca",
       "name": "Casablanca",
       "country": "Maroc",
@@ -2821,17 +2638,6 @@
       "articles": [
         "faces-of-the-gpci-network",
         "les-visages-du-reseau-gpci"
-      ]
-    },
-    {
-      "id": "chypre",
-      "name": "Chypre",
-      "country": "Chypre",
-      "lat": 34.9823018,
-      "lng": 33.1451285,
-      "articles": [
-        "libye-plateforme-logistique-du-groupe-wagner",
-        "objectif-mediterranee-pour-african-corps"
       ]
     },
     {
@@ -2846,47 +2652,14 @@
       ]
     },
     {
-      "id": "cyprus",
-      "name": "Cyprus",
-      "country": "Chypre",
-      "lat": 34.9823018,
-      "lng": 33.1451285,
-      "articles": [
-        "libya-wagner-groups-logistics-platform",
-        "mediterranean-sea-objective-for-the-african-corps"
-      ]
-    },
-    {
-      "id": "damascus",
-      "name": "Damascus",
-      "country": "États-Unis d'Amérique",
-      "lat": 45.4176261,
-      "lng": -122.458985,
+      "id": "damas",
+      "name": "Damas",
+      "country": "Syrie",
+      "lat": 33.5138,
+      "lng": 36.2765,
       "articles": [
         "gru-inc-chasse-les-actifs-petroliers-de-prigojine-en-syrie",
         "gru-inc-hunting-for-prigozhins-oil-assets-in-syria"
-      ]
-    },
-    {
-      "id": "dubai",
-      "name": "Dubaï",
-      "country": "Émirats arabes unis",
-      "lat": 25.2296341,
-      "lng": 55.289585,
-      "articles": [
-        "le-double-jeu-de-moscou-au-yemen",
-        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
-      ]
-    },
-    {
-      "id": "egypte",
-      "name": "Egypte",
-      "country": "Égypte",
-      "lat": 26.2540493,
-      "lng": 29.2675469,
-      "articles": [
-        "libye-plateforme-logistique-du-groupe-wagner",
-        "russie-afrique-un-forum-en-demi-teinte-a-lombre-de-la-guerre-en-ukraine"
       ]
     },
     {
@@ -2945,50 +2718,6 @@
       ]
     },
     {
-      "id": "guinea",
-      "name": "Guinea",
-      "country": "Guinée",
-      "lat": 10.7226226,
-      "lng": -10.7083587,
-      "articles": [
-        "after-wagner-russias-spin-doctors-take-over-in-africa",
-        "beyond-the-sahelian-illusion"
-      ]
-    },
-    {
-      "id": "israel",
-      "name": "Israel",
-      "country": "Israël",
-      "lat": 30.8124247,
-      "lng": 34.8594762,
-      "articles": [
-        "hit-and-sunk",
-        "moscow-double-dealing-in-yemen"
-      ]
-    },
-    {
-      "id": "italie",
-      "name": "Italie",
-      "country": "Italie",
-      "lat": 42.6384261,
-      "lng": 12.674297,
-      "articles": [
-        "architecture-du-silence-comment-la-russie-censure-son-internet",
-        "le-reseau-catrosa-des-societes-europeennes-liees-aux-developpeurs-darmes-chimiques-russes"
-      ]
-    },
-    {
-      "id": "italy",
-      "name": "Italy",
-      "country": "Italie",
-      "lat": 42.6384261,
-      "lng": 12.674297,
-      "articles": [
-        "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa",
-        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers"
-      ]
-    },
-    {
       "id": "jordanie",
       "name": "Jordanie",
       "country": "Jordanie",
@@ -3022,17 +2751,6 @@
       ]
     },
     {
-      "id": "kirghizistan",
-      "name": "Kirghizistan",
-      "country": "Kirghizistan",
-      "lat": 41.5089324,
-      "lng": 74.724091,
-      "articles": [
-        "architecture-du-silence-comment-la-russie-censure-son-internet",
-        "le-reseau-catrosa-des-societes-europeennes-liees-aux-developpeurs-darmes-chimiques-russes"
-      ]
-    },
-    {
       "id": "koupela",
       "name": "Koupéla",
       "country": "Burkina Faso",
@@ -3052,28 +2770,6 @@
       "articles": [
         "recruitment-of-africans-in-ukraine-governments-act-in-the-face-of-growing-evidence",
         "russias-international-security-forum-time-for-confrontation"
-      ]
-    },
-    {
-      "id": "lebanon",
-      "name": "Lebanon",
-      "country": "Liban",
-      "lat": 33.8750629,
-      "lng": 35.843409,
-      "articles": [
-        "gru-inc-hunting-for-prigozhins-oil-assets-in-syria",
-        "hit-and-sunk"
-      ]
-    },
-    {
-      "id": "liban",
-      "name": "Liban",
-      "country": "Liban",
-      "lat": 33.8750629,
-      "lng": 35.843409,
-      "articles": [
-        "gru-inc-chasse-les-actifs-petroliers-de-prigojine-en-syrie",
-        "touche-coule"
       ]
     },
     {
@@ -3110,55 +2806,11 @@
       ]
     },
     {
-      "id": "mauritania",
-      "name": "Mauritania",
-      "country": "Mauritanie",
-      "lat": 20.2540382,
-      "lng": -9.2399263,
-      "articles": [
-        "mediterranean-sea-objective-for-the-african-corps",
-        "russia-africa-a-forum-with-mixed-results-overshadowed-by-the-war-in-ukraine"
-      ]
-    },
-    {
-      "id": "mauritanie",
-      "name": "Mauritanie",
-      "country": "Mauritanie",
-      "lat": 20.2540382,
-      "lng": -9.2399263,
-      "articles": [
-        "objectif-mediterranee-pour-african-corps",
-        "russie-afrique-un-forum-en-demi-teinte-a-lombre-de-la-guerre-en-ukraine"
-      ]
-    },
-    {
-      "id": "mediterranean",
-      "name": "Mediterranean",
-      "country": "—",
-      "lat": 35.0000035,
-      "lng": 19.9999957,
-      "articles": [
-        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "mediterranean-sea-objective-for-the-african-corps"
-      ]
-    },
-    {
-      "id": "mer-mediterranee",
-      "name": "Mer Méditerranée",
-      "country": "—",
-      "lat": 35.0000035,
-      "lng": 19.9999957,
-      "articles": [
-        "la-base-aerienne-dal-khadim-un-avant-poste-russe-incontournable-en-libye",
-        "objectif-mediterranee-pour-african-corps"
-      ]
-    },
-    {
       "id": "mer-rouge",
       "name": "Mer Rouge",
       "country": "Égypte",
-      "lat": 24.6601831,
-      "lng": 34.1399929,
+      "lat": 25.5664162,
+      "lng": 34.0930512,
       "articles": [
         "russie-afrique-un-forum-en-demi-teinte-a-lombre-de-la-guerre-en-ukraine",
         "touche-coule"
@@ -3198,33 +2850,11 @@
       ]
     },
     {
-      "id": "namibia",
-      "name": "Namibia",
-      "country": "Namibie",
-      "lat": -23.2335499,
-      "lng": 17.3231107,
-      "articles": [
-        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "anatomy-of-deception-engineering-covert-influence-operations"
-      ]
-    },
-    {
-      "id": "namibie",
-      "name": "Namibie",
-      "country": "Namibie",
-      "lat": -23.2335499,
-      "lng": 17.3231107,
-      "articles": [
-        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
-        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
-      ]
-    },
-    {
       "id": "northern-mali",
       "name": "Northern Mali",
-      "country": "Fidji",
-      "lat": -16.3444007,
-      "lng": 179.349941,
+      "country": "Mali",
+      "lat": 18.5,
+      "lng": 1.5,
       "articles": [
         "disarray-in-azawad",
         "gold-thirst"
@@ -3264,17 +2894,6 @@
       ]
     },
     {
-      "id": "pekin",
-      "name": "Pékin",
-      "country": "Chine",
-      "lat": 39.9057136,
-      "lng": 116.3912972,
-      "articles": [
-        "influence-as-a-service-lillustration-de-la-dame-de-sochi",
-        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan"
-      ]
-    },
-    {
       "id": "rostov",
       "name": "Rostov",
       "country": "Russie",
@@ -3286,39 +2905,6 @@
       ]
     },
     {
-      "id": "royaume-uni",
-      "name": "Royaume Uni",
-      "country": "Royaume-Uni",
-      "lat": 54.7023545,
-      "lng": -3.2765753,
-      "articles": [
-        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan",
-        "touche-coule"
-      ]
-    },
-    {
-      "id": "saint-petersbourg",
-      "name": "Saint Petersbourg",
-      "country": "Russie",
-      "lat": 59.9606739,
-      "lng": 30.1586551,
-      "articles": [
-        "dimitri-sytyi-cadre-de-wagner-en-centrafrique",
-        "wagner-peau-de-chagrin"
-      ]
-    },
-    {
-      "id": "saint-petersburg",
-      "name": "Saint Petersburg",
-      "country": "Russie",
-      "lat": 59.9606739,
-      "lng": 30.1586551,
-      "articles": [
-        "anatomy-of-deception-engineering-covert-influence-operations",
-        "wagner-like-nobodys-business"
-      ]
-    },
-    {
       "id": "sanaa",
       "name": "Sanaa",
       "country": "Yémen",
@@ -3327,28 +2913,6 @@
       "articles": [
         "hit-and-sunk",
         "touche-coule"
-      ]
-    },
-    {
-      "id": "saudi-arabia",
-      "name": "Saudi Arabia",
-      "country": "Arabie saoudite",
-      "lat": 25.6242618,
-      "lng": 42.3528328,
-      "articles": [
-        "libya-wagner-groups-logistics-platform",
-        "moscow-double-dealing-in-yemen"
-      ]
-    },
-    {
-      "id": "senegal",
-      "name": "Senegal",
-      "country": "Sénégal",
-      "lat": 14.4750607,
-      "lng": -14.4529612,
-      "articles": [
-        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "after-wagner-russias-spin-doctors-take-over-in-africa"
       ]
     },
     {
@@ -3374,17 +2938,6 @@
       ]
     },
     {
-      "id": "st-petersbourg",
-      "name": "St Petersbourg",
-      "country": "Russie",
-      "lat": 59.9606739,
-      "lng": 30.1586551,
-      "articles": [
-        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "dimitri-sytyi-cadre-de-wagner-en-centrafrique"
-      ]
-    },
-    {
       "id": "taiwan",
       "name": "Taiwan",
       "country": "Taïwan",
@@ -3407,17 +2960,6 @@
       ]
     },
     {
-      "id": "tchad",
-      "name": "Tchad",
-      "country": "Tchad",
-      "lat": 15.6134137,
-      "lng": 19.0156172,
-      "articles": [
-        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
-        "spaghetti-de-lampedusa"
-      ]
-    },
-    {
       "id": "tenkodogo",
       "name": "Tenkodogo",
       "country": "Burkina Faso",
@@ -3437,28 +2979,6 @@
       "articles": [
         "objectif-mediterranee-pour-african-corps",
         "spaghetti-de-lampedusa"
-      ]
-    },
-    {
-      "id": "turquie",
-      "name": "Turquie",
-      "country": "Turquie",
-      "lat": 39.294076,
-      "lng": 35.2316631,
-      "articles": [
-        "africa-flop-saison-2",
-        "le-reseau-catrosa-des-societes-europeennes-liees-aux-developpeurs-darmes-chimiques-russes"
-      ]
-    },
-    {
-      "id": "united-kingdom",
-      "name": "United Kingdom",
-      "country": "Royaume-Uni",
-      "lat": 54.7023545,
-      "lng": -3.2765753,
-      "articles": [
-        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "global-kombat"
       ]
     },
     {
@@ -3495,40 +3015,7 @@
       ]
     },
     {
-      "id": "du-sud",
-      "name": "du Sud",
-      "country": "Afrique du Sud",
-      "lat": -28.8166236,
-      "lng": 24.991639,
-      "articles": [
-        "spaghetti-de-lampedusa",
-        "une-influence-pas-si-orthodoxe-la-religion-comme-arme-du-kremlin"
-      ]
-    },
-    {
-      "id": "egypte",
-      "name": "Égypte",
-      "country": "Égypte",
-      "lat": 26.2540493,
-      "lng": 29.2675469,
-      "articles": [
-        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
-        "russie-afrique-un-forum-en-demi-teinte-a-lombre-de-la-guerre-en-ukraine"
-      ]
-    },
-    {
-      "id": "etats",
-      "name": "États",
-      "country": "États-Unis d'Amérique",
-      "lat": 39.7837304,
-      "lng": -100.445882,
-      "articles": [
-        "alabuga-noeud-central-de-la-menace-hybride-russe",
-        "influence-as-a-service-lillustration-de-la-dame-de-sochi"
-      ]
-    },
-    {
-      "id": "x57721",
+      "id": "x95633",
       "name": "России",
       "country": "Russie",
       "lat": 55.7946485,
