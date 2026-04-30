@@ -1421,7 +1421,7 @@
     position: fixed;
     inset: 0;
     background: var(--bg);
-    z-index: 9500;
+    z-index: 10000;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
@@ -3782,9 +3782,10 @@ function setupCompareBtn() {
   computeHotPlaces();
   readUrlState();
 
-  // 3. Setup landing : si l'utilisateur a déjà choisi une langue, on saute la landing
+  // 3. Setup landing : remplit les chiffres
   setupLanding();
   fillLandingStats(DATA);
+  // Si l'utilisateur a déjà choisi une langue (URL ou localStorage), on cache la landing
   if (shouldSkipLanding()) {
     hideLanding();
   }
@@ -3818,8 +3819,9 @@ function setupCompareBtn() {
     }, 100);
   }
 
-  // 8. Splash après tout (si la landing était skippée)
-  if (shouldSkipLanding()) runSplash();
+  // 8. Le splash se cache TOUJOURS après son animation, indépendamment de la landing
+  //    (la landing reste visible au-dessus si elle n'a pas été cachée)
+  runSplash();
 })();
 
 </script>
