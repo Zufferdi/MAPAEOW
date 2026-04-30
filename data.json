@@ -2,10 +2,10 @@
   "_meta": {
     "generated": "2026-04-30",
     "source": "https://public-api.wordpress.com/wp/v2/sites/alleyesonwagner.org",
-    "articles_count": 102,
+    "articles_count": 103,
     "places_count": 127,
     "languages": {
-      "fr": 51,
+      "fr": 52,
       "en": 49,
       "ru": 2
     },
@@ -20,6 +20,15 @@
     }
   },
   "articles": [
+    {
+      "id": "africa-corps-au-mali",
+      "title": "Africa Corps au Mali",
+      "url": "https://alleyesonwagner.org/2026/04/30/africa-corps-au-mali/",
+      "date": "2026-04-30",
+      "category": "AEOW",
+      "lang": "fr",
+      "excerpt": "Voici un petit rappel sur la présence de Africa Corps au Mali: un contigent d’environ 2500 hommes avec une mission de soutien principalement à la junte (contrairement au Groupe Wagner qui était déployé régulièrement en opération avec les FAMas). D’après plusieurs sources d’INPACT"
+    },
     {
       "id": "le-forum-international-sur-la-securite-de-la-russie-le-temps-de-la-confrontation",
       "title": "Le Forum International sur la Sécurité de la Russie: le temps de la confrontation",
@@ -1157,6 +1166,7 @@
       "lng": -2.2900239,
       "articles": [
         "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
+        "africa-corps-au-mali",
         "africa-flop",
         "africa-flop-saison-2",
         "africa-politology-loffensive-feutree-de-moscou",
@@ -1994,6 +2004,20 @@
       ]
     },
     {
+      "id": "tessalit",
+      "name": "Tessalit",
+      "country": "Mali",
+      "lat": 20.2019542,
+      "lng": 1.0124531,
+      "articles": [
+        "africa-corps-au-mali",
+        "africa-flop",
+        "disarray-in-azawad",
+        "ordre-de-debandade-en-azawad",
+        "wagner-peau-de-chagrin"
+      ]
+    },
+    {
       "id": "turquie",
       "name": "Turquie",
       "country": "Turquie",
@@ -2221,8 +2245,8 @@
       "id": "paris",
       "name": "Paris",
       "country": "France",
-      "lat": 48.8534951,
-      "lng": 2.3483915,
+      "lat": 48.8588897,
+      "lng": 2.320041,
       "articles": [
         "africa-politology-loffensive-feutree-de-moscou",
         "denis-pavlov-lhomme-de-bangui",
@@ -2241,19 +2265,6 @@
         "influence-as-a-service-lillustration-de-la-dame-de-sochi",
         "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
         "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan"
-      ]
-    },
-    {
-      "id": "tessalit",
-      "name": "Tessalit",
-      "country": "Mali",
-      "lat": 20.2019542,
-      "lng": 1.0124531,
-      "articles": [
-        "africa-flop",
-        "disarray-in-azawad",
-        "ordre-de-debandade-en-azawad",
-        "wagner-peau-de-chagrin"
       ]
     },
     {
@@ -2356,8 +2367,8 @@
       "id": "hong-kong",
       "name": "Hong Kong",
       "country": "Chine",
-      "lat": 22.3492155,
-      "lng": 114.1857978,
+      "lat": 22.2792968,
+      "lng": 114.1628907,
       "articles": [
         "china-gets-nvidia-gpu-for-the-ai-race-through-vietnam-and-malaysia",
         "gru-inc-chasse-les-actifs-petroliers-de-prigojine-en-syrie",

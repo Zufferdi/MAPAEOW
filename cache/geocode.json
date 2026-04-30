@@ -42,12 +42,12 @@
   },
   "afrique de prigojine": null,
   "afrique de l’ouest": {
-    "lat": 5.5238575,
-    "lng": 10.1256764,
-    "country": "Cameroun",
-    "display": "Ferme EPA, Nkong-Zem, Menoua, Région de l'Ouest, Cameroun",
-    "type": "farmyard",
-    "class": "landuse"
+    "lat": 45.4203354,
+    "lng": -75.6944061,
+    "country": "Canada",
+    "display": "D'Afrique, 164, avenue Laurier Ouest, Centre-ville, Somerset, Ottawa, Est de l'Ontario, Ontario, K1P 5J2, Canada",
+    "type": "restaurant",
+    "class": "amenity"
   },
   "afrique du nord": {
     "lat": 41.362599,
@@ -118,7 +118,7 @@
     "lat": 31.9515694,
     "lng": 35.9239625,
     "country": "Jordanie",
-    "display": "Amman, Amman Sub-District, Amman Qasabah District, Gouvernorat d'Amman, 11118, Jordanie",
+    "display": "Amman, Amman Sub-District, Amman Qasabah District, Gouvernorat d'Amman, 11110, Jordanie",
     "type": "city",
     "class": "place"
   },
@@ -195,7 +195,7 @@
     "class": "boundary"
   },
   "balkans": {
-    "lat": 41.7785016,
+    "lat": 41.7785017,
     "lng": 23.814677,
     "country": "Bulgarie",
     "display": "Balkans, Bulgarie",
@@ -259,11 +259,11 @@
     "class": "boundary"
   },
   "bittou": {
-    "lat": 11.2470714,
-    "lng": -0.299902,
+    "lat": 11.2746799,
+    "lng": -0.3115963,
     "country": "Burkina Faso",
-    "display": "Brigade Territoriale de BITTOU, N 16, Noaho, Bitou, Boulgou, Centre-Est, Burkina Faso",
-    "type": "police",
+    "display": "Hôpital de Bittou, N 16, Bitou, Boulgou, Centre-Est, Burkina Faso",
+    "type": "hospital",
     "class": "amenity"
   },
   "biélorussie": {
@@ -465,8 +465,8 @@
   },
   "gurokhen": null,
   "hong kong": {
-    "lat": 22.3492155,
-    "lng": 114.1857978,
+    "lat": 22.2792968,
+    "lng": 114.1628907,
     "country": "Chine",
     "display": "Hong Kong, Chine",
     "type": "administrative",
@@ -781,8 +781,8 @@
     "class": "boundary"
   },
   "paris": {
-    "lat": 48.8534951,
-    "lng": 2.3483915,
+    "lat": 48.8588897,
+    "lng": 2.320041,
     "country": "France",
     "display": "Paris, Île-de-France, France métropolitaine, France",
     "type": "administrative",
@@ -805,8 +805,8 @@
     "class": "boundary"
   },
   "poblenou": {
-    "lat": 41.4037049,
-    "lng": 2.2033841,
+    "lat": 41.403733,
+    "lng": 2.2033544,
     "country": "Espagne",
     "display": "Poblenou, Carrer de Pujades, el Poblenou, Sant Martí, Barcelone, Barcelonais, Barcelone, Catalogne, 08005, Espagne",
     "type": "stop",
@@ -858,7 +858,7 @@
     "lat": 47.2222596,
     "lng": 39.7198736,
     "country": "Russie",
-    "display": "Rostov-sur-le-Don, Rostov-on-Don, District fédéral du Sud, Russie",
+    "display": "Rostov-sur-le-Don, Rostov-on-Don, Oblast de Rostov, District fédéral du Sud, Russie",
     "type": "city",
     "class": "place"
   },
@@ -1180,16 +1180,16 @@
     "lat": 38.9243135,
     "lng": -77.0744826,
     "country": "États-Unis d'Amérique",
-    "display": "Ambassade de Russie, 2650, Wisconsin Avenue Northwest, Massachusetts Avenue Heights, Glover Park, Ward 3, Washington, District de Columbia, 20007, États-Unis d'Amérique",
+    "display": "Ambassade de Russie, 2650, Wisconsin Avenue Northwest, Glover Park, Ward 3, Washington, District de Columbia, 20007, États-Unis d'Amérique",
     "type": "diplomatic",
     "class": "office"
   },
   "the soviet union": {
-    "lat": 50.5269282,
-    "lng": 16.0906248,
-    "country": "Tchéquie",
-    "display": "Cannon Red Army as liberators from the Soviet Union, Path of liberation by the Red Army, Odolov, Malé Svatoňovice, okres Trutnov, Hradec Králové Region, Nord-Est, 542 33, Tchéquie",
-    "type": "vehicle",
+    "lat": 56.3456965,
+    "lng": 43.844463,
+    "country": "Russie",
+    "display": "Decorative Stone in honor of the hero of the Soviet Union Ryazanov V.G, улица Шимборского, Сормовский район, Nijni Novgorod, Nizhny Novgorod, Oblast de Nijni Novgorod, District fédéral de la Volga, 603037, Russie",
+    "type": "monument",
     "class": "historic"
   },
   "the united arab emirates": {
