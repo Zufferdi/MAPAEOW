@@ -30,6 +30,7 @@
     --accent-soft: rgba(255, 138, 61, 0.12);
     --accent-bright: #ffb47a;
     --wagner-red: #dc1f1f;
+    --emerging: #9aff8a;
     --link-color: #ff8a3d;
     --serif: 'Instrument Serif', 'Times New Roman', serif;
     --sans: 'Manrope', system-ui, sans-serif;
@@ -37,7 +38,7 @@
     --shadow-pop: 0 12px 40px -12px rgba(0,0,0,0.6), 0 2px 8px -2px rgba(0,0,0,0.4);
     --header-h: 58px;
     --filter-h: 46px;
-    --timeline-h: 90px;
+    --timeline-h: 110px;
   }
 
   * { box-sizing: border-box; }
@@ -57,7 +58,7 @@
     height: 100vh;
   }
 
-  /* ============= SPLASH SCREEN ============= */
+  /* ============= SPLASH ============= */
   #splash {
     position: fixed;
     inset: 0;
@@ -83,11 +84,7 @@
     opacity: 0;
     animation: splash-fade-in 0.8s ease 0.2s forwards;
   }
-  .splash-logo em {
-    color: var(--accent);
-    font-style: italic;
-    display: block;
-  }
+  .splash-logo em { color: var(--accent); font-style: italic; display: block; }
   .splash-tag {
     font-family: var(--mono);
     font-size: 10.5px;
@@ -201,11 +198,23 @@
     color: var(--text-faint);
     pointer-events: none;
   }
+  .search-wrap kbd {
+    position: absolute;
+    right: 8px; top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-faint);
+    border: 1px solid var(--border);
+    padding: 1px 5px;
+    background: var(--bg);
+    pointer-events: none;
+  }
   input[type="search"] {
     background: var(--bg-elev);
     border: 1px solid var(--border);
     color: var(--text);
-    padding: 8px 12px 8px 32px;
+    padding: 8px 32px 8px 32px;
     font-family: var(--sans);
     font-size: 13px;
     width: 220px;
@@ -214,6 +223,7 @@
   }
   input[type="search"]::placeholder { color: var(--text-faint); }
   input[type="search"]:focus { border-color: var(--accent); background: var(--bg-elev-2); }
+  input[type="search"]:focus + kbd { display: none; }
 
   .toggle-group {
     display: flex;
@@ -238,6 +248,20 @@
   .toggle-group button:hover { color: var(--text); background: var(--bg-elev-2); }
   .toggle-group button.active { color: var(--accent); background: var(--accent-soft); }
   .toggle-group button.tour-btn.active { color: var(--wagner-red); background: rgba(220,31,31,0.12); }
+  .toggle-group button.compare-btn.active { color: var(--emerging); background: rgba(154,255,138,0.1); }
+
+  .icon-btn {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    width: 32px; height: 32px;
+    display: grid; place-items: center;
+    cursor: pointer;
+    font-family: var(--mono);
+    font-size: 14px;
+    transition: all 0.15s;
+  }
+  .icon-btn:hover { border-color: var(--accent); color: var(--accent); }
 
   .stats {
     display: flex;
@@ -246,9 +270,7 @@
     border-left: 1px solid var(--border);
     color: var(--text-dim);
   }
-  .stats .stat {
-    display: flex; flex-direction: column; align-items: flex-end; gap: 2px;
-  }
+  .stats .stat { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
   .stats strong {
     font-family: var(--mono);
     font-weight: 500;
@@ -266,7 +288,7 @@
     color: var(--text-faint);
   }
 
-  /* ============= FILTERBAR ============= */
+  /* ============= FILTERBAR + sidebar tabs ============= */
   .filterbar {
     display: flex;
     align-items: center;
@@ -303,31 +325,23 @@
     white-space: nowrap;
   }
   .chip:hover { border-color: var(--text-dim); color: var(--text); }
-  .chip.active {
-    border-color: var(--accent);
-    background: var(--accent-soft);
-    color: var(--accent-bright);
-  }
+  .chip.active { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-bright); }
   .chip .count {
     margin-left: 6px;
     font-family: var(--mono);
     font-size: 10px;
     color: var(--text-faint);
+    transition: color 0.2s;
   }
   .chip.active .count { color: var(--accent); }
-  .chip.lang {
-    text-transform: uppercase;
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.06em;
+  .chip .total {
+    color: var(--text-faint);
+    opacity: 0.5;
   }
+  .chip.lang { text-transform: uppercase; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; }
+  .chip.zero-results { opacity: 0.35; }
 
-  .filter-divider {
-    width: 1px;
-    height: 22px;
-    background: var(--border);
-    flex-shrink: 0;
-  }
+  .filter-divider { width: 1px; height: 22px; background: var(--border); flex-shrink: 0; }
 
   .reset-btn {
     background: transparent;
@@ -371,10 +385,7 @@
     color: var(--text) !important;
     border-color: var(--border) !important;
   }
-  .leaflet-control-zoom a:hover {
-    background: var(--bg-elev-2) !important;
-    color: var(--accent) !important;
-  }
+  .leaflet-control-zoom a:hover { background: var(--bg-elev-2) !important; color: var(--accent) !important; }
   .leaflet-control-attribution {
     background: rgba(10,11,14,0.85) !important;
     color: var(--text-faint) !important;
@@ -383,13 +394,13 @@
   }
   .leaflet-control-attribution a { color: var(--text-dim) !important; }
 
-  /* Markers et animations de pulse */
+  /* Markers — avec dim/highlight pour focus narrative */
   .place-marker {
     background: var(--accent);
     border: 2px solid var(--bg);
     border-radius: 50%;
     box-shadow: 0 0 0 1px var(--accent), 0 0 12px rgba(255,138,61,0.5);
-    transition: transform 0.15s;
+    transition: transform 0.15s, opacity 0.3s;
     position: relative;
     transform-origin: center;
   }
@@ -398,8 +409,18 @@
     background: var(--accent-bright);
     box-shadow: 0 0 0 2px var(--accent), 0 0 24px rgba(255,180,122,0.8);
   }
+  .place-marker.dimmed { opacity: 0.2; }
+  .place-marker.connected {
+    box-shadow: 0 0 0 1px var(--accent), 0 0 16px rgba(255,138,61,0.7);
+    opacity: 1;
+  }
+  /* Émergent : badge vert */
+  .place-marker.emerging {
+    background: var(--emerging);
+    box-shadow: 0 0 0 1px var(--emerging), 0 0 14px rgba(154,255,138,0.6);
+  }
 
-  /* Pulse continu sur le lieu sélectionné */
+  /* Pulses */
   .place-marker.selected::before {
     content: '';
     position: absolute;
@@ -410,7 +431,6 @@
     animation: pulse-ring 1.6s ease-out infinite;
     pointer-events: none;
   }
-  /* Pulse continu plus subtil sur les "hot spots" (top 5%) */
   .place-marker.hot::after {
     content: '';
     position: absolute;
@@ -426,22 +446,25 @@
     80%  { opacity: 0; }
     100% { transform: scale(2.6); opacity: 0; }
   }
-
-  /* Animation d'arrivée stagger */
-  .place-marker.drop-in {
-    animation: marker-drop-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) backwards;
-  }
+  .place-marker.drop-in { animation: marker-drop-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) backwards; }
   @keyframes marker-drop-in {
     from { opacity: 0; transform: scale(0); }
     to   { opacity: 1; transform: scale(1); }
   }
 
-  /* Co-occurrence link styling */
+  /* Co-occurrence link styling avec highlight */
   .leaflet-overlay-pane path.cooccurrence-link {
     stroke: var(--link-color);
     fill: none;
     pointer-events: none;
+    transition: opacity 0.3s, stroke-width 0.3s;
   }
+  .leaflet-overlay-pane path.cooccurrence-link.dimmed { opacity: 0.05 !important; }
+  .leaflet-overlay-pane path.cooccurrence-link.highlighted { opacity: 1 !important; }
+
+  /* Mode comparaison : couleurs distinctes */
+  .leaflet-overlay-pane path.delta-line.gain { stroke: var(--emerging); }
+  .leaflet-overlay-pane path.delta-line.loss { stroke: var(--wagner-red); }
 
   .leaflet-tooltip {
     background: var(--bg-elev) !important;
@@ -452,7 +475,8 @@
     box-shadow: var(--shadow-pop) !important;
     font-family: var(--sans) !important;
     font-size: 12px !important;
-    padding: 6px 10px !important;
+    padding: 8px 12px !important;
+    max-width: 260px !important;
   }
   .leaflet-tooltip::before { display: none !important; }
   .leaflet-tooltip strong {
@@ -467,6 +491,34 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
     margin-top: 2px;
+  }
+  /* Mini-sparkline dans le tooltip */
+  .tooltip-sparkline {
+    margin-top: 8px;
+    height: 18px;
+    display: flex;
+    align-items: flex-end;
+    gap: 1px;
+  }
+  .tooltip-sparkline span {
+    flex: 1;
+    background: var(--accent);
+    min-height: 1px;
+    opacity: 0.6;
+  }
+  .tooltip-recent {
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid var(--border-soft);
+    font-family: var(--sans);
+    font-size: 11px;
+    font-style: italic;
+    color: var(--text-dim);
+    line-height: 1.3;
+  }
+  .tooltip-emerging {
+    color: var(--emerging) !important;
+    font-weight: 500;
   }
 
   /* ============= LÉGENDE ============= */
@@ -501,8 +553,7 @@
     color: var(--text-faint);
   }
   .legend-toggle {
-    background: none;
-    border: none;
+    background: none; border: none;
     color: var(--text-faint);
     font-family: var(--mono);
     font-size: 14px;
@@ -536,15 +587,9 @@
     text-transform: uppercase;
     letter-spacing: 0.06em;
   }
-  .legend-links {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
+  .legend-links { display: flex; flex-direction: column; gap: 5px; }
   .legend-link-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: flex; align-items: center; gap: 10px;
     font-family: var(--mono);
     font-size: 10px;
     color: var(--text-dim);
@@ -555,12 +600,11 @@
     flex-shrink: 0;
   }
   .legend-markers {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    display: flex; align-items: center; gap: 12px;
     font-family: var(--mono);
     font-size: 10px;
     color: var(--text-dim);
+    flex-wrap: wrap;
   }
   .legend-marker-dot {
     background: var(--accent);
@@ -568,6 +612,7 @@
     box-shadow: 0 0 0 1px var(--accent);
     flex-shrink: 0;
   }
+  .legend-marker-dot.emerging-dot { background: var(--emerging); box-shadow: 0 0 0 1px var(--emerging); }
 
   /* ============= TOP 10 PANEL ============= */
   .top-places {
@@ -586,11 +631,7 @@
     flex-direction: column;
     transition: width 0.25s ease, max-height 0.25s ease;
   }
-  .top-places.collapsed {
-    width: 44px;
-    max-height: 44px;
-    overflow: hidden;
-  }
+  .top-places.collapsed { width: 44px; max-height: 44px; overflow: hidden; }
   .top-places-header {
     display: flex;
     justify-content: space-between;
@@ -614,8 +655,7 @@
     transform: rotate(180deg);
   }
   .top-places-toggle {
-    background: none;
-    border: none;
+    background: none; border: none;
     color: var(--text-faint);
     cursor: pointer;
     font-family: var(--mono);
@@ -625,11 +665,7 @@
   }
   .top-places.collapsed .top-places-toggle { display: none; }
   .top-places-toggle:hover { color: var(--accent); }
-  .top-places-list {
-    overflow-y: auto;
-    flex: 1;
-    padding: 4px 0;
-  }
+  .top-places-list { overflow-y: auto; flex: 1; padding: 4px 0; }
   .top-places-list::-webkit-scrollbar { width: 4px; }
   .top-places-list::-webkit-scrollbar-track { background: transparent; }
   .top-places-list::-webkit-scrollbar-thumb { background: var(--border); }
@@ -658,6 +694,7 @@
     text-align: right;
   }
   .top-place-row.selected .top-place-rank { color: var(--accent); }
+  .top-place-name-wrap { min-width: 0; }
   .top-place-name {
     font-family: var(--serif);
     font-size: 15px;
@@ -666,6 +703,19 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .top-place-emerging-badge {
+    font-family: var(--mono);
+    font-size: 8.5px;
+    color: var(--emerging);
+    border: 1px solid var(--emerging);
+    padding: 1px 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    flex-shrink: 0;
   }
   .top-place-country {
     font-family: var(--mono);
@@ -682,7 +732,6 @@
     color: var(--accent);
     font-weight: 500;
   }
-  .top-place-name-wrap { min-width: 0; }
   .top-places.collapsed .top-places-list { display: none; }
 
   /* ============= TOUR INDICATOR ============= */
@@ -725,10 +774,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  .tour-indicator-text strong {
-    color: var(--wagner-red);
-    font-weight: 500;
-  }
+  .tour-indicator-text strong { color: var(--wagner-red); font-weight: 500; }
   .tour-skip-btn {
     background: none;
     border: 1px solid var(--border);
@@ -756,13 +802,38 @@
   #sidebar::-webkit-scrollbar-thumb { background: var(--border); }
   #sidebar::-webkit-scrollbar-thumb:hover { background: var(--text-faint); }
 
-  /* Sidebar empty avec "À LA UNE" */
-  .sidebar-empty {
-    padding: 0;
+  /* Sidebar tabs (Place / Stats) */
+  .sidebar-tabs {
     display: flex;
-    flex-direction: column;
-    flex: 1;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+    background: var(--bg-elev);
+    position: sticky;
+    top: 0;
+    z-index: 2;
   }
+  .sidebar-tab {
+    flex: 1;
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    font-family: var(--mono);
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 12px 14px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s;
+  }
+  .sidebar-tab:hover { color: var(--text); }
+  .sidebar-tab.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  /* Sidebar empty avec "À LA UNE" */
+  .sidebar-empty { padding: 0; display: flex; flex-direction: column; flex: 1; }
   .sidebar-intro {
     padding: 32px 24px 20px;
     text-align: center;
@@ -789,9 +860,7 @@
     letter-spacing: 0.1em;
     color: var(--text-faint);
   }
-  .sidebar-features {
-    padding: 24px 24px 16px;
-  }
+  .sidebar-features { padding: 24px 24px 16px; }
   .sidebar-features-label {
     font-family: var(--mono);
     font-size: 10px;
@@ -846,9 +915,7 @@
     padding: 24px 24px 18px;
     border-bottom: 1px solid var(--border-soft);
     background: var(--bg-elev);
-    position: sticky;
-    top: 0;
-    z-index: 1;
+    position: relative;
   }
   .sidebar-header .crumb {
     font-family: var(--mono);
@@ -865,6 +932,10 @@
     margin: 0 0 4px;
     letter-spacing: -0.01em;
     line-height: 1.05;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
   }
   .sidebar-header .country {
     color: var(--accent);
@@ -872,6 +943,17 @@
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+  }
+  .sidebar-header .emerging-tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--emerging);
+    border: 1px solid var(--emerging);
+    padding: 2px 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: rgba(154, 255, 138, 0.05);
+    margin-left: 8px;
   }
   .sidebar-header .coords {
     margin-top: 12px;
@@ -902,6 +984,30 @@
     font-size: 11px;
     margin-left: auto;
   }
+  .share-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+    align-items: center;
+  }
+  .share-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    font-family: var(--mono);
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .share-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .share-btn.copied { border-color: var(--emerging); color: var(--emerging); }
+  .share-btn svg { width: 11px; height: 11px; }
 
   .articles-list { padding: 8px 0; list-style: none; margin: 0; }
   .article-card {
@@ -930,11 +1036,7 @@
     border: 1px solid var(--accent);
     padding: 2px 6px;
   }
-  .article-card .date {
-    font-family: var(--mono);
-    font-size: 10.5px;
-    color: var(--text-faint);
-  }
+  .article-card .date { font-family: var(--mono); font-size: 10.5px; color: var(--text-faint); }
   .article-card h3 {
     font-family: var(--serif);
     font-size: 19px;
@@ -963,10 +1065,7 @@
     transition: color 0.12s, transform 0.15s;
     display: inline-block;
   }
-  .article-card:hover .arrow {
-    color: var(--accent);
-    transform: translateX(4px);
-  }
+  .article-card:hover .arrow { color: var(--accent); transform: translateX(4px); }
 
   .close-btn {
     position: absolute;
@@ -982,7 +1081,116 @@
   }
   .close-btn:hover { border-color: var(--accent); color: var(--accent); }
 
-  /* ============= TIMELINE ============= */
+  /* === STATISTIQUES PANEL === */
+  .stats-panel { padding: 24px; }
+  .stats-section { margin-bottom: 28px; }
+  .stats-section:last-child { margin-bottom: 0; }
+  .stats-section-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-faint);
+    margin-bottom: 14px;
+  }
+  .stats-section-label::before {
+    content: '';
+    display: inline-block;
+    width: 12px; height: 1px;
+    background: var(--accent);
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+  .stats-bigfig {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .stats-bigfig-card {
+    border: 1px solid var(--border-soft);
+    padding: 14px;
+  }
+  .stats-bigfig-num {
+    font-family: var(--mono);
+    font-size: 28px;
+    color: var(--accent);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .stats-bigfig-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-faint);
+    margin-top: 6px;
+  }
+  /* Mini-bars histogramme catégories / pays */
+  .stats-bars { display: flex; flex-direction: column; gap: 8px; }
+  .stats-bar-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: center;
+    cursor: pointer;
+    padding: 4px 0;
+  }
+  .stats-bar-row:hover .stats-bar-name { color: var(--accent); }
+  .stats-bar-name {
+    font-size: 12px;
+    color: var(--text);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: color 0.12s;
+  }
+  .stats-bar-track {
+    height: 4px;
+    background: var(--border-soft);
+    margin-top: 4px;
+    position: relative;
+  }
+  .stats-bar-fill {
+    height: 100%;
+    background: var(--accent);
+    transition: width 0.3s ease;
+  }
+  .stats-bar-count {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .stats-mini-timeline {
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    margin-top: 4px;
+    padding: 4px 0;
+  }
+  .stats-mini-timeline-bar {
+    flex: 1;
+    background: var(--accent);
+    min-height: 1px;
+    opacity: 0.4;
+    transition: opacity 0.15s;
+  }
+  .stats-mini-timeline-bar:hover { opacity: 1; }
+  .stats-mini-timeline-axis {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+  }
+
+  /* ============= TIMELINE (avec scrub cursor) ============= */
   #timeline-wrap {
     position: relative;
     background: var(--bg-elev);
@@ -990,14 +1198,10 @@
     overflow: hidden;
     user-select: none;
   }
-  #timeline-svg {
-    display: block;
-    width: 100%;
-    height: 100%;
-    cursor: crosshair;
-  }
+  #timeline-svg { display: block; width: 100%; height: 100%; cursor: crosshair; }
   .timeline-bar { fill: var(--text-faint); transition: fill 0.2s; }
   .timeline-bar.in-range { fill: var(--accent); }
+  .timeline-bar.in-range-2 { fill: var(--emerging); }
   .timeline-selection {
     fill: var(--accent-soft);
     stroke: var(--accent);
@@ -1005,21 +1209,30 @@
     pointer-events: all;
     cursor: grab;
   }
+  .timeline-selection.range-2 { fill: rgba(154,255,138,0.12); stroke: var(--emerging); }
   .timeline-selection:active { cursor: grabbing; }
-  .timeline-handle {
-    fill: var(--accent);
-    cursor: ew-resize;
-  }
-  .timeline-handle-grip {
-    stroke: var(--bg);
-    stroke-width: 1;
-  }
+  .timeline-handle { fill: var(--accent); cursor: ew-resize; }
+  .timeline-handle.range-2 { fill: var(--emerging); }
+  .timeline-handle-grip { stroke: var(--bg); stroke-width: 1; }
   .timeline-axis-tick {
     fill: var(--text-faint);
     font-family: var(--mono);
     font-size: 9.5px;
     text-transform: uppercase;
     letter-spacing: 0.08em;
+  }
+  /* Scrub cursor */
+  .timeline-scrub-line {
+    stroke: var(--accent-bright);
+    stroke-width: 1;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+  .timeline-scrub-handle {
+    fill: var(--accent-bright);
+    stroke: var(--bg);
+    stroke-width: 2;
+    cursor: ew-resize;
   }
   .timeline-readout {
     position: absolute;
@@ -1030,8 +1243,10 @@
     letter-spacing: 0.08em;
     color: var(--text-faint);
     pointer-events: none;
+    z-index: 5;
   }
   .timeline-readout strong { color: var(--accent); font-weight: 500; }
+  .timeline-readout strong.range-2 { color: var(--emerging); }
   .timeline-hint {
     position: absolute;
     top: 6px; right: 14px;
@@ -1041,7 +1256,133 @@
     letter-spacing: 0.08em;
     color: var(--text-faint);
     pointer-events: none;
+    z-index: 5;
   }
+  /* Toggle scrub mode */
+  .timeline-mode-btn {
+    position: absolute;
+    bottom: 8px; right: 14px;
+    background: var(--bg-elev-2);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    font-family: var(--mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 4px 8px;
+    cursor: pointer;
+    z-index: 5;
+    transition: all 0.15s;
+  }
+  .timeline-mode-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .timeline-mode-btn.active { color: var(--accent); border-color: var(--accent); }
+
+  /* ============= MODALE RACCOURCIS CLAVIER ============= */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(10,11,14,0.85);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 9000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    animation: modal-fade 0.2s ease;
+  }
+  .modal-backdrop.open { display: flex; }
+  @keyframes modal-fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .modal {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-pop);
+    width: 480px;
+    max-width: 90vw;
+    max-height: 80vh;
+    overflow-y: auto;
+    animation: modal-slide 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @keyframes modal-slide {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .modal-header {
+    padding: 20px 24px 12px;
+    border-bottom: 1px solid var(--border-soft);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .modal-header h3 {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .modal-close {
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0 4px;
+  }
+  .modal-close:hover { color: var(--accent); }
+  .modal-body { padding: 18px 24px 24px; }
+  .shortcut-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .shortcut-row:last-child { border-bottom: none; }
+  .shortcut-keys { display: flex; gap: 4px; }
+  .shortcut-keys kbd {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--accent);
+    border: 1px solid var(--border);
+    padding: 3px 8px;
+    background: var(--bg);
+    min-width: 24px;
+    text-align: center;
+  }
+  .shortcut-desc {
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  /* ============= TOAST ============= */
+  .toast {
+    position: fixed;
+    bottom: calc(var(--timeline-h) + 16px);
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--bg-elev);
+    border: 1px solid var(--accent);
+    color: var(--text);
+    padding: 10px 18px;
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: var(--shadow-pop);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s, transform 0.25s;
+    z-index: 5000;
+  }
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  .toast.success { border-color: var(--emerging); color: var(--emerging); }
 
   /* ============= MOBILE ============= */
   @media (max-width: 900px) {
@@ -1068,6 +1409,7 @@
     }
     .stats { display: none; }
     input[type="search"] { width: 140px; }
+    .search-wrap kbd { display: none; }
     .brand h1 { font-size: 20px; }
     .brand .sub { display: none; }
     .toggle-group button { padding: 8px 8px; font-size: 9.5px; }
@@ -1077,7 +1419,7 @@
 </head>
 <body>
 
-<!-- ============= SPLASH SCREEN ============= -->
+<!-- SPLASH -->
 <div id="splash" aria-hidden="true">
   <h2 class="splash-logo">Cartographie<br><em>des Enquêtes</em></h2>
   <div class="splash-tag">INPACT · All Eyes On Wagner</div>
@@ -1086,6 +1428,31 @@
     <span id="splash-counter-label">initialisation…</span>
   </div>
   <div class="splash-bar"></div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- MODALE RACCOURCIS -->
+<div class="modal-backdrop" id="shortcuts-modal">
+  <div class="modal" role="dialog" aria-labelledby="shortcuts-title">
+    <div class="modal-header">
+      <h3 id="shortcuts-title">Raccourcis clavier</h3>
+      <button class="modal-close" id="shortcuts-close" aria-label="Fermer">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="shortcut-row"><div class="shortcut-keys"><kbd>/</kbd></div><div class="shortcut-desc">Recherche</div></div>
+      <div class="shortcut-row"><div class="shortcut-keys"><kbd>Esc</kbd></div><div class="shortcut-desc">Fermer panneau / désélectionner</div></div>
+      <div class="shortcut-row"><div class="shortcut-keys"><kbd>H</kbd></div><div class="shortcut-desc">Toggle Heatmap</div></div>
+      <div class="shortcut-row"><div class="shortcut-keys"><kbd>M</kbd></div><div class="shortcut-desc">Toggle Markers</div></div>
+      <div class="shortcut-row"><div class="shortcut-keys"><kbd>L</kbd></div><div class="shortcut-desc">Toggle Liens (co-occurrence)</div></div>
+      <div class="shortcut-row"><div class="shortcut-keys"><kbd>T</kbd></div><div class="shortcut-desc">Lance/arrête le tour guidé</div></div>
+      <div class="shortcut-row"><div class="shortcut-keys"><kbd>C</kbd></div><div class="shortcut-desc">Mode comparaison de périodes</div></div>
+      <div class="shortcut-row"><div class="shortcut-keys"><kbd>S</kbd></div><div class="shortcut-desc">Onglet statistiques</div></div>
+      <div class="shortcut-row"><div class="shortcut-keys"><kbd>R</kbd></div><div class="shortcut-desc">Réinitialiser tous les filtres</div></div>
+      <div class="shortcut-row"><div class="shortcut-keys"><kbd>?</kbd></div><div class="shortcut-desc">Afficher cette aide</div></div>
+    </div>
+  </div>
 </div>
 
 <div id="app">
@@ -1100,13 +1467,16 @@
       <div class="search-wrap">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
         <input type="search" id="search" placeholder="Rechercher un lieu...">
+        <kbd>/</kbd>
       </div>
       <div class="toggle-group" role="group">
         <button data-layer="heat" class="active">Heatmap</button>
         <button data-layer="markers" class="active">Points</button>
         <button data-layer="links">Liens</button>
+        <button id="compare-btn" class="compare-btn">Compare</button>
         <button id="tour-btn" class="tour-btn">Tour</button>
       </div>
+      <button class="icon-btn" id="help-btn" aria-label="Raccourcis clavier" title="Raccourcis (touche ?)">?</button>
     </div>
 
     <div class="stats">
@@ -1129,7 +1499,6 @@
 
   <main>
     <div id="map">
-      <!-- Top 10 panel (gauche) -->
       <div class="top-places" id="top-places">
         <div class="top-places-header">
           <span class="top-places-title">Lieux les plus mentionnés</span>
@@ -1137,7 +1506,6 @@
         </div>
         <div class="top-places-list" id="top-places-list"></div>
       </div>
-      <!-- Légende (bas-gauche) -->
       <div class="legend" id="legend">
         <div class="legend-header" id="legend-header">
           <span class="legend-title">Légende</span>
@@ -1159,15 +1527,13 @@
           <div class="legend-section">
             <div class="legend-section-label">Lieux</div>
             <div class="legend-markers">
-              <div class="legend-marker-dot" style="width:8px;height:8px"></div>
-              <span>Standard</span>
-              <div class="legend-marker-dot" style="width:14px;height:14px"></div>
-              <span>Hot spot</span>
+              <div class="legend-marker-dot" style="width:8px;height:8px"></div><span>Standard</span>
+              <div class="legend-marker-dot" style="width:14px;height:14px"></div><span>Hot spot</span>
+              <div class="legend-marker-dot emerging-dot" style="width:10px;height:10px"></div><span>Émergent</span>
             </div>
           </div>
         </div>
       </div>
-      <!-- Tour indicator -->
       <div class="tour-indicator" id="tour-indicator">
         <div class="tour-indicator-pulse"></div>
         <div class="tour-indicator-text" id="tour-indicator-text">
@@ -1181,12 +1547,13 @@
 
   <div id="timeline-wrap">
     <div class="timeline-readout" id="timeline-readout"></div>
-    <div class="timeline-hint">Glisse pour sélectionner une période · double-clic pour réinitialiser</div>
+    <div class="timeline-hint" id="timeline-hint">Glisse pour sélectionner · double-clic pour réinitialiser</div>
     <svg id="timeline-svg"></svg>
+    <button class="timeline-mode-btn" id="timeline-scrub-btn" title="Curseur temporel (S)">Scrub</button>
   </div>
 </div>
 
-<!-- Données embarquées (fallback si data.json non servi) -->
+<!-- Données embarquées (fallback) -->
 <script id="inpact-data" type="application/json">
 /*DATA_START*/
 {
@@ -1194,38 +1561,19 @@
   "articles": [
     {"id": "africa-flop-saison-2", "title": "AFRICA FLOP, SAISON 2", "url": "https://alleyesonwagner.org/2026/04/28/africa-flop-saison-2/", "date": "2026-04-28", "category": "AEOW", "lang": "fr", "excerpt": "Bilan d'un an de l'Africa Corps au Mali, des attaques coordonnées du 25 avril 2026 par le FLA et le JNIM contre Bamako, Kidal, Gao, Mopti, Sévaré et Kati."},
     {"id": "africa-flop-2025", "title": "AFRICA FLOP", "url": "https://alleyesonwagner.org/2025/06/17/africa-flop/", "date": "2025-06-17", "category": "AEOW", "lang": "fr", "excerpt": "Premiers déploiements difficiles de l'Africa Corps avec 2500 hommes répartis sur une vingtaine de bases au Mali."},
-    {"id": "alabuga-fr", "title": "Alabuga, nœud central de la menace hybride russe", "url": "https://alleyesonwagner.org/2026/04/19/alabuga-noeud-central-de-la-menace-hybride-russe/", "date": "2026-04-19", "category": "Russia & Partners", "lang": "fr", "excerpt": "La zone industrielle d'Alabuga au Tatarstan comme noeud central de la guerre hybride russe — drones Shahed-136, recrutement, sanctions."},
-    {"id": "russia-security-forum", "title": "Le Forum International sur la Sécurité de la Russie", "url": "https://alleyesonwagner.org/2026/04/29/le-forum-international-sur-la-securite-de-la-russie-le-temps-de-la-confrontation/", "date": "2026-04-29", "category": "Hybrid Warfare", "lang": "fr", "excerpt": "Forum à Moscou rassemblant délégations étrangères, services de renseignement russes et Rossotrudnichestvo."},
-    {"id": "svr-politology", "title": "SVR-controlled Politology Labels Non-Orthodox Christian Groups as Western Agents", "url": "https://alleyesonwagner.org/2026/04/23/svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa/", "date": "2026-04-23", "category": "Hybrid Warfare", "lang": "en", "excerpt": "How SVR-linked think tank Politology frames non-Orthodox Christian groups as Western agents in Africa."},
-    {"id": "demo-strategic-arms", "title": "Réseaux d'acquisition d'armes stratégiques", "url": "https://alleyesonwagner.org/", "date": "2025-11-15", "category": "Strategic arms and Disruptive Tech", "lang": "fr", "excerpt": "Cartographie des chaînes d'approvisionnement de la Russie via la Libye, la Turquie et l'Asie centrale (article démo)."},
-    {"id": "demo-hybrid-2024", "title": "Hybrid Operations in West Africa, 2024 retrospective", "url": "https://alleyesonwagner.org/", "date": "2024-12-20", "category": "Hybrid Warfare", "lang": "en", "excerpt": "Retrospective on hybrid warfare operations across West Africa in 2024 (article démo)."}
+    {"id": "alabuga-fr", "title": "Alabuga", "url": "https://alleyesonwagner.org/", "date": "2026-04-19", "category": "Russia & Partners", "lang": "fr", "excerpt": "Démo."},
+    {"id": "russia-security-forum", "title": "Forum Sécurité Russie", "url": "https://alleyesonwagner.org/", "date": "2026-04-29", "category": "Hybrid Warfare", "lang": "fr", "excerpt": "Démo."},
+    {"id": "demo-2024", "title": "Hybrid Operations 2024", "url": "https://alleyesonwagner.org/", "date": "2024-12-20", "category": "Hybrid Warfare", "lang": "en", "excerpt": "Démo."},
+    {"id": "demo-arms", "title": "Strategic arms networks", "url": "https://alleyesonwagner.org/", "date": "2025-11-15", "category": "Strategic arms and Disruptive Tech", "lang": "fr", "excerpt": "Démo."}
   ],
   "places": [
-    {"id": "kidal", "name": "Kidal", "country": "Mali", "lat": 18.4411, "lng": 1.4078, "articles": ["africa-flop-saison-2", "africa-flop-2025", "demo-hybrid-2024"]},
-    {"id": "bamako", "name": "Bamako", "country": "Mali", "lat": 12.6392, "lng": -8.0029, "articles": ["africa-flop-saison-2", "africa-flop-2025", "demo-hybrid-2024"]},
+    {"id": "kidal", "name": "Kidal", "country": "Mali", "lat": 18.4411, "lng": 1.4078, "articles": ["africa-flop-saison-2", "africa-flop-2025", "demo-2024"]},
+    {"id": "bamako", "name": "Bamako", "country": "Mali", "lat": 12.6392, "lng": -8.0029, "articles": ["africa-flop-saison-2", "africa-flop-2025", "demo-2024"]},
     {"id": "gao", "name": "Gao", "country": "Mali", "lat": 16.2667, "lng": -0.05, "articles": ["africa-flop-saison-2", "africa-flop-2025"]},
-    {"id": "mopti", "name": "Mopti", "country": "Mali", "lat": 14.4843, "lng": -4.1976, "articles": ["africa-flop-saison-2"]},
-    {"id": "sevare", "name": "Sévaré", "country": "Mali", "lat": 14.5269, "lng": -4.0911, "articles": ["africa-flop-saison-2", "africa-flop-2025"]},
-    {"id": "kati", "name": "Kati", "country": "Mali", "lat": 12.7483, "lng": -8.0742, "articles": ["africa-flop-saison-2"]},
-    {"id": "tessit", "name": "Tessit", "country": "Mali", "lat": 15.2167, "lng": 0.7833, "articles": ["africa-flop-saison-2"]},
-    {"id": "tessalit", "name": "Tessalit", "country": "Mali", "lat": 20.2, "lng": 1.0, "articles": ["africa-flop-saison-2", "africa-flop-2025"]},
-    {"id": "tin-zaouaten", "name": "Tin Zaouaten", "country": "Mali", "lat": 19.95, "lng": 2.95, "articles": ["africa-flop-saison-2", "africa-flop-2025"]},
-    {"id": "ber", "name": "Ber", "country": "Mali", "lat": 16.97, "lng": -2.22, "articles": ["africa-flop-saison-2"]},
-    {"id": "labbezzanga", "name": "Labbezzanga", "country": "Mali", "lat": 14.95, "lng": 0.78, "articles": ["africa-flop-saison-2"]},
-    {"id": "intahaka", "name": "Intahaka", "country": "Mali", "lat": 16.5, "lng": -0.05, "articles": ["africa-flop-saison-2"]},
-    {"id": "al-moustarat", "name": "Al Moustarat", "country": "Mali", "lat": 16.4, "lng": -1.4, "articles": ["africa-flop-saison-2"]},
-    {"id": "kayes", "name": "Kayes", "country": "Mali", "lat": 14.4427, "lng": -11.4444, "articles": ["africa-flop-saison-2"]},
-    {"id": "conakry", "name": "Conakry", "country": "Guinée", "lat": 9.5092, "lng": -13.7122, "articles": ["africa-flop-saison-2", "demo-strategic-arms"]},
-    {"id": "al-khadim", "name": "Al Khadim (base aérienne)", "country": "Libye", "lat": 32.4, "lng": 21.9, "articles": ["africa-flop-saison-2", "demo-strategic-arms"]},
-    {"id": "niger", "name": "Niger", "country": "Niger", "lat": 17.6078, "lng": 8.0817, "articles": ["africa-flop-saison-2", "africa-flop-2025", "demo-hybrid-2024"]},
-    {"id": "burkina-faso", "name": "Burkina Faso", "country": "Burkina Faso", "lat": 12.2383, "lng": -1.5616, "articles": ["africa-flop-saison-2", "africa-flop-2025", "demo-hybrid-2024"]},
-    {"id": "cote-divoire", "name": "Côte d'Ivoire", "country": "Côte d'Ivoire", "lat": 7.5399, "lng": -5.5471, "articles": ["africa-flop-saison-2"]},
-    {"id": "senegal", "name": "Sénégal", "country": "Sénégal", "lat": 14.4974, "lng": -14.4524, "articles": ["africa-flop-saison-2"]},
-    {"id": "alabuga", "name": "Alabuga", "country": "Russie", "lat": 55.7402, "lng": 52.0584, "articles": ["alabuga-fr", "demo-strategic-arms"]},
-    {"id": "moscow", "name": "Moscou", "country": "Russie", "lat": 55.7558, "lng": 37.6173, "articles": ["russia-security-forum", "alabuga-fr", "svr-politology", "demo-strategic-arms"]},
-    {"id": "kazan", "name": "Kazan", "country": "Russie", "lat": 55.8304, "lng": 49.0661, "articles": ["alabuga-fr"]},
-    {"id": "sahel", "name": "Sahel", "country": "—", "lat": 15.5, "lng": 0.0, "articles": ["africa-flop-saison-2", "africa-flop-2025", "demo-hybrid-2024"]},
-    {"id": "turkey", "name": "Turquie", "country": "Turquie", "lat": 39.0, "lng": 35.0, "articles": ["demo-strategic-arms"]}
+    {"id": "moscow", "name": "Moscou", "country": "Russie", "lat": 55.7558, "lng": 37.6173, "articles": ["russia-security-forum", "alabuga-fr", "demo-arms"]},
+    {"id": "alabuga", "name": "Alabuga", "country": "Russie", "lat": 55.7402, "lng": 52.0584, "articles": ["alabuga-fr", "demo-arms"]},
+    {"id": "niger", "name": "Niger", "country": "Niger", "lat": 17.6078, "lng": 8.0817, "articles": ["africa-flop-saison-2", "africa-flop-2025", "demo-2024"]},
+    {"id": "burkina-faso", "name": "Burkina Faso", "country": "Burkina Faso", "lat": 12.2383, "lng": -1.5616, "articles": ["africa-flop-saison-2", "africa-flop-2025", "demo-2024"]}
   ]
 }
 /*DATA_END*/
@@ -1241,7 +1589,7 @@ async function loadData() {
   try {
     const res = await fetch('./data.json', { cache: 'no-store' });
     if (res.ok) return await res.json();
-  } catch (e) { /* file:// or no data.json */ }
+  } catch (e) {}
   const inline = document.getElementById('inpact-data').textContent
     .replace(/^[\s\S]*?\/\*DATA_START\*\//, '')
     .replace(/\/\*DATA_END\*\/[\s\S]*$/, '');
@@ -1255,13 +1603,20 @@ const state = {
   filters: {
     categories: new Set(),
     languages: new Set(),
-    dateRange: null,
+    dateRange: null,        // primary range
+    dateRange2: null,       // for compare mode
   },
   layers: { heat: true, markers: true, links: false },
   selectedPlaceId: null,
-  hotPlaceIds: new Set(),    // top 5% des lieux par nb d'articles
-  initialLoad: true,         // pour stagger animation au boot uniquement
+  hotPlaceIds: new Set(),
+  emergingPlaceIds: new Set(),  // calculé selon la plage
+  initialLoad: true,
   tour: { active: false, index: 0, places: [], timer: null },
+  compareMode: false,
+  scrubMode: false,
+  scrubDate: null,           // ISO date for the scrub cursor
+  sidebarTab: 'place',       // 'place' | 'stats'
+  sidebarStatsOpen: false,   // garde la sidebar ouverte sur stats si true
 };
 
 let DATA = null;
@@ -1271,6 +1626,93 @@ let heatLayer = null;
 let markerLayer;
 let linkLayer;
 let placeMarkers = {};
+let cooccLinkRefs = [];   // pour highlight focus narrative
+
+// ============================================================
+// URL HASH SYNC (feature 1)
+// ============================================================
+function readUrlState() {
+  const params = new URLSearchParams(window.location.hash.slice(1));
+  if (params.has('place')) state.selectedPlaceId = params.get('place');
+  if (params.has('cat')) {
+    params.get('cat').split(',').filter(Boolean).forEach(c => state.filters.categories.add(c));
+  }
+  if (params.has('lang')) {
+    params.get('lang').split(',').filter(Boolean).forEach(l => state.filters.languages.add(l));
+  }
+  if (params.has('from') && params.has('to')) {
+    state.filters.dateRange = [params.get('from'), params.get('to')];
+  }
+  if (params.has('layers')) {
+    const ls = params.get('layers').split(',');
+    state.layers.heat = ls.includes('heat');
+    state.layers.markers = ls.includes('markers');
+    state.layers.links = ls.includes('links');
+  }
+  if (params.has('tab')) state.sidebarTab = params.get('tab') === 'stats' ? 'stats' : 'place';
+}
+
+let urlSyncPending = null;
+function writeUrlState() {
+  // Debounce
+  if (urlSyncPending) cancelAnimationFrame(urlSyncPending);
+  urlSyncPending = requestAnimationFrame(() => {
+    urlSyncPending = null;
+    const params = new URLSearchParams();
+    if (state.selectedPlaceId) params.set('place', state.selectedPlaceId);
+    if (state.filters.categories.size) params.set('cat', [...state.filters.categories].join(','));
+    if (state.filters.languages.size) params.set('lang', [...state.filters.languages].join(','));
+    if (state.filters.dateRange) {
+      params.set('from', state.filters.dateRange[0]);
+      params.set('to', state.filters.dateRange[1]);
+    }
+    const layers = [];
+    if (state.layers.heat) layers.push('heat');
+    if (state.layers.markers) layers.push('markers');
+    if (state.layers.links) layers.push('links');
+    const defaultLayers = state.layers.heat && state.layers.markers && !state.layers.links;
+    if (!defaultLayers) params.set('layers', layers.join(','));
+    if (state.sidebarTab === 'stats') params.set('tab', 'stats');
+    const hash = params.toString();
+    const newUrl = hash ? `#${hash}` : window.location.pathname + window.location.search;
+    history.replaceState(null, '', newUrl);
+  });
+}
+
+function getShareUrl() {
+  return window.location.href;
+}
+
+async function copyShareUrl(btnEl) {
+  const url = getShareUrl();
+  try {
+    await navigator.clipboard.writeText(url);
+    if (btnEl) {
+      btnEl.classList.add('copied');
+      const original = btnEl.querySelector('span').textContent;
+      btnEl.querySelector('span').textContent = 'Copié !';
+      setTimeout(() => {
+        btnEl.classList.remove('copied');
+        btnEl.querySelector('span').textContent = original;
+      }, 1600);
+    }
+    showToast('Lien copié dans le presse-papiers', 'success');
+  } catch (e) {
+    showToast('Impossible de copier (HTTPS requis)');
+  }
+}
+
+// ============================================================
+// TOAST
+// ============================================================
+let toastTimer = null;
+function showToast(message, kind = '') {
+  const el = document.getElementById('toast');
+  el.textContent = message;
+  el.className = `toast show ${kind}`;
+  if (toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 2000);
+}
 
 // ============================================================
 // SPLASH
@@ -1292,14 +1734,12 @@ function animateCounter(targetNum, label, duration = 1100) {
 }
 
 async function runSplash() {
-  // attend brièvement pour laisser apparaître le titre
   await new Promise(r => setTimeout(r, 1200));
   await animateCounter(DATA.articles.length, 'enquêtes indexées');
   await new Promise(r => setTimeout(r, 250));
   await animateCounter(DATA.places.length, 'lieux cartographiés');
   await new Promise(r => setTimeout(r, 600));
   document.getElementById('splash').classList.add('hidden');
-  // Une fois le splash retiré, on permet le stagger d'arrivée
   setTimeout(() => { state.initialLoad = false; }, 2000);
 }
 
@@ -1308,30 +1748,21 @@ async function runSplash() {
 // ============================================================
 function initMap() {
   map = L.map('map', {
-    center: [22, 12],
-    zoom: 3,
-    minZoom: 2,
-    maxZoom: 12,
-    worldCopyJump: true,
-    zoomControl: false,
-    attributionControl: true,
+    center: [22, 12], zoom: 3, minZoom: 2, maxZoom: 12,
+    worldCopyJump: true, zoomControl: false, attributionControl: true,
   });
   L.control.zoom({ position: 'bottomright' }).addTo(map);
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
     attribution: '© OSM · © CartoDB · INPACT',
-    subdomains: 'abcd',
-    maxZoom: 19,
+    subdomains: 'abcd', maxZoom: 19,
   }).addTo(map);
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png', {
-    subdomains: 'abcd',
-    maxZoom: 19,
-    pane: 'shadowPane',
+    subdomains: 'abcd', maxZoom: 19, pane: 'shadowPane',
   }).addTo(map);
   markerLayer = L.layerGroup().addTo(map);
   linkLayer = L.layerGroup();
   map.on('click', (e) => {
     if (!e.originalEvent.target.closest('.leaflet-marker-icon')) {
-      // En mode tour, un clic sur la carte ne quitte pas le tour mais désélectionne juste
       clearSelection();
     }
   });
@@ -1340,19 +1771,20 @@ function initMap() {
 // ============================================================
 // FILTRAGE
 // ============================================================
-function articleMatchesFilters(a) {
+function articleMatchesFilters(a, range) {
   if (state.filters.categories.size && !state.filters.categories.has(a.category)) return false;
   if (state.filters.languages.size && !state.filters.languages.has(a.lang)) return false;
-  if (state.filters.dateRange) {
-    const [s, e] = state.filters.dateRange;
+  const r = range !== undefined ? range : state.filters.dateRange;
+  if (r) {
+    const [s, e] = r;
     if (a.date < s || a.date > e) return false;
   }
   return true;
 }
 
-function getFilteredData() {
+function getFilteredData(range) {
   const validArticleIds = new Set(
-    DATA.articles.filter(articleMatchesFilters).map(a => a.id)
+    DATA.articles.filter(a => articleMatchesFilters(a, range)).map(a => a.id)
   );
   const places = DATA.places
     .map(p => ({ ...p, articles: p.articles.filter(id => validArticleIds.has(id)) }))
@@ -1361,12 +1793,48 @@ function getFilteredData() {
 }
 
 // ============================================================
-// HOT PLACES (top 5%)
+// HOT + EMERGING
 // ============================================================
 function computeHotPlaces() {
   const sorted = [...DATA.places].sort((a, b) => b.articles.length - a.articles.length);
   const cutoff = Math.max(1, Math.ceil(sorted.length * 0.05));
   state.hotPlaceIds = new Set(sorted.slice(0, cutoff).map(p => p.id));
+}
+
+// Calcule les lieux émergents : ceux dont la fréquence augmente significativement
+// sur la dernière moitié de la plage active vs la première moitié
+function computeEmergingPlaces() {
+  state.emergingPlaceIds.clear();
+  const range = state.filters.dateRange;
+  if (!range) return;
+  const [start, end] = range;
+  // Coupe la plage en deux moitiés
+  const startD = new Date(start), endD = new Date(end);
+  const midMs = (startD.getTime() + endD.getTime()) / 2;
+  const midISO = new Date(midMs).toISOString().slice(0, 10);
+
+  // Pour chaque lieu, compte les mentions sur chaque moitié (ne tenant compte que des filtres cat/lang)
+  const eligible = id => {
+    const a = articlesById[id];
+    if (!a) return false;
+    if (state.filters.categories.size && !state.filters.categories.has(a.category)) return false;
+    if (state.filters.languages.size && !state.filters.languages.has(a.lang)) return false;
+    return true;
+  };
+
+  for (const p of DATA.places) {
+    let countFirst = 0, countSecond = 0;
+    for (const aid of p.articles) {
+      if (!eligible(aid)) continue;
+      const a = articlesById[aid];
+      if (a.date >= start && a.date < midISO) countFirst++;
+      else if (a.date >= midISO && a.date <= end) countSecond++;
+    }
+    // Émergent si : au moins 2 mentions sur la 2e moitié, et au moins 2x plus que sur la 1ere
+    if (countSecond >= 2 && countSecond >= countFirst * 2 && countFirst < countSecond) {
+      state.emergingPlaceIds.add(p.id);
+    }
+  }
 }
 
 // ============================================================
@@ -1399,12 +1867,27 @@ function computeLinks(filteredPlaces) {
     .slice(0, MAX_LINKS);
 }
 
+// Set des IDs de lieux connectés au lieu sélectionné (pour focus narrative)
+function getConnectedPlaceIds(placeId, filteredPlaces) {
+  const connected = new Set([placeId]);
+  const place = filteredPlaces.find(p => p.id === placeId);
+  if (!place) return connected;
+  // Pour chaque article du lieu sélectionné, ajoute tous les autres lieux qui partagent cet article
+  const placeArticles = new Set(place.articles);
+  for (const p of filteredPlaces) {
+    if (p.id === placeId) continue;
+    if (p.articles.some(a => placeArticles.has(a))) connected.add(p.id);
+  }
+  return connected;
+}
+
 // ============================================================
 // RENDER : HEATMAP
 // ============================================================
 function renderHeatmap(filteredPlaces) {
   if (heatLayer) { map.removeLayer(heatLayer); heatLayer = null; }
   if (!state.layers.heat || !filteredPlaces.length) return;
+  if (state.compareMode) return;  // en mode compare, on n'affiche pas la heatmap mixte
   const points = filteredPlaces.map(p => [p.lat, p.lng, Math.min(p.articles.length, 10)]);
   heatLayer = L.heatLayer(points, {
     radius: 32, blur: 28, maxZoom: 8, minOpacity: 0.35,
@@ -1413,7 +1896,48 @@ function renderHeatmap(filteredPlaces) {
 }
 
 // ============================================================
-// RENDER : MARKERS (avec stagger initial + classes hot/selected)
+// TOOLTIP enrichi (feature 6)
+// ============================================================
+function buildTooltipHtml(place) {
+  const articles = place.articles.map(aid => articlesById[aid]).filter(Boolean);
+  if (!articles.length) return `<strong>${escapeHtml(place.name)}</strong>`;
+  // Sparkline : compte par année
+  const years = {};
+  let minYear = 9999, maxYear = 0;
+  articles.forEach(a => {
+    const y = parseInt(a.date.slice(0,4), 10);
+    if (y < minYear) minYear = y;
+    if (y > maxYear) maxYear = y;
+    years[y] = (years[y] || 0) + 1;
+  });
+  const yearRange = [];
+  for (let y = minYear; y <= maxYear; y++) yearRange.push(y);
+  const max = Math.max(...Object.values(years), 1);
+  const sparkline = yearRange.map(y => {
+    const h = (years[y] || 0) / max * 18;
+    return `<span style="height:${Math.max(1,h)}px"></span>`;
+  }).join('');
+  // Article le plus récent
+  const last = articles.slice().sort((a, b) => b.date.localeCompare(a.date))[0];
+  const isHot = state.hotPlaceIds.has(place.id);
+  const isEmerging = state.emergingPlaceIds.has(place.id);
+  const tags = [`${articles.length} enquête${articles.length>1?'s':''}`, escapeHtml(place.country)];
+  if (isHot) tags.push('hot spot');
+  let html = `<strong>${escapeHtml(place.name)}</strong>`;
+  if (isEmerging) html += `<span class="tooltip-emerging" style="display:block;font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.1em;margin-top:2px">↑ Émergent</span>`;
+  html += `<div class="meta">${tags.join(' · ')}</div>`;
+  if (yearRange.length > 1) {
+    html += `<div class="tooltip-sparkline">${sparkline}</div>`;
+    html += `<div style="display:flex;justify-content:space-between;font-family:var(--mono);font-size:9px;color:var(--text-faint);margin-top:2px"><span>${minYear}</span><span>${maxYear}</span></div>`;
+  }
+  if (last) {
+    html += `<div class="tooltip-recent">Dernière : « ${escapeHtml(last.title.slice(0, 70))}${last.title.length > 70 ? '…' : ''} »</div>`;
+  }
+  return html;
+}
+
+// ============================================================
+// RENDER : MARKERS (avec focus narrative + emerging)
 // ============================================================
 function renderMarkers(filteredPlaces) {
   markerLayer.clearLayers();
@@ -1424,17 +1948,27 @@ function renderMarkers(filteredPlaces) {
   }
   if (!map.hasLayer(markerLayer)) markerLayer.addTo(map);
 
-  // Tri par nombre d'articles décroissant pour un stagger qui démarre par les hot spots
+  // Pour focus narrative
+  const connected = state.selectedPlaceId
+    ? getConnectedPlaceIds(state.selectedPlaceId, filteredPlaces)
+    : null;
+
   const sorted = [...filteredPlaces].sort((a, b) => b.articles.length - a.articles.length);
   sorted.forEach((place, idx) => {
     const count = place.articles.length;
     const size = Math.min(8 + count * 2.5, 20);
     const isHot = state.hotPlaceIds.has(place.id);
+    const isEmerging = state.emergingPlaceIds.has(place.id);
     const isSelected = place.id === state.selectedPlaceId;
     const classes = ['place-marker'];
     if (isHot) classes.push('hot');
+    if (isEmerging && !isSelected) classes.push('emerging');
     if (isSelected) classes.push('selected');
     if (state.initialLoad) classes.push('drop-in');
+    if (connected) {
+      if (connected.has(place.id) && !isSelected) classes.push('connected');
+      else if (!connected.has(place.id)) classes.push('dimmed');
+    }
     const delay = state.initialLoad ? Math.min(idx * 25, 1500) : 0;
     const icon = L.divIcon({
       className: '',
@@ -1443,10 +1977,7 @@ function renderMarkers(filteredPlaces) {
       iconAnchor: [size/2, size/2],
     });
     const marker = L.marker([place.lat, place.lng], { icon, riseOnHover: true });
-    marker.bindTooltip(
-      `<strong>${place.name}</strong><div class="meta">${count} enquête${count>1?'s':''} · ${place.country}${isHot ? ' · hot spot' : ''}</div>`,
-      { direction: 'top', offset: [0, -size/2] }
-    );
+    marker.bindTooltip(buildTooltipHtml(place), { direction: 'top', offset: [0, -size/2] });
     marker.on('click', () => {
       if (state.tour.active) stopTour();
       selectPlace(place.id);
@@ -1457,10 +1988,11 @@ function renderMarkers(filteredPlaces) {
 }
 
 // ============================================================
-// RENDER : LINKS
+// RENDER : LINKS (avec highlight focus narrative)
 // ============================================================
 function renderLinks(filteredPlaces) {
   linkLayer.clearLayers();
+  cooccLinkRefs = [];
   if (!state.layers.links) {
     if (map.hasLayer(linkLayer)) map.removeLayer(linkLayer);
     return;
@@ -1469,25 +2001,60 @@ function renderLinks(filteredPlaces) {
   const links = computeLinks(filteredPlaces);
   if (!links.length) return;
   const maxWeight = Math.max(...links.map(l => l.weight));
+  const sel = state.selectedPlaceId;
   for (const link of links) {
     const t = link.weight / maxWeight;
     const opacity = 0.18 + t * 0.5;
     const weight = 0.8 + t * 2.2;
+    let className = 'cooccurrence-link';
+    if (sel) {
+      if (link.a.id === sel || link.b.id === sel) className += ' highlighted';
+      else className += ' dimmed';
+    }
     const polyline = L.polyline(
       [[link.a.lat, link.a.lng], [link.b.lat, link.b.lng]],
       { color: '#ff8a3d', weight, opacity, smoothFactor: 1.5,
-        className: 'cooccurrence-link', interactive: true }
+        className, interactive: true }
     );
     polyline.bindTooltip(
-      `<strong>${link.a.name} ↔ ${link.b.name}</strong><div class="meta">${link.weight} enquête${link.weight>1?'s':''} les co-mentionne${link.weight>1?'nt':''}</div>`,
+      `<strong>${escapeHtml(link.a.name)} ↔ ${escapeHtml(link.b.name)}</strong><div class="meta">${link.weight} enquête${link.weight>1?'s':''}</div>`,
       { sticky: true }
     );
     polyline.addTo(linkLayer);
+    cooccLinkRefs.push({ link, polyline });
   }
 }
 
 // ============================================================
-// RENDER : STATS
+// RENDER : COMPARE MODE — affiche deux jeux de markers superposés
+// ============================================================
+function renderCompareLayers() {
+  if (!state.compareMode) return;
+  const r1 = state.filters.dateRange;
+  const r2 = state.filters.dateRange2;
+  if (!r1 || !r2) return;
+  // Reset markerLayer (renderMarkers a déjà tourné, on superpose un calque vert pour r2)
+  // Calcule places visibles dans r1 et r2
+  const ids1 = new Set(getFilteredData(r1).places.map(p => p.id));
+  const ids2 = new Set(getFilteredData(r2).places.map(p => p.id));
+  const onlyIn2 = [...ids2].filter(id => !ids1.has(id));
+  // Pour les lieux uniquement présents dans r2, ajoute un marker vert
+  for (const id of onlyIn2) {
+    const place = DATA.places.find(p => p.id === id);
+    if (!place) continue;
+    const icon = L.divIcon({
+      className: '',
+      html: `<div class="place-marker emerging" style="width:11px;height:11px;"></div>`,
+      iconSize: [11, 11], iconAnchor: [5.5, 5.5],
+    });
+    const marker = L.marker([place.lat, place.lng], { icon });
+    marker.bindTooltip(`<strong>${escapeHtml(place.name)}</strong><div class="meta tooltip-emerging">Apparaît dans la 2e période</div>`, { direction: 'top' });
+    marker.addTo(markerLayer);
+  }
+}
+
+// ============================================================
+// RENDER : STATS HEADER
 // ============================================================
 function renderStats(filteredPlaces, validArticleIds) {
   const totalMentions = filteredPlaces.reduce((acc, p) => acc + p.articles.length, 0);
@@ -1495,26 +2062,50 @@ function renderStats(filteredPlaces, validArticleIds) {
   document.getElementById('stat-places').textContent = filteredPlaces.length;
   document.getElementById('stat-articles').textContent = validArticleIds.size;
   document.getElementById('stat-mentions').textContent = totalMentions;
-  document.querySelectorAll('.stats strong').forEach(el =>
-    el.classList.toggle('filtered', filtersActive)
-  );
+  document.querySelectorAll('.stats strong').forEach(el => el.classList.toggle('filtered', filtersActive));
 }
 
 // ============================================================
-// RENDER : FILTER BAR (catégories + langues)
+// RENDER : FILTER BAR (compteurs dynamiques — feature 2)
 // ============================================================
 function renderFilterBar() {
-  // Catégories
+  // Pour compteurs dynamiques, on calcule les comptes en simulant chaque filtre seul retiré
+  // Mais simpler version : sur le subset actuel post-autres-filtres
+  const articleEligibleForCat = a => {
+    if (state.filters.languages.size && !state.filters.languages.has(a.lang)) return false;
+    if (state.filters.dateRange) {
+      const [s, e] = state.filters.dateRange;
+      if (a.date < s || a.date > e) return false;
+    }
+    return true;
+  };
+  const articleEligibleForLang = a => {
+    if (state.filters.categories.size && !state.filters.categories.has(a.category)) return false;
+    if (state.filters.dateRange) {
+      const [s, e] = state.filters.dateRange;
+      if (a.date < s || a.date > e) return false;
+    }
+    return true;
+  };
+
+  // Catégories : compteur dynamique + total absolu en fade
   const categoryEl = document.getElementById('category-chips');
-  const categoryCounts = {};
+  const totalByCat = {}, dynByCat = {};
   for (const a of DATA.articles) {
-    categoryCounts[a.category] = (categoryCounts[a.category] || 0) + 1;
+    totalByCat[a.category] = (totalByCat[a.category] || 0) + 1;
+    if (articleEligibleForCat(a)) dynByCat[a.category] = (dynByCat[a.category] || 0) + 1;
   }
-  const cats = Object.keys(categoryCounts).sort();
+  const cats = Object.keys(totalByCat).sort();
   categoryEl.innerHTML = cats.map(cat => {
     const isActive = state.filters.categories.has(cat);
-    return `<button class="chip${isActive ? ' active' : ''}" data-cat="${escapeHtml(cat)}">
-              ${escapeHtml(cat)}<span class="count">${categoryCounts[cat]}</span>
+    const dyn = dynByCat[cat] || 0;
+    const total = totalByCat[cat];
+    const isZero = dyn === 0 && !isActive;
+    const countHtml = (dyn === total || isActive)
+      ? `<span class="count">${total}</span>`
+      : `<span class="count">${dyn}<span class="total"> / ${total}</span></span>`;
+    return `<button class="chip${isActive ? ' active' : ''}${isZero ? ' zero-results' : ''}" data-cat="${escapeHtml(cat)}">
+              ${escapeHtml(cat)}${countHtml}
             </button>`;
   }).join('');
   categoryEl.querySelectorAll('.chip').forEach(btn => {
@@ -1523,21 +2114,29 @@ function renderFilterBar() {
       if (state.filters.categories.has(cat)) state.filters.categories.delete(cat);
       else state.filters.categories.add(cat);
       render();
+      writeUrlState();
     });
   });
 
   // Langues
   const langEl = document.getElementById('language-chips');
-  const langCounts = {};
+  const totalByLang = {}, dynByLang = {};
   for (const a of DATA.articles) {
-    langCounts[a.lang] = (langCounts[a.lang] || 0) + 1;
+    totalByLang[a.lang] = (totalByLang[a.lang] || 0) + 1;
+    if (articleEligibleForLang(a)) dynByLang[a.lang] = (dynByLang[a.lang] || 0) + 1;
   }
   const langLabels = { fr: 'FR', en: 'EN', ru: 'RU', ar: 'AR' };
-  const langs = Object.keys(langCounts).sort();
+  const langs = Object.keys(totalByLang).sort();
   langEl.innerHTML = langs.map(lang => {
     const isActive = state.filters.languages.has(lang);
-    return `<button class="chip lang${isActive ? ' active' : ''}" data-lang="${escapeHtml(lang)}">
-              ${langLabels[lang] || lang.toUpperCase()}<span class="count">${langCounts[lang]}</span>
+    const dyn = dynByLang[lang] || 0;
+    const total = totalByLang[lang];
+    const isZero = dyn === 0 && !isActive;
+    const countHtml = (dyn === total || isActive)
+      ? `<span class="count">${total}</span>`
+      : `<span class="count">${dyn}<span class="total"> / ${total}</span></span>`;
+    return `<button class="chip lang${isActive ? ' active' : ''}${isZero ? ' zero-results' : ''}" data-lang="${escapeHtml(lang)}">
+              ${langLabels[lang] || lang.toUpperCase()}${countHtml}
             </button>`;
   }).join('');
   langEl.querySelectorAll('.chip').forEach(btn => {
@@ -1546,10 +2145,11 @@ function renderFilterBar() {
       if (state.filters.languages.has(lang)) state.filters.languages.delete(lang);
       else state.filters.languages.add(lang);
       render();
+      writeUrlState();
     });
   });
 
-  // Filter status text + reset
+  // Status
   const status = document.getElementById('filter-status');
   const filtersActive = state.filters.categories.size > 0 || state.filters.languages.size > 0 || state.filters.dateRange !== null;
   if (filtersActive) {
@@ -1567,7 +2167,7 @@ function renderFilterBar() {
 }
 
 // ============================================================
-// RENDER : TOP 10 PANEL
+// RENDER : TOP 10 PANEL (avec badge émergent)
 // ============================================================
 function renderTopPlaces(filteredPlaces) {
   const list = document.getElementById('top-places-list');
@@ -1576,10 +2176,11 @@ function renderTopPlaces(filteredPlaces) {
     .slice(0, 10);
   list.innerHTML = top.map((p, idx) => {
     const isSelected = p.id === state.selectedPlaceId;
+    const isEmerging = state.emergingPlaceIds.has(p.id);
     return `<button class="top-place-row${isSelected ? ' selected' : ''}" data-place-id="${escapeHtml(p.id)}">
       <span class="top-place-rank">${String(idx + 1).padStart(2, '0')}</span>
       <span class="top-place-name-wrap">
-        <span class="top-place-name">${escapeHtml(p.name)}</span>
+        <span class="top-place-name">${escapeHtml(p.name)}${isEmerging ? '<span class="top-place-emerging-badge">↑ Émergent</span>' : ''}</span>
         <span class="top-place-country">${escapeHtml(p.country)}</span>
       </span>
       <span class="top-place-count">${p.articles.length}</span>
@@ -1600,38 +2201,74 @@ function render() {
   const { validArticleIds, places } = getFilteredData();
   if (state.selectedPlaceId && !places.some(p => p.id === state.selectedPlaceId)) {
     state.selectedPlaceId = null;
-    renderEmptySidebar();
+    if (state.sidebarTab !== 'stats') renderEmptySidebar();
   }
+  computeEmergingPlaces();
   renderHeatmap(places);
   renderMarkers(places);
+  renderCompareLayers();
   renderLinks(places);
   renderStats(places, validArticleIds);
   renderFilterBar();
   renderTopPlaces(places);
   renderTimelineSelection();
-  if (state.selectedPlaceId) {
+
+  // Sidebar : selon onglet et sélection
+  if (state.sidebarTab === 'stats') {
+    renderStatsPanel(places, validArticleIds);
+  } else if (state.selectedPlaceId) {
     const placeFiltered = places.find(p => p.id === state.selectedPlaceId);
     if (placeFiltered) renderSidebar(placeFiltered);
+  } else {
+    renderEmptySidebar();
   }
 }
 
 // ============================================================
-// SIDEBAR
+// SIDEBAR : sélection lieu
 // ============================================================
 function selectPlace(placeId) {
   const { places } = getFilteredData();
   const place = places.find(p => p.id === placeId);
   if (!place) return;
   state.selectedPlaceId = placeId;
-  for (const [id, marker] of Object.entries(placeMarkers)) {
-    const el = marker.getElement()?.querySelector('.place-marker');
-    if (el) el.classList.toggle('selected', id === placeId);
-  }
+  state.sidebarTab = 'place';
+  // re-render markers and links for focus narrative
+  renderMarkers(places);
+  renderLinks(places);
   document.querySelectorAll('.top-place-row').forEach(row => {
     row.classList.toggle('selected', row.dataset.placeId === placeId);
   });
   map.flyTo([place.lat, place.lng], Math.max(map.getZoom(), 5), { duration: 0.6 });
   renderSidebar(place);
+  writeUrlState();
+}
+
+function fmtDate(d) {
+  const [y, m, day] = d.split('-');
+  const months = ['JAN','FÉV','MAR','AVR','MAI','JUN','JUL','AOÛ','SEP','OCT','NOV','DÉC'];
+  return `${day} ${months[parseInt(m,10)-1]} ${y}`;
+}
+function fmtCoord(v, pos, neg) {
+  return `${Math.abs(v).toFixed(4)}° ${v >= 0 ? pos : neg}`;
+}
+
+function buildSidebarTabs() {
+  return `
+    <div class="sidebar-tabs">
+      <button class="sidebar-tab${state.sidebarTab === 'place' ? ' active' : ''}" data-tab="place">${state.selectedPlaceId ? 'Lieu' : 'Accueil'}</button>
+      <button class="sidebar-tab${state.sidebarTab === 'stats' ? ' active' : ''}" data-tab="stats">Statistiques</button>
+    </div>`;
+}
+
+function attachTabHandlers() {
+  document.querySelectorAll('.sidebar-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.sidebarTab = btn.dataset.tab;
+      writeUrlState();
+      render();
+    });
+  });
 }
 
 function renderSidebar(place) {
@@ -1639,21 +2276,17 @@ function renderSidebar(place) {
     .map(aid => articlesById[aid])
     .filter(Boolean)
     .sort((a, b) => b.date.localeCompare(a.date));
-  const fmtDate = d => {
-    const [y, m, day] = d.split('-');
-    const months = ['JAN','FÉV','MAR','AVR','MAI','JUN','JUL','AOÛ','SEP','OCT','NOV','DÉC'];
-    return `${day} ${months[parseInt(m,10)-1]} ${y}`;
-  };
-  const fmtCoord = (v, pos, neg) => `${Math.abs(v).toFixed(4)}° ${v >= 0 ? pos : neg}`;
   const totalForPlace = (DATA.places.find(p => p.id === place.id) || {}).articles?.length || articles.length;
   const filtersActive = state.filters.categories.size > 0 || state.filters.languages.size > 0 || state.filters.dateRange !== null;
   const totalLine = filtersActive ? `<span class="total">/ ${totalForPlace} sans filtre</span>` : '';
+  const isEmerging = state.emergingPlaceIds.has(place.id);
   const sidebar = document.getElementById('sidebar');
   sidebar.innerHTML = `
+    ${buildSidebarTabs()}
     <div class="sidebar-header">
       <button class="close-btn" id="sidebar-close" aria-label="Fermer">✕</button>
       <div class="crumb">Lieu sélectionné</div>
-      <h2>${escapeHtml(place.name)}</h2>
+      <h2>${escapeHtml(place.name)}${isEmerging ? '<span class="emerging-tag">↑ Émergent</span>' : ''}</h2>
       <div class="country">${escapeHtml(place.country)}</div>
       <div class="coords">
         <span><strong>LAT</strong>${fmtCoord(place.lat, 'N', 'S')}</span>
@@ -1663,6 +2296,12 @@ function renderSidebar(place) {
         <strong>${articles.length}</strong>
         <span>enquête${articles.length>1?'s':''} mentionne${articles.length>1?'nt':''} ce lieu</span>
         ${totalLine}
+      </div>
+      <div class="share-row">
+        <button class="share-btn" id="copy-link-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          <span>Copier le lien</span>
+        </button>
       </div>
     </div>
     <ul class="articles-list">
@@ -1680,29 +2319,27 @@ function renderSidebar(place) {
         </li>`).join('')}
     </ul>`;
   sidebar.classList.add('open');
+  attachTabHandlers();
   document.getElementById('sidebar-close').addEventListener('click', clearSelection);
+  document.getElementById('copy-link-btn').addEventListener('click', e => copyShareUrl(e.currentTarget));
 }
 
 function clearSelection() {
   state.selectedPlaceId = null;
-  for (const marker of Object.values(placeMarkers)) {
-    const el = marker.getElement()?.querySelector('.place-marker');
-    if (el) el.classList.remove('selected');
-  }
+  const { places } = getFilteredData();
+  renderMarkers(places);
+  renderLinks(places);
   document.querySelectorAll('.top-place-row').forEach(row => row.classList.remove('selected'));
-  renderEmptySidebar();
+  if (state.sidebarTab === 'stats') renderStatsPanel(places, new Set(places.flatMap(p => p.articles)));
+  else renderEmptySidebar();
+  writeUrlState();
 }
 
-// Sidebar vide avec "À LA UNE" (3 dernières enquêtes)
 function renderEmptySidebar() {
-  const fmtDate = d => {
-    const [y, m, day] = d.split('-');
-    const months = ['JAN','FÉV','MAR','AVR','MAI','JUN','JUL','AOÛ','SEP','OCT','NOV','DÉC'];
-    return `${day} ${months[parseInt(m,10)-1]} ${y}`;
-  };
   const recent = [...DATA.articles].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
   const sidebar = document.getElementById('sidebar');
   sidebar.innerHTML = `
+    ${buildSidebarTabs()}
     <div class="sidebar-empty">
       <div class="sidebar-intro">
         <div class="icon">◈</div>
@@ -1723,10 +2360,162 @@ function renderEmptySidebar() {
       </div>
     </div>`;
   sidebar.classList.remove('open');
+  attachTabHandlers();
 }
 
 // ============================================================
-// SEARCH
+// SIDEBAR : ONGLET STATS (feature 4)
+// ============================================================
+function renderStatsPanel(filteredPlaces, validArticleIds) {
+  const articles = DATA.articles.filter(a => validArticleIds.has(a.id));
+  const totalMentions = filteredPlaces.reduce((acc, p) => acc + p.articles.length, 0);
+  const avgMentions = filteredPlaces.length ? (totalMentions / filteredPlaces.length).toFixed(1) : '0';
+
+  // Distribution par catégorie
+  const catCounts = {};
+  for (const a of articles) catCounts[a.category] = (catCounts[a.category] || 0) + 1;
+  const catSorted = Object.entries(catCounts).sort((a, b) => b[1] - a[1]);
+  const maxCat = Math.max(...Object.values(catCounts), 1);
+
+  // Distribution par pays (top 8)
+  const countryCounts = {};
+  for (const p of filteredPlaces) {
+    if (!p.country || p.country === '—') continue;
+    countryCounts[p.country] = (countryCounts[p.country] || 0) + p.articles.length;
+  }
+  const countrySorted = Object.entries(countryCounts).sort((a, b) => b[1] - a[1]).slice(0, 8);
+  const maxCountry = Math.max(...countrySorted.map(([_, n]) => n), 1);
+
+  // Distribution par mois
+  const monthCounts = {};
+  let minMonth = '9999-99', maxMonth = '0000-00';
+  for (const a of articles) {
+    const m = a.date.slice(0, 7);
+    monthCounts[m] = (monthCounts[m] || 0) + 1;
+    if (m < minMonth) minMonth = m;
+    if (m > maxMonth) maxMonth = m;
+  }
+  // Génère la liste continue de mois entre min et max
+  const months = [];
+  if (minMonth !== '9999-99' && maxMonth !== '0000-00') {
+    let [y, m] = minMonth.split('-').map(Number);
+    const [eY, eM] = maxMonth.split('-').map(Number);
+    while (y < eY || (y === eY && m <= eM)) {
+      const k = `${y}-${String(m).padStart(2,'0')}`;
+      months.push({ key: k, count: monthCounts[k] || 0 });
+      m++;
+      if (m > 12) { m = 1; y++; }
+    }
+  }
+  const maxMonthCount = Math.max(...months.map(m => m.count), 1);
+
+  // Émergents
+  const emergingList = [...state.emergingPlaceIds]
+    .map(id => DATA.places.find(p => p.id === id))
+    .filter(Boolean)
+    .filter(p => filteredPlaces.some(fp => fp.id === p.id))
+    .sort((a, b) => b.articles.length - a.articles.length)
+    .slice(0, 5);
+
+  const sidebar = document.getElementById('sidebar');
+  sidebar.innerHTML = `
+    ${buildSidebarTabs()}
+    <div class="stats-panel">
+      <div class="stats-bigfig">
+        <div class="stats-bigfig-card">
+          <div class="stats-bigfig-num">${articles.length}</div>
+          <div class="stats-bigfig-label">Enquêtes</div>
+        </div>
+        <div class="stats-bigfig-card">
+          <div class="stats-bigfig-num">${filteredPlaces.length}</div>
+          <div class="stats-bigfig-label">Lieux</div>
+        </div>
+        <div class="stats-bigfig-card">
+          <div class="stats-bigfig-num">${totalMentions}</div>
+          <div class="stats-bigfig-label">Mentions</div>
+        </div>
+        <div class="stats-bigfig-card">
+          <div class="stats-bigfig-num">${avgMentions}</div>
+          <div class="stats-bigfig-label">Mentions / lieu</div>
+        </div>
+      </div>
+
+      <div class="stats-section">
+        <div class="stats-section-label">Enquêtes par mois</div>
+        <div class="stats-mini-timeline">
+          ${months.map(m => `<div class="stats-mini-timeline-bar" style="height:${(m.count/maxMonthCount)*100}%" title="${m.key} · ${m.count} enquête${m.count>1?'s':''}"></div>`).join('')}
+        </div>
+        <div class="stats-mini-timeline-axis">
+          <span>${months[0]?.key.slice(0,7) || '—'}</span>
+          <span>${months[months.length-1]?.key.slice(0,7) || '—'}</span>
+        </div>
+      </div>
+
+      <div class="stats-section">
+        <div class="stats-section-label">Catégories</div>
+        <div class="stats-bars">
+          ${catSorted.map(([cat, n]) => `
+            <div class="stats-bar-row" data-filter-cat="${escapeHtml(cat)}">
+              <div>
+                <div class="stats-bar-name">${escapeHtml(cat)}</div>
+                <div class="stats-bar-track"><div class="stats-bar-fill" style="width:${(n/maxCat)*100}%"></div></div>
+              </div>
+              <div class="stats-bar-count">${n}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="stats-section">
+        <div class="stats-section-label">Top 8 pays par mentions</div>
+        <div class="stats-bars">
+          ${countrySorted.map(([c, n]) => `
+            <div class="stats-bar-row">
+              <div>
+                <div class="stats-bar-name">${escapeHtml(c)}</div>
+                <div class="stats-bar-track"><div class="stats-bar-fill" style="width:${(n/maxCountry)*100}%"></div></div>
+              </div>
+              <div class="stats-bar-count">${n}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      ${emergingList.length ? `
+        <div class="stats-section">
+          <div class="stats-section-label">Lieux émergents (sur la plage active)</div>
+          <div class="stats-bars">
+            ${emergingList.map(p => `
+              <div class="stats-bar-row" data-place-id="${escapeHtml(p.id)}">
+                <div>
+                  <div class="stats-bar-name" style="color:var(--emerging)">↑ ${escapeHtml(p.name)}</div>
+                  <div class="top-place-country">${escapeHtml(p.country)}</div>
+                </div>
+                <div class="stats-bar-count" style="color:var(--emerging)">${p.articles.length}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
+    </div>`;
+  attachTabHandlers();
+  // click sur catégorie → toggle filtre
+  sidebar.querySelectorAll('[data-filter-cat]').forEach(row => {
+    row.addEventListener('click', () => {
+      const cat = row.dataset.filterCat;
+      if (state.filters.categories.has(cat)) state.filters.categories.delete(cat);
+      else state.filters.categories.add(cat);
+      render(); writeUrlState();
+    });
+  });
+  // click sur lieu émergent → sélectionner
+  sidebar.querySelectorAll('[data-place-id]').forEach(row => {
+    row.addEventListener('click', () => selectPlace(row.dataset.placeId));
+  });
+}
+
+// ============================================================
+// SEARCH (avec raccourci /)
 // ============================================================
 function setupSearch() {
   const input = document.getElementById('search');
@@ -1737,7 +2526,7 @@ function setupSearch() {
       const match = places.find(p => p.name.toLowerCase().includes(q));
       if (match) { selectPlace(match.id); input.value = match.name; }
     }
-    if (e.key === 'Escape') { input.value = ''; clearSelection(); }
+    if (e.key === 'Escape') { input.value = ''; input.blur(); clearSelection(); }
   });
 }
 
@@ -1751,6 +2540,7 @@ function setupToggles() {
       state.layers[layer] = !state.layers[layer];
       btn.classList.toggle('active', state.layers[layer]);
       render();
+      writeUrlState();
     });
   });
 }
@@ -1763,22 +2553,24 @@ function setupReset() {
     state.filters.categories.clear();
     state.filters.languages.clear();
     state.filters.dateRange = null;
+    state.filters.dateRange2 = null;
+    if (state.compareMode) toggleCompareMode();
     render();
+    writeUrlState();
   });
 }
 
 // ============================================================
-// LÉGENDE & TOP 10 (toggles repliables)
+// COLLAPSIBLES
 // ============================================================
 function setupCollapsibles() {
   const legend = document.getElementById('legend');
   const legendHeader = document.getElementById('legend-header');
   const legendToggle = document.getElementById('legend-toggle');
-  const legendClick = () => {
+  legendHeader.addEventListener('click', () => {
     const collapsed = legend.classList.toggle('collapsed');
     legendToggle.textContent = collapsed ? '+' : '−';
-  };
-  legendHeader.addEventListener('click', legendClick);
+  });
 
   const tp = document.getElementById('top-places');
   const tpHeader = tp.querySelector('.top-places-header');
@@ -1792,10 +2584,9 @@ function setupCollapsibles() {
 // ============================================================
 // TOUR GUIDÉ
 // ============================================================
-const TOUR_STEP_DURATION = 6500; // ms par étape
+const TOUR_STEP_DURATION = 6500;
 
 function startTour() {
-  // Sélectionne les 6 lieux les plus mentionnés (ignore les filtres pour le tour)
   const top = [...DATA.places].sort((a, b) => b.articles.length - a.articles.length).slice(0, 6);
   if (top.length < 2) return;
   state.tour.active = true;
@@ -1804,10 +2595,10 @@ function startTour() {
   document.getElementById('tour-btn').classList.add('active');
   document.getElementById('tour-indicator').classList.add('active');
   document.getElementById('tour-total').textContent = top.length;
-  // Reset des filtres pour s'assurer que tous les lieux sont visibles
   state.filters.categories.clear();
   state.filters.languages.clear();
   state.filters.dateRange = null;
+  if (state.compareMode) toggleCompareMode();
   render();
   tourNext();
 }
@@ -1841,6 +2632,82 @@ function setupTour() {
 }
 
 // ============================================================
+// COMPARE MODE
+// ============================================================
+function toggleCompareMode() {
+  state.compareMode = !state.compareMode;
+  document.getElementById('compare-btn').classList.toggle('active', state.compareMode);
+  if (state.compareMode) {
+    // Initialise avec deux moitiés de la plage de données
+    const allDates = DATA.articles.map(a => a.date).sort();
+    if (!allDates.length) { state.compareMode = false; return; }
+    const first = allDates[0], last = allDates[allDates.length-1];
+    const midMs = (new Date(first).getTime() + new Date(last).getTime()) / 2;
+    const midISO = new Date(midMs).toISOString().slice(0, 10);
+    state.filters.dateRange = [first, midISO];
+    state.filters.dateRange2 = [midISO, last];
+    showToast('Mode comparaison : 2 plages de dates');
+  } else {
+    state.filters.dateRange2 = null;
+  }
+  render();
+  writeUrlState();
+}
+
+// ============================================================
+// MODALE RACCOURCIS
+// ============================================================
+function setupShortcutsModal() {
+  const modal = document.getElementById('shortcuts-modal');
+  const open = () => modal.classList.add('open');
+  const close = () => modal.classList.remove('open');
+  document.getElementById('help-btn').addEventListener('click', open);
+  document.getElementById('shortcuts-close').addEventListener('click', close);
+  modal.addEventListener('click', e => { if (e.target === modal) close(); });
+}
+
+// ============================================================
+// RACCOURCIS CLAVIER (feature 5)
+// ============================================================
+function setupKeyboardShortcuts() {
+  document.addEventListener('keydown', e => {
+    // Ne pas intercepter si dans un input
+    if (e.target.matches('input, textarea, select')) {
+      // Sauf Escape qui est géré par l'input lui-même
+      return;
+    }
+    // Escape global : ferme modale puis désélection
+    if (e.key === 'Escape') {
+      const modal = document.getElementById('shortcuts-modal');
+      if (modal.classList.contains('open')) { modal.classList.remove('open'); return; }
+      if (state.tour.active) { stopTour(); return; }
+      if (state.selectedPlaceId) clearSelection();
+      return;
+    }
+    // /
+    if (e.key === '/') {
+      e.preventDefault();
+      document.getElementById('search').focus();
+      return;
+    }
+    // ?
+    if (e.key === '?') {
+      e.preventDefault();
+      document.getElementById('shortcuts-modal').classList.add('open');
+      return;
+    }
+    const k = e.key.toLowerCase();
+    if (k === 'h') { state.layers.heat = !state.layers.heat; document.querySelector('[data-layer="heat"]').classList.toggle('active', state.layers.heat); render(); writeUrlState(); }
+    else if (k === 'm') { state.layers.markers = !state.layers.markers; document.querySelector('[data-layer="markers"]').classList.toggle('active', state.layers.markers); render(); writeUrlState(); }
+    else if (k === 'l') { state.layers.links = !state.layers.links; document.querySelector('[data-layer="links"]').classList.toggle('active', state.layers.links); render(); writeUrlState(); }
+    else if (k === 't') { if (state.tour.active) stopTour(); else startTour(); }
+    else if (k === 'c') { toggleCompareMode(); }
+    else if (k === 's') { state.sidebarTab = state.sidebarTab === 'stats' ? 'place' : 'stats'; render(); writeUrlState(); }
+    else if (k === 'r') { document.getElementById('reset-btn').click(); }
+  });
+}
+
+// ============================================================
 // HELPERS
 // ============================================================
 function escapeHtml(s) {
@@ -1848,13 +2715,13 @@ function escapeHtml(s) {
 }
 
 // ============================================================
-// TIMELINE (SVG brush)
+// TIMELINE — avec brush, range2 (compare), scrub cursor
 // ============================================================
 const Timeline = (() => {
   let bins = [];
   let domain = null;
   let svgEl;
-  const PAD_LEFT = 14, PAD_RIGHT = 14, PAD_TOP = 26, PAD_BOTTOM = 18;
+  const PAD_LEFT = 14, PAD_RIGHT = 14, PAD_TOP = 26, PAD_BOTTOM = 26;
   let dims = { w: 0, h: 0 };
   let dragging = null;
 
@@ -1897,6 +2764,16 @@ const Timeline = (() => {
     return Math.max(0, Math.min(bins.length - 1, Math.floor(rel * bins.length)));
   }
 
+  function rangeIndices(range) {
+    if (!range) return [0, bins.length - 1];
+    let leftIdx = 0, rightIdx = bins.length - 1;
+    bins.forEach((b, i) => {
+      if (b.startISO <= range[0]) leftIdx = Math.min(i, bins.length - 1);
+      if (b.endISO <= range[1]) rightIdx = i;
+    });
+    return [leftIdx, rightIdx];
+  }
+
   function draw() {
     if (!bins.length) return;
     setupSize();
@@ -1904,19 +2781,20 @@ const Timeline = (() => {
     const innerH = dims.h - PAD_TOP - PAD_BOTTOM;
     const maxCount = Math.max(...bins.map(b => b.count), 1);
     const barW = innerW / bins.length;
-    const range = state.filters.dateRange || domain;
-    let leftIdx = 0, rightIdx = bins.length - 1;
-    bins.forEach((b, i) => {
-      if (b.startISO <= range[0]) leftIdx = Math.min(i, bins.length - 1);
-      if (b.endISO <= range[1]) rightIdx = i;
-    });
+
+    const range1 = state.filters.dateRange || domain;
+    const [leftIdx, rightIdx] = rangeIndices(range1);
+    const range2 = state.filters.dateRange2;
+    const [leftIdx2, rightIdx2] = range2 ? rangeIndices(range2) : [-1, -1];
 
     const bars = bins.map((b, i) => {
       const x = PAD_LEFT + i * barW + 0.5;
       const h = (b.count / maxCount) * innerH;
       const y = PAD_TOP + innerH - h;
-      const inRange = i >= leftIdx && i <= rightIdx;
-      return `<rect class="timeline-bar${inRange ? ' in-range' : ''}" x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${(barW - 1).toFixed(1)}" height="${h.toFixed(1)}" />`;
+      let cls = 'timeline-bar';
+      if (i >= leftIdx && i <= rightIdx) cls += ' in-range';
+      else if (range2 && i >= leftIdx2 && i <= rightIdx2) cls += ' in-range-2';
+      return `<rect class="${cls}" x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${(barW - 1).toFixed(1)}" height="${h.toFixed(1)}" />`;
     }).join('');
 
     const tickYears = new Set();
@@ -1930,43 +2808,69 @@ const Timeline = (() => {
       return `<text class="timeline-axis-tick" x="${x.toFixed(1)}" y="${(PAD_TOP - 8).toFixed(1)}" text-anchor="start">${yr}</text>`;
     }).join('');
 
+    const handleW = 4, handleH = innerH + 12;
+    const handleY = PAD_TOP - 6;
+
+    // Range 1 selection
     const selXa = PAD_LEFT + leftIdx * barW;
     const selXb = PAD_LEFT + (rightIdx + 1) * barW;
     const selW = Math.max(2, selXb - selXa);
-    const selRect = `<rect class="timeline-selection" x="${selXa.toFixed(1)}" y="${PAD_TOP - 4}" width="${selW.toFixed(1)}" height="${(innerH + 8).toFixed(1)}" />`;
-    const handleW = 4, handleH = innerH + 12;
-    const handleY = PAD_TOP - 6;
-    const leftHandle = `
-      <g class="handle-group" data-handle="left">
-        <rect class="timeline-handle" x="${(selXa - handleW/2).toFixed(1)}" y="${handleY}" width="${handleW}" height="${handleH}" />
-        <line class="timeline-handle-grip" x1="${selXa.toFixed(1)}" y1="${(handleY + 4).toFixed(1)}" x2="${selXa.toFixed(1)}" y2="${(handleY + handleH - 4).toFixed(1)}" />
-      </g>`;
-    const rightHandle = `
-      <g class="handle-group" data-handle="right">
-        <rect class="timeline-handle" x="${(selXb - handleW/2).toFixed(1)}" y="${handleY}" width="${handleW}" height="${handleH}" />
-        <line class="timeline-handle-grip" x1="${selXb.toFixed(1)}" y1="${(handleY + 4).toFixed(1)}" x2="${selXb.toFixed(1)}" y2="${(handleY + handleH - 4).toFixed(1)}" />
-      </g>`;
+    let selRect = `<rect class="timeline-selection" data-range="1" x="${selXa.toFixed(1)}" y="${PAD_TOP - 4}" width="${selW.toFixed(1)}" height="${(innerH + 8).toFixed(1)}" />`;
+    selRect += `<g class="handle-group" data-handle="left" data-range="1"><rect class="timeline-handle" x="${(selXa - handleW/2).toFixed(1)}" y="${handleY}" width="${handleW}" height="${handleH}" /></g>`;
+    selRect += `<g class="handle-group" data-handle="right" data-range="1"><rect class="timeline-handle" x="${(selXb - handleW/2).toFixed(1)}" y="${handleY}" width="${handleW}" height="${handleH}" /></g>`;
+
+    // Range 2 selection (compare mode)
+    let sel2Rect = '';
+    if (range2 && leftIdx2 >= 0) {
+      const sel2Xa = PAD_LEFT + leftIdx2 * barW;
+      const sel2Xb = PAD_LEFT + (rightIdx2 + 1) * barW;
+      const sel2W = Math.max(2, sel2Xb - sel2Xa);
+      sel2Rect = `<rect class="timeline-selection range-2" data-range="2" x="${sel2Xa.toFixed(1)}" y="${PAD_TOP - 4}" width="${sel2W.toFixed(1)}" height="${(innerH + 8).toFixed(1)}" />`;
+      sel2Rect += `<g class="handle-group" data-handle="left" data-range="2"><rect class="timeline-handle range-2" x="${(sel2Xa - handleW/2).toFixed(1)}" y="${handleY}" width="${handleW}" height="${handleH}" /></g>`;
+      sel2Rect += `<g class="handle-group" data-handle="right" data-range="2"><rect class="timeline-handle range-2" x="${(sel2Xb - handleW/2).toFixed(1)}" y="${handleY}" width="${handleW}" height="${handleH}" /></g>`;
+    }
+
+    // Scrub cursor
+    let scrubMarkup = '';
+    if (state.scrubMode && state.scrubDate) {
+      let scrubBin = bins.findIndex(b => b.startISO <= state.scrubDate && b.endISO >= state.scrubDate);
+      if (scrubBin < 0) scrubBin = 0;
+      const scrubX = PAD_LEFT + (scrubBin + 0.5) * barW;
+      scrubMarkup = `
+        <line class="timeline-scrub-line" x1="${scrubX.toFixed(1)}" y1="${PAD_TOP - 6}" x2="${scrubX.toFixed(1)}" y2="${(PAD_TOP + innerH + 6).toFixed(1)}" />
+        <circle class="timeline-scrub-handle" data-scrub="1" cx="${scrubX.toFixed(1)}" cy="${(PAD_TOP + innerH + 6).toFixed(1)}" r="6" />
+      `;
+    }
 
     svgEl.innerHTML = `
       <g class="bars">${bars}</g>
       <g class="ticks">${ticks}</g>
-      <g class="selection">${selRect}${leftHandle}${rightHandle}</g>`;
+      <g class="selection">${selRect}${sel2Rect}${scrubMarkup}</g>`;
     attachHandlers();
-    updateReadout(leftIdx, rightIdx);
+    updateReadout(leftIdx, rightIdx, leftIdx2, rightIdx2);
   }
 
-  function updateReadout(leftIdx, rightIdx) {
-    const totalArticles = bins.slice(leftIdx, rightIdx + 1).reduce((s, b) => s + b.count, 0);
+  function updateReadout(leftIdx, rightIdx, leftIdx2, rightIdx2) {
     const fmt = m => {
+      if (!m) return '—';
       const [y, mo] = m.split('-');
       const months = ['Jan','Fév','Mar','Avr','Mai','Jun','Jul','Aoû','Sep','Oct','Nov','Déc'];
       return `${months[parseInt(mo,10)-1]} ${y}`;
     };
+    const total1 = bins.slice(leftIdx, rightIdx + 1).reduce((s, b) => s + b.count, 0);
     const start = bins[leftIdx]?.month, end = bins[rightIdx]?.month;
     const filtersActive = state.filters.dateRange !== null;
-    const label = filtersActive ? 'Plage sélectionnée' : 'Couverture totale';
-    document.getElementById('timeline-readout').innerHTML =
-      `${label} : <strong>${fmt(start)} → ${fmt(end)}</strong> · ${totalArticles} enquête${totalArticles>1?'s':''}`;
+    const lbl = filtersActive ? 'Plage' : 'Couverture';
+    let html = `${lbl} : <strong>${fmt(start)} → ${fmt(end)}</strong> · ${total1} enquête${total1>1?'s':''}`;
+    if (state.compareMode && state.filters.dateRange2 && leftIdx2 >= 0) {
+      const total2 = bins.slice(leftIdx2, rightIdx2 + 1).reduce((s, b) => s + b.count, 0);
+      const s2 = bins[leftIdx2]?.month, e2 = bins[rightIdx2]?.month;
+      html += `<br>Plage 2 : <strong class="range-2">${fmt(s2)} → ${fmt(e2)}</strong> · ${total2} enquête${total2>1?'s':''}`;
+    }
+    if (state.scrubMode && state.scrubDate) {
+      html = `Scrub : <strong>${fmt(state.scrubDate.slice(0,7))}</strong> · état de la cartographie à cette date`;
+    }
+    document.getElementById('timeline-readout').innerHTML = html;
   }
 
   function attachHandlers() {
@@ -1974,10 +2878,14 @@ const Timeline = (() => {
       g.addEventListener('mousedown', startHandleDrag);
       g.addEventListener('touchstart', startHandleDrag, { passive: false });
     });
-    const sel = svgEl.querySelector('.timeline-selection');
-    if (sel) {
-      sel.addEventListener('mousedown', startMoveDrag);
-      sel.addEventListener('touchstart', startMoveDrag, { passive: false });
+    svgEl.querySelectorAll('.timeline-selection').forEach(s => {
+      s.addEventListener('mousedown', startMoveDrag);
+      s.addEventListener('touchstart', startMoveDrag, { passive: false });
+    });
+    const scrubH = svgEl.querySelector('[data-scrub]');
+    if (scrubH) {
+      scrubH.addEventListener('mousedown', startScrubDrag);
+      scrubH.addEventListener('touchstart', startScrubDrag, { passive: false });
     }
   }
 
@@ -1990,27 +2898,44 @@ const Timeline = (() => {
   function startHandleDrag(e) {
     e.preventDefault(); e.stopPropagation();
     const handle = e.currentTarget.dataset.handle;
-    const range = state.filters.dateRange || domain;
-    dragging = { mode: handle, startX: getEventX(e), originalRange: [...range] };
+    const rangeNum = e.currentTarget.dataset.range;
+    const range = rangeNum === '2' ? state.filters.dateRange2 : (state.filters.dateRange || domain);
+    dragging = { mode: handle, rangeNum, startX: getEventX(e), originalRange: [...range] };
     bindMoveEnd();
   }
 
   function startMoveDrag(e) {
     e.preventDefault(); e.stopPropagation();
-    const range = state.filters.dateRange || domain;
-    dragging = { mode: 'move', startX: getEventX(e), originalRange: [...range] };
+    const rangeNum = e.currentTarget.dataset.range;
+    const range = rangeNum === '2' ? state.filters.dateRange2 : (state.filters.dateRange || domain);
+    dragging = { mode: 'move', rangeNum, startX: getEventX(e), originalRange: [...range] };
+    bindMoveEnd();
+  }
+
+  function startScrubDrag(e) {
+    e.preventDefault(); e.stopPropagation();
+    dragging = { mode: 'scrub', startX: getEventX(e) };
     bindMoveEnd();
   }
 
   function startCreateDrag(e) {
-    if (e.target.closest('.handle-group') || e.target.closest('.timeline-selection')) return;
+    if (e.target.closest('.handle-group') || e.target.closest('.timeline-selection') || e.target.closest('[data-scrub]')) return;
     e.preventDefault();
     const x = getEventX(e);
     const idx = binAtX(x);
+    // En mode scrub, click = positionne le scrub
+    if (state.scrubMode) {
+      state.scrubDate = bins[idx].startISO;
+      dragging = { mode: 'scrub', startX: x };
+      bindMoveEnd();
+      render();
+      return;
+    }
     state.filters.dateRange = [bins[idx].startISO, bins[idx].endISO];
-    dragging = { mode: 'create', startX: x, anchorIdx: idx };
+    dragging = { mode: 'create', rangeNum: '1', startX: x, anchorIdx: idx };
     bindMoveEnd();
     render();
+    writeUrlState();
   }
 
   function bindMoveEnd() {
@@ -2025,14 +2950,29 @@ const Timeline = (() => {
     e.preventDefault();
     const x = getEventX(e);
     const idx = binAtX(x);
+
+    if (dragging.mode === 'scrub') {
+      state.scrubDate = bins[idx].startISO;
+      render();
+      return;
+    }
+
+    const isRange2 = dragging.rangeNum === '2';
+
     if (dragging.mode === 'left') {
       const rightDate = dragging.originalRange[1];
       const newStart = bins[idx].startISO;
-      if (newStart <= rightDate) state.filters.dateRange = [newStart, rightDate];
+      if (newStart <= rightDate) {
+        if (isRange2) state.filters.dateRange2 = [newStart, rightDate];
+        else state.filters.dateRange = [newStart, rightDate];
+      }
     } else if (dragging.mode === 'right') {
       const leftDate = dragging.originalRange[0];
       const newEnd = bins[idx].endISO;
-      if (newEnd >= leftDate) state.filters.dateRange = [leftDate, newEnd];
+      if (newEnd >= leftDate) {
+        if (isRange2) state.filters.dateRange2 = [leftDate, newEnd];
+        else state.filters.dateRange = [leftDate, newEnd];
+      }
     } else if (dragging.mode === 'move') {
       const innerW = dims.w - PAD_LEFT - PAD_RIGHT;
       const barW = innerW / bins.length;
@@ -2045,15 +2985,20 @@ const Timeline = (() => {
       if (newRight > bins.length - 1) { newLeft -= newRight - (bins.length - 1); newRight = bins.length - 1; }
       newLeft = Math.max(0, newLeft);
       newRight = Math.min(bins.length - 1, newRight);
-      state.filters.dateRange = [bins[newLeft].startISO, bins[newRight].endISO];
+      const r = [bins[newLeft].startISO, bins[newRight].endISO];
+      if (isRange2) state.filters.dateRange2 = r;
+      else state.filters.dateRange = r;
     } else if (dragging.mode === 'create') {
       const startIdx = Math.min(dragging.anchorIdx, idx);
       const endIdx = Math.max(dragging.anchorIdx, idx);
       state.filters.dateRange = [bins[startIdx].startISO, bins[endIdx].endISO];
     }
-    const r = state.filters.dateRange;
-    if (r[0] === domain[0] && r[1] === domain[1]) state.filters.dateRange = null;
+    if (!isRange2) {
+      const r = state.filters.dateRange;
+      if (r && r[0] === domain[0] && r[1] === domain[1]) state.filters.dateRange = null;
+    }
     render();
+    writeUrlState();
   }
 
   function endDrag() {
@@ -2071,14 +3016,62 @@ const Timeline = (() => {
     domain = [bins[0].startISO, bins[bins.length - 1].endISO];
     svgEl.addEventListener('mousedown', startCreateDrag);
     svgEl.addEventListener('touchstart', startCreateDrag, { passive: false });
-    svgEl.addEventListener('dblclick', () => { state.filters.dateRange = null; render(); });
+    svgEl.addEventListener('dblclick', () => {
+      state.filters.dateRange = null;
+      state.filters.dateRange2 = null;
+      if (state.compareMode) toggleCompareMode();
+      render();
+      writeUrlState();
+    });
     window.addEventListener('resize', () => draw());
+
+    // Bouton scrub
+    document.getElementById('timeline-scrub-btn').addEventListener('click', () => {
+      state.scrubMode = !state.scrubMode;
+      document.getElementById('timeline-scrub-btn').classList.toggle('active', state.scrubMode);
+      if (state.scrubMode) {
+        if (!state.scrubDate) state.scrubDate = bins[Math.floor(bins.length/2)].startISO;
+        document.getElementById('timeline-hint').textContent = "Scrub mode : glisse le curseur pour voir l'état à une date";
+      } else {
+        document.getElementById('timeline-hint').textContent = 'Glisse pour sélectionner · double-clic pour réinitialiser';
+      }
+      render();
+    });
+
     draw();
   }
   return { init, draw };
 })();
 
 function renderTimelineSelection() { Timeline.draw(); }
+
+// Override des filtres en mode scrub : on filtre par date <= scrubDate
+const _origGetFilteredData = getFilteredData;
+getFilteredData = function(range) {
+  if (state.scrubMode && state.scrubDate && range === undefined) {
+    // Filtre toutes les enquêtes parues avant ou pendant le mois scrub
+    const scrubMonth = state.scrubDate.slice(0, 7);
+    const validArticleIds = new Set(
+      DATA.articles.filter(a => {
+        if (state.filters.categories.size && !state.filters.categories.has(a.category)) return false;
+        if (state.filters.languages.size && !state.filters.languages.has(a.lang)) return false;
+        return a.date.slice(0, 7) <= scrubMonth;
+      }).map(a => a.id)
+    );
+    const places = DATA.places
+      .map(p => ({ ...p, articles: p.articles.filter(id => validArticleIds.has(id)) }))
+      .filter(p => p.articles.length > 0);
+    return { validArticleIds, places };
+  }
+  return _origGetFilteredData(range);
+};
+
+// ============================================================
+// COMPARE BUTTON SETUP
+// ============================================================
+function setupCompareBtn() {
+  document.getElementById('compare-btn').addEventListener('click', toggleCompareMode);
+}
 
 // ============================================================
 // BOOT
@@ -2087,18 +3080,32 @@ function renderTimelineSelection() { Timeline.draw(); }
   DATA = await loadData();
   articlesById = Object.fromEntries(DATA.articles.map(a => [a.id, a]));
   computeHotPlaces();
+  readUrlState();
   initMap();
-  renderEmptySidebar();
   setupSearch();
   setupToggles();
   setupReset();
   setupCollapsibles();
   setupTour();
+  setupCompareBtn();
+  setupShortcutsModal();
+  setupKeyboardShortcuts();
   Timeline.init();
+  // Initialiser la visualisation des couches selon l'URL
+  document.querySelectorAll('[data-layer]').forEach(btn => {
+    btn.classList.toggle('active', state.layers[btn.dataset.layer]);
+  });
   render();
-  // splash animé en parallèle (asynchrone)
+  // Si une URL a une sélection, on flyTo après le 1er render
+  if (state.selectedPlaceId) {
+    setTimeout(() => {
+      const place = DATA.places.find(p => p.id === state.selectedPlaceId);
+      if (place) map.flyTo([place.lat, place.lng], 5, { duration: 0.6 });
+    }, 100);
+  }
   runSplash();
 })();
+
 </script>
 
 </body>
