@@ -1,9 +1,19 @@
 {
   "_doc": "aliases (variante->canonique), blacklist (faux positifs), overrides (lat/lng forcés)",
   "aliases": {
+    "Moscow": "Moscou",
+    "Moskva": "Moscou",
+    "Москва": "Moscou",
+    "России": "Russie",
     "Russia": "Russie",
     "Russian Federation": "Russie",
     "Fédération de Russie": "Russie",
+    "Algeria": "Algérie",
+    "Germany": "Allemagne",
+    "Ethiopia": "Éthiopie",
+    "Equatorial Guinea": "Guinée équatoriale",
+    "Argentina": "Argentine",
+    "Bahrain": "Bahreïn",
     "Sudan": "Soudan",
     "Libya": "Libye",
     "Syria": "Syrie",
@@ -17,7 +27,6 @@
     "Turkey": "Turquie",
     "Senegal": "Sénégal",
     "Guinea": "Guinée",
-    "Guinea-Bissau": "Guinée-Bissau",
     "Mauritania": "Mauritanie",
     "Lebanon": "Liban",
     "Yemen": "Yémen",
@@ -38,11 +47,13 @@
     "U.S": "États-Unis",
     "Etats-Unis": "États-Unis",
     "United States": "États-Unis",
-    "Asia": "Asie",
     "Centrafrique": "République centrafricaine",
     "République Centrafricaine": "République centrafricaine",
     "Emirats Arabes Unis": "Émirats arabes unis",
     "Beijing": "Pékin",
+    "Cairo": "Le Caire",
+    "London": "Londres",
+    "Kyiv": "Kiev",
     "St. Petersburg": "Saint-Pétersbourg",
     "Saint Petersbourg": "Saint-Pétersbourg",
     "Saint Petersburg": "Saint-Pétersbourg",
@@ -50,19 +61,39 @@
     "Brussels": "Bruxelles",
     "Dubai": "Dubaï",
     "Damascus": "Damas",
-    "Mediterranean": "Mer Méditerranée"
+    "Sevare": "Sévaré",
+    "Severe": "Sévaré",
+    "Bamako Mali": "Bamako",
+    "Tin-Zaouatene": "Tin Zaouaten",
+    "Tin Zaouatene": "Tin Zaouaten",
+    "Gouni": "Gouni-Habé",
+    "Gouni Habé": "Gouni-Habé",
+    "la Chine": "Chine",
+    "la Russie": "Russie",
+    "Mediterranean": "Mer Méditerranée",
+    "Côte-d'Ivoire": "Côte d'Ivoire",
+    "Cote d'Ivoire": "Côte d'Ivoire",
+    "Cote-d'Ivoire": "Côte d'Ivoire",
+    "Côte d’Ivoire": "Côte d'Ivoire",
+    "Burkina-Faso": "Burkina Faso",
+    "République du Mali": "Mali",
+    "République du Niger": "Niger"
   },
   "blacklist": [
     "afp",
     "africa",
     "africa corps",
     "afrique",
+    "aliou",
     "amérique",
     "août",
     "ap",
     "aqim",
+    "asie",
     "avril",
+    "brics",
     "cedeao",
+    "centre",
     "concord",
     "de l'est",
     "de l'ouest",
@@ -93,8 +124,9 @@
     "juillet",
     "juin",
     "kremlin",
-    "la france",
     "mai",
+    "maisons",
+    "marran",
     "mars",
     "minusma",
     "nato",
@@ -111,6 +143,7 @@
     "ouest",
     "reuters",
     "rfi",
+    "schengen",
     "septembre",
     "south",
     "state",
@@ -127,12 +160,38 @@
     "wagner group",
     "west",
     "western",
+    "western sahara",
     "x",
     "youtube",
     "état",
     "états"
   ],
   "overrides": {
+    "Moyen-Orient": {
+      "lat": 29.0,
+      "lng": 41.0,
+      "country": "—"
+    },
+    "the Middle East": {
+      "lat": 29.0,
+      "lng": 41.0,
+      "country": "—"
+    },
+    "Middle East": {
+      "lat": 29.0,
+      "lng": 41.0,
+      "country": "—"
+    },
+    "Gaza": {
+      "lat": 31.5017,
+      "lng": 34.4668,
+      "country": "Palestine"
+    },
+    "Gao": {
+      "lat": 16.2667,
+      "lng": -0.05,
+      "country": "Mali"
+    },
     "Kidal": {
       "lat": 18.4411,
       "lng": 1.4078,
@@ -162,6 +221,31 @@
       "lat": 15.5,
       "lng": 0.0,
       "country": "—"
+    },
+    "Mer Méditerranée": {
+      "lat": 35.0,
+      "lng": 18.0,
+      "country": "—"
+    },
+    "Mer Rouge": {
+      "lat": 22.0,
+      "lng": 38.0,
+      "country": "—"
+    },
+    "RDC": {
+      "lat": -4.038,
+      "lng": 21.7587,
+      "country": "République démocratique du Congo"
+    },
+    "Kassai": {
+      "lat": -3.5,
+      "lng": 16.2,
+      "country": "République démocratique du Congo"
+    },
+    "Tatarstan": {
+      "lat": 55.798,
+      "lng": 49.106,
+      "country": "Russie"
     }
   }
 }
