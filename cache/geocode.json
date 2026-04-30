@@ -1,4170 +1,1837 @@
 {
-  "afric": {
-    "lat": -4.2752259,
-    "lng": 15.28426,
-    "country": "Congo-Brazzaville",
-    "display": "Afric', Avenue du Camp, Poto-Poto, Poto-Poto (arrondissement 3), Brazzaville (commune), Brazzaville (département), Congo-Brazzaville"
-  },
-  "algeria": {
-    "lat": 36.7729333,
-    "lng": 3.0588445,
-    "country": "Algérie",
-    "display": "Alger, Daïra Sidi M'Hamed, Alger, 16007, Algérie"
-  },
-  "anacom": {
-    "lat": 38.7356808,
-    "lng": -9.1597697,
-    "country": "Portugal",
-    "display": "Anacom, 51, Rua Ramalho Ortigão, Campolide, Lisbonne, 1099-099, Portugal"
-  },
-  "abed al wali": null,
   "abidjan": {
     "lat": 5.320357,
     "lng": -4.016107,
     "country": "Côte d’Ivoire",
-    "display": "Abidjan, Côte d’Ivoire"
+    "display": "Abidjan, Côte d’Ivoire",
+    "type": "city",
+    "class": "place"
   },
   "aden": {
     "lat": 12.789585,
     "lng": 45.028504,
     "country": "Yémen",
-    "display": "Aden, Gouvernorat d’Aden, Yémen"
-  },
-  "adrar": {
-    "lat": 27.873203,
-    "lng": -0.2876021,
-    "country": "Algérie",
-    "display": "Adrar, Daïra d'Adrar, Adrar, Algérie"
-  },
-  "afarak": {
-    "lat": 17.4140449,
-    "lng": 7.9537447,
-    "country": "Niger",
-    "display": "Afarak, Tchirozerine, Agadez, Niger"
+    "display": "Aden, Gouvernorat d’Aden, Yémen",
+    "type": "administrative",
+    "class": "boundary"
   },
   "afghanistan": {
     "lat": 33.7680065,
     "lng": 66.2385139,
     "country": "Afghanistan",
-    "display": "Afghanistan"
+    "display": "Afghanistan",
+    "type": "administrative",
+    "class": "boundary"
   },
   "africa politology": null,
-  "africa russia": {
-    "lat": 56.1498779,
-    "lng": 101.6308575,
-    "country": "Russie",
-    "display": "AFRICA, 31, проспект Ленина, Центральный Жилой район, Bratsk, городской округ Братск, Oblast d'Irkoutsk, District fédéral sibérien, 665729, Russie"
-  },
-  "africain": {
-    "lat": -4.3946401,
-    "lng": 15.381968,
-    "country": "République démocratique du Congo",
-    "display": "Africain, Quartier 12, N'djili, Kinshasa, République démocratique du Congo"
-  },
   "afrique russie": {
     "lat": 55.758955,
     "lng": 37.5943635,
     "country": "Russie",
-    "display": "Ambassade d'Afrique du Sud, 1 с9, Granatnyy Lane, 47, Presnenski, Moscou, District fédéral central, 123001, Russie"
+    "display": "Ambassade d'Afrique du Sud, 1 с9, Granatnyy Lane, 47, Presnenski, Moscou, District fédéral central, 123001, Russie",
+    "type": "diplomatic",
+    "class": "office"
   },
   "afrique centrale": {
     "lat": 8.9868127,
     "lng": 1.1396676,
     "country": "Togo",
-    "display": "Ets Afrique Pro, Rue de l'Église, ZONGO, Sokodé, Préfecture de Tchaoudjo, Région Centrale, Togo"
+    "display": "Ets Afrique Pro, Rue de l'Église, ZONGO, Sokodé, Préfecture de Tchaoudjo, Région Centrale, Togo",
+    "type": "mobile_phone",
+    "class": "shop"
   },
   "afrique de prigojine": null,
   "afrique de l’ouest": {
-    "lat": 45.4203354,
-    "lng": -75.6944061,
-    "country": "Canada",
-    "display": "D'Afrique, 164, avenue Laurier Ouest, Centre-ville, Somerset, Ottawa, Est de l'Ontario, Ontario, K1P 5J2, Canada"
+    "lat": 5.5238575,
+    "lng": 10.1256764,
+    "country": "Cameroun",
+    "display": "Ferme EPA, Nkong-Zem, Menoua, Région de l'Ouest, Cameroun",
+    "type": "farmyard",
+    "class": "landuse"
   },
   "afrique du nord": {
     "lat": 41.362599,
     "lng": 2.159665,
     "country": "Espagne",
-    "display": "Afrique du Nord, el Poble-sec, Sants-Montjuïc, Barcelone, Barcelonais, Barcelone, Catalogne, Espagne"
+    "display": "Afrique du Nord, el Poble-sec, Sants-Montjuïc, Barcelone, Barcelonais, Barcelone, Catalogne, Espagne",
+    "type": "garden",
+    "class": "leisure"
   },
   "afrique du sud": {
     "lat": -28.8166236,
     "lng": 24.991639,
     "country": "Afrique du Sud",
-    "display": "Afrique du Sud"
+    "display": "Afrique du Sud",
+    "type": "administrative",
+    "class": "boundary"
   },
   "afrique francophone": {
     "lat": 6.1832774,
     "lng": 1.2355266,
     "country": "Togo",
-    "display": "Réseau des Organisations Féminines d'Afrique Francophone, Boulevard Jean-Paul II, Hédzranawoé, 2e Arrondissement, Lomé, Région Maritime, Togo"
+    "display": "Réseau des Organisations Féminines d'Afrique Francophone, Boulevard Jean-Paul II, Hédzranawoé, 2e Arrondissement, Lomé, Région Maritime, Togo",
+    "type": "ngo",
+    "class": "office"
   },
   "afrique subsaharienne": null,
-  "agadez": {
-    "lat": 16.972556,
-    "lng": 7.990739,
-    "country": "Niger",
-    "display": "ⴰⴳⴰⴷⴻⵣ, Tchirozerine, Agadez, Niger"
-  },
-  "aguelhoc": null,
   "aguelhok": {
     "lat": 19.4641919,
     "lng": 0.8573623,
     "country": "Mali",
-    "display": "Aguelhok, Cercle de Tessalit, Kidal, Mali"
-  },
-  "aimons": {
-    "lat": 44.8471849,
-    "lng": 0.1231574,
-    "country": "France",
-    "display": "Route des Aimons, Barrière, Vélines, Bergerac, Dordogne, Nouvelle-Aquitaine, France métropolitaine, 24230, France"
-  },
-  "akkuyu": {
-    "lat": 36.8981928,
-    "lng": 37.7510757,
-    "country": "Turquie",
-    "display": "Akkuyu Mahallesi, Nizip, Gaziantep, Région de l'Anatolie du Sud-Est, Turquie"
-  },
-  "akvametria": null,
-  "al-jabri": {
-    "lat": 30.9993088,
-    "lng": 47.4040594,
-    "country": "Irak",
-    "display": "Al Jabri, شارع ٤٠, Al Qurnah, Al-Qurnah Central Sbudsitrict, Al-Qurnah District, Al-Basra, 29987, Irak"
+    "display": "Aguelhok, Cercle de Tessalit, Kidal, Mali",
+    "type": "village",
+    "class": "place"
   },
   "alabuga": {
     "lat": 55.7577131,
     "lng": 52.0539938,
     "country": "Russie",
-    "display": "Ielabouga, городское поселение Елабуга, Yelabuzhsky District, Tatarstan, District fédéral de la Volga, 423600, Russie"
+    "display": "Ielabouga, городское поселение Елабуга, Yelabuzhsky District, Tatarstan, District fédéral de la Volga, 423600, Russie",
+    "type": "town",
+    "class": "place"
   },
   "alabuga start": {
     "lat": 55.7497601,
     "lng": 52.0129175,
     "country": "Russie",
-    "display": "RCF Старт, проспект Нефтяников, Хлебный городок, Ielabouga, городское поселение Елабуга, Yelabuzhsky District, Tatarstan, District fédéral de la Volga, 423600, Russie"
+    "display": "RCF Старт, проспект Нефтяников, Ielabouga, городское поселение Елабуга, Yelabuzhsky District, Tatarstan, District fédéral de la Volga, 423600, Russie",
+    "type": "shoes",
+    "class": "shop"
   },
-  "alabuga telegram": null,
+  "algeria": {
+    "lat": 36.7729333,
+    "lng": 3.0588445,
+    "country": "Algérie",
+    "display": "Alger, Daïra Sidi M'Hamed, Alger, 16007, Algérie",
+    "type": "city",
+    "class": "place"
+  },
   "algérie": {
     "lat": 28.0000272,
     "lng": 2.9999825,
     "country": "Algérie",
-    "display": "Algérie"
+    "display": "Algérie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "aliou": {
     "lat": 8.4538722,
     "lng": 20.6938037,
     "country": "République centrafricaine",
-    "display": "Aliou, Bamingui-Bangoran, République centrafricaine"
-  },
-  "allemand": {
-    "lat": 29.660212,
-    "lng": -90.7656472,
-    "country": "États-Unis d'Amérique",
-    "display": "Allemand, Paroisse de Terrebonne, Louisiane, 70359, États-Unis d'Amérique"
-  },
-  "ambassade de russie": {
-    "lat": 38.9243135,
-    "lng": -77.0744826,
-    "country": "États-Unis d'Amérique",
-    "display": "Ambassade de Russie, 2650, Wisconsin Avenue Northwest, Ward 3, Washington, District de Columbia, 20007, États-Unis d'Amérique"
-  },
-  "ambassadeur russe": {
-    "lat": -3.3908302,
-    "lng": 29.3606282,
-    "country": "Burundi",
-    "display": "résidence ambassadeur russe, Boulevard de La Liberté, Mukaza, Building Bata, Bujumbura, Bujumbura Mairie, Burundi"
+    "display": "Aliou, Bamingui-Bangoran, République centrafricaine",
+    "type": "village",
+    "class": "place"
   },
   "amman": {
     "lat": 31.9515694,
     "lng": 35.9239625,
     "country": "Jordanie",
-    "display": "Amman, Amman Sub-District, Amman Qasabah District, Gouvernorat d'Amman, 11110, Jordanie"
-  },
-  "amour": {
-    "lat": 48.872916,
-    "lng": 130.6753417,
-    "country": "Russie",
-    "display": "Amour, District fédéral extrême-oriental, Russie"
-  },
-  "amur": {
-    "lat": 52.8032368,
-    "lng": 128.437295,
-    "country": "Russie",
-    "display": "Oblast d'Amour, District fédéral extrême-oriental, Russie"
+    "display": "Amman, Amman Sub-District, Amman Qasabah District, Gouvernorat d'Amman, 11110, Jordanie",
+    "type": "city",
+    "class": "place"
   },
   "amérique": {
     "lat": 9.2548361,
     "lng": -79.8805617,
     "country": "—",
-    "display": "Amérique"
-  },
-  "amérique latine": {
-    "lat": 48.8861486,
-    "lng": 2.2899828,
-    "country": "France",
-    "display": "Square de l'Amérique Latine, Paris 17e Arrondissement, Paris, Île-de-France, France métropolitaine, 75017, France"
-  },
-  "andreevsky": {
-    "lat": 55.1476191,
-    "lng": 61.3814991,
-    "country": "Russie",
-    "display": "Square named Stepan Andreevsky, Raïon Tsentralny, Tcheliabinsk, Oblast de Tcheliabinsk, District fédéral de l'Oural, Russie"
+    "display": "Amérique",
+    "type": "continent",
+    "class": "place"
   },
   "anefis": {
     "lat": 18.04589,
     "lng": 0.602897,
     "country": "Mali",
-    "display": "Anéfif, Cercle de Kidal, Kidal, Mali"
+    "display": "Anéfif, Cercle de Kidal, Kidal, Mali",
+    "type": "village",
+    "class": "place"
   },
   "angola": {
     "lat": -11.8775768,
     "lng": 17.5691241,
     "country": "Angola",
-    "display": "Angola"
-  },
-  "ankara": {
-    "lat": 39.9207759,
-    "lng": 32.8540497,
-    "country": "Turquie",
-    "display": "Ankara, Çankaya, Ankara, Région de l'Anatolie centrale, 06420, Turquie"
+    "display": "Angola",
+    "type": "administrative",
+    "class": "boundary"
   },
   "antananarivo": {
     "lat": -18.9100122,
     "lng": 47.5255809,
     "country": "Madagascar",
-    "display": "Antananarivo, Analamanga, Province d’Antananarivo, 101, Madagascar"
-  },
-  "antouly": {
-    "lat": 44.8748041,
-    "lng": 4.5507968,
-    "country": "France",
-    "display": "Antouly, Chalencon, Privas, Ardèche, Auvergne-Rhône-Alpes, France métropolitaine, 07240, France"
-  },
-  "anéfis": {
-    "lat": 18.04589,
-    "lng": 0.602897,
-    "country": "Mali",
-    "display": "Anéfif, Cercle de Kidal, Kidal, Mali"
-  },
-  "arabian sea": {
-    "lat": 12.4368972,
-    "lng": 63.0026622,
-    "country": "—",
-    "display": "Mer d'Arabie"
-  },
-  "arabie": {
-    "lat": 22.3742506,
-    "lng": 49.4770891,
-    "country": "Arabie saoudite",
-    "display": "péninsule Arabique, Arabie saoudite"
+    "display": "Antananarivo, Analamanga, Province d’Antananarivo, 101, Madagascar",
+    "type": "city",
+    "class": "place"
   },
   "arabie saoudite": {
     "lat": 25.6242618,
     "lng": 42.3528328,
     "country": "Arabie saoudite",
-    "display": "Arabie saoudite"
-  },
-  "arctic": {
-    "lat": 25.2291463,
-    "lng": 55.1385759,
-    "country": "Émirats arabes unis",
-    "display": "Artic, Doubaï, Émirats arabes unis"
-  },
-  "arctique": {
-    "lat": 81.0159994,
-    "lng": 55.0007366,
-    "country": "Russie",
-    "display": "Parc national de l'Arctique russe, District fédéral du Nord-Ouest, 163100, Russie"
+    "display": "Arabie saoudite",
+    "type": "administrative",
+    "class": "boundary"
   },
   "argentina": {
     "lat": -34.9964963,
     "lng": -64.9672817,
     "country": "Argentine",
-    "display": "Argentine"
-  },
-  "argentine": {
-    "lat": -34.9964963,
-    "lng": -64.9672817,
-    "country": "Argentine",
-    "display": "Argentine"
+    "display": "Argentine",
+    "type": "administrative",
+    "class": "boundary"
   },
   "arlit": {
     "lat": 18.739079,
     "lng": 7.393331,
     "country": "Niger",
-    "display": "Arlit, Agadez, Niger"
-  },
-  "armenia": {
-    "lat": 40.7696272,
-    "lng": 44.6736646,
-    "country": "Arménie",
-    "display": "Arménie"
+    "display": "Arlit, Agadez, Niger",
+    "type": "city",
+    "class": "place"
   },
   "asia": {
     "lat": 51.2086975,
     "lng": 89.2343748,
     "country": "—",
-    "display": "Asie"
+    "display": "Asie",
+    "type": "continent",
+    "class": "place"
   },
   "asie": {
     "lat": 51.2086975,
     "lng": 89.2343748,
     "country": "—",
-    "display": "Asie"
+    "display": "Asie",
+    "type": "continent",
+    "class": "place"
   },
   "asie centrale": {
     "lat": 39.0,
     "lng": 32.0,
     "country": "Turquie",
-    "display": "Anatolia, Polatlı, Ankara, Région de l'Anatolie centrale, 06900, Turquie"
-  },
-  "asipovichski": null,
-  "atlantique": {
-    "lat": 13.581921,
-    "lng": -38.320312,
-    "country": "—",
-    "display": "Océan Atlantique"
-  },
-  "auchan": {
-    "lat": 11.403508,
-    "lng": 8.008224,
-    "country": "Nigéria",
-    "display": "Auchan, Ikara, État de Kaduna, Nigéria"
-  },
-  "australia": {
-    "lat": -24.7761086,
-    "lng": 134.755,
-    "country": "Australie",
-    "display": "Australie"
-  },
-  "australie": {
-    "lat": -24.7761086,
-    "lng": 134.755,
-    "country": "Australie",
-    "display": "Australie"
-  },
-  "avenue russie": {
-    "lat": 55.7463092,
-    "lng": 37.5800658,
-    "country": "Russie",
-    "display": "Avenue, 1st Smolenskiy Lane, Arbat, Moscou, District fédéral central, 121099, Russie"
-  },
-  "avenue de russie": {
-    "lat": 45.9161835,
-    "lng": 3.0561985,
-    "country": "France",
-    "display": "Avenue de Russie, Saint-Hippolyte, Châtel-Guyon, Riom, Puy-de-Dôme, Auvergne-Rhône-Alpes, France métropolitaine, 63140, France"
-  },
-  "averyanov": {
-    "lat": 59.9213817,
-    "lng": 30.4120172,
-    "country": "Russie",
-    "display": "Averyanov, Russian & Eurasian patent attorney, 4, улица Громова, Malaya Okhta, округ Малая Охта, Saint-Pétersbourg, District fédéral du Nord-Ouest, 195196, Russie"
-  },
-  "azobe": {
-    "lat": 3.4922611,
-    "lng": 11.506136,
-    "country": "Cameroun",
-    "display": "Azobé, Nkolnguet, Mbalmayo, Nyong-et-So'o, Région du Centre, Cameroun"
+    "display": "Anatolia, Polatlı, Ankara, Région de l'Anatolie centrale, 06900, Turquie",
+    "type": "peninsula",
+    "class": "natural"
   },
   "brics": {
     "lat": 41.9473421,
     "lng": 1.5118973,
     "country": "Espagne",
-    "display": "Brics, Olius, Solsonais, Lérida, Catalogne, 25287, Espagne"
-  },
-  "bab el mandeb/ mer d’arabie": null,
-  "baboua": {
-    "lat": 5.8055823,
-    "lng": 14.8327321,
-    "country": "République centrafricaine",
-    "display": "Baboua, Nana-Mambéré, République centrafricaine"
+    "display": "Brics, Olius, Solsonais, Lérida, Catalogne, 25287, Espagne",
+    "type": "hamlet",
+    "class": "place"
   },
   "bahrain": {
     "lat": 26.1551249,
     "lng": 50.5344606,
     "country": "Bahreïn",
-    "display": "Bahreïn"
-  },
-  "bahreïn": {
-    "lat": 26.1551249,
-    "lng": 50.5344606,
-    "country": "Bahreïn",
-    "display": "Bahreïn"
+    "display": "Bahreïn",
+    "type": "administrative",
+    "class": "boundary"
   },
   "balkans": {
     "lat": 41.7785016,
     "lng": 23.814677,
     "country": "Bulgarie",
-    "display": "Balkans, Bulgarie"
+    "display": "Balkans, Bulgarie",
+    "type": "peninsula",
+    "class": "natural"
   },
   "bamako": {
     "lat": 12.649319,
     "lng": -8.000337,
     "country": "Mali",
-    "display": "Bamako, Mali"
+    "display": "Bamako, Mali",
+    "type": "administrative",
+    "class": "boundary"
   },
   "bangladesh": {
     "lat": 24.4769288,
     "lng": 90.2934413,
     "country": "Bangladesh",
-    "display": "Bangladesh"
+    "display": "Bangladesh",
+    "type": "administrative",
+    "class": "boundary"
   },
   "bangui": {
     "lat": 4.3635118,
     "lng": 18.5835913,
     "country": "République centrafricaine",
-    "display": "Bangui, République centrafricaine"
-  },
-  "bangui (nb": null,
-  "bangui a": {
-    "lat": 18.5358354,
-    "lng": 120.7700654,
-    "country": "Philippines",
-    "display": "A. Garvida Street, Salucag, Saranay, Tarrag, Bangui, Ilocos Norte, Ilocos Region, 2920, Philippines"
-  },
-  "barcelona": {
-    "lat": 41.3825802,
-    "lng": 2.177073,
-    "country": "Espagne",
-    "display": "Barcelone, Barcelonais, Barcelone, Catalogne, Espagne"
+    "display": "Bangui, République centrafricaine",
+    "type": "administrative",
+    "class": "boundary"
   },
   "barcelone": {
     "lat": 41.3825802,
     "lng": 2.177073,
     "country": "Espagne",
-    "display": "Barcelone, Barcelonais, Barcelone, Catalogne, Espagne"
-  },
-  "baye mohamed": {
-    "lat": -8.7957726,
-    "lng": 13.2253361,
-    "country": "Angola",
-    "display": "Baye Inn, Murtala Mohamed Avenue, Clube Naval de Luanda, Lelo, Luanda, Province de Luanda, Angola"
-  },
-  "bayraktar": {
-    "lat": 40.3879458,
-    "lng": 40.5763579,
-    "country": "Turquie",
-    "display": "Bayraktar, Bayburt, Région de la mer Noire, Turquie"
-  },
-  "beeline": {
-    "lat": 22.4045847,
-    "lng": 114.086252,
-    "country": "Chine",
-    "display": "Beeline, Yuen Long, Nouveaux Territoires, Hong Kong, Chine"
+    "display": "Barcelone, Barcelonais, Barcelone, Catalogne, Espagne",
+    "type": "administrative",
+    "class": "boundary"
   },
   "beijing": {
     "lat": 39.9057136,
     "lng": 116.3912972,
     "country": "Chine",
-    "display": "Pékin, Chine"
+    "display": "Pékin, Chine",
+    "type": "administrative",
+    "class": "boundary"
   },
   "belarus": {
     "lat": 53.4250605,
     "lng": 27.6971358,
     "country": "Bélarus",
-    "display": "Bélarus"
-  },
-  "belgique": {
-    "lat": 50.6402809,
-    "lng": 4.6667145,
-    "country": "Belgique",
-    "display": "Belgique"
-  },
-  "belgium": {
-    "lat": 50.6402809,
-    "lng": 4.6667145,
-    "country": "Belgique",
-    "display": "Belgique"
-  },
-  "belize": {
-    "lat": 17.1204943,
-    "lng": -88.6859028,
-    "country": "Belize",
-    "display": "Belize"
+    "display": "Bélarus",
+    "type": "administrative",
+    "class": "boundary"
   },
   "benghazi": {
     "lat": 32.1200168,
     "lng": 20.0812174,
     "country": "Libye",
-    "display": "Benghazi, Libye"
+    "display": "Benghazi, Libye",
+    "type": "city",
+    "class": "place"
   },
   "benin": {
     "lat": 9.5293472,
     "lng": 2.2584408,
     "country": "Bénin",
-    "display": "Bénin"
+    "display": "Bénin",
+    "type": "administrative",
+    "class": "boundary"
   },
   "berlin": {
     "lat": 52.5173885,
     "lng": 13.3951309,
     "country": "Allemagne",
-    "display": "Berlin, Allemagne"
-  },
-  "beta llc": {
-    "lat": 25.1851674,
-    "lng": 55.3664583,
-    "country": "Émirats arabes unis",
-    "display": "Beta Industrial LLC, Ras Al Khor Road, Nouvelle communauté de Ras Al Khor, Ras Al Khor Ind 2, Doubaï, Émirats arabes unis"
-  },
-  "bir hakeim": {
-    "lat": 48.8538898,
-    "lng": 2.2893811,
-    "country": "France",
-    "display": "Bir-Hakeim, Boulevard de Grenelle, Quartier de Grenelle, Paris 15e Arrondissement, Paris, Île-de-France, France métropolitaine, 75015, France"
-  },
-  "birao": {
-    "lat": 10.2961965,
-    "lng": 22.7809907,
-    "country": "République centrafricaine",
-    "display": "Birao, Vakaga, République centrafricaine"
+    "display": "Berlin, Allemagne",
+    "type": "administrative",
+    "class": "boundary"
   },
   "bishkek": {
     "lat": 42.8761424,
     "lng": 74.6036724,
     "country": "Kirghizistan",
-    "display": "Bichkek, Kirghizistan"
+    "display": "Bichkek, Kirghizistan",
+    "type": "administrative",
+    "class": "boundary"
   },
   "bittou": {
     "lat": 11.2470714,
     "lng": -0.299902,
     "country": "Burkina Faso",
-    "display": "Brigade Territoriale de BITTOU, N 16, Noaho, Bitou, Boulgou, Centre-Est, Burkina Faso"
+    "display": "Brigade Territoriale de BITTOU, N 16, Noaho, Bitou, Boulgou, Centre-Est, Burkina Faso",
+    "type": "police",
+    "class": "amenity"
   },
   "biélorussie": {
     "lat": 53.4250605,
     "lng": 27.6971358,
     "country": "Bélarus",
-    "display": "Bélarus"
-  },
-  "black moon": {
-    "lat": 45.3040455,
-    "lng": -111.4072868,
-    "country": "États-Unis d'Amérique",
-    "display": "Black Moon, Big Sky, Madison County, Montana, 50716, États-Unis d'Amérique"
-  },
-  "black moon dudukin": null,
-  "blagovechtchensk": {
-    "lat": 50.2600417,
-    "lng": 127.5337378,
-    "country": "Russie",
-    "display": "Blagovechtchensk, городской округ Благовещенск, Oblast d'Amour, District fédéral extrême-oriental, Russie"
-  },
-  "blagoveshchensk": {
-    "lat": 50.2600417,
-    "lng": 127.5337378,
-    "country": "Russie",
-    "display": "Blagovechtchensk, городской округ Благовещенск, Oblast d'Amour, District fédéral extrême-oriental, Russie"
-  },
-  "bobo dioulasso": {
-    "lat": 11.1765796,
-    "lng": -4.2961436,
-    "country": "Burkina Faso",
-    "display": "Bobo-Dioulasso, Houet, Hauts-Bassins, Burkina Faso"
-  },
-  "bobo-dioulasso": {
-    "lat": 11.1765796,
-    "lng": -4.2961436,
-    "country": "Burkina Faso",
-    "display": "Bobo-Dioulasso, Houet, Hauts-Bassins, Burkina Faso"
-  },
-  "bois rouge": {
-    "lat": 18.7788098,
-    "lng": -71.8967195,
-    "country": "Haïti",
-    "display": "Bois Rouge, 2e Juampas, Commune Lascahobas, Arrondissement Lascahobas, Centre Department, Haïti"
-  },
-  "bois rouge’s": {
-    "lat": -20.0994431,
-    "lng": 57.5893773,
-    "country": "Maurice",
-    "display": "Bois Rouge, Mapou VCA, South, Pamplemousses, 21013, Maurice"
+    "display": "Bélarus",
+    "type": "administrative",
+    "class": "boundary"
   },
   "bolivia": {
     "lat": -17.0568696,
     "lng": -64.9912286,
     "country": "Bolivie",
-    "display": "Bolivie"
+    "display": "Bolivie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "bolivie": {
     "lat": -17.0568696,
     "lng": -64.9912286,
     "country": "Bolivie",
-    "display": "Bolivie"
-  },
-  "bolshoy": {
-    "lat": 78.6277555,
-    "lng": 98.6797611,
-    "country": "Russie",
-    "display": "Bolshoy, городское поселение Диксон, Raïon dolgano-nénètse de Taïmyr, Kraï de Krasnoïarsk, District fédéral sibérien, Russie"
-  },
-  "boomerang": {
-    "lat": 47.5972055,
-    "lng": -121.6135615,
-    "country": "États-Unis d'Amérique",
-    "display": "Boomerang, King County, Washington, États-Unis d'Amérique"
-  },
-  "bosnie": {
-    "lat": 44.3053476,
-    "lng": 17.5961467,
-    "country": "Bosnie-Herzégovine",
-    "display": "Bosnie-Herzégovine"
+    "display": "Bolivie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "botswana": {
     "lat": -23.1681782,
     "lng": 24.5928742,
     "country": "Botswana",
-    "display": "Botswana"
-  },
-  "bouar": {
-    "lat": 5.9354018,
-    "lng": 15.5921894,
-    "country": "République centrafricaine",
-    "display": "Bouar, Nana-Mambéré, République centrafricaine"
-  },
-  "brak": {
-    "lat": 52.1876102,
-    "lng": 20.1159942,
-    "country": "Pologne",
-    "display": "Braki, gmina Nowa Sucha, Sochaczew County, Voïvodie de Mazovie, Pologne"
-  },
-  "brak al shati": {
-    "lat": 27.55163,
-    "lng": 14.272144,
-    "country": "Libye",
-    "display": "Birak, Wadi ach Chatii, Libye"
-  },
-  "brak al-shati": {
-    "lat": 27.55163,
-    "lng": 14.272144,
-    "country": "Libye",
-    "display": "Birak, Wadi ach Chatii, Libye"
+    "display": "Botswana",
+    "type": "administrative",
+    "class": "boundary"
   },
   "bremino": {
     "lat": 53.5278986,
     "lng": 23.6760523,
     "country": "Bélarus",
-    "display": "Bremino-Bruzghi TLC, Адэльскі сельскі Савет, Hrodna District, Voblast de Hrodna, Bélarus"
+    "display": "Bremino-Bruzghi TLC, Адэльскі сельскі Савет, Hrodna District, Voblast de Hrodna, Bélarus",
+    "type": "commercial",
+    "class": "landuse"
   },
   "brussels": {
     "lat": 50.8467372,
     "lng": 4.352493,
     "country": "Belgique",
-    "display": "Bruxelles, Bruxelles-Capitale, Belgique"
+    "display": "Bruxelles, Bruxelles-Capitale, Belgique",
+    "type": "administrative",
+    "class": "boundary"
   },
   "bruxelles": {
     "lat": 50.8467372,
     "lng": 4.352493,
     "country": "Belgique",
-    "display": "Bruxelles, Bruxelles-Capitale, Belgique"
-  },
-  "brésil": {
-    "lat": -10.3333333,
-    "lng": -53.2,
-    "country": "Brésil",
-    "display": "Brésil"
-  },
-  "bulgaria": {
-    "lat": 42.6073975,
-    "lng": 25.4856617,
-    "country": "Bulgarie",
-    "display": "Bulgarie"
+    "display": "Bruxelles, Bruxelles-Capitale, Belgique",
+    "type": "administrative",
+    "class": "boundary"
   },
   "burkina faso": {
     "lat": 12.0753083,
     "lng": -1.6880314,
     "country": "Burkina Faso",
-    "display": "Burkina Faso"
-  },
-  "burkinabè": {
-    "lat": 12.3474913,
-    "lng": -1.4927393,
-    "country": "Burkina Faso",
-    "display": "Société Burkinabé des Filières Alimentaires, Silmissin, Ouagadougou, Kadiogo, Centre, Burkina Faso"
-  },
-  "burval se": null,
-  "butyrka": {
-    "lat": 51.063625,
-    "lng": 44.494877,
-    "country": "Russie",
-    "display": "Butyrka, Клёновское сельское поселение, Zhirnovsky District, Oblast de Volgograd, District fédéral du Sud, Russie"
-  },
-  "bélize": {
-    "lat": 17.1204943,
-    "lng": -88.6859028,
-    "country": "Belize",
-    "display": "Belize"
+    "display": "Burkina Faso",
+    "type": "administrative",
+    "class": "boundary"
   },
   "bénin": {
     "lat": 9.5293472,
     "lng": 2.2584408,
     "country": "Bénin",
-    "display": "Bénin"
-  },
-  "c4ads": null,
-  "cc by": {
-    "lat": 52.406002,
-    "lng": 30.9357308,
-    "country": "Bélarus",
-    "display": "BTEU CC, 50, праспект Кастрычніка, Мікрараён №53 «Давыдаўка», 55-ы мікрараён, Савецкі раён, Homiel, Voblast de Homiel, 246029, Bélarus"
-  },
-  "caire": {
-    "lat": 30.0332516,
-    "lng": 31.5621651,
-    "country": "Égypte",
-    "display": "Caire, Égypte"
+    "display": "Bénin",
+    "type": "administrative",
+    "class": "boundary"
   },
   "cairo": {
     "lat": 30.0443879,
     "lng": 31.2357257,
     "country": "Égypte",
-    "display": "Le Caire, Caire, Égypte"
+    "display": "Le Caire, Caire, Égypte",
+    "type": "city",
+    "class": "place"
   },
   "cameroon": {
     "lat": 4.6125522,
     "lng": 13.1535811,
     "country": "Cameroun",
-    "display": "Cameroun"
+    "display": "Cameroun",
+    "type": "administrative",
+    "class": "boundary"
   },
   "cameroun": {
     "lat": 4.6125522,
     "lng": 13.1535811,
     "country": "Cameroun",
-    "display": "Cameroun"
-  },
-  "canada": {
-    "lat": 61.0666922,
-    "lng": -107.991707,
-    "country": "Canada",
-    "display": "Canada"
+    "display": "Cameroun",
+    "type": "administrative",
+    "class": "boundary"
   },
   "casablanca": {
     "lat": 33.5945144,
     "lng": -7.6200284,
     "country": "Maroc",
-    "display": "Casablanca, Pachalik de Casablanca, Préfecture de Casablanca, Casablanca-Settat, Maroc"
-  },
-  "catrosa": null,
-  "catrosa reactiv": null,
-  "catrosa reactiv llc": null,
-  "caucase du nord": {
-    "lat": 42.9920711,
-    "lng": 44.2636348,
-    "country": "Russie",
-    "display": "Ossétie-du-Nord-Alanie, District fédéral du Caucase du Nord, Russie"
-  },
-  "cavina": {
-    "lat": -8.9281008,
-    "lng": -77.3083714,
-    "country": "Pérou",
-    "display": "Cavina, Llama, Province of Mariscal Luzuriaga, Ancash, Pérou"
-  },
-  "center": {
-    "lat": 31.7952814,
-    "lng": -94.1803576,
-    "country": "États-Unis d'Amérique",
-    "display": "Center, Shelby County, Texas, 75935, États-Unis d'Amérique"
-  },
-  "centrafricaine": {
-    "lat": 7.0323598,
-    "lng": 19.9981227,
-    "country": "République centrafricaine",
-    "display": "République centrafricaine"
+    "display": "Casablanca, Pachalik de Casablanca, Préfecture de Casablanca, Casablanca-Settat, Maroc",
+    "type": "administrative",
+    "class": "boundary"
   },
   "centrafrique": {
     "lat": 7.0323598,
     "lng": 19.9981227,
     "country": "République centrafricaine",
-    "display": "République centrafricaine"
+    "display": "République centrafricaine",
+    "type": "administrative",
+    "class": "boundary"
   },
   "central africa": {
     "lat": -25.3579401,
     "lng": -57.5835295,
     "country": "Paraguay",
-    "display": "África, Ypatí, Villa Elisa, Département central, Región Oriental, 111507, Paraguay"
+    "display": "África, Ypatí, Villa Elisa, Département central, Región Oriental, 111507, Paraguay",
+    "type": "residential",
+    "class": "highway"
   },
   "central asia": {
     "lat": 3.1624869,
     "lng": 101.7125461,
     "country": "Malaisie",
-    "display": "Central Asia, Jalan Yap Kwan Seng, Kampung Sungai Baru, Kampung Cendana, Kuala Lumpur, 50450, Malaisie"
+    "display": "Central Asia, Jalan Yap Kwan Seng, Kampung Sungai Baru, Kampung Cendana, Kuala Lumpur, 50450, Malaisie",
+    "type": "restaurant",
+    "class": "amenity"
   },
   "centre": {
     "lat": 47.5490251,
     "lng": 1.7324062,
     "country": "France",
-    "display": "Centre-Val de Loire, France métropolitaine, France"
+    "display": "Centre-Val de Loire, France métropolitaine, France",
+    "type": "administrative",
+    "class": "boundary"
   },
-  "centre muraz": {
-    "lat": 11.1803845,
-    "lng": -4.3050849,
-    "country": "Burkina Faso",
-    "display": "Centre Muraz, Avenue de l'Unité, Bobo-Dioulasso, Houet, Hauts-Bassins, Burkina Faso"
-  },
-  "centre international de défense et de sécurité": null,
   "chad": {
     "lat": 15.6134137,
     "lng": 19.0156172,
     "country": "Tchad",
-    "display": "Tchad"
-  },
-  "chambre libyenne": null,
-  "chengdu": {
-    "lat": 30.659867,
-    "lng": 104.063315,
-    "country": "Chine",
-    "display": "Chengdu, Sichuan, Chine"
-  },
-  "chengdu ai": {
-    "lat": 30.7648688,
-    "lng": 102.1192947,
-    "country": "Chine",
-    "display": "Chengdu, Pan’an, Xiaojin County, Préfecture autonome tibétaine et qiang d'Aba, Sichuan, 624200, Chine"
-  },
-  "chepiga": null,
-  "chernivitsi": {
-    "lat": 48.2961245,
-    "lng": 25.9383076,
-    "country": "Ukraine",
-    "display": "Chernivitsi Ghetto of 1941, вулиця Івана Дудича, Mashzavod, Старе Місто, Tchernivtsi, Chernivtsi Urban Hromada, Chernivtsi Raion, Oblast de Tchernivtsi, 58002, Ukraine"
+    "display": "Tchad",
+    "type": "administrative",
+    "class": "boundary"
   },
   "china": {
     "lat": 35.000074,
     "lng": 104.999927,
     "country": "Chine",
-    "display": "Chine"
+    "display": "Chine",
+    "type": "administrative",
+    "class": "boundary"
   },
   "chine": {
     "lat": 35.000074,
     "lng": 104.999927,
     "country": "Chine",
-    "display": "Chine"
+    "display": "Chine",
+    "type": "administrative",
+    "class": "boundary"
   },
-  "chinois": {
-    "lat": -4.472848,
-    "lng": 11.7144356,
-    "country": "Congo-Brazzaville",
-    "display": "Chinois, Madingo-Kayes, Kouilou, Congo-Brazzaville"
-  },
-  "choïgou": null,
   "chypre": {
     "lat": 34.9823018,
     "lng": 33.1451285,
     "country": "Chypre",
-    "display": "Chypre"
-  },
-  "cinkansé": {
-    "lat": 11.1182353,
-    "lng": 0.006713,
-    "country": "Burkina Faso",
-    "display": "Cinkansé, Yargatenga, Koulpélogo, Centre-Est, Burkina Faso"
-  },
-  "cirdi": null,
-  "citadel": {
-    "lat": 47.4869898,
-    "lng": 19.0462656,
-    "country": "Hongrie",
-    "display": "Citadelle, 1, Citadella sétány, Gellérthegy, 1st district, Budapest, Hongrie centrale, 1118, Hongrie"
-  },
-  "cologne": {
-    "lat": 50.938361,
-    "lng": 6.959974,
-    "country": "Allemagne",
-    "display": "Cologne, Rhénanie-du-Nord-Westphalie, Allemagne"
+    "display": "Chypre",
+    "type": "administrative",
+    "class": "boundary"
   },
   "complexe sancu": null,
-  "complexe sancu sl": null,
   "conakry": {
     "lat": 9.5170602,
     "lng": -13.6998434,
     "country": "Guinée",
-    "display": "Conakry, Guinée"
+    "display": "Conakry, Guinée",
+    "type": "administrative",
+    "class": "boundary"
   },
-  "concern sozvezdni": null,
-  "concern sozvezdnie": null,
   "concord": {
     "lat": 43.207178,
     "lng": -71.537476,
     "country": "États-Unis d'Amérique",
-    "display": "Concord, Merrimack County, New Hampshire, États-Unis d'Amérique"
+    "display": "Concord, Merrimack County, New Hampshire, États-Unis d'Amérique",
+    "type": "administrative",
+    "class": "boundary"
   },
-  "consalt": {
-    "lat": 56.9820785,
-    "lng": 40.9782056,
-    "country": "Russie",
-    "display": "Legal firm \"Consalt\" Sorokiny and partners, Велижская улица, Фрунзенский район, Ivanovo, Oblast d'Ivanovo, District fédéral central, 152022, Russie"
-  },
-  "continent": {
-    "lat": 18.4452798,
-    "lng": -73.3071685,
-    "country": "Haïti",
-    "display": "Continent, 3e Saut du Baril, Commune Anse-à-Veau, Arrondissement de l’Anse-à-Veau, Département des Nippes, Haïti"
-  },
-  "corpus": {
-    "lat": 52.1704872,
-    "lng": 4.453483,
-    "country": "Pays-Bas",
-    "display": "Corpus, 1, Willem Einthovenstraat, Nieuw Rhijngeest-Zuid, Oegstgeest, Hollande-Méridionale, Pays-Bas, 2342 BH, Pays-Bas"
-  },
-  "corridor de lobito": null,
   "corée du nord": {
     "lat": 40.3736611,
     "lng": 127.0870417,
     "country": "Corée du Nord",
-    "display": "Corée du Nord"
-  },
-  "cote d’ivoire": {
-    "lat": 7.9897371,
-    "lng": -5.5679458,
-    "country": "Côte d’Ivoire",
-    "display": "Côte d’Ivoire"
-  },
-  "crete": {
-    "lat": 35.3084952,
-    "lng": 24.4633423,
-    "country": "Grèce",
-    "display": "Crète, Région Crète, Grèce"
-  },
-  "crimée": {
-    "lat": 48.8908513,
-    "lng": 2.3773681,
-    "country": "France",
-    "display": "Crimée, Avenue de Flandre, Quartier de la Villette, Paris 19e Arrondissement, Paris, Île-de-France, France métropolitaine, 75019, France"
-  },
-  "crète": {
-    "lat": 35.3084952,
-    "lng": 24.4633423,
-    "country": "Grèce",
-    "display": "Crète, Région Crète, Grèce"
-  },
-  "cuba": {
-    "lat": 23.0131338,
-    "lng": -80.8328748,
-    "country": "Cuba",
-    "display": "Cuba"
+    "display": "Corée du Nord",
+    "type": "administrative",
+    "class": "boundary"
   },
   "cyprus": {
     "lat": 34.9823018,
     "lng": 33.1451285,
     "country": "Chypre",
-    "display": "Chypre"
+    "display": "Chypre",
+    "type": "administrative",
+    "class": "boundary"
   },
   "côte d’ivoire": {
     "lat": 7.9897371,
     "lng": -5.5679458,
     "country": "Côte d’Ivoire",
-    "display": "Côte d’Ivoire"
-  },
-  "dci": {
-    "lat": 39.3538434,
-    "lng": 8.9719267,
-    "country": "Italie",
-    "display": "Decimomannu Air Base, Strada Statale 196 di Villacidro, Biddesorris/Villasor, Cagliari, Sardaigne, 09034, Italie"
-  },
-  "drc": {
-    "lat": -2.9814344,
-    "lng": 23.8222636,
-    "country": "République démocratique du Congo",
-    "display": "République démocratique du Congo"
-  },
-  "dvocu": null,
-  "daghestan": {
-    "lat": 43.0,
-    "lng": 47.0,
-    "country": "Russie",
-    "display": "Daghestan, District fédéral du Caucase du Nord, Russie"
+    "display": "Côte d’Ivoire",
+    "type": "administrative",
+    "class": "boundary"
   },
   "damascus": {
     "lat": 45.4176261,
     "lng": -122.458985,
     "country": "États-Unis d'Amérique",
-    "display": "Damascus, Clackamas County, Oregon, 97089, États-Unis d'Amérique"
-  },
-  "deir-ez-zor": {
-    "lat": 35.3333335,
-    "lng": 40.1499999,
-    "country": "Syrie",
-    "display": "Deïr ez-Zôr, Sous-district de Deir ez-Zor, District de Deir ez-Zor, Gouvernorat de Deir ez-Zor, Syrie"
-  },
-  "dioura": {
-    "lat": 14.8254246,
-    "lng": -5.2506187,
-    "country": "Mali",
-    "display": "Dioura, Cercle de Tenenkou, Mopti, Mali"
-  },
-  "directeur général de la police nationale bienvenu zokoué": null,
-  "djamena": {
-    "lat": 11.3407125,
-    "lng": 17.0981713,
-    "country": "Tchad",
-    "display": "Djaména, Chari-Baguirmi, Tchad"
-  },
-  "djanet": {
-    "lat": 24.071521,
-    "lng": 9.6155847,
-    "country": "Algérie",
-    "display": "Djanet, 56000, Algérie"
-  },
-  "djoubissi": {
-    "lat": 6.1938358,
-    "lng": 20.7637394,
-    "country": "République centrafricaine",
-    "display": "Ndjoubissi, Ouaka, République centrafricaine"
-  },
-  "donbas": {
-    "lat": 49.4183248,
-    "lng": 17.3108801,
-    "country": "Tchéquie",
-    "display": "Tovačovské jezero I, Tovačov, okres Přerov, Olomouc Region, Moravie centrale, Tchéquie"
-  },
-  "donbass": {
-    "lat": 40.5928159,
-    "lng": 71.8919178,
-    "country": "Ouzbékistan",
-    "display": "Donbass, Tashlak District, Province de Ferghana, Ouzbékistan"
-  },
-  "donso": {
-    "lat": 57.6015513,
-    "lng": 11.803425,
-    "country": "Suède",
-    "display": "Donsö, Sydväst, Donsö, Göteborgs Stad, Comté de Västra Götaland, 430 82, Suède"
-  },
-  "dori": {
-    "lat": 14.0327651,
-    "lng": -0.0348286,
-    "country": "Burkina Faso",
-    "display": "Dori, Séno, Sahel, Burkina Faso"
+    "display": "Damascus, Clackamas County, Oregon, 97089, États-Unis d'Amérique",
+    "type": "village",
+    "class": "place"
   },
   "dossier center": null,
-  "dosso": {
-    "lat": 13.0496369,
-    "lng": 3.1944647,
-    "country": "Niger",
-    "display": "Dosso, Niger"
-  },
-  "douala": {
-    "lat": 4.0429389,
-    "lng": 9.7062018,
-    "country": "Cameroun",
-    "display": "Douala, Douala II, Communauté urbaine de Douala, Wouri, Région du Littoral, Cameroun"
-  },
-  "douamba": {
-    "lat": 5.3490709,
-    "lng": -3.9497092,
-    "country": "Côte d’Ivoire",
-    "display": "Rue Amidou Douamba, Riviéra 3, Cocody, Abidjan, Côte d’Ivoire"
-  },
-  "douentza": {
-    "lat": 15.0068749,
-    "lng": -2.9529649,
-    "country": "Mali",
-    "display": "Douentza, Cercle de Douentza, Mopti, Mali"
-  },
   "dubai": {
     "lat": 25.0742823,
     "lng": 55.1885387,
     "country": "Émirats arabes unis",
-    "display": "Doubaï, Émirats arabes unis"
+    "display": "Doubaï, Émirats arabes unis",
+    "type": "administrative",
+    "class": "boundary"
   },
   "dubaï": {
     "lat": 25.2296341,
     "lng": 55.289585,
     "country": "Émirats arabes unis",
-    "display": "Doubaï, Émirats arabes unis"
-  },
-  "dudukin": {
-    "lat": 54.6005185,
-    "lng": 51.1552395,
-    "country": "Russie",
-    "display": "улица Дюдюкина, Чувашское Эштебенькино, сельское поселение Эштебенькино, Chelno-Vershinsky District, Oblast de Samara, District fédéral de la Volga, Russie"
-  },
-  "dépecer": null,
-  "eastern libya": {
-    "lat": 32.6856498,
-    "lng": 12.9088713,
-    "country": "Libye",
-    "display": "Eastern Zahra -Bir Trena, Azzahra, Al Djfara, Libye"
+    "display": "Doubaï, Émirats arabes unis",
+    "type": "city",
+    "class": "place"
   },
   "egypt": {
     "lat": 26.2540493,
     "lng": 29.2675469,
     "country": "Égypte",
-    "display": "Égypte"
+    "display": "Égypte",
+    "type": "administrative",
+    "class": "boundary"
   },
   "egypte": {
     "lat": 26.2540493,
     "lng": 29.2675469,
     "country": "Égypte",
-    "display": "Égypte"
+    "display": "Égypte",
+    "type": "administrative",
+    "class": "boundary"
   },
   "emirats arabes unis": {
     "lat": 24.0002488,
     "lng": 53.9994829,
     "country": "Émirats arabes unis",
-    "display": "Émirats arabes unis"
+    "display": "Émirats arabes unis",
+    "type": "administrative",
+    "class": "boundary"
   },
   "equatorial guinea": {
     "lat": 1.613172,
     "lng": 10.5170357,
     "country": "Guinée équatoriale",
-    "display": "Guinée équatoriale"
-  },
-  "eritrea": {
-    "lat": 15.9500319,
-    "lng": 37.9999668,
-    "country": "Érythrée",
-    "display": "Érythrée"
-  },
-  "ersan": {
-    "lat": 53.5537803,
-    "lng": 9.9889303,
-    "country": "Allemagne",
-    "display": "Ersan, Poststraße, Neustadt, Hamburg-Mitte, Hambourg, 20354, Allemagne"
-  },
-  "espagne": {
-    "lat": 39.3260685,
-    "lng": -4.8379791,
-    "country": "Espagne",
-    "display": "Espagne"
-  },
-  "est libyen": {
-    "lat": 45.4201451,
-    "lng": -75.6947075,
-    "country": "Canada",
-    "display": "Ambassade de Libye, 170, avenue Laurier Ouest, Centre-ville, Somerset, Ottawa, Est de l'Ontario, Ontario, K1P 5J2, Canada"
+    "display": "Guinée équatoriale",
+    "type": "administrative",
+    "class": "boundary"
   },
   "etat": {
     "lat": 36.5748441,
     "lng": 139.2394179,
     "country": "Japon",
-    "display": "Japon"
-  },
-  "etat islamique": null,
-  "etat malien": null,
-  "etat russe": {
-    "lat": 59.9379748,
-    "lng": 30.3086461,
-    "country": "Russie",
-    "display": "État-major de la Marine Russe, Адмиралтейский округ, Saint-Pétersbourg, District fédéral du Nord-Ouest, Russie"
+    "display": "Japon",
+    "type": "administrative",
+    "class": "boundary"
   },
   "etats-unis": {
     "lat": 39.7837304,
     "lng": -100.445882,
     "country": "États-Unis d'Amérique",
-    "display": "États-Unis d'Amérique"
+    "display": "États-Unis d'Amérique",
+    "type": "administrative",
+    "class": "boundary"
   },
   "ethiopia": {
     "lat": 10.2116702,
     "lng": 38.6521203,
     "country": "Éthiopie",
-    "display": "Éthiopie"
+    "display": "Éthiopie",
+    "type": "administrative",
+    "class": "boundary"
   },
-  "ethiopie": {
-    "lat": 10.2116702,
-    "lng": 38.6521203,
-    "country": "Éthiopie",
-    "display": "Éthiopie"
-  },
-  "europe pavlov": null,
   "evropolis": {
     "lat": 43.2121971,
     "lng": 76.9802009,
     "country": "Kazakhstan",
-    "display": "Europolis, микрорайон Юбилейный, Медеу ауданы, Almaty, Kazakhstan"
-  },
-  "extrême-orient": {
-    "lat": 49.1819977,
-    "lng": -0.3659604,
-    "country": "France",
-    "display": "Extrême-orient, Rue de Bras, Cité Gardin, Préfecture, Caen, Calvados, Normandie, France métropolitaine, 14000, France"
-  },
-  "fkey": null,
-  "fsr": {
-    "lat": 34.0786777,
-    "lng": -117.0463462,
-    "country": "États-Unis d'Amérique",
-    "display": "Forest Service Road, San Bernardino County, Californie, 92399, États-Unis d'Amérique"
-  },
-  "farol": {
-    "lat": -24.0935055,
-    "lng": -52.6232183,
-    "country": "Brésil",
-    "display": "Farol, Parana, Région Sud, 87317-000, Brésil"
-  },
-  "fawasel": null,
-  "flightradar.com": null,
-  "florida": {
-    "lat": 27.7567667,
-    "lng": -81.4639835,
-    "country": "États-Unis d'Amérique",
-    "display": "Floride, États-Unis d'Amérique"
+    "display": "Europolis, микрорайон Юбилейный, Медеу ауданы, Almaty, Kazakhstan",
+    "type": "residential",
+    "class": "landuse"
   },
   "france": {
     "lat": 46.603354,
     "lng": 1.8883335,
     "country": "France",
-    "display": "France"
-  },
-  "français": {
-    "lat": 3.9439622,
-    "lng": -53.0373015,
-    "country": "France",
-    "display": "Département d'outre-mer français, Guyane, France"
-  },
-  "fujairah": {
-    "lat": 25.4147357,
-    "lng": 56.2313667,
-    "country": "Émirats arabes unis",
-    "display": "Fujaïrah, Émirats arabes unis"
+    "display": "France",
+    "type": "administrative",
+    "class": "boundary"
   },
   "fédération de russie": {
     "lat": 64.6863136,
     "lng": 97.7453061,
     "country": "Russie",
-    "display": "Russie"
+    "display": "Russie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "gpci": null,
-  "gr group": {
-    "lat": 50.3690973,
-    "lng": -4.1251686,
-    "country": "Royaume-Uni",
-    "display": "Grove Group, St John's Road, Cattedown, Plymouth, Angleterre, PL4 0NP, Royaume-Uni"
-  },
-  "gambia": {
-    "lat": 13.470062,
-    "lng": -15.4900464,
-    "country": "Gambie",
-    "display": "Gambie"
-  },
   "gao": {
     "lat": 16.2788129,
     "lng": -0.0412392,
     "country": "Mali",
-    "display": "Gao, Cercle de Gao, Gao, Mali"
-  },
-  "gao –": {
-    "lat": 11.642308,
-    "lng": -2.1800254,
-    "country": "Burkina Faso",
-    "display": "Gao, Ziro, Centre-Ouest, Burkina Faso"
+    "display": "Gao, Cercle de Gao, Gao, Mali",
+    "type": "city",
+    "class": "place"
   },
   "gaza": {
     "lat": -23.328398,
     "lng": 32.8066057,
     "country": "Mozambique",
-    "display": "Province de Gaza, Zona Sul, Mozambique"
-  },
-  "gelendzhik": {
-    "lat": 44.5609447,
-    "lng": 38.0766832,
-    "country": "Russie",
-    "display": "Guelendjik, городской округ Геленджик, Kraï de Krasnodar, District fédéral du Sud, Russie"
-  },
-  "generyum": null,
-  "geneva": {
-    "lat": 46.2017559,
-    "lng": 6.1466014,
-    "country": "Suisse",
-    "display": "Genève, Suisse"
-  },
-  "genève": {
-    "lat": 46.2017559,
-    "lng": 6.1466014,
-    "country": "Suisse",
-    "display": "Genève, Suisse"
-  },
-  "georgia": {
-    "lat": 32.3293809,
-    "lng": -83.1137366,
-    "country": "États-Unis d'Amérique",
-    "display": "Géorgie, États-Unis d'Amérique"
+    "display": "Province de Gaza, Zona Sul, Mozambique",
+    "type": "administrative",
+    "class": "boundary"
   },
   "germany": {
     "lat": 51.1638175,
     "lng": 10.4478313,
     "country": "Allemagne",
-    "display": "Allemagne"
+    "display": "Allemagne",
+    "type": "administrative",
+    "class": "boundary"
   },
   "ghana": {
     "lat": 8.0300284,
     "lng": -1.0800271,
     "country": "Ghana",
-    "display": "Ghana"
+    "display": "Ghana",
+    "type": "administrative",
+    "class": "boundary"
   },
   "ghardabiya": null,
-  "global south": {
-    "lat": 18.1960272,
-    "lng": -73.750679,
-    "country": "Haïti",
-    "display": "Global GPA services, Rue du Peuple, 1re Bourdet, Les Cayes, Arrondissement des Cayes, Sud Department, Haïti"
-  },
   "glovo": {
     "lat": 41.8506274,
     "lng": 12.4616934,
     "country": "Italie",
-    "display": "GLOVO, Via Sesto Fiorentino, Municipio Roma XI, Rome, Roma Capitale, Latium, 00149, Italie"
-  },
-  "golfe": {
-    "lat": -7.5556411,
-    "lng": 144.8850036,
-    "country": "Papouasie-Nouvelle-Guinée",
-    "display": "Golfe, Southern Region, Papouasie-Nouvelle-Guinée"
-  },
-  "google earth": {
-    "lat": -0.9191736,
-    "lng": -80.4496163,
-    "country": "Équateur",
-    "display": "Cooperativa de Transporte Crucitahttps://earth.google.com/web/@-0.95852507,-80.69145646,21.64961062a,790.08329147d,35y,-0.00000005h,0.11675768t,-0r/data=CgRCAggBOgMKATBCAggASg0I____________ARAA, José Joaquín Olmedo, Rocafuerte, Parroquia Rocafuerte, Rocafuerte, Manabí, Équateur"
-  },
-  "goryashiy klyuch": null,
-  "gosniiokht": null,
-  "gosuslugi": {
-    "lat": 44.5640385,
-    "lng": 38.0819875,
-    "country": "Russie",
-    "display": "Центр услуг (через Госуслуги), Gorkogo Street, Магилат, Guelendjik, городской округ Геленджик, Kraï de Krasnodar, District fédéral du Sud, 353460, Russie"
-  },
-  "gotheye": {
-    "lat": 13.8571396,
-    "lng": 1.5665107,
-    "country": "Niger",
-    "display": "Gothèye, Téra, Tillabéri, Niger"
+    "display": "GLOVO, Via Sesto Fiorentino, Municipio Roma XI, Rome, Roma Capitale, Latium, 00149, Italie",
+    "type": "yes",
+    "class": "office"
   },
   "gouni": {
     "lat": 12.872607,
     "lng": -7.5344274,
     "country": "Mali",
-    "display": "Gouni, Cercle de Koulikoro, Koulikoro, Mali"
+    "display": "Gouni, Cercle de Koulikoro, Koulikoro, Mali",
+    "type": "village",
+    "class": "place"
   },
   "gouni habé": {
     "lat": 14.1154785,
     "lng": -3.9750676,
     "country": "Mali",
-    "display": "Goumi-Habe, Cercle de Bandiagara, Mopti, Mali"
+    "display": "Goumi-Habe, Cercle de Bandiagara, Mopti, Mali",
+    "type": "village",
+    "class": "place"
   },
   "gouni-habé": {
     "lat": 14.1154785,
     "lng": -3.9750676,
     "country": "Mali",
-    "display": "Goumi-Habe, Cercle de Bandiagara, Mopti, Mali"
-  },
-  "gourma": {
-    "lat": 12.2278267,
-    "lng": 0.5472078,
-    "country": "Burkina Faso",
-    "display": "Gourma, Est, Burkina Faso"
-  },
-  "grekhov": null,
-  "grekhov d’aeroflot": null,
-  "grey zone": {
-    "lat": 50.1532,
-    "lng": -122.900933,
-    "country": "Canada",
-    "display": "Grey Zone, Area C (Pemberton Valley/Mount Currie/D'Arcy), Squamish-Lillooet Regional District, Colombie-Britannique, V8E 1M2, Canada"
+    "display": "Goumi-Habe, Cercle de Bandiagara, Mopti, Mali",
+    "type": "village",
+    "class": "place"
   },
   "greyzone": null,
-  "grizodubova": {
-    "lat": 55.7833903,
-    "lng": 37.5349427,
-    "country": "Russie",
-    "display": "улица Гризодубовой, Khoroshyovsky District, Moscou, District fédéral central, 125252, Russie"
-  },
   "guinea": {
     "lat": 10.7226226,
     "lng": -10.7083587,
     "country": "Guinée",
-    "display": "Guinée"
+    "display": "Guinée",
+    "type": "administrative",
+    "class": "boundary"
   },
   "guinée": {
     "lat": 10.7226226,
     "lng": -10.7083587,
     "country": "Guinée",
-    "display": "Guinée"
-  },
-  "guinée equatoriale": {
-    "lat": 1.613172,
-    "lng": 10.5170357,
-    "country": "Guinée équatoriale",
-    "display": "Guinée équatoriale"
-  },
-  "gulf of aden": {
-    "lat": 12.6147301,
-    "lng": 47.5063378,
-    "country": "—",
-    "display": "Golfe d'Aden"
+    "display": "Guinée",
+    "type": "administrative",
+    "class": "boundary"
   },
   "gurokhen": null,
-  "génève": {
-    "lat": 46.2017559,
-    "lng": 6.1466014,
-    "country": "Suisse",
-    "display": "Genève, Suisse"
-  },
-  "géorgie": {
-    "lat": 41.6808672,
-    "lng": 44.0287806,
-    "country": "Géorgie",
-    "display": "Géorgie"
-  },
-  "hts": {
-    "lat": 38.3679651,
-    "lng": -82.5596021,
-    "country": "États-Unis d'Amérique",
-    "display": "Huntington Tri-State Airport/Milton J. Ferguson Field, 1449, Airport Road, Huntington, Wayne County, Virginie-Occidentale, 25704, États-Unis d'Amérique"
-  },
-  "http/3": {
-    "lat": 47.6724693,
-    "lng": 9.5297015,
-    "country": "Allemagne",
-    "display": "3, Käthe-Paulus-Straße, Gewerbegebiet Flughafen, Gerbertshaus, Meckenbeuren, Arrondissement du Lac de Constance, Bade-Wurtemberg, 88074, Allemagne"
-  },
-  "hamed": {
-    "lat": 14.8049995,
-    "lng": -9.0049446,
-    "country": "Mali",
-    "display": "Hamed, Cercle de Nioro, Kayes, Mali"
-  },
-  "hemetti": null,
-  "homs": {
-    "lat": 34.7333334,
-    "lng": 36.7166667,
-    "country": "Syrie",
-    "display": "Homs, Sous-district de Homs, District de Homs, Gouvernorat de Homs, Syrie"
-  },
   "hong kong": {
     "lat": 22.3492155,
     "lng": 114.1857978,
     "country": "Chine",
-    "display": "Hong Kong, Chine"
+    "display": "Hong Kong, Chine",
+    "type": "administrative",
+    "class": "boundary"
   },
   "houthis": null,
-  "inpact": {
-    "lat": 45.5656557,
-    "lng": -73.61461,
-    "country": "Canada",
-    "display": "Inpact Tacos, 8390, Boulevard Saint-Michel, Saint-Michel, Villeray–Saint-Michel–Parc-Extension, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H1Z 3E2, Canada"
-  },
-  "idere": {
-    "lat": 7.1102265,
-    "lng": 3.6850479,
-    "country": "Nigéria",
-    "display": "Idere, Owojo, Obafemi Owode, État d'Ogun, Nigéria"
-  },
-  "ifoghas": {
-    "lat": 15.8981837,
-    "lng": 2.3976675,
-    "country": "Mali",
-    "display": "Ifoghas, Ménaka, Mali"
-  },
-  "ijevsk": {
-    "lat": 56.8605175,
-    "lng": 53.1977307,
-    "country": "Russie",
-    "display": "Izhevsk, Oudmourtie, District fédéral de la Volga, Russie"
-  },
-  "india": {
-    "lat": 22.3511148,
-    "lng": 78.6677428,
-    "country": "Inde",
-    "display": "Inde"
-  },
-  "indonesia": {
-    "lat": -2.4833826,
-    "lng": 117.8902853,
-    "country": "Indonésie",
-    "display": "Indonésie"
-  },
-  "indonésie": {
-    "lat": -2.4833826,
-    "lng": 117.8902853,
-    "country": "Indonésie",
-    "display": "Indonésie"
-  },
-  "ingouchétie": null,
-  "institut": {
-    "lat": 48.8165563,
-    "lng": 2.3086278,
-    "country": "France",
-    "display": "Institut National de la Statistique et des Études Économiques, Avenue de la Marne, Quartier Jean Jaurès, Montrouge, Antony, Hauts-de-Seine, Île-de-France, France métropolitaine, 92120, France"
-  },
-  "intahaka": {
-    "lat": 16.2015595,
-    "lng": -0.4745056,
-    "country": "Mali",
-    "display": "INTAHAKA, Sévaré - Konna - Douentza - Gossi - Gao, In Tahaka, Wabaria, Cercle de Gao, Gao, Mali"
-  },
-  "irak": {
-    "lat": 33.0955793,
-    "lng": 44.1749775,
-    "country": "Irak",
-    "display": "Irak"
-  },
   "iran": {
     "lat": 32.6475314,
     "lng": 54.5643516,
     "country": "Iran",
-    "display": "Iran"
-  },
-  "iraniens": null,
-  "iraq": {
-    "lat": 33.0955793,
-    "lng": 44.1749775,
-    "country": "Irak",
-    "display": "Irak"
+    "display": "Iran",
+    "type": "administrative",
+    "class": "boundary"
   },
   "irdéré": null,
   "israel": {
     "lat": 30.8124247,
     "lng": 34.8594762,
     "country": "Israël",
-    "display": "Israël"
+    "display": "Israël",
+    "type": "administrative",
+    "class": "boundary"
   },
   "israël": {
     "lat": 30.8124247,
     "lng": 34.8594762,
     "country": "Israël",
-    "display": "Israël"
-  },
-  "istanbul": {
-    "lat": 41.006381,
-    "lng": 28.9758715,
-    "country": "Turquie",
-    "display": "Istanbul, Fatih, Istanbul, Région de Marmara, 34122, Turquie"
+    "display": "Israël",
+    "type": "administrative",
+    "class": "boundary"
   },
   "istra": {
     "lat": 45.1934345,
     "lng": 13.9150536,
     "country": "Croatie",
-    "display": "Istrie, Croatie"
+    "display": "Istrie, Croatie",
+    "type": "peninsula",
+    "class": "natural"
   },
   "italie": {
     "lat": 42.6384261,
     "lng": 12.674297,
     "country": "Italie",
-    "display": "Italie"
+    "display": "Italie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "italy": {
     "lat": 42.6384261,
     "lng": 12.674297,
     "country": "Italie",
-    "display": "Italie"
-  },
-  "ivato": {
-    "lat": -22.3886295,
-    "lng": 47.8674826,
-    "country": "Madagascar",
-    "display": "Ivato, District de Vohipeno, Fitovinany, Province de Fianarantsoa, Madagascar"
-  },
-  "ivory coast": {
-    "lat": 7.9897371,
-    "lng": -5.5679458,
-    "country": "Côte d’Ivoire",
-    "display": "Côte d’Ivoire"
-  },
-  "jacksonville": {
-    "lat": 30.3262247,
-    "lng": -81.6579179,
-    "country": "États-Unis d'Amérique",
-    "display": "Jacksonville, Comté de Duval, Floride, États-Unis d'Amérique"
+    "display": "Italie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "johannesburg": {
     "lat": -26.205,
     "lng": 28.049722,
     "country": "Afrique du Sud",
-    "display": "Johannesbourg, City of Johannesburg Metropolitan Municipality, Municipalité métropolitaine de la ville de Johannesburg, Gauteng, 2001, Afrique du Sud"
-  },
-  "jordan": {
-    "lat": 31.1667049,
-    "lng": 36.941628,
-    "country": "Jordanie",
-    "display": "Jordanie"
+    "display": "Johannesbourg, City of Johannesburg Metropolitan Municipality, Municipalité métropolitaine de la ville de Johannesburg, Gauteng, 2001, Afrique du Sud",
+    "type": "city",
+    "class": "place"
   },
   "jordanie": {
     "lat": 31.1667049,
     "lng": 36.941628,
     "country": "Jordanie",
-    "display": "Jordanie"
+    "display": "Jordanie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "jufra": {
     "lat": 28.0055724,
     "lng": 16.7430292,
     "country": "Libye",
-    "display": "Al Djoufrah, Libye"
+    "display": "Al Djoufrah, Libye",
+    "type": "administrative",
+    "class": "boundary"
   },
-  "justlan": {
-    "lat": 51.7126397,
-    "lng": 39.1634366,
-    "country": "Russie",
-    "display": "JustLan, бульвар Победы, Severnyj, Коминтерновский район, Voronej, Voronezh, Oblast de Voronej, District fédéral central, 394077, Russie"
-  },
-  "kangamongoulou": null,
-  "karab toum": null,
   "kassai": {
     "lat": 5.090987,
     "lng": 14.5274019,
     "country": "Cameroun",
-    "display": "Kassai, Ouli, Kadey, Région de l'Est, Cameroun"
-  },
-  "kati": {
-    "lat": -6.2190579,
-    "lng": 39.3938514,
-    "country": "Tanzanie",
-    "display": "Kati, Unguja Sud et Central, Zanzibar, Tanzanie"
+    "display": "Kassai, Ouli, Kadey, Région de l'Est, Cameroun",
+    "type": "village",
+    "class": "place"
   },
   "kazakhstan": {
     "lat": 48.1012954,
     "lng": 66.7780818,
     "country": "Kazakhstan",
-    "display": "Kazakhstan"
+    "display": "Kazakhstan",
+    "type": "administrative",
+    "class": "boundary"
   },
   "kenya": {
     "lat": 1.4419683,
     "lng": 38.4313975,
     "country": "Kenya",
-    "display": "Kenya"
+    "display": "Kenya",
+    "type": "administrative",
+    "class": "boundary"
   },
-  "kep": {
-    "lat": 10.4021539,
-    "lng": 104.2650618,
-    "country": "Cambodge",
-    "display": "Kep, Cambodge"
-  },
-  "khabarovsk": {
-    "lat": 51.6312684,
-    "lng": 136.121524,
-    "country": "Russie",
-    "display": "Kraï de Khabarovsk, District fédéral extrême-oriental, Russie"
-  },
-  "kharouba": {
-    "lat": 32.1819154,
-    "lng": 21.2159429,
-    "country": "Libye",
-    "display": "Khrouba, Al Marj, Libye"
-  },
-  "kheimeim": null,
   "kidal": {
     "lat": 19.802089,
     "lng": 0.7253125,
     "country": "Mali",
-    "display": "Kidal, Mali"
-  },
-  "kiev": {
-    "lat": 50.4500336,
-    "lng": 30.5241361,
-    "country": "Ukraine",
-    "display": "Kyiv, Ukraine"
+    "display": "Kidal, Mali",
+    "type": "administrative",
+    "class": "boundary"
   },
   "kirghizistan": {
     "lat": 41.5089324,
     "lng": 74.724091,
     "country": "Kirghizistan",
-    "display": "Kirghizistan"
-  },
-  "klin": {
-    "lat": 49.4350714,
-    "lng": 19.4971363,
-    "country": "District of Námestovo",
-    "display": "Klin, Région de Žilina, Stredné Slovensko, District of Námestovo, 029 41, Slovaquie"
-  },
-  "klyukin": null,
-  "kobadié": {
-    "lat": 13.2174676,
-    "lng": 1.8625651,
-    "country": "Niger",
-    "display": "Kobadié, Say, Tillabéri, Niger"
-  },
-  "kobé": {
-    "lat": 34.6932379,
-    "lng": 135.1943764,
-    "country": "Japon",
-    "display": "Kobe, Préfecture de Hyōgo, Japon"
+    "display": "Kirghizistan",
+    "type": "administrative",
+    "class": "boundary"
   },
   "koupéla": {
     "lat": 12.178932,
     "lng": -0.3539332,
     "country": "Burkina Faso",
-    "display": "Koupéla, Kouritenga, Centre-Est, Burkina Faso"
-  },
-  "kourma": {
-    "lat": 14.2172917,
-    "lng": 15.1721168,
-    "country": "Tchad",
-    "display": "Kourma, Blatougli, Kanem, Tchad"
-  },
-  "kpandé": {
-    "lat": 8.4571273,
-    "lng": 0.989427,
-    "country": "Togo",
-    "display": "Kpande-kpandé, Préfecture de Sotouboua, Région Centrale, Togo"
+    "display": "Koupéla, Kouritenga, Centre-Est, Burkina Faso",
+    "type": "town",
+    "class": "place"
   },
   "kremlin": {
     "lat": 36.5472537,
     "lng": -97.8314456,
     "country": "États-Unis d'Amérique",
-    "display": "Kremlin, Garfield County, Oklahoma, 73753, États-Unis d'Amérique"
+    "display": "Kremlin, Garfield County, Oklahoma, 73753, États-Unis d'Amérique",
+    "type": "administrative",
+    "class": "boundary"
   },
-  "kurochnaya": null,
-  "kygyzstan": null,
   "kyiv": {
     "lat": 50.4500336,
     "lng": 30.5241361,
     "country": "Ukraine",
-    "display": "Kyiv, Ukraine"
+    "display": "Kyiv, Ukraine",
+    "type": "administrative",
+    "class": "boundary"
   },
   "kyrgyzstan": {
     "lat": 41.5089324,
     "lng": 74.724091,
     "country": "Kirghizistan",
-    "display": "Kirghizistan"
-  },
-  "la paz": {
-    "lat": -16.4955455,
-    "lng": -68.1336229,
-    "country": "Bolivie",
-    "display": "La Paz, Pedro Domingo Murillo, La Paz, Bolivie"
-  },
-  "labbezzanga": null,
-  "lakhta park llc": null,
-  "lakhta plaza": null,
-  "lampedusa": {
-    "lat": 35.5111342,
-    "lng": 12.5962914,
-    "country": "Italie",
-    "display": "Île de Lampedusa, Lampedusa, Lampedusa e Linosa, Agrigente, Sicile, 92031, Italie"
-  },
-  "lancaster": {
-    "lat": 40.0379958,
-    "lng": -76.3056707,
-    "country": "États-Unis d'Amérique",
-    "display": "Lancaster, Lancaster County, Pennsylvanie, 17575, États-Unis d'Amérique"
-  },
-  "latakia": {
-    "lat": 35.579874,
-    "lng": 35.9772699,
-    "country": "Syrie",
-    "display": "Gouvernorat de Lattaquié, Syrie"
+    "display": "Kirghizistan",
+    "type": "administrative",
+    "class": "boundary"
   },
   "latin america": {
     "lat": 33.9709393,
     "lng": -117.3198639,
     "country": "États-Unis d'Amérique",
-    "display": "Latin America, University, Riverside, Riverside County, Californie, 92521, États-Unis d'Amérique"
+    "display": "Latin America, University, Riverside, Riverside County, Californie, 92521, États-Unis d'Amérique",
+    "type": "garden",
+    "class": "leisure"
   },
   "lebanon": {
     "lat": 33.8750629,
     "lng": 35.843409,
     "country": "Liban",
-    "display": "Liban"
+    "display": "Liban",
+    "type": "administrative",
+    "class": "boundary"
   },
   "lengo songo": null,
-  "lerneb": {
-    "lat": 16.3275802,
-    "lng": -4.9641551,
-    "country": "Mali",
-    "display": "Lerneb, Cercle de Goundam, Tombouctou, Mali"
-  },
-  "les maisons": {
-    "lat": 48.9708891,
-    "lng": 3.4098768,
-    "country": "France",
-    "display": "Les Maisons, Essises, Château-Thierry, Aisne, Hauts-de-France, France métropolitaine, 02570, France"
-  },
-  "les échos du niger": null,
-  "liaoning": {
-    "lat": 41.2374106,
-    "lng": 122.9955469,
-    "country": "Chine",
-    "display": "Liaoning, Chine"
-  },
   "liban": {
     "lat": 33.8750629,
     "lng": 35.843409,
     "country": "Liban",
-    "display": "Liban"
+    "display": "Liban",
+    "type": "administrative",
+    "class": "boundary"
   },
   "libya": {
     "lat": 26.8234472,
     "lng": 18.1236723,
     "country": "Libye",
-    "display": "Libye"
+    "display": "Libye",
+    "type": "administrative",
+    "class": "boundary"
   },
   "libye": {
     "lat": 26.8234472,
     "lng": 18.1236723,
     "country": "Libye",
-    "display": "Libye"
-  },
-  "linkedin": {
-    "lat": 37.7864738,
-    "lng": -122.3982635,
-    "country": "États-Unis d'Amérique",
-    "display": "LinkedIn, 222, 2nd Street, Transbay, Financial District, South of Market, San Francisco, Californie, 94105, États-Unis d'Amérique"
-  },
-  "liubov valentinovna prigozhina": null,
-  "lobaye": {
-    "lat": 4.1034548,
-    "lng": 17.5653592,
-    "country": "République centrafricaine",
-    "display": "Lobaye, République centrafricaine"
-  },
-  "lobito": {
-    "lat": -12.3506867,
-    "lng": 13.5464318,
-    "country": "Angola",
-    "display": "Lobito, Benguela, Angola"
+    "display": "Libye",
+    "type": "administrative",
+    "class": "boundary"
   },
   "lomé": {
     "lat": 6.130419,
     "lng": 1.215829,
     "country": "Togo",
-    "display": "Lomé, Région Maritime, Togo"
+    "display": "Lomé, Région Maritime, Togo",
+    "type": "administrative",
+    "class": "boundary"
   },
   "london": {
     "lat": 51.5074456,
     "lng": -0.1277653,
     "country": "Royaume-Uni",
-    "display": "Grand Londres, Angleterre, Royaume-Uni"
-  },
-  "londres": {
-    "lat": 51.5074456,
-    "lng": -0.1277653,
-    "country": "Royaume-Uni",
-    "display": "Grand Londres, Angleterre, Royaume-Uni"
-  },
-  "lougangsk": null,
-  "luna-m tricycle": {
-    "lat": 14.6363599,
-    "lng": 121.0948767,
-    "country": "Philippines",
-    "display": "General A. Luna Tricycle Terminal, M. Cruz Street, Paliparan Subdivision, Santo Niño, District I, Marikina, Eastern Manila District, Métro Manile, 1800, Philippines"
-  },
-  "l’afrique": {
-    "lat": 43.5346302,
-    "lng": 0.1958151,
-    "country": "France",
-    "display": "L'Afrique, Marciac, Mirande, Gers, Occitanie, France métropolitaine, 32230, France"
+    "display": "Grand Londres, Angleterre, Royaume-Uni",
+    "type": "administrative",
+    "class": "boundary"
   },
   "madagascar": {
     "lat": -18.9249604,
     "lng": 46.4416422,
     "country": "Madagascar",
-    "display": "Madagascar"
+    "display": "Madagascar",
+    "type": "administrative",
+    "class": "boundary"
   },
   "madrid": {
     "lat": 40.416782,
     "lng": -3.703507,
     "country": "Espagne",
-    "display": "Madrid, Communauté de Madrid, Espagne"
-  },
-  "maghreb": {
-    "lat": 33.3648003,
-    "lng": 44.3761825,
-    "country": "Irak",
-    "display": "Maghreb, Adhamiya, Al-Adhamiyah District, Bagdad, Al-Adhamiyah Municipality, Bagdad, Irak"
-  },
-  "mai 2024": {
-    "lat": 55.5987388,
-    "lng": 38.1198943,
-    "country": "Russie",
-    "display": "Institut d'aviation de Moscou, 8, Zhukovskogo street, Центр, Joukovski, Zhukovsky, Oblast de Moscou, District fédéral central, 140181, Russie"
+    "display": "Madrid, Communauté de Madrid, Espagne",
+    "type": "administrative",
+    "class": "boundary"
   },
   "maison russe": {
     "lat": 34.011731,
     "lng": -6.8434133,
     "country": "Maroc",
-    "display": "Maison russe, 12, Avenue Annasr, Agdal, Arrondissement Agdal-Riyad, Rabat, Pachalik de Rabat, Préfecture de Rabat, Rabat-Salé-Kénitra, 10050, Maroc"
+    "display": "Maison russe, 12, Avenue Annasr, Agdal, Arrondissement Agdal-Riyad, Rabat, Pachalik de Rabat, Préfecture de Rabat, Rabat-Salé-Kénitra, 10050, Maroc",
+    "type": "arts_centre",
+    "class": "amenity"
   },
-  "maison russe de bangui": null,
   "maisons": {
     "lat": 49.3188308,
     "lng": -0.7568691,
     "country": "France",
-    "display": "Maisons, Bayeux, Calvados, Normandie, France métropolitaine, 14400, France"
-  },
-  "major général morozov": null,
-  "malaysia": {
-    "lat": 4.5693754,
-    "lng": 102.2656823,
-    "country": "Malaisie",
-    "display": "Malaisie"
+    "display": "Maisons, Bayeux, Calvados, Normandie, France métropolitaine, 14400, France",
+    "type": "administrative",
+    "class": "boundary"
   },
   "mali": {
     "lat": 16.3700359,
     "lng": -2.2900239,
     "country": "Mali",
-    "display": "Mali"
+    "display": "Mali",
+    "type": "administrative",
+    "class": "boundary"
   },
   "maroc": {
     "lat": 28.3347722,
     "lng": -10.3713379,
     "country": "Maroc",
-    "display": "Maroc"
+    "display": "Maroc",
+    "type": "claimed_administrative",
+    "class": "boundary"
   },
   "marran": {
     "lat": 36.2217,
     "lng": 46.9703,
     "country": "Iran",
-    "display": "Marran-e `Olya, دهستان اوباتو, بخش کرفتو, Divandarreh County, Kurdistan, Iran"
+    "display": "Marran-e `Olya, دهستان اوباتو, بخش کرفتو, Divandarreh County, Kurdistan, Iran",
+    "type": "village",
+    "class": "place"
   },
-  "maryina roshcha estate": null,
   "mashkevich": null,
   "mauritania": {
     "lat": 20.2540382,
     "lng": -9.2399263,
     "country": "Mauritanie",
-    "display": "Mauritanie"
+    "display": "Mauritanie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "mauritanie": {
     "lat": 20.2540382,
     "lng": -9.2399263,
     "country": "Mauritanie",
-    "display": "Mauritanie"
-  },
-  "maxar": {
-    "lat": 34.1680673,
-    "lng": -118.158597,
-    "country": "États-Unis d'Amérique",
-    "display": "Maxar, 1250, Lincoln Avenue, Pasadena Council District 1, Pasadena, Los Angeles County, Californie, 91103, États-Unis d'Amérique"
-  },
-  "mayyun": {
-    "lat": 12.6518053,
-    "lng": 43.4277634,
-    "country": "Yémen",
-    "display": "Périm, Dhubab, Gouvernorat de Ta'izz, Yémen"
+    "display": "Mauritanie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "mediterranean": {
     "lat": 35.0000035,
     "lng": 19.9999957,
     "country": "—",
-    "display": "Mer Méditerranée"
-  },
-  "meet africa politology": null,
-  "megafon": {
-    "lat": 40.648896,
-    "lng": 30.342195,
-    "country": "Turquie",
-    "display": "Megafon, Karaçam, Geyve, Sakarya, Région de Marmara, Turquie"
+    "display": "Mer Méditerranée",
+    "type": "sea",
+    "class": "place"
   },
   "mer méditerranée": {
     "lat": 35.0000035,
     "lng": 19.9999957,
     "country": "—",
-    "display": "Mer Méditerranée"
+    "display": "Mer Méditerranée",
+    "type": "sea",
+    "class": "place"
   },
   "mer rouge": {
-    "lat": 25.5664162,
-    "lng": 34.0930512,
+    "lat": 24.6601831,
+    "lng": 34.1399929,
     "country": "Égypte",
-    "display": "Mer-Rouge, Égypte"
-  },
-  "mer rouge/ détroit": null,
-  "metropolitan": {
-    "lat": -22.9831448,
-    "lng": -43.362847,
-    "country": "Brésil",
-    "display": "Metropolitan, Avenida Nelson Mufarrej, Barra da Tijuca, Rio de Janeiro, Région Sud-est, 22775-904, Brésil"
-  },
-  "mexico": {
-    "lat": 23.6585116,
-    "lng": -102.0077097,
-    "country": "Mexique",
-    "display": "Mexique"
+    "display": "Mer-Rouge, Égypte",
+    "type": "administrative",
+    "class": "boundary"
   },
   "mexique": {
     "lat": 23.6585116,
     "lng": -102.0077097,
     "country": "Mexique",
-    "display": "Mexique"
-  },
-  "middel east": {
-    "lat": 50.8688751,
-    "lng": 3.6403258,
-    "country": "Belgique",
-    "display": "Middelgracht, Nederename, Audenarde, Flandre-Orientale, 9700, Belgique"
-  },
-  "middle-east": {
-    "lat": 39.3014159,
-    "lng": -76.5888477,
-    "country": "États-Unis d'Amérique",
-    "display": "Middle East, Baltimore, Maryland, États-Unis d'Amérique"
-  },
-  "middle-eastern": {
-    "lat": 53.39439,
-    "lng": -2.9495891,
-    "country": "Royaume-Uni",
-    "display": "Middle Eastern, Ritson Street, Edge Hill, Liverpool, Liverpool City Region, Angleterre, L8 0UF, Royaume-Uni"
-  },
-  "mikrogen": {
-    "lat": 57.9725209,
-    "lng": 56.3257055,
-    "country": "Russie",
-    "display": "Научно-производственная организация «Биомед» - филиал АО «НПО «Микроген», 177, Sverdlovsky City District, Perm, Perm District, Kraï de Perm, District fédéral de la Volga, 614089, Russie"
-  },
-  "milinfo": null,
-  "mines": {
-    "lat": 27.5966781,
-    "lng": -99.5213704,
-    "country": "États-Unis d'Amérique",
-    "display": "Mines, Laredo, Webb County, Texas, 78045, États-Unis d'Amérique"
-  },
-  "mirzayants": null,
-  "moldavie": {
-    "lat": 47.2879608,
-    "lng": 28.5670941,
-    "country": "Moldavie",
-    "display": "Moldavie"
+    "display": "Mexique",
+    "type": "administrative",
+    "class": "boundary"
   },
   "molkino": {
     "lat": 55.167511,
     "lng": 40.566715,
     "country": "Russie",
-    "display": "Mol'kino, Клепиковский муниципальный округ, Oblast de Riazan, District fédéral central, 391001, Russie"
-  },
-  "mondoro": {
-    "lat": 10.8038576,
-    "lng": 2.6716349,
-    "country": "Bénin",
-    "display": "Mondoro, Gogounou, Alibori, Bénin"
-  },
-  "montenegro": {
-    "lat": 42.7755624,
-    "lng": 19.2022423,
-    "country": "Monténégro",
-    "display": "Monténégro"
-  },
-  "monténégro": {
-    "lat": 42.7755624,
-    "lng": 19.2022423,
-    "country": "Monténégro",
-    "display": "Monténégro"
-  },
-  "monza": {
-    "lat": 45.6395418,
-    "lng": 9.2788304,
-    "country": "Italie",
-    "display": "Monza-et-la-Brianza, Lombardie, Italie"
+    "display": "Mol'kino, Клепиковский муниципальный округ, Oblast de Riazan, District fédéral central, 391001, Russie",
+    "type": "village",
+    "class": "place"
   },
   "mopti": {
     "lat": 14.514489,
     "lng": -3.6464581,
     "country": "Mali",
-    "display": "Mopti, Mali"
+    "display": "Mopti, Mali",
+    "type": "administrative",
+    "class": "boundary"
   },
   "morocco": {
     "lat": 28.3347722,
     "lng": -10.3713379,
     "country": "Maroc",
-    "display": "Maroc"
+    "display": "Maroc",
+    "type": "claimed_administrative",
+    "class": "boundary"
   },
   "moscou": {
     "lat": 55.625578,
     "lng": 37.6063916,
     "country": "Russie",
-    "display": "Moscou, District fédéral central, Russie"
-  },
-  "mourmansk": {
-    "lat": 68.970665,
-    "lng": 33.07497,
-    "country": "Russie",
-    "display": "Mourmansk, Murmansk Urban Okrug, Oblast de Mourmansk, District fédéral du Nord-Ouest, Russie"
-  },
-  "moyen-orient": {
-    "lat": 48.8491127,
-    "lng": 2.3476893,
-    "country": "France",
-    "display": "Institut de recherche et d’études Méditerranée Moyen-Orient, Rue des Carmes, Quartier de la Sorbonne, Paris 5e Arrondissement, Paris, Île-de-France, France métropolitaine, 75005, France"
+    "display": "Moscou, District fédéral central, Russie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "mozambique": {
     "lat": -19.302233,
     "lng": 34.9144977,
     "country": "Mozambique",
-    "display": "Mozambique"
+    "display": "Mozambique",
+    "type": "administrative",
+    "class": "boundary"
   },
   "mumbai": {
     "lat": 19.054999,
     "lng": 72.8692035,
     "country": "Inde",
-    "display": "Mumbai, Mumbai Suburban District, Maharashtra, 400051, Inde"
-  },
-  "murielle": {
-    "lat": 7.2874286,
-    "lng": 13.5743996,
-    "country": "Cameroun",
-    "display": "Murielle, Pont marza1, Bamyanga Marza, Ngaoundéré I, Communauté urbaine de Ngaoundéré, Vina, Région de l'Adamaoua, Cameroun"
-  },
-  "murmansk": {
-    "lat": 68.970665,
-    "lng": 33.07497,
-    "country": "Russie",
-    "display": "Mourmansk, Murmansk Urban Okrug, Oblast de Mourmansk, District fédéral du Nord-Ouest, Russie"
+    "display": "Mumbai, Mumbai Suburban District, Maharashtra, 400051, Inde",
+    "type": "city",
+    "class": "place"
   },
   "muscat": {
     "lat": 23.6123628,
     "lng": 58.5938134,
     "country": "Oman",
-    "display": "Mascate, Muscat Province, Mascate, Oman"
-  },
-  "musée du chocolat": {
-    "lat": 48.870585,
-    "lng": 2.3500955,
-    "country": "France",
-    "display": "Musée du chocolat, 28, Boulevard de Bonne Nouvelle, Quartier de la Porte-Saint-Denis, Paris 10e Arrondissement, Paris, Île-de-France, France métropolitaine, 75010, France"
-  },
-  "méditerranée": {
-    "lat": 35.0000035,
-    "lng": 19.9999957,
-    "country": "—",
-    "display": "Mer Méditerranée"
-  },
-  "ménaka": {
-    "lat": 15.9167,
-    "lng": 2.4,
-    "country": "Mali",
-    "display": "Ménaka, Mali"
-  },
-  "n-méthyl-2-pyrrolidone": null,
-  "nana mambere": {
-    "lat": 5.2231625,
-    "lng": 15.3517922,
-    "country": "République centrafricaine",
-    "display": "Nana-Mambéré, République centrafricaine"
-  },
-  "ntc.party": null,
-  "nairobi": {
-    "lat": -1.302398,
-    "lng": 36.8288509,
-    "country": "Kenya",
-    "display": "Nairobi, Comté de Nairobi, Kenya"
+    "display": "Mascate, Muscat Province, Mascate, Oman",
+    "type": "administrative",
+    "class": "boundary"
   },
   "namibia": {
     "lat": -23.2335499,
     "lng": 17.3231107,
     "country": "Namibie",
-    "display": "Namibie"
+    "display": "Namibie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "namibie": {
     "lat": -23.2335499,
     "lng": 17.3231107,
     "country": "Namibie",
-    "display": "Namibie"
-  },
-  "nana-mambere": {
-    "lat": 5.2231625,
-    "lng": 15.3517922,
-    "country": "République centrafricaine",
-    "display": "Nana-Mambéré, République centrafricaine"
-  },
-  "nana-mambéré": {
-    "lat": 5.2231625,
-    "lng": 15.3517922,
-    "country": "République centrafricaine",
-    "display": "Nana-Mambéré, République centrafricaine"
-  },
-  "nara": {
-    "lat": 38.8927368,
-    "lng": -77.0229201,
-    "country": "États-Unis d'Amérique",
-    "display": "Archives nationales des États-Unis, 700, Pennsylvania Avenue Northwest, Downtown, Ward 2, Washington, District de Columbia, 20004, États-Unis d'Amérique"
-  },
-  "ndanga": {
-    "lat": -12.9185815,
-    "lng": 15.2623691,
-    "country": "Angola",
-    "display": "Ndanga, Longonjo, Huambo, Angola"
-  },
-  "ndiba": {
-    "lat": -2.7363196,
-    "lng": 28.4754176,
-    "country": "République démocratique du Congo",
-    "display": "Ndiba Centre, Ngweshe (chefferie), Walungu, Sud-Kivu, République démocratique du Congo"
-  },
-  "net4people": null,
-  "netumbo nandi": null,
-  "neva": {
-    "lat": 59.8354498,
-    "lng": 30.5614758,
-    "country": "Russie",
-    "display": "Neva River, Korotka District, Saint-Pétersbourg, District fédéral du Nord-Ouest, Russie"
-  },
-  "new america": {
-    "lat": 38.8998727,
-    "lng": -77.0339995,
-    "country": "États-Unis d'Amérique",
-    "display": "New America, 15th Street Northwest, Ward 2, Washington, District de Columbia, 20005, États-Unis d'Amérique"
-  },
-  "nguia-bouar": {
-    "lat": 5.2212956,
-    "lng": 14.6939268,
-    "country": "République centrafricaine",
-    "display": "Nguia-Bouar, Nana-Mambéré, République centrafricaine"
+    "display": "Namibie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "niamey": {
     "lat": 13.524834,
     "lng": 2.109823,
     "country": "Niger",
-    "display": "Niamey, Kollo, Niger"
+    "display": "Niamey, Kollo, Niger",
+    "type": "administrative",
+    "class": "boundary"
   },
   "niger": {
     "lat": 17.7356214,
     "lng": 9.3238432,
     "country": "Niger",
-    "display": "Niger"
-  },
-  "niger-russie": {
-    "lat": 49.0531786,
-    "lng": 142.5660332,
-    "country": "Russie",
-    "display": "Нигер, Poronaysky District, Oblast de Sakhaline, District fédéral extrême-oriental, Russie"
+    "display": "Niger",
+    "type": "administrative",
+    "class": "boundary"
   },
   "nigeria": {
     "lat": 9.6000359,
     "lng": 7.9999721,
     "country": "Nigéria",
-    "display": "Nigéria"
-  },
-  "nigeriens": {
-    "lat": 13.5079015,
-    "lng": 2.1126201,
-    "country": "Niger",
-    "display": "Union des Scolaires Nigeriens, Avenue du Souvenir, Terminus, Niamey Bas, Arrondissement Communal Niamey 3, Niamey, Kollo, 8001, Niger"
-  },
-  "nigérienne": {
-    "lat": 50.809841,
-    "lng": 4.3836092,
-    "country": "Belgique",
-    "display": "Ambassade de la République du Niger, Avenue de l'Orée, Solbosch, south extension of Brussels, Bruxelles, Bruxelles-Capitale, 1050, Belgique"
-  },
-  "nigériens": {
-    "lat": 13.501702,
-    "lng": 2.0991519,
-    "country": "Niger",
-    "display": "Union des Étudiants Nigériens à l'Université de Niamey, Boulevard de l'Université, Nogaré, Arrondissement Communal Niamey 5, Niamey, Kollo, 8001, Niger"
-  },
-  "nord ouest": {
-    "lat": -26.1347819,
-    "lng": 25.6546729,
-    "country": "Afrique du Sud",
-    "display": "Nord-Ouest, Afrique du Sud"
-  },
-  "nord-coréens": null,
-  "nord-ouest": {
-    "lat": -26.1347819,
-    "lng": 25.6546729,
-    "country": "Afrique du Sud",
-    "display": "Nord-Ouest, Afrique du Sud"
-  },
-  "norsi-trans": null,
-  "north africa": {
-    "lat": 41.362599,
-    "lng": 2.159665,
-    "country": "Espagne",
-    "display": "Afrique du Nord, el Poble-sec, Sants-Montjuïc, Barcelone, Barcelonais, Barcelone, Catalogne, Espagne"
+    "display": "Nigéria",
+    "type": "administrative",
+    "class": "boundary"
   },
   "north korea": {
     "lat": 40.3736611,
     "lng": 127.0870417,
     "country": "Corée du Nord",
-    "display": "Corée du Nord"
+    "display": "Corée du Nord",
+    "type": "administrative",
+    "class": "boundary"
   },
   "northern mali": {
     "lat": -16.3444007,
     "lng": 179.349941,
     "country": "Fidji",
-    "display": "Mali Island, Macuata, Northern, Fidji"
-  },
-  "novorossiysk": {
-    "lat": 44.7239578,
-    "lng": 37.7690711,
-    "country": "Russie",
-    "display": "Novorossiisk, городской округ Новороссийск, Kraï de Krasnodar, District fédéral du Sud, 353900, Russie"
-  },
-  "n’djamena": {
-    "lat": 12.1191543,
-    "lng": 15.0502758,
-    "country": "Tchad",
-    "display": "N'Djaména, Tchad"
-  },
-  "olaf": {
-    "lat": 50.8463614,
-    "lng": 4.3712805,
-    "country": "Belgique",
-    "display": "Office européen de lutte antifraude, Rue Joseph II, Quartier européen, Bruxelles, Bruxelles-Capitale, 1000, Belgique"
-  },
-  "opa russe": null,
-  "osint": {
-    "lat": 38.9511076,
-    "lng": -77.1507156,
-    "country": "États-Unis d'Amérique",
-    "display": "OSINT Dr, Langley, McLean, Fairfax County, Virginie, 20892, États-Unis d'Amérique"
-  },
-  "oyam": {
-    "lat": 2.3489345,
-    "lng": 32.423386,
-    "country": "Ouganda",
-    "display": "Oyam, Northern Region, Ouganda"
-  },
-  "obfuscation": null,
-  "okrug": {
-    "lat": -6.1754049,
-    "lng": 106.827168,
-    "country": "Indonésie",
-    "display": "Jakarta, Java, Indonésie"
+    "display": "Mali Island, Vuo Village, Macuata, Northern, Fidji",
+    "type": "island",
+    "class": "place"
   },
   "oman": {
     "lat": 21.0000287,
     "lng": 57.0036901,
     "country": "Oman",
-    "display": "Oman"
-  },
-  "organigrammes": null,
-  "osh": {
-    "lat": 40.1082848,
-    "lng": 73.1931447,
-    "country": "Kirghizistan",
-    "display": "Province d'Och, Kirghizistan"
-  },
-  "ouaga": {
-    "lat": 12.3681873,
-    "lng": -1.5270944,
-    "country": "Burkina Faso",
-    "display": "Ouagadougou, Kadiogo, Centre, Burkina Faso"
+    "display": "Oman",
+    "type": "administrative",
+    "class": "boundary"
   },
   "ouagadougou": {
     "lat": 12.3681873,
     "lng": -1.5270944,
     "country": "Burkina Faso",
-    "display": "Ouagadougou, Kadiogo, Centre, Burkina Faso"
-  },
-  "ouzbékistan": {
-    "lat": 41.32373,
-    "lng": 63.9528098,
-    "country": "Ouzbékistan",
-    "display": "Ouzbékistan"
-  },
-  "pantsir": {
-    "lat": 58.02638,
-    "lng": 33.3027331,
-    "country": "Russie",
-    "display": "Pantsir-S1 96K6 (SA-22 Greyhound), Долгие Бороды, Валдайский муниципальный округ, Oblast de Novgorod, District fédéral du Nord-Ouest, Russie"
+    "display": "Ouagadougou, Kadiogo, Centre, Burkina Faso",
+    "type": "city",
+    "class": "place"
   },
   "pakistan": {
     "lat": 30.3308401,
     "lng": 71.247499,
     "country": "Pakistan",
-    "display": "Pakistan"
-  },
-  "palmyra": {
-    "lat": 5.882204,
-    "lng": -162.0748745,
-    "country": "États-Unis d'Amérique",
-    "display": "Palmyra, États-Unis d'Amérique"
-  },
-  "palmyre": {
-    "lat": 34.5526608,
-    "lng": 38.259261,
-    "country": "Syrie",
-    "display": "Palmyre, M 20, Ḩayy aḑ Ḑāhirīyah, Palmyre, Sous-district de Palmyre, District de Palmyre, Gouvernorat de Homs, Syrie"
+    "display": "Pakistan",
+    "type": "administrative",
+    "class": "boundary"
   },
   "paris": {
-    "lat": 48.8588897,
-    "lng": 2.320041,
+    "lat": 48.8534951,
+    "lng": 2.3483915,
     "country": "France",
-    "display": "Paris, Île-de-France, France métropolitaine, France"
-  },
-  "paspanga": {
-    "lat": 13.1785555,
-    "lng": -1.1038889,
-    "country": "Burkina Faso",
-    "display": "Paspanga, Sanmatenga, Centre-Nord, Burkina Faso"
-  },
-  "patriarcat de moscou": {
-    "lat": 48.5904209,
-    "lng": 7.7862848,
-    "country": "France",
-    "display": "Patriarcat de Moscou, Rue du Général Conrad, Quartier des XV, Orangerie-Conseil des XV, Strasbourg, Bas-Rhin, Collectivité européenne d'Alsace, Grand Est, France métropolitaine, 67000, France"
-  },
-  "pentagon": {
-    "lat": 38.8691306,
-    "lng": -77.054076,
-    "country": "États-Unis d'Amérique",
-    "display": "Pentagon, Tunnel to LL, Arlington, Arlington County, Virginie, 20310, États-Unis d'Amérique"
+    "display": "Paris, Île-de-France, France métropolitaine, France",
+    "type": "administrative",
+    "class": "boundary"
   },
   "petropavlovsk-kamchatsky": {
     "lat": 53.0199838,
     "lng": 158.6471356,
     "country": "Russie",
-    "display": "Petropavlovsk-Kamtchatski, городской округ Петропавловск-Камчатский, Kraï du Kamtchatka, District fédéral extrême-oriental, 683000, Russie"
-  },
-  "pharmtech": {
-    "lat": 47.5673783,
-    "lng": 8.903508,
-    "country": "Suisse",
-    "display": "Zellwag Pharmtech AG, Juchstrasse, Hinderem Dorf, Langdorf, Frauenfeld, Neunforn, Bezirk Frauenfeld, Thurgovie, 8510, Suisse"
+    "display": "Petropavlovsk-Kamtchatski, городской округ Петропавловск-Камчатский, Kraï du Kamtchatka, District fédéral extrême-oriental, 683000, Russie",
+    "type": "city",
+    "class": "place"
   },
   "philippines": {
     "lat": 12.7503486,
     "lng": 122.7312101,
     "country": "Philippines",
-    "display": "Philippines"
+    "display": "Philippines",
+    "type": "administrative",
+    "class": "boundary"
   },
-  "pioneer": {
-    "lat": 42.6539872,
-    "lng": -94.3914906,
-    "country": "États-Unis d'Amérique",
-    "display": "Pioneer, Humboldt County, Iowa, États-Unis d'Amérique"
-  },
-  "pirogova": {
-    "lat": 54.9530084,
-    "lng": 31.0892562,
-    "country": "Russie",
-    "display": "улица Пирогова, Rudnya, Rudnyansky District, Oblast de Smolensk, District fédéral central, 216790, Russie"
-  },
-  "pisarenok": null,
   "poblenou": {
     "lat": 41.4037049,
     "lng": 2.2033841,
     "country": "Espagne",
-    "display": "Poblenou, Carrer de Pujades, el Poblenou, Sant Martí, Barcelone, Barcelonais, Barcelone, Catalogne, 08005, Espagne"
-  },
-  "poland": {
-    "lat": 52.215933,
-    "lng": 19.134422,
-    "country": "Pologne",
-    "display": "Pologne"
-  },
-  "pologne": {
-    "lat": 52.215933,
-    "lng": 19.134422,
-    "country": "Pologne",
-    "display": "Pologne"
-  },
-  "port soudan": {
-    "lat": 19.619217,
-    "lng": 37.211709,
-    "country": "Soudan",
-    "display": "Port-Soudan, Port Sudan, Mer Rouge, 79800, Soudan"
-  },
-  "port sudan": {
-    "lat": 19.619217,
-    "lng": 37.211709,
-    "country": "Soudan",
-    "display": "Port-Soudan, Mer Rouge, 79800, Soudan"
-  },
-  "potential centrafricain": null,
-  "potepkin": null,
-  "prague": {
-    "lat": 50.0874654,
-    "lng": 14.4212535,
-    "country": "Tchéquie",
-    "display": "Prague, Tchéquie"
+    "display": "Poblenou, Carrer de Pujades, el Poblenou, Sant Martí, Barcelone, Barcelonais, Barcelone, Catalogne, 08005, Espagne",
+    "type": "stop",
+    "class": "railway"
   },
   "prigojine": null,
   "prigozhin": null,
-  "protei": {
-    "lat": 42.8775662,
-    "lng": 74.6156319,
-    "country": "Kirghizistan",
-    "display": "Протей, 121/1, Shopokov street, Sverdlov District, Bichkek, 720011, Kirghizistan"
-  },
-  "prytanée": {
-    "lat": 47.7001081,
-    "lng": -0.0609795,
-    "country": "France",
-    "display": "Prytanée (Quartier Gallieni), Rue Henri Dunant, Sainte-Colombe, La Flèche, Sarthe, Pays de la Loire, France métropolitaine, 72200, France"
-  },
-  "présidence centrafricaine": null,
   "pékin": {
     "lat": 39.9057136,
     "lng": 116.3912972,
     "country": "Chine",
-    "display": "Pékin, Chine"
-  },
-  "qaminis": {
-    "lat": 31.7009605,
-    "lng": 19.9615141,
-    "country": "Libye",
-    "display": "طريق البحر قمينس-بنغازي sea road Qaminis-Benghazi, Benghazi, Libye"
+    "display": "Pékin, Chine",
+    "type": "administrative",
+    "class": "boundary"
   },
   "qardabiyah": {
     "lat": 31.1637366,
     "lng": 16.6795186,
     "country": "Libye",
-    "display": "The Small Qardabiyah reservoir, Syrte, Libye"
+    "display": "The Small Qardabiyah reservoir, Syrte, Libye",
+    "type": "reservoir",
+    "class": "water"
   },
-  "ra-76845": {
-    "lat": 59.3555713,
-    "lng": 10.4386549,
-    "country": "Norvège",
-    "display": "Ra, Åsgårdstrand, Horten, Vestfold, 3184, Norvège"
-  },
-  "ra-82038": {
-    "lat": 41.7869294,
-    "lng": 12.4752811,
-    "country": "Italie",
-    "display": "Keaton, Via Buster Keaton, Vallerano, Municipio Roma IX, Rome, Roma Capitale, Latium, 00128, Italie"
-  },
-  "ra-85042": null,
   "rca": {
     "lat": 51.5008416,
     "lng": -0.1791497,
     "country": "Royaume-Uni",
-    "display": "Royal College of Art, Kensington, Kensington Gore, Knightsbridge, Cité de Westminster, Grand Londres, Angleterre, SW7 2QU, Royaume-Uni"
+    "display": "Royal College of Art, Kensington, Kensington Gore, Knightsbridge, Cité de Westminster, Grand Londres, Angleterre, SW7 2QU, Royaume-Uni",
+    "type": "university",
+    "class": "amenity"
   },
   "rdc": {
     "lat": -2.9814344,
     "lng": 23.8222636,
     "country": "République démocratique du Congo",
-    "display": "République démocratique du Congo"
-  },
-  "redut": {
-    "lat": 45.1565825,
-    "lng": 18.009627,
-    "country": "Croatie",
-    "display": "Redut, Vukovarska ulica, Mjesni odbor Centar, Slavonski Brod, Grad Slavonski Brod, Comitat de Brod-Posavina, 35101, Croatie"
-  },
-  "roc": {
-    "lat": 43.1161699,
-    "lng": -77.6726934,
-    "country": "États-Unis d'Amérique",
-    "display": "Greater Rochester International Airport, Airpark Drive, Town of Chili, Monroe County, New York, 14624, États-Unis d'Amérique"
-  },
-  "rpost-m llc": null,
-  "rub": {
-    "lat": 51.4441576,
-    "lng": 7.2610046,
-    "country": "Allemagne",
-    "display": "Ruhr-Universität Bochum, 150, Universitätsstraße, Querenburg, Bochum-Süd, Bochum, Rhénanie-du-Nord-Westphalie, 44801, Allemagne"
+    "display": "République démocratique du Congo",
+    "type": "administrative",
+    "class": "boundary"
   },
   "radio svoboda": {
     "lat": 50.0789633,
     "lng": 14.4785153,
     "country": "Tchéquie",
-    "display": "Radio Free Europe / Radio Liberty, 159a, Vinohradská, Třebešín, Strašnice, Praha 10, obvod Praha 10, Prague, 100 00, Tchéquie"
-  },
-  "radisson": {
-    "lat": 52.4610242,
-    "lng": -107.3950488,
-    "country": "Canada",
-    "display": "Radisson, Saskatchewan, S0K 3L0, Canada"
-  },
-  "randrianasoloniaiko": null,
-  "ratibor": {
-    "lat": 50.0905252,
-    "lng": 18.2151495,
-    "country": "Pologne",
-    "display": "Racibórz, Powiat de Racibórz, Voïvodie de Silésie, Pologne"
-  },
-  "registre du commerce oman": null,
-  "riazan": {
-    "lat": 54.6295687,
-    "lng": 39.7425039,
-    "country": "Russie",
-    "display": "Riazan, Oblast de Riazan, District fédéral central, Russie"
-  },
-  "roblox": {
-    "lat": 33.6316301,
-    "lng": 73.0440268,
-    "country": "Pakistan",
-    "display": "roblox, Badar Colony, Pirwadhai, Old City, Rawalpindi City Tehsil, Rawalpindi District, Rawalpindi Division, Pendjab, 46350, Pakistan"
-  },
-  "rokossovsky": {
-    "lat": 41.0912761,
-    "lng": 68.8386771,
-    "country": "Ouzbékistan",
-    "display": "Rokossovsky, Rokosovsky, Chinaz District, Province de Tachkent, Ouzbékistan"
-  },
-  "rome": {
-    "lat": 41.8933203,
-    "lng": 12.4829321,
-    "country": "Italie",
-    "display": "Rome, Roma Capitale, Latium, Italie"
+    "display": "Radio Free Europe / Radio Liberty, 159a, Vinohradská, Třebešín, Strašnice, Praha 10, obvod Praha 10, Prague, 100 00, Tchéquie",
+    "type": "commercial",
+    "class": "building"
   },
   "rosatom": {
     "lat": 55.7398734,
     "lng": 37.623268,
     "country": "Russie",
-    "display": "Rosatom State Atomic Energy Corporation, 24, Bolshaya Ordynka Street, Iakimanka, Moscou, District fédéral central, 119017, Russie"
-  },
-  "rosoboronexport": {
-    "lat": 55.7957373,
-    "lng": 37.7016745,
-    "country": "Russie",
-    "display": "RosOboronExport, 27, улица Стромынка, Sokolniki District, Moscou, District fédéral central, 107996, Russie"
+    "display": "Rosatom State Atomic Energy Corporation, 24, Bolshaya Ordynka Street, Iakimanka, Moscou, District fédéral central, 119017, Russie",
+    "type": "company",
+    "class": "office"
   },
   "rostov": {
     "lat": 47.2222596,
     "lng": 39.7198736,
     "country": "Russie",
-    "display": "Rostov-sur-le-Don, Rostov-on-Don, District fédéral du Sud, Russie"
+    "display": "Rostov-sur-le-Don, Rostov-on-Don, District fédéral du Sud, Russie",
+    "type": "city",
+    "class": "place"
   },
   "royaume uni": {
     "lat": 54.7023545,
     "lng": -3.2765753,
     "country": "Royaume-Uni",
-    "display": "Royaume-Uni"
-  },
-  "royaume-uni": {
-    "lat": 54.7023545,
-    "lng": -3.2765753,
-    "country": "Royaume-Uni",
-    "display": "Royaume-Uni"
-  },
-  "rrodyz": null,
-  "rutube": {
-    "lat": 55.7861442,
-    "lng": 37.6389308,
-    "country": "Russie",
-    "display": "rutube, Банный переулок, Meshchansky District, Moscou, District fédéral central, 129110, Russie"
-  },
-  "rusich": {
-    "lat": 43.7765795,
-    "lng": 11.2226037,
-    "country": "Italie",
-    "display": "Giardino Sergio Rusich, Isolotto, Quartiere 4, Florence, Toscane, Italie"
-  },
-  "russe": {
-    "lat": 43.8480413,
-    "lng": 25.9542057,
-    "country": "Bulgarie",
-    "display": "Roussé, Municipalité de Roussé, Oblast de Roussé, Bulgarie"
+    "display": "Royaume-Uni",
+    "type": "administrative",
+    "class": "boundary"
   },
   "russes": {
     "lat": 61.5510763,
     "lng": 16.4516729,
     "country": "Suède",
-    "display": "Russes, Bollnäs kommun, Comté de Gävleborg, 820 11, Suède"
+    "display": "Russes, Bollnäs kommun, Comté de Gävleborg, 820 11, Suède",
+    "type": "isolated_dwelling",
+    "class": "place"
   },
   "russie": {
     "lat": 64.6863136,
     "lng": 97.7453061,
     "country": "Russie",
-    "display": "Russie"
+    "display": "Russie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "russie afrique": {
     "lat": 55.758955,
     "lng": 37.5943635,
     "country": "Russie",
-    "display": "Ambassade d'Afrique du Sud, 1 с9, Granatnyy Lane, 47, Presnenski, Moscou, District fédéral central, 123001, Russie"
-  },
-  "région": {
-    "lat": 22.3492155,
-    "lng": 114.1857978,
-    "country": "Chine",
-    "display": "Hong Kong, Chine"
+    "display": "Ambassade d'Afrique du Sud, 1 с9, Granatnyy Lane, 47, Presnenski, Moscou, District fédéral central, 123001, Russie",
+    "type": "diplomatic",
+    "class": "office"
   },
   "république centrafricaine": {
     "lat": 7.0323598,
     "lng": 19.9981227,
     "country": "République centrafricaine",
-    "display": "République centrafricaine"
-  },
-  "république démocratique du congo": {
-    "lat": -2.9814344,
-    "lng": 23.8222636,
-    "country": "République démocratique du Congo",
-    "display": "République démocratique du Congo"
-  },
-  "république islamique d’iran": {
-    "lat": 32.6475314,
-    "lng": 54.5643516,
-    "country": "Iran",
-    "display": "Iran"
+    "display": "République centrafricaine",
+    "type": "administrative",
+    "class": "boundary"
   },
   "république de centrafrique": {
     "lat": 4.259816,
     "lng": 15.7893114,
     "country": "République centrafricaine",
-    "display": "Banque Centrale de la République Centrafricaine, RN 6, Babolo, Berbérati, Mambéré-Kadéï, République centrafricaine"
+    "display": "Banque Centrale de la République Centrafricaine, RN 6, Babolo, Berbérati, Mambéré-Kadéï, République centrafricaine",
+    "type": "bank",
+    "class": "amenity"
   },
-  "république de guinée": {
-    "lat": 10.7226226,
-    "lng": -10.7083587,
-    "country": "Guinée",
-    "display": "Guinée"
-  },
-  "république tchèque": {
-    "lat": 49.7439047,
-    "lng": 15.3381061,
-    "country": "Tchéquie",
-    "display": "Tchéquie"
-  },
-  "républiques de donetsk": null,
-  "réunion russie": {
-    "lat": 55.6364472,
-    "lng": 37.676215,
-    "country": "Russie",
-    "display": "Reunion, Кантемировская улица, Tsaritsyno District, Moscou, District fédéral central, 115409, Russie"
-  },
-  "sa-22t-72a": {
-    "lat": 3.1089778,
-    "lng": 101.4753327,
-    "country": "Malaisie",
-    "display": "Jalan Setia Nusantara U13/22T, Section U13, Shah Alam, Petaling, Selangor, 40170, Malaisie"
-  },
-  "sorm": {
-    "lat": 55.7776919,
-    "lng": 46.6846682,
-    "country": "Russie",
-    "display": "Сормвары, Alikovsky District, Tchouvachie, District fédéral de la Volga, Russie"
-  },
-  "sagaini": null,
   "sahel": {
     "lat": 14.0279165,
     "lng": -0.7717776,
     "country": "Burkina Faso",
-    "display": "Sahel, Burkina Faso"
+    "display": "Sahel, Burkina Faso",
+    "type": "administrative",
+    "class": "boundary"
   },
-  "sahel gpci": null,
   "saint petersbourg": {
     "lat": 59.9606739,
     "lng": 30.1586551,
     "country": "Russie",
-    "display": "Saint-Pétersbourg, District fédéral du Nord-Ouest, Russie"
+    "display": "Saint-Pétersbourg, District fédéral du Nord-Ouest, Russie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "saint petersburg": {
     "lat": 59.9606739,
     "lng": 30.1586551,
     "country": "Russie",
-    "display": "Saint-Pétersbourg, District fédéral du Nord-Ouest, Russie"
-  },
-  "saint-georges": {
-    "lat": 50.3583949,
-    "lng": 2.0874312,
-    "country": "France",
-    "display": "Saint-Georges, Montreuil-sur-Mer, Pas-de-Calais, Hauts-de-France, France métropolitaine, 62770, France"
-  },
-  "saint-pétersbourg": {
-    "lat": 59.9606739,
-    "lng": 30.1586551,
-    "country": "Russie",
-    "display": "Saint-Pétersbourg, District fédéral du Nord-Ouest, Russie"
-  },
-  "salalah": {
-    "lat": 17.0174945,
-    "lng": 54.1010923,
-    "country": "Oman",
-    "display": "Salalah, Dhofar, Oman"
-  },
-  "salisbury": {
-    "lat": 51.0690613,
-    "lng": -1.7954134,
-    "country": "Royaume-Uni",
-    "display": "Salisbury, Wiltshire, Angleterre, Royaume-Uni"
+    "display": "Saint-Pétersbourg, District fédéral du Nord-Ouest, Russie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "sanaa": {
     "lat": 15.35,
     "lng": 44.2,
     "country": "Yémen",
-    "display": "Amanat Al Asimah, Yémen"
-  },
-  "sanaa center": {
-    "lat": -1.2605328,
-    "lng": 36.8652185,
-    "country": "Kenya",
-    "display": "SLUM SANAA ART CENTER, Mathare N Road, Huruma ward, Mathare, Nairobi, Comté de Nairobi, 00611, Kenya"
-  },
-  "sandton": {
-    "lat": -26.0682406,
-    "lng": 28.0479844,
-    "country": "Afrique du Sud",
-    "display": "Sandton, Johannesburg Ward 103, Sandton, Municipalité métropolitaine de la ville de Johannesburg, Gauteng, 1617, Afrique du Sud"
-  },
-  "sani": {
-    "lat": 13.4212822,
-    "lng": -2.9158273,
-    "country": "Burkina Faso",
-    "display": "Gani, Gomboro, Sourou, Boucle du Mouhoun, Burkina Faso"
+    "display": "Amanat Al Asimah, Yémen",
+    "type": "administrative",
+    "class": "boundary"
   },
   "saudi arabia": {
     "lat": 25.6242618,
     "lng": 42.3528328,
     "country": "Arabie saoudite",
-    "display": "Arabie saoudite"
-  },
-  "scud-b": {
-    "lat": 57.2413952,
-    "lng": -131.1684832,
-    "country": "Canada",
-    "display": "Scud Peak, Area D (Iskut/Big Raven), District régional de Kitimat-Stikine, Colombie-Britannique, Canada"
+    "display": "Arabie saoudite",
+    "type": "administrative",
+    "class": "boundary"
   },
   "senegal": {
     "lat": 14.4750607,
     "lng": -14.4529612,
     "country": "Sénégal",
-    "display": "Sénégal"
-  },
-  "senegal tounkara": {
-    "lat": 13.7718226,
-    "lng": -15.8682004,
-    "country": "Sénégal",
-    "display": "Keur Oumar Tounkara, Communauté rurale de Taïba Niassène, Arrondissement de Paoskoto, Département de Nioro du Rip, Région de Kaolack, Sénégal"
-  },
-  "serbie": {
-    "lat": 44.0243229,
-    "lng": 21.0765743,
-    "country": "Serbie",
-    "display": "Serbie"
-  },
-  "serguey “prud": null,
-  "serma": {
-    "lat": 19.1913324,
-    "lng": 83.7839404,
-    "country": "Inde",
-    "display": "Serma, Gunupur, Rayagada, Odisha, 765029, Inde"
-  },
-  "service russe": {
-    "lat": 43.8161197,
-    "lng": 25.9771876,
-    "country": "Bulgarie",
-    "display": "Fines - MAN Service Ruse, 152, bul. Gotse Delchev, MAN сервиз, ж.к. Дружба 3, Roussé, Municipalité de Roussé, Oblast de Roussé, 7016, Bulgarie"
+    "display": "Sénégal",
+    "type": "administrative",
+    "class": "boundary"
   },
   "seychelles": {
     "lat": -4.6574977,
     "lng": 55.4540146,
     "country": "Seychelles",
-    "display": "Seychelles"
-  },
-  "shadowsocks": null,
-  "shanghai": {
-    "lat": 31.2312707,
-    "lng": 121.4700152,
-    "country": "Chine",
-    "display": "Shanghai, Chine"
-  },
-  "shinkuba": {
-    "lat": 43.0002366,
-    "lng": 41.0263644,
-    "country": "Abkhazie",
-    "display": "Bagrat Shinkuba Park, Anuarkyt, Sokhoumi, République autonome d'Abkhazie, Abkhazie, Géorgie"
-  },
-  "shugalei": null,
-  "signal": {
-    "lat": 40.7983943,
-    "lng": -80.6592402,
-    "country": "États-Unis d'Amérique",
-    "display": "Signal, Columbiana County, Ohio, 44415, États-Unis d'Amérique"
-  },
-  "slidstvo_info": null,
-  "snowflake": {
-    "lat": 34.5114704,
-    "lng": -110.079608,
-    "country": "États-Unis d'Amérique",
-    "display": "Snowflake, Navajo County, Arizona, États-Unis d'Amérique"
+    "display": "Seychelles",
+    "type": "administrative",
+    "class": "boundary"
   },
   "sochi": {
     "lat": 43.5854823,
     "lng": 39.723109,
     "country": "Russie",
-    "display": "Sotchi, town district of Sochi, Kraï de Krasnodar, District fédéral du Sud, Russie"
+    "display": "Sotchi, town district of Sochi, Kraï de Krasnodar, District fédéral du Sud, Russie",
+    "type": "city",
+    "class": "place"
   },
   "sofara": {
     "lat": 14.0171201,
     "lng": -4.2312194,
     "country": "Mali",
-    "display": "Sofara, Cercle de Djenné, Mopti, Mali"
-  },
-  "sofia": {
-    "lat": 42.6977028,
-    "lng": 23.3217359,
-    "country": "Bulgarie",
-    "display": "Sofia, Sredec, Sofia City, Oblast de Sofia-ville, Bulgarie"
-  },
-  "somalia": {
-    "lat": 8.3676771,
-    "lng": 49.083416,
-    "country": "Somalie",
-    "display": "Somalie"
-  },
-  "somalie": {
-    "lat": 8.3676771,
-    "lng": 49.083416,
-    "country": "Somalie",
-    "display": "Somalie"
-  },
-  "somina": {
-    "lat": 42.5576957,
-    "lng": 18.6901903,
-    "country": "Monténégro",
-    "display": "Somina, Municipalité de Kotor, 85337, Monténégro"
-  },
-  "sosonkin": null,
-  "sotchi": {
-    "lat": 43.5854823,
-    "lng": 39.723109,
-    "country": "Russie",
-    "display": "Sotchi, town district of Sochi, Kraï de Krasnodar, District fédéral du Sud, Russie"
+    "display": "Sofara, Cercle de Djenné, Mopti, Mali",
+    "type": "town",
+    "class": "place"
   },
   "soudan": {
     "lat": 14.5844444,
     "lng": 29.4917691,
     "country": "Soudan",
-    "display": "Soudan"
+    "display": "Soudan",
+    "type": "administrative",
+    "class": "boundary"
   },
   "south africa": {
     "lat": -28.8166236,
     "lng": 24.991639,
     "country": "Afrique du Sud",
-    "display": "Afrique du Sud"
+    "display": "Afrique du Sud",
+    "type": "administrative",
+    "class": "boundary"
   },
-  "south africa/": {
-    "lat": -28.8166236,
-    "lng": 24.991639,
-    "country": "Afrique du Sud",
-    "display": "Afrique du Sud"
-  },
-  "south africa’s": {
-    "lat": -26.4631081,
-    "lng": 27.7670511,
-    "country": "Afrique du Sud",
-    "display": "South, Poortjie, Johannesburg Ward 5, Municipalité métropolitaine de la ville de Johannesburg, Gauteng, Afrique du Sud"
-  },
-  "sovereign": {
-    "lat": 37.861772,
-    "lng": -81.8262303,
-    "country": "États-Unis d'Amérique",
-    "display": "Sovereign, Logan County, Virginie-Occidentale, 25022, États-Unis d'Amérique"
-  },
-  "soweto": {
-    "lat": -26.2227778,
-    "lng": 27.89,
-    "country": "Afrique du Sud",
-    "display": "Soweto, Municipalité métropolitaine de la ville de Johannesburg, Gauteng, 1852, Afrique du Sud"
-  },
-  "spain": {
-    "lat": 39.3260685,
-    "lng": -4.8379791,
-    "country": "Espagne",
-    "display": "Espagne"
-  },
-  "splinternet": null,
   "st petersbourg": {
     "lat": 59.9606739,
     "lng": 30.1586551,
     "country": "Russie",
-    "display": "Saint-Pétersbourg, District fédéral du Nord-Ouest, Russie"
-  },
-  "st petersburg": {
-    "lat": 59.938732,
-    "lng": 30.316229,
-    "country": "Russie",
-    "display": "Saint-Pétersbourg, District fédéral du Nord-Ouest, Russie"
-  },
-  "st péterbourgeoises": null,
-  "st pétersbourg": {
-    "lat": 59.9606739,
-    "lng": 30.1586551,
-    "country": "Russie",
-    "display": "Saint-Pétersbourg, District fédéral du Nord-Ouest, Russie"
+    "display": "Saint-Pétersbourg, District fédéral du Nord-Ouest, Russie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "st. petersburg": {
     "lat": 59.9606739,
     "lng": 30.1586551,
     "country": "Russie",
-    "display": "Saint-Pétersbourg, District fédéral du Nord-Ouest, Russie"
+    "display": "Saint-Pétersbourg, District fédéral du Nord-Ouest, Russie",
+    "type": "administrative",
+    "class": "boundary"
   },
-  "strait": {
-    "lat": 65.8455661,
-    "lng": -169.3785432,
-    "country": "Russie",
-    "display": "Détroit de Béring, Tchoukotka, District fédéral extrême-oriental, Russie"
-  },
-  "stratconsult": null,
-  "stratconsult sa": null,
-  "stratconsult llc": null,
-  "sub-saharan africa": null,
   "sudan": {
     "lat": 14.5844444,
     "lng": 29.4917691,
     "country": "Soudan",
-    "display": "Soudan"
-  },
-  "suisse": {
-    "lat": 46.7985624,
-    "lng": 8.2319736,
-    "country": "Suisse",
-    "display": "Suisse"
-  },
-  "surovikin": null,
-  "suzhou": {
-    "lat": 31.311123,
-    "lng": 120.6212881,
-    "country": "Chine",
-    "display": "Suzhou, Jiangsu, Chine"
-  },
-  "switzerland": {
-    "lat": 46.7985624,
-    "lng": 8.2319736,
-    "country": "Suisse",
-    "display": "Suisse"
+    "display": "Soudan",
+    "type": "administrative",
+    "class": "boundary"
   },
   "syria": {
     "lat": 34.6401861,
     "lng": 39.0494106,
     "country": "Syrie",
-    "display": "Syrie"
+    "display": "Syrie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "syrie": {
     "lat": 34.6401861,
     "lng": 39.0494106,
     "country": "Syrie",
-    "display": "Syrie"
-  },
-  "syrienne": {
-    "lat": 34.6401861,
-    "lng": 39.0494106,
-    "country": "Syrie",
-    "display": "Syrie"
-  },
-  "syrte": {
-    "lat": 31.2059625,
-    "lng": 16.5836206,
-    "country": "Libye",
-    "display": "Syrte, Libye"
+    "display": "Syrie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "sytyi": {
     "lat": 59.22264,
     "lng": 39.8843492,
     "country": "Russie",
-    "display": "Sytyi kot, 20, проспект Победы, Заречье, Vologda, Oblast de Vologda, District fédéral du Nord-Ouest, 160000, Russie"
+    "display": "Sytyi kot, 20, проспект Победы, Заречье, Vologda, Oblast de Vologda, District fédéral du Nord-Ouest, 160000, Russie",
+    "type": "cafe",
+    "class": "amenity"
   },
   "sénégal": {
     "lat": 14.4750607,
     "lng": -14.4529612,
     "country": "Sénégal",
-    "display": "Sénégal"
-  },
-  "sévaré": {
-    "lat": 14.5224127,
-    "lng": -4.0921345,
-    "country": "Mali",
-    "display": "Sévaré, Cercle de Mopti, Mopti, Mali"
-  },
-  "tactiques": {
-    "lat": 45.2846672,
-    "lng": -74.0781614,
-    "country": "Canada",
-    "display": "General Dynamics - Produits de défense et Systemes tactiques Canada Valleyfield, Usine Expro, General Dynamics, Notre-Dame-du-Sourire, Salaberry-de-Valleyfield, Beauharnois-Salaberry, Montérégie, Québec, J6S 4V9, Canada"
-  },
-  "tl- kpa": null,
-  "tadjwart": null,
-  "tahoua": {
-    "lat": 14.889922,
-    "lng": 5.262149,
-    "country": "Niger",
-    "display": "Tahoua, 5000, Niger"
+    "display": "Sénégal",
+    "type": "administrative",
+    "class": "boundary"
   },
   "taiwan": {
     "lat": 23.9739374,
     "lng": 120.9820179,
     "country": "Taïwan",
-    "display": "Taïwan"
-  },
-  "tanzania": {
-    "lat": -6.5247123,
-    "lng": 35.7878438,
-    "country": "Tanzanie",
-    "display": "Tanzanie"
-  },
-  "tanzanie": {
-    "lat": -6.5247123,
-    "lng": 35.7878438,
-    "country": "Tanzanie",
-    "display": "Tanzanie"
-  },
-  "tartous": {
-    "lat": 34.8936225,
-    "lng": 35.885167,
-    "country": "Syrie",
-    "display": "Tartous, Sous-district de Tartous, District de Tartous, Gouvernorat de Tartous, Syrie"
+    "display": "Taïwan",
+    "type": "administrative",
+    "class": "boundary"
   },
   "tatarstan": {
     "lat": 55.448217,
     "lng": 50.4763591,
     "country": "Russie",
-    "display": "Tatarstan, District fédéral de la Volga, Russie"
-  },
-  "taïwan": {
-    "lat": 23.9739374,
-    "lng": 120.9820179,
-    "country": "Taïwan",
-    "display": "Taïwan"
+    "display": "Tatarstan, District fédéral de la Volga, Russie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "tchad": {
     "lat": 15.6134137,
     "lng": 19.0156172,
     "country": "Tchad",
-    "display": "Tchad"
-  },
-  "tchernivitsi": null,
-  "tchétchénie": {
-    "lat": 43.4,
-    "lng": 45.7,
-    "country": "Russie",
-    "display": "Tchétchénie, District fédéral du Caucase du Nord, Russie"
-  },
-  "technodinamika": null,
-  "telabit": {
-    "lat": 19.0691741,
-    "lng": 0.9990906,
-    "country": "Mali",
-    "display": "Télabit, Cercle de Tessalit, Kidal, Mali"
+    "display": "Tchad",
+    "type": "administrative",
+    "class": "boundary"
   },
   "tenkodogo": {
     "lat": 11.7828079,
     "lng": -0.3651416,
     "country": "Burkina Faso",
-    "display": "Tenkodogo, Boulgou, Centre-Est, Burkina Faso"
-  },
-  "tera": {
-    "lat": 34.9656724,
-    "lng": 32.4248003,
-    "country": "Chypre",
-    "display": "Terra, Δήμος Πόλις Χρυσοχούς, District de Paphos, Chypre, 8728, Chypre"
+    "display": "Tenkodogo, Boulgou, Centre-Est, Burkina Faso",
+    "type": "administrative",
+    "class": "boundary"
   },
   "tessalit": {
     "lat": 20.2019542,
     "lng": 1.0124531,
     "country": "Mali",
-    "display": "Tessalit, Cercle de Tessalit, Kidal, Mali"
-  },
-  "thailand": {
-    "lat": 14.8971921,
-    "lng": 100.83273,
-    "country": "Thaïlande",
-    "display": "Thaïlande"
-  },
-  "thaïlande": {
-    "lat": 14.8971921,
-    "lng": 100.83273,
-    "country": "Thaïlande",
-    "display": "Thaïlande"
-  },
-  "the continent": {
-    "lat": 13.7363855,
-    "lng": 100.5620578,
-    "country": "Thaïlande",
-    "display": "The Continent, Sukhumvit Road, Sukhumvit, Khlong Toei Subdistrict, Khlong Toei District, Bangkok, 10110, Thaïlande"
-  },
-  "throttled": null,
-  "tiani": {
-    "lat": 5.9438115,
-    "lng": -7.4776407,
-    "country": "Côte d’Ivoire",
-    "display": "Tiani, Zaïpobli, Cavally, Montagnes, Côte d’Ivoire"
-  },
-  "tillaberi": {
-    "lat": 13.799389,
-    "lng": 1.8654732,
-    "country": "Niger",
-    "display": "Tillabéri, Niger"
-  },
-  "tin za ouatine": null,
-  "tin zaouaten": null,
-  "tin zaouatine": {
-    "lat": 19.9495614,
-    "lng": 2.9659783,
-    "country": "Mali",
-    "display": "Tin Zaouatine, Cercle d'Abeïbara, Kidal, Mali"
-  },
-  "tinzaouaten": {
-    "lat": 19.9541906,
-    "lng": 2.9694782,
-    "country": "Algérie",
-    "display": "Tinzaouten, Daïra Tinzaouaten, In Guezzam, 11150, Algérie"
+    "display": "Tessalit, Cercle de Tessalit, Kidal, Mali",
+    "type": "town",
+    "class": "place"
   },
   "tobrouk": {
     "lat": 32.0773764,
     "lng": 23.9599988,
     "country": "Libye",
-    "display": "Tobrouk, Al Boutnan, Libye"
-  },
-  "tobruk": {
-    "lat": 32.0773764,
-    "lng": 23.9599988,
-    "country": "Libye",
-    "display": "Tobrouk, Al Boutnan, Libye"
+    "display": "Tobrouk, Al Boutnan, Libye",
+    "type": "city",
+    "class": "place"
   },
   "togo": {
     "lat": 8.7800265,
     "lng": 1.0199765,
     "country": "Togo",
-    "display": "Togo"
-  },
-  "tombouctou": {
-    "lat": 16.7719091,
-    "lng": -3.0087272,
-    "country": "Mali",
-    "display": "Tombouctou, Cercle de Tombouctou, Tombouctou, Mali"
-  },
-  "toretsk": {
-    "lat": 48.3970469,
-    "lng": 37.8501378,
-    "country": "Ukraine",
-    "display": "Toretsk, Toretsk urban hromada, Le raion de Bakhmout, Oblast de Donetsk, 85200-85279, Ukraine"
+    "display": "Togo",
+    "type": "administrative",
+    "class": "boundary"
   },
   "touaregs": {
     "lat": 13.5282662,
     "lng": 2.1030051,
     "country": "Niger",
-    "display": "Bijoux touaregs, Rue de la Magia, Issa Béri, Issa Bery, Arrondissement Communal Niamey 2, Niamey, Kollo, 8001, Niger"
+    "display": "Bijoux touaregs, Rue de la Magia, Issa Béri, Issa Bery, Arrondissement Communal Niamey 2, Niamey, Kollo, 8001, Niger",
+    "type": "jewelry",
+    "class": "shop"
   },
   "tripoli": {
     "lat": 32.896672,
     "lng": 13.1777923,
     "country": "Libye",
-    "display": "Tripoli, Libye"
-  },
-  "tsargrad": {
-    "lat": 50.4410415,
-    "lng": 30.171723,
-    "country": "Ukraine",
-    "display": "Tsargrad, 21/23, Stolychna Street, Peremohy Street, Dmytrivka Rural Hromada, Bucha district, Oblast de Kiev, 08128, Ukraine"
-  },
-  "tsaritsyno": {
-    "lat": 55.6214814,
-    "lng": 37.669238,
-    "country": "Russie",
-    "display": "Tsaritsyno, Luganskaya Street, Tsaritsyno District, Moscou, District fédéral central, 115541, Russie"
-  },
-  "tsel": {
-    "lat": 1.4387234,
-    "lng": 124.8413693,
-    "country": "Indonésie",
-    "display": "TSEL, Jalan . Gereja, Winangun I, Ranotana Weru, Manado, Sulawesi du Nord, Célèbes, 95119, Indonésie"
-  },
-  "tsvetochnaya": {
-    "lat": 55.7264783,
-    "lng": 49.1420676,
-    "country": "Russie",
-    "display": "Tsvetochnaya Street, Boriskovo, Приволжский район, Kazan, городской округ Казань, Tatarstan, District fédéral de la Volga, 420054, Russie"
-  },
-  "tunisia": {
-    "lat": 33.8439408,
-    "lng": 9.400138,
-    "country": "Tunisie",
-    "display": "Tunisie"
-  },
-  "tunisie": {
-    "lat": 33.8439408,
-    "lng": 9.400138,
-    "country": "Tunisie",
-    "display": "Tunisie"
-  },
-  "turc": {
-    "lat": 47.9898103,
-    "lng": 23.2000194,
-    "country": "Roumanie",
-    "display": "Turț, Satu Mare, Roumanie"
+    "display": "Tripoli, Libye",
+    "type": "city",
+    "class": "place"
   },
   "turkey": {
     "lat": 39.294076,
     "lng": 35.2316631,
     "country": "Turquie",
-    "display": "Turquie"
+    "display": "Turquie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "turquie": {
     "lat": 39.294076,
     "lng": 35.2316631,
     "country": "Turquie",
-    "display": "Turquie"
-  },
-  "téhéran": {
-    "lat": 35.6892523,
-    "lng": 51.3896004,
-    "country": "Iran",
-    "display": "Téhéran, بخش مرکزی شهرستان تهران, Tehran County, Téhéran, Iran"
+    "display": "Turquie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "u.s": {
     "lat": 39.7837304,
     "lng": -100.445882,
     "country": "États-Unis d'Amérique",
-    "display": "États-Unis d'Amérique"
+    "display": "États-Unis d'Amérique",
+    "type": "administrative",
+    "class": "boundary"
   },
   "usa": {
     "lat": 39.7837304,
     "lng": -100.445882,
     "country": "États-Unis d'Amérique",
-    "display": "États-Unis d'Amérique"
-  },
-  "ussr": {
-    "lat": 46.3421653,
-    "lng": 48.0254474,
-    "country": "Russie",
-    "display": "USSR, 1/2/5, Казанская улица, Kirovsky District, Astrakhan, Oblast d'Astrakhan, District fédéral du Sud, 414024, Russie"
+    "display": "États-Unis d'Amérique",
+    "type": "administrative",
+    "class": "boundary"
   },
   "ukraine": {
     "lat": 49.4871968,
     "lng": 31.2718321,
     "country": "Ukraine",
-    "display": "Ukraine"
-  },
-  "ukrainien": {
-    "lat": 50.8421653,
-    "lng": 4.3741747,
-    "country": "Belgique",
-    "display": "Centre culturel ukrainien, Rue d'Arlon, Quartier européen, Bruxelles, Bruxelles-Capitale, 1040, Belgique"
+    "display": "Ukraine",
+    "type": "administrative",
+    "class": "boundary"
   },
   "united kingdom": {
     "lat": 54.7023545,
     "lng": -3.2765753,
     "country": "Royaume-Uni",
-    "display": "Royaume-Uni"
-  },
-  "united states": {
-    "lat": 39.7837304,
-    "lng": -100.445882,
-    "country": "États-Unis d'Amérique",
-    "display": "États-Unis d'Amérique"
-  },
-  "universitetskaya": {
-    "lat": 55.7893694,
-    "lng": 49.1225199,
-    "country": "Russie",
-    "display": "Universitetskaya Street, Старо-Татарская слобода, Вахитовский район, Kazan, городской округ Казань, Tatarstan, District fédéral de la Volga, 420111, Russie"
-  },
-  "université autonome de barcelone": {
-    "lat": 41.5015527,
-    "lng": 2.1062607,
-    "country": "Espagne",
-    "display": "Université Autonome de Barcelone, Plaça Civica, Bellaterra, Cerdanyola del Vallès, Vallais-Occidental, Barcelone, Catalogne, 08193, Espagne"
-  },
-  "utkin": {
-    "lat": 44.2550562,
-    "lng": 41.2944418,
-    "country": "Russie",
-    "display": "Уткин Бугор, Подгорненское сельское поселение, Otradnensky District, Kraï de Krasnodar, District fédéral du Sud, 352283, Russie"
+    "display": "Royaume-Uni",
+    "type": "administrative",
+    "class": "boundary"
   },
   "uzbekistan": {
     "lat": 41.32373,
     "lng": 63.9528098,
     "country": "Ouzbékistan",
-    "display": "Ouzbékistan"
-  },
-  "vara": {
-    "lat": 58.2611293,
-    "lng": 12.9561832,
-    "country": "Suède",
-    "display": "Vara, Vara kommun, Comté de Västra Götaland, 534 31, Suède"
+    "display": "Ouzbékistan",
+    "type": "administrative",
+    "class": "boundary"
   },
   "vatican": {
     "lat": 41.903411,
     "lng": 12.4528527,
     "country": "Cité du Vatican",
-    "display": "Cité du Vatican"
+    "display": "Cité du Vatican",
+    "type": "administrative",
+    "class": "boundary"
   },
   "venezuela": {
     "lat": 8.0018709,
     "lng": -66.1109318,
     "country": "Venezuela",
-    "display": "Venezuela"
+    "display": "Venezuela",
+    "type": "administrative",
+    "class": "boundary"
   },
-  "verstka": null,
-  "vienna": {
-    "lat": 48.2083537,
-    "lng": 16.3725042,
-    "country": "Autriche",
-    "display": "Vienne, Autriche"
-  },
-  "vienne": {
-    "lat": 48.2083537,
-    "lng": 16.3725042,
-    "country": "Autriche",
-    "display": "Vienne, Autriche"
-  },
-  "vietnam": {
-    "lat": 15.9266657,
-    "lng": 107.9650855,
-    "country": "Viêt Nam",
-    "display": "Viêt Nam"
-  },
-  "vladivostok": {
-    "lat": 43.1150678,
-    "lng": 131.8855768,
-    "country": "Russie",
-    "display": "Vladivostok, Vladivostok City District, Kraï du Primorié, District fédéral extrême-oriental, 690000, Russie"
-  },
-  "voronej": {
-    "lat": 51.6605982,
-    "lng": 39.2005858,
-    "country": "Russie",
-    "display": "Voronej, Voronezh, Oblast de Voronej, District fédéral central, Russie"
-  },
-  "voronezh": {
-    "lat": 51.6800081,
-    "lng": 39.183725,
-    "country": "Russie",
-    "display": "Voronezh, Oblast de Voronej, District fédéral central, Russie"
-  },
-  "votonya": null,
-  "vénézuela": {
-    "lat": 8.0018709,
-    "lng": -66.1109318,
-    "country": "Venezuela",
-    "display": "Venezuela"
-  },
-  "wsj": {
-    "lat": 57.7331324,
-    "lng": -153.3203755,
-    "country": "États-Unis d'Amérique",
-    "display": "San Juan-Uganik Seaplane Base, Port O'Brien, Kodiak Island Borough, Alaska, États-Unis d'Amérique"
-  },
-  "warabia": null,
   "washington": {
     "lat": 38.8950982,
     "lng": -77.0363849,
     "country": "États-Unis d'Amérique",
-    "display": "Washington, District de Columbia, États-Unis d'Amérique"
-  },
-  "washington dc": {
-    "lat": 38.8950982,
-    "lng": -77.0363849,
-    "country": "États-Unis d'Amérique",
-    "display": "Washington, District de Columbia, États-Unis d'Amérique"
+    "display": "Washington, District de Columbia, États-Unis d'Amérique",
+    "type": "city",
+    "class": "place"
   },
   "west africa": {
     "lat": 47.3138746,
     "lng": 5.0488196,
     "country": "France",
-    "display": "West Africa, Rue d'Auxonne, Faubourg Saint-Pierre, Université, Dijon, Côte-d'Or, Bourgogne-Franche-Comté, France métropolitaine, 21000, France"
-  },
-  "west africa’s": {
-    "lat": 5.5714423,
-    "lng": -0.2360584,
-    "country": "Ghana",
-    "display": "Hass West Africa Hearing Clinic, DF 110, Mantse Boi Street, North Kaneshie, Accra, Okaikoi South Sub Metropolitan District, Accra métropolitain, Région du Grand Accra, Ghana"
-  },
-  "western africa": {
-    "lat": 6.9137267,
-    "lng": 79.8743616,
-    "country": "Sri Lanka",
-    "display": "Haut-commissariat d'Afrique du Sud, 114, Rosmead Place, Town Hall, Cinnamon Gardens, Colombo, Province de l'Ouest, 00800, Sri Lanka"
-  },
-  "western libya": {
-    "lat": 6.9110618,
-    "lng": 79.8758196,
-    "country": "Sri Lanka",
-    "display": "Ambassade de Libye, Kynsey Road, Town Hall, Cinnamon Gardens, Colombo, Province de l'Ouest, 00800, Sri Lanka"
-  },
-  "wildberries": {
-    "lat": 41.6256157,
-    "lng": 41.6159814,
-    "country": "Géorgie",
-    "display": "Wildberries, 29ა, Meskheti Street, Stepanovka, Agmashenebeli, Batoumi, Adjarie, 6000, Géorgie"
-  },
-  "yaloké": {
-    "lat": 5.3165124,
-    "lng": 17.1019118,
-    "country": "République centrafricaine",
-    "display": "Yaloke, Ombella-M'Poko, République centrafricaine"
-  },
-  "yanino": {
-    "lat": 41.389588,
-    "lng": 25.2892621,
-    "country": "Bulgarie",
-    "display": "Ianino, Kirkovo, Oblast de Kardjali, Bulgarie"
+    "display": "West Africa, Rue d'Auxonne, Faubourg Saint-Pierre, Université, Dijon, Côte-d'Or, Bourgogne-Franche-Comté, France métropolitaine, 21000, France",
+    "type": "fast_food",
+    "class": "amenity"
   },
   "yemen": {
     "lat": 16.3471243,
     "lng": 47.8915271,
     "country": "Yémen",
-    "display": "Yémen"
+    "display": "Yémen",
+    "type": "administrative",
+    "class": "boundary"
   },
-  "yidere": null,
   "yémen": {
     "lat": 16.3471243,
     "lng": 47.8915271,
     "country": "Yémen",
-    "display": "Yémen"
-  },
-  "zes": {
-    "lat": 45.9819939,
-    "lng": 10.2875188,
-    "country": "Italie",
-    "display": "Zes, Monti di Cerveno, Cerveno, Comunità montana della valle Camonica, Brescia, Lombardie, 25040, Italie"
+    "display": "Yémen",
+    "type": "administrative",
+    "class": "boundary"
   },
   "zimbabwe": {
     "lat": -18.4554963,
     "lng": 29.7468414,
     "country": "Zimbabwe",
-    "display": "Zimbabwe"
+    "display": "Zimbabwe",
+    "type": "administrative",
+    "class": "boundary"
   },
-  "zone": {
-    "lat": 45.7634448,
-    "lng": 10.1158821,
-    "country": "Italie",
-    "display": "Zone, Comunità montana del Sebino bresciano, Brescia, Lombardie, 25050, Italie"
-  },
-  "zorki-2m": {
-    "lat": 49.7884827,
-    "lng": 43.6572605,
-    "country": "Russie",
-    "display": "улица Зорьки, Пригородный, Пригородное сельское поселение, Frolovsky District, Oblast de Volgograd, District fédéral du Sud, 403518, Russie"
-  },
-  "zorkiy-2m": null,
-  "al marj": {
-    "lat": 31.9108728,
-    "lng": 21.1477877,
-    "country": "Libye",
-    "display": "Al Marj, Libye"
-  },
-  "ampcache": null,
-  "aménokal des ifoghas": null,
-  "américains": {
-    "lat": 47.2360892,
-    "lng": -1.5682793,
-    "country": "France",
-    "display": "Américains, Boulevard Robert Schuman, Rond-Point de Rennes, Schuman, Breil - Barberie, Nantes, Loire-Atlantique, Pays de la Loire, France métropolitaine, 44322, France"
-  },
-  "and blocked": {
-    "lat": 51.3027929,
-    "lng": -0.2732155,
-    "country": "Royaume-Uni",
-    "display": "Easterly footpath blocked, Langley Bottom Farm, Langley Vale, Epsom, Epsom and Ewell, Surrey, Angleterre, KT18 6AR, Royaume-Uni"
-  },
-  "aéroport de gao": {
-    "lat": 16.2493039,
-    "lng": -0.002093,
-    "country": "Mali",
-    "display": "Aéroport International de Gao Korogoussou, route résidentielle, Gao, Cercle de Gao, Gao, Mali"
-  },
-  "aéroport de hong kong": {
-    "lat": 14.7547012,
-    "lng": -17.4683603,
-    "country": "Sénégal",
-    "display": "Hong Kong, Avenue Seydina Limamoulaye, Arrondissement des Almadies, Dakar, Région de Dakar, 11900, Sénégal"
-  },
-  "aéroport de kati": {
-    "lat": 15.2933078,
-    "lng": 38.9161873,
-    "country": "Érythrée",
-    "display": "Aéroport international d'Asmara, Asmara mereb, Asmara, Maekel, Érythrée"
-  },
-  "aéroport de latakia": {
-    "lat": 35.4119739,
-    "lng": 35.954477,
-    "country": "Syrie",
-    "display": "Base aérienne de Hmeimim, 1, Ach-Charachîr, Sous-district de Djablé, District de Djablé, Gouvernorat de Lattaquié, Syrie"
-  },
-  "aéroport de niamey": {
-    "lat": 13.4901663,
-    "lng": 2.1846007,
-    "country": "Niger",
-    "display": "Aéroport international Diori-Hamani, Rue TJ - 54, Talladjé Koado, Talladjé, Arrondissement Communal Niamey 4, Niamey, Kollo, 5001, Niger"
-  },
-  "aéroport d’agadez": {
-    "lat": 16.9709219,
-    "lng": 8.0140235,
-    "country": "Niger",
-    "display": "Aéroport International Mano Dayak d'Agadez, Trans-Sahara, Agadez, Quartier Hasna, Toudou, Tchirozerine, Agadez, Niger"
-  },
-  "aéroport international ivato": {
-    "lat": -18.7961372,
-    "lng": 47.4734286,
-    "country": "Madagascar",
-    "display": "Ivato International Airport, route accès centre météorologique, Ivato, Soamanandray, Ambohidratrimo, District d'Ambohidratrimo, Analamanga, Province d’Antananarivo, 105, Madagascar"
-  },
-  "aéroport international modibo keita": {
-    "lat": 12.5353304,
-    "lng": -7.948765,
-    "country": "Mali",
-    "display": "Aéroport International President Modibo Keïta - Senou, Route de l'Aéroport, Sénou, Bamako, Mali"
-  },
-  "base molkino": null,
-  "base de matan as-sarra": null,
-  "base d’ asipovichy": null,
-  "base militaire de brak al shati": null,
-  "bol-van": {
-    "lat": 51.6466977,
-    "lng": 5.9379688,
-    "country": "Pays-Bas",
-    "display": "Bol, 73, Spoorstraat, Boxmeer, Land van Cuijk, Brabant-Septentrional, Pays-Bas, 5831 CK, Pays-Bas"
-  },
-  "burkina": {
-    "lat": 12.0753083,
-    "lng": -1.6880314,
-    "country": "Burkina Faso",
-    "display": "Burkina Faso"
-  },
-  "bâtiment 5": {
-    "lat": 48.8687109,
-    "lng": 2.384531,
-    "country": "France",
-    "display": "Bâtiment 5, Rue des Maronites, Quartier de Belleville, Paris 20e Arrondissement, Paris, Île-de-France, France métropolitaine, 75020, France"
-  },
-  "call-sign": {
-    "lat": 40.6294411,
-    "lng": -111.4554646,
-    "country": "États-Unis d'Amérique",
-    "display": "Call Sign Casa Trail, Wasatch County, Utah, 84060, États-Unis d'Amérique"
-  },
-  "canal tg « white": null,
   "canal telegram": {
     "lat": 42.2617107,
     "lng": -71.8022375,
     "country": "États-Unis d'Amérique",
-    "display": "Worcester Telegram & Gazette, 18;20, Franklin Street, Central Business District, Theater District, Central Business District, Worcester, Worcester County, Massachusetts, 01608, États-Unis d'Amérique"
+    "display": "Worcester Telegram & Gazette, 18;20, Franklin Street, Central Business District, Theater District, Central Business District, Worcester, Worcester County, Massachusetts, 01608, États-Unis d'Amérique",
+    "type": "yes",
+    "class": "building"
   },
-  "canal telegram rybar": null,
-  "cathédrale saint-isaac": {
-    "lat": 59.9340785,
-    "lng": 30.306142,
-    "country": "Russie",
-    "display": "Cathédrale Saint-Isaac, 4, Исаакиевская площадь, Адмиралтейский округ, Saint-Pétersbourg, District fédéral du Nord-Ouest, 190031, Russie"
-  },
-  "centrale nucléaire de zaporizhzhia": {
-    "lat": 47.5139263,
-    "lng": 34.5867313,
-    "country": "Ukraine",
-    "display": "Unité de production nucléaire V, Промислова вулиця, Centrale nucléaire de Zaporijjia, Enerhodar, Enerhodar urban hromada, Vasylivka Raion, Oblast de Zaporijia, 71500, Ukraine"
-  },
-  "circonscription d’istra": null,
-  "clowwindy": null,
-  "colonne de véhicules fama": null,
   "continent africain": {
     "lat": 37.3469253,
     "lng": 9.742319,
     "country": "Tunisie",
-    "display": "Le point le plus septentrional du continent africain, depuis 2014., RL401, Douar Haj Mohamed Ben Hassen, Marnissa, Délégation Bizerte Sud, Gouvernorat Bizerte, 7028, Tunisie"
-  },
-  "district primorsky": {
-    "lat": 45.0819456,
-    "lng": 134.726645,
-    "country": "Russie",
-    "display": "Kraï du Primorié, District fédéral extrême-oriental, Russie"
+    "display": "Le point le plus septentrional du continent africain, depuis 2014., RL401, Douar Haj Mohamed Ben Hassen, Marnissa, Délégation Bizerte Sud, Gouvernorat Bizerte, 7028, Tunisie",
+    "type": "attraction",
+    "class": "tourism"
   },
   "du nord": {
     "lat": 54.7023545,
     "lng": -3.2765753,
     "country": "Royaume-Uni",
-    "display": "Royaume-Uni"
+    "display": "Royaume-Uni",
+    "type": "administrative",
+    "class": "boundary"
   },
   "du sud": {
     "lat": -28.8166236,
     "lng": 24.991639,
     "country": "Afrique du Sud",
-    "display": "Afrique du Sud"
+    "display": "Afrique du Sud",
+    "type": "administrative",
+    "class": "boundary"
   },
-  "département des monnaies": {
-    "lat": 50.6412173,
-    "lng": 3.0622683,
-    "country": "France",
-    "display": "Ancien Hôtel du Juge Garde des Monnaies, Rue de la Monnaie, Vieux-Lille, Lille, Nord, Hauts-de-France, France métropolitaine, 59043, France"
-  },
-  "détroit de bab el mandeb": {
-    "lat": 12.5743764,
-    "lng": 43.3128158,
-    "country": "Djibouti",
-    "display": "Détroit de Bab-el-Mandeb, Djibouti"
-  },
-  "fondation navis": null,
-  "forké": {
-    "lat": 45.0388512,
-    "lng": 13.802744,
-    "country": "Croatie",
-    "display": "Forke, Krmed, Općina Bale, Comitat d'Istrie, 52211, Croatie"
-  },
-  "front ukrainien": null,
   "galaxie prigojine": null,
-  "galaxie prigozhin": null,
-  "galaxie de prigozhin": null,
-  "golfe de finlande": {
-    "lat": 59.8737114,
-    "lng": 26.3229884,
-    "country": "Estonie",
-    "display": "Golfe de Finlande, Estonie"
-  },
-  "golfe d’aden": {
-    "lat": 12.6147301,
-    "lng": 47.5063378,
-    "country": "—",
-    "display": "Golfe d'Aden"
-  },
   "la chine": {
     "lat": 48.0839536,
     "lng": -1.3786545,
     "country": "France",
-    "display": "La Chine, Domagné, Fougères-Vitré, Ille-et-Vilaine, Bretagne, France métropolitaine, 35113, France"
-  },
-  "la défense": {
-    "lat": 48.891008,
-    "lng": 2.2412078,
-    "country": "France",
-    "display": "La Défense, Quartier Gambetta, Courbevoie, Nanterre, Hauts-de-Seine, Île-de-France, France métropolitaine, 92400, France"
+    "display": "La Chine, Domagné, Fougères-Vitré, Ille-et-Vilaine, Bretagne, France métropolitaine, 35113, France",
+    "type": "hamlet",
+    "class": "place"
   },
   "la france": {
     "lat": 34.6122634,
     "lng": -82.7654934,
     "country": "États-Unis d'Amérique",
-    "display": "La France, Anderson County, Caroline du Sud, 29677, États-Unis d'Amérique"
-  },
-  "la terre": {
-    "lat": 46.1679433,
-    "lng": -1.286087,
-    "country": "France",
-    "display": "La Terre, Rivedoux-Plage, La Rochelle, Charente-Maritime, Nouvelle-Aquitaine, France métropolitaine, 17940, France"
+    "display": "La France, Anderson County, Caroline du Sud, 29677, États-Unis d'Amérique",
+    "type": "village",
+    "class": "place"
   },
   "le roskomnadzor": null,
-  "libyo-biélorusse": null,
-  "l’arménie": {
-    "lat": 40.8297023,
-    "lng": 43.8286021,
-    "country": "Arménie",
-    "display": "l, next to church, Ani district, Gyumri, Shirak, 3126, Arménie"
-  },
-  "l’espagne": {
-    "lat": 49.9700486,
-    "lng": 3.3391276,
+  "l’afrique": {
+    "lat": 43.5346302,
+    "lng": 0.1958151,
     "country": "France",
-    "display": "L'Espagne, Montbrehain, Saint-Quentin, Aisne, Hauts-de-France, France métropolitaine, 02110, France"
-  },
-  "mer du nord": {
-    "lat": 56.0026997,
-    "lng": 2.8144673,
-    "country": "—",
-    "display": "Mer du Nord"
-  },
-  "ministère russe de la défense": null,
-  "mosquée de gouni": null,
-  "mux": {
-    "lat": 30.2071105,
-    "lng": 71.4199825,
-    "country": "Pakistan",
-    "display": "Multan International Airport, Canal Road, اسماعیل آباد, Jamilabad, Multan, Multan City Tehsil, Multan District, Multan Division, Pendjab, 59070, Pakistan"
-  },
-  "nfqws": null,
-  "oued d’achibriche": null,
-  "pays du moyen-orient": null,
-  "place jeune": {
-    "lat": 48.5855304,
-    "lng": 7.7464291,
-    "country": "France",
-    "display": "Église protestante Saint-Pierre-le-Jeune, Place Saint-Pierre-le-Jeune, La Petite France, Centre, Strasbourg, Bas-Rhin, Collectivité européenne d'Alsace, Grand Est, France métropolitaine, 67000, France"
-  },
-  "port de barcelone": {
-    "lat": 41.3569143,
-    "lng": 2.143195,
-    "country": "Espagne",
-    "display": "Port, la Marina de Port, Sants-Montjuïc, Barcelone, Barcelonais, Barcelone, Catalogne, 08038, Espagne"
-  },
-  "roblox.com": null,
-  "rrodyz@gmail.com": null,
-  "région de kayes": {
-    "lat": 13.8001844,
-    "lng": -10.2245548,
-    "country": "Mali",
-    "display": "Kayes, Mali"
-  },
-  "région d’oulianovsk": {
-    "lat": 54.2303202,
-    "lng": 48.3135304,
-    "country": "Russie",
-    "display": "Регион Авто, 109А, проспект Гая, Железнодорожный район, Oulianovsk, городской округ Ульяновск, Oblast d'Oulianovsk, District fédéral de la Volga, 433320, Russie"
-  },
-  "soudanais": {
-    "lat": 11.5711666,
-    "lng": 43.131959,
-    "country": "Djibouti",
-    "display": "Hôpital Militaire Soudanais, Boulevard Hassan Gouled, Lotissement des Salines, Quartier 4 bis, Balbala, Djibouti"
-  },
-  "stéréoide": null,
-  "syriens": {
-    "lat": 59.3945647,
-    "lng": 18.0488044,
-    "country": "Suède",
-    "display": "Embassy of Syria, 90, Vendevägen, Mörbylund, Klingsta, Stocksund, Lidingö, Danderyds kommun, Comté de Stockholm, 182 32, Suède"
-  },
-  "the atlantic ocean": {
-    "lat": 36.163799,
-    "lng": -75.7533294,
-    "country": "États-Unis d'Amérique",
-    "display": "Ocean Atlantic Rentals, 1194, Duck Road, Sandy Ridge, Saltaire, Duck, Dare County, Caroline du Nord, 27949, États-Unis d'Amérique"
-  },
-  "the black moon": {
-    "lat": 50.9419173,
-    "lng": 7.008303,
-    "country": "Allemagne",
-    "display": "The Black Moon, 27-29, Buchforststraße, Kalk, Cologne, Rhénanie-du-Nord-Westphalie, 51103, Allemagne"
+    "display": "L'Afrique, Marciac, Mirande, Gers, Occitanie, France métropolitaine, 32230, France",
+    "type": "isolated_dwelling",
+    "class": "place"
   },
   "the central african republic": {
     "lat": 38.9244607,
     "lng": -77.0405354,
     "country": "États-Unis d'Amérique",
-    "display": "Ambassade de la République Centrafricaine, 2704, Ontario Road Northwest, Lanier Heights, Ward 1, Washington, District de Columbia, 20009, États-Unis d'Amérique"
-  },
-  "the central african republic (tsaritsyno": null,
-  "the congo basin": null,
-  "the democratic republic of congo": {
-    "lat": 38.9040127,
-    "lng": -77.0407249,
-    "country": "États-Unis d'Amérique",
-    "display": "Ambassade de la République démocratique du Congo, 1100, Connecticut Avenue Northwest, Golden Triangle, Downtown, Ward 2, Washington, District de Columbia, 20036, États-Unis d'Amérique"
+    "display": "Ambassade de la République Centrafricaine, 2704, Ontario Road Northwest, Lanier Heights, Columbia Heights, Ward 1, Washington, District de Columbia, 20009, États-Unis d'Amérique",
+    "type": "diplomatic",
+    "class": "office"
   },
   "the global south": {
     "lat": 1.3070909,
     "lng": 103.9095869,
     "country": "Singapour",
-    "display": "Odyssey The Global Preschool, Still Road South, Frankel, Telok Kurau, Bedok, East Region, Singapour, 423927, Singapour"
-  },
-  "the gulf of finland": null,
-  "the islamic republic of iran": {
-    "lat": 52.1014931,
-    "lng": 4.2877583,
-    "country": "Pays-Bas",
-    "display": "Ambassade d'Iran, 20, Duinweg, Schéveningue, La Haye, Hollande-Méridionale, Pays-Bas, 2585 JX, Pays-Bas"
+    "display": "Odyssey The Global Preschool, Still Road South, Frankel, Telok Kurau, Bedok, East Region, Singapour, 423937, Singapour",
+    "type": "school",
+    "class": "amenity"
   },
   "the mediterranean sea": {
     "lat": 31.27717,
     "lng": 16.020182,
     "country": "Libye",
-    "display": "The Mediterranean Sea, Coastal Road, Syrte, Libye"
+    "display": "The Mediterranean Sea, Coastal Road, Syrte, Libye",
+    "type": "information",
+    "class": "tourism"
   },
   "the middle east": {
     "lat": 55.4142529,
     "lng": -2.201099,
     "country": "Royaume-Uni",
-    "display": "The Middle, Alwinton, Northumberland, North East, Angleterre, Royaume-Uni"
-  },
-  "the north sea": {
-    "lat": 55.7355049,
-    "lng": 9.1283737,
-    "country": "Danemark",
-    "display": "The North Sea, Travbyen, Billund, Billund Municipality, Danemark-du-Sud, Danemark"
-  },
-  "the north west": {
-    "lat": 52.9559076,
-    "lng": -1.1557387,
-    "country": "Royaume-Uni",
-    "display": "North West, 41, Talbot Street, Hockley, The Park, Nottingham, East Midlands, Angleterre, NG1 5GY, Royaume-Uni"
-  },
-  "the northern west federal district": null,
-  "the primorsky district": {
-    "lat": 64.538544,
-    "lng": 40.161182,
-    "country": "Russie",
-    "display": "Rikasikha, Primorsky District, Région d'Arkhangelsk, District fédéral du Nord-Ouest, Russie"
+    "display": "The Middle, Alwinton, Northumberland, North East, Angleterre, Royaume-Uni",
+    "type": "locality",
+    "class": "place"
   },
   "the red sea": {
     "lat": 45.4004951,
     "lng": -77.5371217,
     "country": "Canada",
-    "display": "The Red Sea Pond, Madawaska Valley, Renfrew County, Est de l'Ontario, Ontario, Canada"
-  },
-  "the red sea/bab": null,
-  "the republic of burkina faso": {
-    "lat": 12.3786266,
-    "lng": -1.5076267,
-    "country": "Burkina Faso",
-    "display": "Ambassade de la République fédérale d'Allemagne, 14, Rue Kafando Romuald, Ouagadougou, Kadiogo, Centre, Burkina Faso"
-  },
-  "the republic of guinea": {
-    "lat": 38.9154877,
-    "lng": -77.0470863,
-    "country": "États-Unis d'Amérique",
-    "display": "Ambassade de Guinée, 2112, Leroy Place Northwest, Kalorama Heights, Dupont Circle, Ward 2, Washington, District de Columbia, 20008, États-Unis d'Amérique"
-  },
-  "the republic of mali": {
-    "lat": 44.8073969,
-    "lng": 17.1000401,
-    "country": "Bosnie-Herzégovine",
-    "display": "Izvor Žrvenje / The spring of Žrvenja, 14. februara, Jankovići, Prnjavor Mali, Ville de Banja Luka, République serbe, Bosnie-Herzégovine"
+    "display": "The Red Sea Pond, Madawaska Valley, Renfrew County, Est de l'Ontario, Ontario, Canada",
+    "type": "water",
+    "class": "natural"
   },
   "the russian federation": {
     "lat": 38.9243135,
     "lng": -77.0744826,
     "country": "États-Unis d'Amérique",
-    "display": "Ambassade de Russie, 2650, Wisconsin Avenue Northwest, Ward 3, Washington, District de Columbia, 20007, États-Unis d'Amérique"
-  },
-  "the russian houses": null,
-  "the russian mission": {
-    "lat": 32.0471945,
-    "lng": 34.7712588,
-    "country": "Israël",
-    "display": "Compound of the Russian Ecclesiastical Mission in honor of St. Peter and righteous Tabitha, Heinrich Mendelssohn, Tel Aviv, Grove Park, Tel-Aviv, Tel Aviv Subdistrict, District de Tel-Aviv, 6608928, Israël"
-  },
-  "the russian mod": null,
-  "the russian orthodox africa exarchate": null,
-  "the russian state": {
-    "lat": 55.7775688,
-    "lng": 37.5964606,
-    "country": "Russie",
-    "display": "Université d'État des sciences humaines de Russie, Bogoslovskiy Lane, 48, Presnenski, Moscou, District fédéral central, 123104, Russie"
-  },
-  "the sahel gpci": null,
-  "the sahelian states": null,
-  "the south africa’s": {
-    "lat": 51.5094016,
-    "lng": -0.2321136,
-    "country": "Royaume-Uni",
-    "display": "MATRADE Loftus Road Stadium, South Africa Road, Shepherd's Bush, Borough londonien de Hammersmith et Fulham, Grand Londres, Angleterre, W12 7PA, Royaume-Uni"
+    "display": "Ambassade de Russie, 2650, Wisconsin Avenue Northwest, Massachusetts Avenue Heights, Glover Park, Ward 3, Washington, District de Columbia, 20007, États-Unis d'Amérique",
+    "type": "diplomatic",
+    "class": "office"
   },
   "the soviet union": {
     "lat": 56.3456965,
     "lng": 43.844463,
     "country": "Russie",
-    "display": "Decorative Stone in honor of the hero of the Soviet Union Ryazanov V.G, улица Шимборского, Сормовский район, Nijni Novgorod, Nizhny Novgorod, Oblast de Nijni Novgorod, District fédéral de la Volga, 603037, Russie"
-  },
-  "the third rome": {
-    "lat": 41.8790555,
-    "lng": 12.4909055,
-    "country": "Italie",
-    "display": "The Third Paradise by Michelangelo Pistoletto, Viale Guido Baccelli, San Saba, Municipio Roma I, Rome, Roma Capitale, Latium, 00154, Italie"
+    "display": "Decorative Stone in honor of the hero of the Soviet Union Ryazanov V.G, улица Шимборского, Сормовский район, Nijni Novgorod, Nizhny Novgorod, Oblast de Nijni Novgorod, District fédéral de la Volga, 603037, Russie",
+    "type": "monument",
+    "class": "historic"
   },
   "the united arab emirates": {
     "lat": 38.9449546,
     "lng": -77.0692577,
     "country": "États-Unis d'Amérique",
-    "display": "Ambassade des Émirats arabes unis, 3522, International Court Northwest, Van Ness, Ward 3, Washington, District de Columbia, 20008, États-Unis d'Amérique"
-  },
-  "the united kingdom": {
-    "lat": 52.4577754,
-    "lng": -1.8692099,
-    "country": "Royaume-Uni",
-    "display": "The (Oval) Banqueting Suite, 372, Stratford Road, Sparkhill, Sparkbrook, Birmingham, West Midlands, Angleterre, B11 4AB, Royaume-Uni"
+    "display": "Ambassade des Émirats arabes unis, 3522, International Court Northwest, Van Ness, Ward 3, Washington, District de Columbia, 20008, États-Unis d'Amérique",
+    "type": "diplomatic",
+    "class": "office"
   },
   "the united states": {
     "lat": 47.8291375,
     "lng": -122.5970742,
     "country": "États-Unis d'Amérique",
-    "display": "Buzzcut, Kitsap County, Washington, 98364, États-Unis d'Amérique"
-  },
-  "thesudan": null,
-  "throttling": null,
-  "tpws": null,
-  "ukrainiens": {
-    "lat": 46.0874982,
-    "lng": -73.8808294,
-    "country": "Canada",
-    "display": "Lac des Ukrainiens, Chertsey, Matawinie, Lanaudière, Québec, Canada"
+    "display": "Buzzcut, Kitsap County, Washington, 98364, États-Unis d'Amérique",
+    "type": "cycleway",
+    "class": "highway"
   },
   "yellow cake": {
     "lat": 35.3778302,
     "lng": -106.67835,
     "country": "États-Unis d'Amérique",
-    "display": "Yellow Cake Hills, Rio Rancho, Sandoval County, Nouveau-Mexique, États-Unis d'Amérique"
+    "display": "Yellow Cake Hills, Rio Rancho, Sandoval County, Nouveau-Mexique, États-Unis d'Amérique",
+    "type": "path",
+    "class": "highway"
   },
-  "zapret": {
-    "lat": -8.2821297,
-    "lng": 115.4740071,
-    "country": "Indonésie",
-    "display": "Ban, Kubu, Karangasem, Bali, Lesser Sunda Islands, Indonésie"
-  },
-  "ère houthi": null,
   "égypte": {
     "lat": 26.2540493,
     "lng": 29.2675469,
     "country": "Égypte",
-    "display": "Égypte"
+    "display": "Égypte",
+    "type": "administrative",
+    "class": "boundary"
   },
   "émirats arabes unis": {
     "lat": 24.0002488,
     "lng": 53.9994829,
     "country": "Émirats arabes unis",
-    "display": "Émirats arabes unis"
+    "display": "Émirats arabes unis",
+    "type": "administrative",
+    "class": "boundary"
   },
   "état": {
     "lat": 36.5748441,
     "lng": 139.2394179,
     "country": "Japon",
-    "display": "Japon"
+    "display": "Japon",
+    "type": "administrative",
+    "class": "boundary"
   },
-  "état libyen": {
-    "lat": 26.8234472,
-    "lng": 18.1236723,
-    "country": "Libye",
-    "display": "Libye"
-  },
-  "état malien": null,
   "état russe": {
     "lat": 59.9379748,
     "lng": 30.3086461,
     "country": "Russie",
-    "display": "État-major de la Marine Russe, Адмиралтейский округ, Saint-Pétersbourg, District fédéral du Nord-Ouest, Russie"
-  },
-  "état-nation": {
-    "lat": 6.3598458,
-    "lng": 5.6285427,
-    "country": "Nigéria",
-    "display": "Glorious mission to all Nation, Akenzua Street, Uselu, Egor, État d'Edo, 300241, Nigéria"
+    "display": "État-major de la Marine Russe, Адмиралтейский округ, Saint-Pétersbourg, District fédéral du Nord-Ouest, Russie",
+    "type": "military",
+    "class": "landuse"
   },
   "états": {
     "lat": 39.7837304,
     "lng": -100.445882,
     "country": "États-Unis d'Amérique",
-    "display": "États-Unis d'Amérique"
+    "display": "États-Unis d'Amérique",
+    "type": "administrative",
+    "class": "boundary"
   },
-  "états africains": null,
   "états-unis": {
     "lat": 39.7837304,
     "lng": -100.445882,
     "country": "États-Unis d'Amérique",
-    "display": "États-Unis d'Amérique"
-  },
-  "аббе": {
-    "lat": 50.371375,
-    "lng": 2.6328916,
-    "country": "France",
-    "display": "Camblain-l'Abbé, Arras, Pas-de-Calais, Hauts-de-France, France métropolitaine, 62690, France"
-  },
-  "американском казначействе": null,
-  "анголе": {
-    "lat": 2.6721751,
-    "lng": 32.8639233,
-    "country": "Ouganda",
-    "display": "Angole Laroo, Pader, Northern Region, Ouganda"
-  },
-  "анголу": {
-    "lat": 10.234125,
-    "lng": 24.896435,
-    "country": "Soudan",
-    "display": "Angolu, Darfour du Sud, Soudan"
-  },
-  "африке": {
-    "lat": 9.8333333,
-    "lng": 49.1666667,
-    "country": "Somalie",
-    "display": "Corne de l'Afrique, Qardho, Bari, Pount, Somalie"
-  },
-  "африки": {
-    "lat": 55.7553,
-    "lng": 37.6119999,
-    "country": "Russie",
-    "display": "Институт стран Азии и Африки МГУ, Rue Mokhovaïa, 40, Tverskoy District, Moscou, District fédéral central, 103009, Russie"
-  },
-  "африку": {
-    "lat": 9.8333333,
-    "lng": 49.1666667,
-    "country": "Somalie",
-    "display": "Corne de l'Afrique, Qardho, Bari, Pount, Somalie"
-  },
-  "буаре": {
-    "lat": 40.6684791,
-    "lng": 14.7882567,
-    "country": "Italie",
-    "display": "Buarè, Via Generale Germano Ricciardi, Torrione, Salerne, Salerno, Campanie, 84128, Italie"
-  },
-  "бабуа": {
-    "lat": 1.0126654,
-    "lng": 127.46612,
-    "country": "Indonésie",
-    "display": "Pulau Babua, Village, Moluques du Nord, Moluques, Indonésie"
-  },
-  "бразилии": {
-    "lat": 37.5815942,
-    "lng": 126.9804206,
-    "country": "Corée du Sud",
-    "display": "Ambassade du Brésil, 73, Cheongwadae-ro, Gungjeong-dong, Samcheong-dong, Jongno-gu, Séoul, 03054, Corée du Sud"
-  },
-  "декабрь": {
-    "lat": 43.4143123,
-    "lng": 76.8945813,
-    "country": "Kazakhstan",
-    "display": "Жәпек батыр ауылы, Ile District, Oblys d'Almaty, Kazakhstan"
-  },
-  "демократической республике конго": null,
-  "земля": {
-    "lat": 75.1168415,
-    "lng": 58.6929463,
-    "country": "Russie",
-    "display": "Nouvelle-Zemble, District fédéral du Nord-Ouest, 163055, Russie"
-  },
-  "идере": {
-    "lat": 5.0595679,
-    "lng": 14.7504329,
-    "country": "République centrafricaine",
-    "display": "Camp Idéré, Nana-Mambéré, République centrafricaine"
-  },
-  "ирдере": null,
-  "йидере": {
-    "lat": 41.5306002,
-    "lng": 44.9230188,
-    "country": "Géorgie",
-    "display": "ჯიდერე, Municipalité de Marneouli, Basse Kartlie, Géorgie"
-  },
-  "камеруном": null,
-  "кпанде": {
-    "lat": 8.4571273,
-    "lng": 0.989427,
-    "country": "Togo",
-    "display": "Kpande-kpandé, Préfecture de Sotouboua, Région Centrale, Togo"
-  },
-  "лами-понте": {
-    "lat": 44.2950264,
-    "lng": 10.7079419,
-    "country": "Italie",
-    "display": "Via M. Lami, Cà Pastora, Borra, Lama Mocogno, Unione dei comuni del Frignano, Modena, Émilie-Romagne, 41025, Italie"
-  },
-  "мали": {
-    "lat": 16.3700359,
-    "lng": -2.2900239,
-    "country": "Mali",
-    "display": "Mali"
-  },
-  "нана-мамбере": {
-    "lat": 5.2231625,
-    "lng": 15.3517922,
-    "country": "République centrafricaine",
-    "display": "Nana-Mambéré, République centrafricaine"
-  },
-  "нгия-буаре": null,
-  "ндассима": {
-    "lat": 6.1844037,
-    "lng": 20.705863,
-    "country": "République centrafricaine",
-    "display": "Ndassima gold mine, Ouaka, République centrafricaine"
-  },
-  "ндибе": {
-    "lat": 5.8486258,
-    "lng": 7.9463957,
-    "country": "Nigéria",
-    "display": "Ndibe Beach, Nkanu, Enugu State, Afikpo North, État d'Ebonyi, Nigéria"
+    "display": "États-Unis d'Amérique",
+    "type": "administrative",
+    "class": "boundary"
   },
   "объединенных арабских эмиратах": null,
-  "париже": {
-    "lat": 46.75157,
-    "lng": 3.35632,
-    "country": "France",
-    "display": "Saint-Parize-en-Viry, Nevers, Nièvre, Bourgogne-Franche-Comté, France métropolitaine, 58300, France"
-  },
   "россии": {
     "lat": 55.7946485,
     "lng": 49.1115022,
     "country": "Russie",
-    "display": "Kazan, городской округ Казань, Tatarstan, District fédéral de la Volga, Russie"
+    "display": "Kazan, городской округ Казань, Tatarstan, District fédéral de la Volga, Russie",
+    "type": "city",
+    "class": "place"
   },
-  "рязань": {
-    "lat": 54.6295687,
-    "lng": 39.7425039,
-    "country": "Russie",
-    "display": "Riazan, Oblast de Riazan, District fédéral central, Russie"
-  },
-  "сагайни": null,
-  "система": {
-    "lat": 53.1053415,
-    "lng": 60.2367386,
-    "country": "Russie",
-    "display": "Система, Карталинский муниципальный округ, Oblast de Tcheliabinsk, District fédéral de l'Oural, Russie"
-  },
-  "суверенный интернет": null,
-  "франции": {
-    "lat": 48.8617819,
-    "lng": 2.3179827,
-    "country": "France",
-    "display": "Assemblée nationale, Quai d'Orsay, Quartier des Invalides, Paris 7e Arrondissement, Paris, Île-de-France, France métropolitaine, 75007, France"
-  },
-  "цар": {
-    "lat": 7.0323598,
-    "lng": 19.9981227,
-    "country": "République centrafricaine",
-    "display": "République centrafricaine"
-  },
-  "центральноафриканской республике": null,
-  "центральноафриканской республике (цар": null,
-  "центральной африке": null,
-  "центральной африки": null,
-  "разведки российской федерации": {
-    "lat": 55.5847265,
-    "lng": 37.520449,
-    "country": "Russie",
-    "display": "Headquarters of The Foreign Intelligence Service of the Russian Federation, Yasenevo District, Kommunarka, Moscou, District fédéral central, 143370, Russie"
-  }
+  "центральноафриканской республике": null
 }
