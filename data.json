@@ -2233,8 +2233,8 @@
       "id": "paris",
       "name": "Paris",
       "country": "France",
-      "lat": 48.8588897,
-      "lng": 2.320041,
+      "lat": 48.8534951,
+      "lng": 2.3483915,
       "articles": [
         "africa-politology-loffensive-feutree-de-moscou",
         "denis-pavlov-lhomme-de-bangui",
@@ -2343,9 +2343,9 @@
     {
       "id": "gao",
       "name": "Gao",
-      "country": "Burkina Faso",
-      "lat": 11.642308,
-      "lng": -2.1800254,
+      "country": "Mali",
+      "lat": 16.2788129,
+      "lng": -0.0412392,
       "articles": [
         "africa-flop",
         "africa-flop-saison-2",
@@ -2368,8 +2368,8 @@
       "id": "hong-kong",
       "name": "Hong Kong",
       "country": "Chine",
-      "lat": 22.2792968,
-      "lng": 114.1628907,
+      "lat": 22.3492155,
+      "lng": 114.1857978,
       "articles": [
         "china-gets-nvidia-gpu-for-the-ai-race-through-vietnam-and-malaysia",
         "gru-inc-chasse-les-actifs-petroliers-de-prigojine-en-syrie",
@@ -2809,8 +2809,8 @@
       "id": "mer-rouge",
       "name": "Mer Rouge",
       "country": "Égypte",
-      "lat": 25.5664162,
-      "lng": 34.0930512,
+      "lat": 24.6601831,
+      "lng": 34.1399929,
       "articles": [
         "russie-afrique-un-forum-en-demi-teinte-a-lombre-de-la-guerre-en-ukraine",
         "touche-coule"
@@ -3015,7 +3015,7 @@
       ]
     },
     {
-      "id": "x95633",
+      "id": "x97028",
       "name": "России",
       "country": "Russie",
       "lat": 55.7946485,

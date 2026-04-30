@@ -33,21 +33,21 @@
     "class": "office"
   },
   "afrique centrale": {
-    "lat": 8.9868127,
-    "lng": 1.1396676,
+    "lat": 8.9822897,
+    "lng": 1.1388154,
     "country": "Togo",
-    "display": "Ets Afrique Pro, Rue de l'Église, ZONGO, Sokodé, Préfecture de Tchaoudjo, Région Centrale, Togo",
-    "type": "mobile_phone",
-    "class": "shop"
+    "display": "Action pour la jeunesse d Afrique, Lomé - Cinkassé, Sokodé, Préfecture de Tchaoudjo, Région Centrale, Togo",
+    "type": "ngo",
+    "class": "office"
   },
   "afrique de prigojine": null,
   "afrique de l’ouest": {
-    "lat": 5.5238575,
-    "lng": 10.1256764,
-    "country": "Cameroun",
-    "display": "Ferme EPA, Nkong-Zem, Menoua, Région de l'Ouest, Cameroun",
-    "type": "farmyard",
-    "class": "landuse"
+    "lat": 45.4203354,
+    "lng": -75.6944061,
+    "country": "Canada",
+    "display": "D'Afrique, 164, avenue Laurier Ouest, Centre-ville, Somerset, Ottawa, Est de l'Ontario, Ontario, K1P 5J2, Canada",
+    "type": "restaurant",
+    "class": "amenity"
   },
   "afrique du nord": {
     "lat": 41.362599,
@@ -211,7 +211,7 @@
     "class": "boundary"
   },
   "balkans": {
-    "lat": 41.7785016,
+    "lat": 41.7785017,
     "lng": 23.814677,
     "country": "Bulgarie",
     "display": "Balkans, Bulgarie",
@@ -255,8 +255,8 @@
     "lng": 20.0812174,
     "country": "Libye",
     "display": "Benghazi, Libye",
-    "type": "administrative",
-    "class": "boundary"
+    "type": "city",
+    "class": "place"
   },
   "berlin": {
     "lat": 52.5173885,
@@ -470,11 +470,11 @@
   },
   "gpci": null,
   "gao": {
-    "lat": 11.642308,
-    "lng": -2.1800254,
-    "country": "Burkina Faso",
-    "display": "Gao, Ziro, Centre-Ouest, Burkina Faso",
-    "type": "town",
+    "lat": 16.2788129,
+    "lng": -0.0412392,
+    "country": "Mali",
+    "display": "Gao, Cercle de Gao, Gao, Mali",
+    "type": "city",
     "class": "place"
   },
   "gaza": {
@@ -545,8 +545,8 @@
   },
   "gurokhen": null,
   "hong kong": {
-    "lat": 22.2792968,
-    "lng": 114.1628907,
+    "lat": 22.3492155,
+    "lng": 114.1857978,
     "country": "Chine",
     "display": "Hong Kong, Chine",
     "type": "administrative",
@@ -773,8 +773,8 @@
     "class": "place"
   },
   "mer rouge": {
-    "lat": 25.5664162,
-    "lng": 34.0930512,
+    "lat": 24.6601831,
+    "lng": 34.1399929,
     "country": "Égypte",
     "display": "Mer-Rouge, Égypte",
     "type": "administrative",
@@ -901,8 +901,8 @@
     "class": "boundary"
   },
   "paris": {
-    "lat": 48.8588897,
-    "lng": 2.320041,
+    "lat": 48.8534951,
+    "lng": 2.3483915,
     "country": "France",
     "display": "Paris, Île-de-France, France métropolitaine, France",
     "type": "administrative",
@@ -925,11 +925,11 @@
     "class": "boundary"
   },
   "poblenou": {
-    "lat": 41.4036418,
-    "lng": 2.2032751,
+    "lat": 41.4037049,
+    "lng": 2.2033841,
     "country": "Espagne",
     "display": "Poblenou, Carrer de Pujades, el Poblenou, Sant Martí, Barcelone, Barcelonais, Barcelone, Catalogne, 08005, Espagne",
-    "type": "station",
+    "type": "stop",
     "class": "railway"
   },
   "prigojine": null,
@@ -970,7 +970,7 @@
     "lat": 50.0789633,
     "lng": 14.4785153,
     "country": "Tchéquie",
-    "display": "Radio Free Europe / Radio Liberty, 159a, Vinohradská, Třebešín, Strašnice, SO Praha 10, obvod Praha 10, Prague, 100 00, Tchéquie",
+    "display": "Radio Free Europe / Radio Liberty, 159a, Vinohradská, Třebešín, Strašnice, Praha 10, obvod Praha 10, Prague, 100 00, Tchéquie",
     "type": "commercial",
     "class": "building"
   },
@@ -1002,7 +1002,7 @@
     "lat": 61.5510763,
     "lng": 16.4516729,
     "country": "Suède",
-    "display": "Russes, Bollnäs kommun, Comté de Gävleborg, 820 11, Suède",
+    "display": "Russes, Bollnäs kommun, Comté de Gävleborg, Suède",
     "type": "isolated_dwelling",
     "class": "place"
   },
@@ -1090,7 +1090,7 @@
     "lat": 59.22264,
     "lng": 39.8843492,
     "country": "Russie",
-    "display": "Sytyi kot, проспект Победы, Заречье, Vologda, Oblast de Vologda, District fédéral du Nord-Ouest, 160000, Russie",
+    "display": "Sytyi kot, 20, проспект Победы, Заречье, Vologda, Oblast de Vologda, District fédéral du Nord-Ouest, 160000, Russie",
     "type": "cafe",
     "class": "amenity"
   },
@@ -1247,10 +1247,10 @@
     "class": "boundary"
   },
   "canal telegram": {
-    "lat": 42.2617108,
+    "lat": 42.2617107,
     "lng": -71.8022375,
     "country": "États-Unis d'Amérique",
-    "display": "Worcester Telegram & Gazette, 18;20, Franklin Street, Central Business District, Worcester, Worcester County, Massachusetts, 01608, États-Unis d'Amérique",
+    "display": "Worcester Telegram & Gazette, 18;20, Franklin Street, Central Business District, Theater District, Central Business District, Worcester, Worcester County, Massachusetts, 01608, États-Unis d'Amérique",
     "type": "yes",
     "class": "building"
   },
@@ -1313,12 +1313,12 @@
     "class": "place"
   },
   "the red sea": {
-    "lat": 45.4004951,
-    "lng": -77.5371217,
-    "country": "Canada",
-    "display": "The Red Sea Pond, Madawaska Valley, Renfrew County, Est de l'Ontario, Ontario, Canada",
-    "type": "water",
-    "class": "natural"
+    "lat": 50.8400976,
+    "lng": -0.2857862,
+    "country": "Royaume-Uni",
+    "display": "The Red Lion, Steyning Road, Shoreham-by-Sea, District d'Adur, West Sussex, Angleterre, BN43 5TE, Royaume-Uni",
+    "type": "pub",
+    "class": "amenity"
   },
   "the russian federation": {
     "lat": 38.9243135,
@@ -1345,12 +1345,12 @@
     "class": "office"
   },
   "the united states": {
-    "lat": 36.1337324,
-    "lng": -80.2782636,
+    "lat": 47.8291375,
+    "lng": -122.5970742,
     "country": "États-Unis d'Amérique",
-    "display": "Subway, The, Eure Drive, Reynolda Village, Winston-Salem, Forsyth County, Caroline du Nord, 27109, États-Unis d'Amérique",
-    "type": "fast_food",
-    "class": "amenity"
+    "display": "Buzzcut, Kitsap County, Washington, 98364, États-Unis d'Amérique",
+    "type": "cycleway",
+    "class": "highway"
   },
   "yellow cake": {
     "lat": 35.3778302,
