@@ -1,0 +1,4 @@
+requests>=2.31
+beautifulsoup4>=4.12
+spacy>=3.7,<4.0
+tqdm>=4.66

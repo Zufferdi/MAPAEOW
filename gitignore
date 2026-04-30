@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.python-version
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# IMPORTANT: on garde cache/ (geocoding cache, articles cache)
+# pour ne pas re-taper Nominatim à chaque run

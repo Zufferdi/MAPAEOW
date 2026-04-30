@@ -1,0 +1,344 @@
+{
+  "_meta": {
+    "generated": "2026-04-30",
+    "source": "https://alleyesonwagner.org",
+    "note": "Échantillon démo extrait manuellement de quelques enquêtes — lance pipeline.py pour régénérer avec tous les articles"
+  },
+  "articles": [
+    {
+      "id": "africa-flop-saison-2",
+      "title": "AFRICA FLOP, SAISON 2",
+      "url": "https://alleyesonwagner.org/2026/04/28/africa-flop-saison-2/",
+      "date": "2026-04-28",
+      "category": "AEOW",
+      "lang": "fr",
+      "excerpt": "Bilan d'un an de l'Africa Corps au Mali, des attaques coordonnées du 25 avril 2026 par le FLA et le JNIM contre Bamako, Kidal, Gao, Mopti, Sévaré et Kati."
+    },
+    {
+      "id": "africa-flop-2025",
+      "title": "AFRICA FLOP",
+      "url": "https://alleyesonwagner.org/2025/06/17/africa-flop/",
+      "date": "2025-06-17",
+      "category": "AEOW",
+      "lang": "fr",
+      "excerpt": "Premiers déploiements difficiles de l'Africa Corps avec 2500 hommes répartis sur une vingtaine de bases au Mali."
+    },
+    {
+      "id": "alabuga-fr",
+      "title": "Alabuga, nœud central de la menace hybride russe",
+      "url": "https://alleyesonwagner.org/2026/04/19/alabuga-noeud-central-de-la-menace-hybride-russe/",
+      "date": "2026-04-19",
+      "category": "Russia & Partners",
+      "lang": "fr",
+      "excerpt": "La zone industrielle d'Alabuga au Tatarstan comme noeud central de la guerre hybride russe — drones Shahed-136, recrutement, sanctions."
+    },
+    {
+      "id": "russia-security-forum",
+      "title": "Le Forum International sur la Sécurité de la Russie",
+      "url": "https://alleyesonwagner.org/2026/04/29/le-forum-international-sur-la-securite-de-la-russie-le-temps-de-la-confrontation/",
+      "date": "2026-04-29",
+      "category": "Hybrid Warfare",
+      "lang": "fr",
+      "excerpt": "Forum à Moscou rassemblant délégations étrangères, services de renseignement russes et Rossotrudnichestvo."
+    },
+    {
+      "id": "svr-politology",
+      "title": "SVR-controlled Politology Labels Non-Orthodox Christian Groups as Western Agents",
+      "url": "https://alleyesonwagner.org/2026/04/23/svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa/",
+      "date": "2026-04-23",
+      "category": "Hybrid Warfare",
+      "lang": "en",
+      "excerpt": "How SVR-linked think tank Politology frames non-Orthodox Christian groups as Western agents in Africa."
+    },
+    {
+      "id": "demo-strategic-arms",
+      "title": "Réseaux d'acquisition d'armes stratégiques",
+      "url": "https://alleyesonwagner.org/",
+      "date": "2025-11-15",
+      "category": "Strategic arms and Disruptive Tech",
+      "lang": "fr",
+      "excerpt": "Cartographie des chaînes d'approvisionnement de la Russie via la Libye, la Turquie et l'Asie centrale (article démo)."
+    },
+    {
+      "id": "demo-hybrid-2024",
+      "title": "Hybrid Operations in West Africa, 2024 retrospective",
+      "url": "https://alleyesonwagner.org/",
+      "date": "2024-12-20",
+      "category": "Hybrid Warfare",
+      "lang": "en",
+      "excerpt": "Retrospective on hybrid warfare operations across West Africa in 2024 (article démo)."
+    }
+  ],
+  "places": [
+    {
+      "id": "kidal",
+      "name": "Kidal",
+      "country": "Mali",
+      "lat": 18.4411,
+      "lng": 1.4078,
+      "articles": [
+        "africa-flop-saison-2",
+        "africa-flop-2025",
+        "demo-hybrid-2024"
+      ]
+    },
+    {
+      "id": "bamako",
+      "name": "Bamako",
+      "country": "Mali",
+      "lat": 12.6392,
+      "lng": -8.0029,
+      "articles": [
+        "africa-flop-saison-2",
+        "africa-flop-2025",
+        "demo-hybrid-2024"
+      ]
+    },
+    {
+      "id": "gao",
+      "name": "Gao",
+      "country": "Mali",
+      "lat": 16.2667,
+      "lng": -0.05,
+      "articles": [
+        "africa-flop-saison-2",
+        "africa-flop-2025"
+      ]
+    },
+    {
+      "id": "mopti",
+      "name": "Mopti",
+      "country": "Mali",
+      "lat": 14.4843,
+      "lng": -4.1976,
+      "articles": [
+        "africa-flop-saison-2"
+      ]
+    },
+    {
+      "id": "sevare",
+      "name": "Sévaré",
+      "country": "Mali",
+      "lat": 14.5269,
+      "lng": -4.0911,
+      "articles": [
+        "africa-flop-saison-2",
+        "africa-flop-2025"
+      ]
+    },
+    {
+      "id": "kati",
+      "name": "Kati",
+      "country": "Mali",
+      "lat": 12.7483,
+      "lng": -8.0742,
+      "articles": [
+        "africa-flop-saison-2"
+      ]
+    },
+    {
+      "id": "tessit",
+      "name": "Tessit",
+      "country": "Mali",
+      "lat": 15.2167,
+      "lng": 0.7833,
+      "articles": [
+        "africa-flop-saison-2"
+      ]
+    },
+    {
+      "id": "tessalit",
+      "name": "Tessalit",
+      "country": "Mali",
+      "lat": 20.2,
+      "lng": 1.0,
+      "articles": [
+        "africa-flop-saison-2",
+        "africa-flop-2025"
+      ]
+    },
+    {
+      "id": "tin-zaouaten",
+      "name": "Tin Zaouaten",
+      "country": "Mali",
+      "lat": 19.95,
+      "lng": 2.95,
+      "articles": [
+        "africa-flop-saison-2",
+        "africa-flop-2025"
+      ]
+    },
+    {
+      "id": "ber",
+      "name": "Ber",
+      "country": "Mali",
+      "lat": 16.97,
+      "lng": -2.22,
+      "articles": [
+        "africa-flop-saison-2"
+      ]
+    },
+    {
+      "id": "labbezzanga",
+      "name": "Labbezzanga",
+      "country": "Mali",
+      "lat": 14.95,
+      "lng": 0.78,
+      "articles": [
+        "africa-flop-saison-2"
+      ]
+    },
+    {
+      "id": "intahaka",
+      "name": "Intahaka",
+      "country": "Mali",
+      "lat": 16.5,
+      "lng": -0.05,
+      "articles": [
+        "africa-flop-saison-2"
+      ]
+    },
+    {
+      "id": "al-moustarat",
+      "name": "Al Moustarat",
+      "country": "Mali",
+      "lat": 16.4,
+      "lng": -1.4,
+      "articles": [
+        "africa-flop-saison-2"
+      ]
+    },
+    {
+      "id": "kayes",
+      "name": "Kayes",
+      "country": "Mali",
+      "lat": 14.4427,
+      "lng": -11.4444,
+      "articles": [
+        "africa-flop-saison-2"
+      ]
+    },
+    {
+      "id": "conakry",
+      "name": "Conakry",
+      "country": "Guinée",
+      "lat": 9.5092,
+      "lng": -13.7122,
+      "articles": [
+        "africa-flop-saison-2",
+        "demo-strategic-arms"
+      ]
+    },
+    {
+      "id": "al-khadim",
+      "name": "Al Khadim (base aérienne)",
+      "country": "Libye",
+      "lat": 32.4,
+      "lng": 21.9,
+      "articles": [
+        "africa-flop-saison-2",
+        "demo-strategic-arms"
+      ]
+    },
+    {
+      "id": "niger",
+      "name": "Niger",
+      "country": "Niger",
+      "lat": 17.6078,
+      "lng": 8.0817,
+      "articles": [
+        "africa-flop-saison-2",
+        "africa-flop-2025",
+        "demo-hybrid-2024"
+      ]
+    },
+    {
+      "id": "burkina-faso",
+      "name": "Burkina Faso",
+      "country": "Burkina Faso",
+      "lat": 12.2383,
+      "lng": -1.5616,
+      "articles": [
+        "africa-flop-saison-2",
+        "africa-flop-2025",
+        "demo-hybrid-2024"
+      ]
+    },
+    {
+      "id": "cote-divoire",
+      "name": "Côte d'Ivoire",
+      "country": "Côte d'Ivoire",
+      "lat": 7.5399,
+      "lng": -5.5471,
+      "articles": [
+        "africa-flop-saison-2"
+      ]
+    },
+    {
+      "id": "senegal",
+      "name": "Sénégal",
+      "country": "Sénégal",
+      "lat": 14.4974,
+      "lng": -14.4524,
+      "articles": [
+        "africa-flop-saison-2"
+      ]
+    },
+    {
+      "id": "alabuga",
+      "name": "Alabuga",
+      "country": "Russie",
+      "lat": 55.7402,
+      "lng": 52.0584,
+      "articles": [
+        "alabuga-fr",
+        "demo-strategic-arms"
+      ]
+    },
+    {
+      "id": "moscow",
+      "name": "Moscou",
+      "country": "Russie",
+      "lat": 55.7558,
+      "lng": 37.6173,
+      "articles": [
+        "russia-security-forum",
+        "alabuga-fr",
+        "svr-politology",
+        "demo-strategic-arms"
+      ]
+    },
+    {
+      "id": "kazan",
+      "name": "Kazan",
+      "country": "Russie",
+      "lat": 55.8304,
+      "lng": 49.0661,
+      "articles": [
+        "alabuga-fr"
+      ]
+    },
+    {
+      "id": "sahel",
+      "name": "Sahel",
+      "country": "—",
+      "lat": 15.5,
+      "lng": 0.0,
+      "articles": [
+        "africa-flop-saison-2",
+        "africa-flop-2025",
+        "demo-hybrid-2024"
+      ]
+    },
+    {
+      "id": "turkey",
+      "name": "Turquie",
+      "country": "Turquie",
+      "lat": 39.0,
+      "lng": 35.0,
+      "articles": [
+        "demo-strategic-arms"
+      ]
+    }
+  ]
+}

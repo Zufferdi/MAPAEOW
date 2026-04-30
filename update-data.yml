@@ -1,0 +1,62 @@
+name: Update map data
+
+# Quand le workflow tourne :
+#   - manuellement depuis l'onglet Actions
+#   - tous les lundis à 04:00 UTC
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 4 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout (avec history)
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # Cache des modèles spaCy (~1 GB cumulés). Évite de retélécharger à chaque run.
+      - name: Restore spaCy models cache
+        id: spacy-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip/wheels
+          key: spacy-models-v1-fr-en-ru-xx
+
+      - name: Download spaCy models
+        run: |
+          python -m spacy download fr_core_news_lg
+          python -m spacy download en_core_web_lg
+          python -m spacy download ru_core_news_lg
+          python -m spacy download xx_ent_wiki_sm
+
+      - name: Run pipeline
+        run: python pipeline.py
+
+      - name: Commit & push si des changements
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json cache/ place_aliases.json
+          if git diff --staged --quiet; then
+            echo "Pas de changement, rien à commiter."
+          else
+            git commit -m "🌍 Mise à jour data.json ($(date -u +%Y-%m-%d))"
+            git push
+          fi
