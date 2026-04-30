@@ -356,4 +356,89 @@ def load_aliases_and_blacklist() -> tuple[dict[str, str], set[str], dict[str, di
         )
     cfg = json.loads(ALIASES_FILE.read_text("utf-8"))
     aliases = cfg.get("aliases", {})
-    blacklist = {b.lower() for b in cfg.get("blacklist", [])} | DEFAULT_
+    blacklist = {b.lower() for b in cfg.get("blacklist", [])} | DEFAULT_BLACKLIST
+    overrides = cfg.get("overrides", {})
+    return aliases, blacklist, overrides
+
+
+# ----------------------------------------------------------------------
+# Pipeline principal
+# ----------------------------------------------------------------------
+def run(site: str, refresh_articles: bool, regeocode: bool) -> None:
+    CACHE_DIR.mkdir(exist_ok=True)
+
+    raw_posts = fetch_all_posts(site, cache_articles=not refresh_articles)
+    categories = fetch_categories(site)
+    articles = [post_to_article(p, categories) for p in raw_posts]
+
+    lang_counts: dict[str, int] = {}
+    for a in articles:
+        lang_counts[a.lang] = lang_counts.get(a.lang, 0) + 1
+    print(f"[wp] {len(articles)} articles parsés. Langues : "
+          f"{', '.join(f'{k}={v}' for k,v in sorted(lang_counts.items()))}")
+
+    ner = NERModels()
+    aliases, blacklist, overrides = load_aliases_and_blacklist()
+
+    place_to_articles: dict[str, list[str]] = {}
+    print("[ner] extraction des lieux par article…")
+    for art in tqdm(articles):
+        for place in extract_places(art, ner, blacklist, aliases):
+            place_to_articles.setdefault(place, []).append(art.id)
+    print(f"[ner] {len(place_to_articles)} lieux uniques extraits")
+
+    geocode_cache = {} if regeocode else load_geocode_cache()
+    geocoded: list[Place] = []
+    print("[geo] géocodage Nominatim (≈1 req/s)…")
+    try:
+        for name, art_ids in tqdm(sorted(place_to_articles.items())):
+            if name in overrides:
+                ov = overrides[name]
+                geocoded.append(Place(
+                    id=slugify(name), name=name, country=ov.get("country", "—"),
+                    lat=float(ov["lat"]), lng=float(ov["lng"]),
+                    articles=sorted(set(art_ids)),
+                ))
+                continue
+            res = geocode(name, geocode_cache)
+            if not res:
+                continue
+            geocoded.append(Place(
+                id=slugify(name), name=name, country=res["country"],
+                lat=res["lat"], lng=res["lng"],
+                articles=sorted(set(art_ids)),
+            ))
+    finally:
+        save_geocode_cache(geocode_cache)
+
+    print(f"[geo] {len(geocoded)} lieux géocodés (sur {len(place_to_articles)})")
+
+    out = {
+        "_meta": {
+            "generated": time.strftime("%Y-%m-%d"),
+            "source": site,
+            "articles_count": len(articles),
+            "places_count": len(geocoded),
+            "places_dropped": len(place_to_articles) - len(geocoded),
+            "languages": lang_counts,
+        },
+        "articles": [a.to_public() for a in articles],
+        "places": [asdict(p) for p in sorted(geocoded, key=lambda x: -len(x.articles))],
+    }
+    OUTPUT_FILE.write_text(json.dumps(out, ensure_ascii=False, indent=2), "utf-8")
+    print(f"\n✓ {OUTPUT_FILE} écrit ({len(geocoded)} lieux, {len(articles)} enquêtes)")
+    print("\nProchaine étape :")
+    print("  python -m http.server 8000   # puis http://localhost:8000/")
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--site", default=DEFAULT_SITE)
+    parser.add_argument("--refresh", action="store_true")
+    parser.add_argument("--regeocode", action="store_true")
+    args = parser.parse_args()
+    run(site=args.site.rstrip("/"), refresh_articles=args.refresh, regeocode=args.regeocode)
+
+
+if __name__ == "__main__":
+    main()
