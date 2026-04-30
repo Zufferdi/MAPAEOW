@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>INPACT — Cartographie des Enquêtes</title>
+<meta name="description" content="Cartographie interactive des lieux mentionnés dans les enquêtes INPACT / All Eyes On Wagner.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+
+<style>
+  :root {
+    --bg: #0a0b0e;
+    --bg-elev: #13151a;
+    --bg-elev-2: #1a1d24;
+    --border: #262932;
+    --border-soft: #1e2128;
+    --text: #e6e7ea;
+    --text-dim: #8a8d96;
+    --text-faint: #5b5e67;
+    --accent: #ff8a3d;
+    --accent-soft: rgba(255, 138, 61, 0.12);
+    --accent-bright: #ffb47a;
+    --link-color: #ff8a3d;
+    --serif: 'Instrument Serif', 'Times New Roman', serif;
+    --sans: 'Manrope', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+    --shadow-pop: 0 12px 40px -12px rgba(0,0,0,0.6), 0 2px 8px -2px rgba(0,0,0,0.4);
+    --header-h: 58px;
+    --filter-h: 46px;
+    --timeline-h: 90px;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #app {
+    display: grid;
+    grid-template-rows: var(--header-h) var(--filter-h) 1fr var(--timeline-h);
+    height: 100vh;
+  }
+
+  /* ============= HEADER ============= */
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 24px;
+    padding: 0 22px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    z-index: 1000;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent) 30%, var(--accent) 70%, transparent);
+    opacity: 0.4;
+  }
+
+  .brand { display: flex; align-items: baseline; gap: 16px; }
+  .brand .logo {
+    width: 28px; height: 28px;
+    border: 1px solid var(--accent);
+    display: grid; place-items: center;
+    color: var(--accent);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    flex-shrink: 0;
+  }
+  .brand h1 {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: -0.01em;
+    line-height: 1;
+  }
+  .brand h1 em { color: var(--accent); font-style: italic; }
+  .brand .sub {
+    color: var(--text-faint);
+    font-family: var(--mono);
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  .controls { display: flex; align-items: center; gap: 8px; }
+
+  .search-wrap { position: relative; }
+  .search-wrap svg {
+    position: absolute;
+    left: 10px; top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-faint);
+    pointer-events: none;
+  }
+  input[type="search"] {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 8px 12px 8px 32px;
+    font-family: var(--sans);
+    font-size: 13px;
+    width: 220px;
+    outline: none;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  input[type="search"]::placeholder { color: var(--text-faint); }
+  input[type="search"]:focus { border-color: var(--accent); background: var(--bg-elev-2); }
+
+  .toggle-group {
+    display: flex;
+    border: 1px solid var(--border);
+    background: var(--bg-elev);
+    overflow: hidden;
+  }
+  .toggle-group button {
+    background: transparent;
+    border: none;
+    color: var(--text-dim);
+    font-family: var(--mono);
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: color 0.15s, background 0.15s;
+    border-right: 1px solid var(--border);
+  }
+  .toggle-group button:last-child { border-right: none; }
+  .toggle-group button:hover { color: var(--text); background: var(--bg-elev-2); }
+  .toggle-group button.active { color: var(--accent); background: var(--accent-soft); }
+
+  .stats {
+    display: flex;
+    gap: 18px;
+    padding-left: 18px;
+    border-left: 1px solid var(--border);
+    color: var(--text-dim);
+  }
+  .stats .stat {
+    display: flex; flex-direction: column; align-items: flex-end; gap: 2px;
+  }
+  .stats strong {
+    font-family: var(--mono);
+    font-weight: 500;
+    color: var(--accent);
+    font-size: 16px;
+    line-height: 1;
+    transition: color 0.2s;
+  }
+  .stats strong.filtered { color: var(--accent-bright); }
+  .stats .label {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-faint);
+  }
+
+  /* ============= FILTERBAR ============= */
+  .filterbar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 0 22px;
+    background: var(--bg-elev);
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+  }
+  .filterbar::-webkit-scrollbar { display: none; }
+
+  .filter-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-faint);
+    padding-right: 4px;
+    white-space: nowrap;
+  }
+
+  .chips { display: flex; gap: 6px; flex-shrink: 0; }
+  .chip {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    font-family: var(--sans);
+    font-size: 12px;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .chip:hover { border-color: var(--text-dim); color: var(--text); }
+  .chip.active {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    color: var(--accent-bright);
+  }
+  .chip .count {
+    margin-left: 6px;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-faint);
+  }
+  .chip.active .count { color: var(--accent); }
+
+  .filter-divider {
+    width: 1px;
+    height: 22px;
+    background: var(--border);
+    flex-shrink: 0;
+  }
+
+  .reset-btn {
+    background: transparent;
+    border: 1px dashed var(--border);
+    color: var(--text-faint);
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.15s;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+  .reset-btn:hover { border-color: var(--accent); color: var(--accent); border-style: solid; }
+  .reset-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+  .filter-status {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    flex-shrink: 0;
+  }
+  .filter-status strong { color: var(--accent); font-weight: 500; }
+
+  /* ============= MAP ============= */
+  main {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    overflow: hidden;
+  }
+  #map { background: #0a0b0e; height: 100%; width: 100%; }
+
+  .leaflet-container { background: #0a0b0e; font-family: var(--sans); }
+  .leaflet-control-zoom a {
+    background: var(--bg-elev) !important;
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+  }
+  .leaflet-control-zoom a:hover {
+    background: var(--bg-elev-2) !important;
+    color: var(--accent) !important;
+  }
+  .leaflet-control-attribution {
+    background: rgba(10,11,14,0.85) !important;
+    color: var(--text-faint) !important;
+    font-size: 10px !important;
+    font-family: var(--mono) !important;
+  }
+  .leaflet-control-attribution a { color: var(--text-dim) !important; }
+
+  .place-marker {
+    background: var(--accent);
+    border: 2px solid var(--bg);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px var(--accent), 0 0 12px rgba(255,138,61,0.5);
+    transition: transform 0.15s;
+  }
+  .place-marker:hover { transform: scale(1.3); }
+  .place-marker.selected {
+    background: var(--accent-bright);
+    box-shadow: 0 0 0 2px var(--accent), 0 0 24px rgba(255,180,122,0.8);
+  }
+
+  /* Co-occurrence link styling */
+  .leaflet-overlay-pane path.cooccurrence-link {
+    stroke: var(--link-color);
+    fill: none;
+    pointer-events: none;
+  }
+
+  .leaflet-tooltip {
+    background: var(--bg-elev) !important;
+    color: var(--text) !important;
+    border: 1px solid var(--border) !important;
+    border-left: 2px solid var(--accent) !important;
+    border-radius: 0 !important;
+    box-shadow: var(--shadow-pop) !important;
+    font-family: var(--sans) !important;
+    font-size: 12px !important;
+    padding: 6px 10px !important;
+  }
+  .leaflet-tooltip::before { display: none !important; }
+  .leaflet-tooltip strong {
+    font-family: var(--serif);
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .leaflet-tooltip .meta {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 2px;
+  }
+
+  /* ============= SIDEBAR ============= */
+  #sidebar {
+    background: var(--bg-elev);
+    border-left: 1px solid var(--border);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  #sidebar::-webkit-scrollbar { width: 6px; }
+  #sidebar::-webkit-scrollbar-track { background: transparent; }
+  #sidebar::-webkit-scrollbar-thumb { background: var(--border); }
+  #sidebar::-webkit-scrollbar-thumb:hover { background: var(--text-faint); }
+
+  .sidebar-empty {
+    padding: 40px 28px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex: 1;
+    color: var(--text-dim);
+  }
+  .sidebar-empty .icon { font-size: 28px; color: var(--accent); opacity: 0.5; }
+  .sidebar-empty p {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.4;
+    margin: 0;
+    max-width: 260px;
+  }
+  .sidebar-empty .hint {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-faint);
+    font-style: normal;
+  }
+
+  .sidebar-header {
+    padding: 24px 24px 18px;
+    border-bottom: 1px solid var(--border-soft);
+    background: var(--bg-elev);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  .sidebar-header .crumb {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-faint);
+    margin-bottom: 6px;
+  }
+  .sidebar-header h2 {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+  }
+  .sidebar-header .country {
+    color: var(--accent);
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .sidebar-header .coords {
+    margin-top: 12px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--text-faint);
+    display: flex;
+    gap: 16px;
+  }
+  .sidebar-header .coords span strong { color: var(--text-dim); font-weight: 500; margin-right: 4px; }
+  .sidebar-header .count {
+    margin-top: 14px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    color: var(--text-dim);
+    font-size: 13px;
+  }
+  .sidebar-header .count strong {
+    font-family: var(--mono);
+    color: var(--accent);
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .sidebar-header .count .total {
+    color: var(--text-faint);
+    font-family: var(--mono);
+    font-size: 11px;
+    margin-left: auto;
+  }
+
+  .articles-list { padding: 8px 0; list-style: none; margin: 0; }
+  .article-card {
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--border-soft);
+    cursor: pointer;
+    transition: background 0.12s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .article-card:hover { background: var(--bg-elev-2); }
+  .article-card .meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+  .article-card .category {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 6px;
+  }
+  .article-card .date {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--text-faint);
+  }
+  .article-card h3 {
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 8px;
+    color: var(--text);
+    transition: color 0.12s;
+  }
+  .article-card:hover h3 { color: var(--accent-bright); }
+  .article-card .excerpt {
+    font-size: 12.5px;
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .article-card .arrow {
+    font-family: var(--mono);
+    color: var(--text-faint);
+    font-size: 12px;
+    margin-top: 8px;
+    transition: color 0.12s, transform 0.15s;
+    display: inline-block;
+  }
+  .article-card:hover .arrow {
+    color: var(--accent);
+    transform: translateX(4px);
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 18px; right: 18px;
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    width: 28px; height: 28px;
+    cursor: pointer;
+    font-size: 16px;
+    display: grid; place-items: center;
+    transition: all 0.15s;
+  }
+  .close-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ============= TIMELINE ============= */
+  #timeline-wrap {
+    position: relative;
+    background: var(--bg-elev);
+    border-top: 1px solid var(--border);
+    overflow: hidden;
+    user-select: none;
+  }
+  #timeline-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+  }
+  .timeline-bar { fill: var(--text-faint); transition: fill 0.2s; }
+  .timeline-bar.in-range { fill: var(--accent); }
+  .timeline-selection {
+    fill: var(--accent-soft);
+    stroke: var(--accent);
+    stroke-width: 1;
+    stroke-dasharray: 0;
+    pointer-events: all;
+    cursor: grab;
+  }
+  .timeline-selection:active { cursor: grabbing; }
+  .timeline-handle {
+    fill: var(--accent);
+    cursor: ew-resize;
+  }
+  .timeline-handle-grip {
+    stroke: var(--bg);
+    stroke-width: 1;
+  }
+  .timeline-axis-tick {
+    fill: var(--text-faint);
+    font-family: var(--mono);
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .timeline-readout {
+    position: absolute;
+    top: 6px; left: 14px;
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-faint);
+    pointer-events: none;
+  }
+  .timeline-readout strong { color: var(--accent); font-weight: 500; }
+  .timeline-hint {
+    position: absolute;
+    top: 6px; right: 14px;
+    font-family: var(--mono);
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-faint);
+    pointer-events: none;
+  }
+
+  /* ============= MOBILE ============= */
+  @media (max-width: 900px) {
+    main { grid-template-columns: 1fr; }
+    #sidebar {
+      position: fixed;
+      bottom: var(--timeline-h);
+      left: 0; right: 0;
+      height: 50vh;
+      border-left: none;
+      border-top: 1px solid var(--border);
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+    #sidebar.open { transform: translateY(0); }
+    .sidebar-empty { display: none; }
+    header {
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      padding: 0 14px;
+    }
+    .stats { display: none; }
+    input[type="search"] { width: 140px; }
+    .brand h1 { font-size: 20px; }
+    .brand .sub { display: none; }
+    .toggle-group button { padding: 8px 8px; font-size: 9.5px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="app">
+  <header>
+    <div class="brand">
+      <div class="logo">IN</div>
+      <h1>Cartographie des <em>Enquêtes</em></h1>
+      <div class="sub">INPACT · All Eyes On Wagner</div>
+    </div>
+
+    <div class="controls">
+      <div class="search-wrap">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="search" placeholder="Rechercher un lieu...">
+      </div>
+      <div class="toggle-group" role="group">
+        <button data-layer="heat" class="active">Heatmap</button>
+        <button data-layer="markers" class="active">Points</button>
+        <button data-layer="links">Liens</button>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><strong id="stat-places">—</strong><span class="label">Lieux</span></div>
+      <div class="stat"><strong id="stat-articles">—</strong><span class="label">Enquêtes</span></div>
+      <div class="stat"><strong id="stat-mentions">—</strong><span class="label">Mentions</span></div>
+    </div>
+  </header>
+
+  <div class="filterbar">
+    <span class="filter-label">Catégorie</span>
+    <div class="chips" id="category-chips"></div>
+    <div class="filter-divider"></div>
+    <span class="filter-status" id="filter-status"></span>
+    <button class="reset-btn" id="reset-btn">Réinitialiser</button>
+  </div>
+
+  <main>
+    <div id="map"></div>
+    <aside id="sidebar"></aside>
+  </main>
+
+  <div id="timeline-wrap">
+    <div class="timeline-readout" id="timeline-readout"></div>
+    <div class="timeline-hint">Glisse pour sélectionner une période · double-clic pour réinitialiser</div>
+    <svg id="timeline-svg"></svg>
+  </div>
+</div>
+
+<!-- Données embarquées (fallback si data.json non servi) -->
+<script id="inpact-data" type="application/json">
+/*DATA_START*/
+{
+  "_meta": {"generated": "2026-04-30", "source": "https://alleyesonwagner.org", "note": "Échantillon démo"},
+  "articles": [
+    {"id": "africa-flop-saison-2", "title": "AFRICA FLOP, SAISON 2", "url": "https://alleyesonwagner.org/2026/04/28/africa-flop-saison-2/", "date": "2026-04-28", "category": "AEOW", "lang": "fr", "excerpt": "Bilan d'un an de l'Africa Corps au Mali, des attaques coordonnées du 25 avril 2026 par le FLA et le JNIM contre Bamako, Kidal, Gao, Mopti, Sévaré et Kati."},
+    {"id": "africa-flop-2025", "title": "AFRICA FLOP", "url": "https://alleyesonwagner.org/2025/06/17/africa-flop/", "date": "2025-06-17", "category": "AEOW", "lang": "fr", "excerpt": "Premiers déploiements difficiles de l'Africa Corps avec 2500 hommes répartis sur une vingtaine de bases au Mali."},
+    {"id": "alabuga-fr", "title": "Alabuga, nœud central de la menace hybride russe", "url": "https://alleyesonwagner.org/2026/04/19/alabuga-noeud-central-de-la-menace-hybride-russe/", "date": "2026-04-19", "category": "Russia & Partners", "lang": "fr", "excerpt": "La zone industrielle d'Alabuga au Tatarstan comme noeud central de la guerre hybride russe — drones Shahed-136, recrutement, sanctions."},
+    {"id": "russia-security-forum", "title": "Le Forum International sur la Sécurité de la Russie", "url": "https://alleyesonwagner.org/2026/04/29/le-forum-international-sur-la-securite-de-la-russie-le-temps-de-la-confrontation/", "date": "2026-04-29", "category": "Hybrid Warfare", "lang": "fr", "excerpt": "Forum à Moscou rassemblant délégations étrangères, services de renseignement russes et Rossotrudnichestvo."},
+    {"id": "svr-politology", "title": "SVR-controlled Politology Labels Non-Orthodox Christian Groups as Western Agents", "url": "https://alleyesonwagner.org/2026/04/23/svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa/", "date": "2026-04-23", "category": "Hybrid Warfare", "lang": "en", "excerpt": "How SVR-linked think tank Politology frames non-Orthodox Christian groups as Western agents in Africa."},
+    {"id": "demo-strategic-arms", "title": "Réseaux d'acquisition d'armes stratégiques", "url": "https://alleyesonwagner.org/", "date": "2025-11-15", "category": "Strategic arms and Disruptive Tech", "lang": "fr", "excerpt": "Cartographie des chaînes d'approvisionnement de la Russie via la Libye, la Turquie et l'Asie centrale (article démo)."},
+    {"id": "demo-hybrid-2024", "title": "Hybrid Operations in West Africa, 2024 retrospective", "url": "https://alleyesonwagner.org/", "date": "2024-12-20", "category": "Hybrid Warfare", "lang": "en", "excerpt": "Retrospective on hybrid warfare operations across West Africa in 2024 (article démo)."}
+  ],
+  "places": [
+    {"id": "kidal", "name": "Kidal", "country": "Mali", "lat": 18.4411, "lng": 1.4078, "articles": ["africa-flop-saison-2", "africa-flop-2025", "demo-hybrid-2024"]},
+    {"id": "bamako", "name": "Bamako", "country": "Mali", "lat": 12.6392, "lng": -8.0029, "articles": ["africa-flop-saison-2", "africa-flop-2025", "demo-hybrid-2024"]},
+    {"id": "gao", "name": "Gao", "country": "Mali", "lat": 16.2667, "lng": -0.05, "articles": ["africa-flop-saison-2", "africa-flop-2025"]},
+    {"id": "mopti", "name": "Mopti", "country": "Mali", "lat": 14.4843, "lng": -4.1976, "articles": ["africa-flop-saison-2"]},
+    {"id": "sevare", "name": "Sévaré", "country": "Mali", "lat": 14.5269, "lng": -4.0911, "articles": ["africa-flop-saison-2", "africa-flop-2025"]},
+    {"id": "kati", "name": "Kati", "country": "Mali", "lat": 12.7483, "lng": -8.0742, "articles": ["africa-flop-saison-2"]},
+    {"id": "tessit", "name": "Tessit", "country": "Mali", "lat": 15.2167, "lng": 0.7833, "articles": ["africa-flop-saison-2"]},
+    {"id": "tessalit", "name": "Tessalit", "country": "Mali", "lat": 20.2, "lng": 1.0, "articles": ["africa-flop-saison-2", "africa-flop-2025"]},
+    {"id": "tin-zaouaten", "name": "Tin Zaouaten", "country": "Mali", "lat": 19.95, "lng": 2.95, "articles": ["africa-flop-saison-2", "africa-flop-2025"]},
+    {"id": "ber", "name": "Ber", "country": "Mali", "lat": 16.97, "lng": -2.22, "articles": ["africa-flop-saison-2"]},
+    {"id": "labbezzanga", "name": "Labbezzanga", "country": "Mali", "lat": 14.95, "lng": 0.78, "articles": ["africa-flop-saison-2"]},
+    {"id": "intahaka", "name": "Intahaka", "country": "Mali", "lat": 16.5, "lng": -0.05, "articles": ["africa-flop-saison-2"]},
+    {"id": "al-moustarat", "name": "Al Moustarat", "country": "Mali", "lat": 16.4, "lng": -1.4, "articles": ["africa-flop-saison-2"]},
+    {"id": "kayes", "name": "Kayes", "country": "Mali", "lat": 14.4427, "lng": -11.4444, "articles": ["africa-flop-saison-2"]},
+    {"id": "conakry", "name": "Conakry", "country": "Guinée", "lat": 9.5092, "lng": -13.7122, "articles": ["africa-flop-saison-2", "demo-strategic-arms"]},
+    {"id": "al-khadim", "name": "Al Khadim (base aérienne)", "country": "Libye", "lat": 32.4, "lng": 21.9, "articles": ["africa-flop-saison-2", "demo-strategic-arms"]},
+    {"id": "niger", "name": "Niger", "country": "Niger", "lat": 17.6078, "lng": 8.0817, "articles": ["africa-flop-saison-2", "africa-flop-2025", "demo-hybrid-2024"]},
+    {"id": "burkina-faso", "name": "Burkina Faso", "country": "Burkina Faso", "lat": 12.2383, "lng": -1.5616, "articles": ["africa-flop-saison-2", "africa-flop-2025", "demo-hybrid-2024"]},
+    {"id": "cote-divoire", "name": "Côte d'Ivoire", "country": "Côte d'Ivoire", "lat": 7.5399, "lng": -5.5471, "articles": ["africa-flop-saison-2"]},
+    {"id": "senegal", "name": "Sénégal", "country": "Sénégal", "lat": 14.4974, "lng": -14.4524, "articles": ["africa-flop-saison-2"]},
+    {"id": "alabuga", "name": "Alabuga", "country": "Russie", "lat": 55.7402, "lng": 52.0584, "articles": ["alabuga-fr", "demo-strategic-arms"]},
+    {"id": "moscow", "name": "Moscou", "country": "Russie", "lat": 55.7558, "lng": 37.6173, "articles": ["russia-security-forum", "alabuga-fr", "svr-politology", "demo-strategic-arms"]},
+    {"id": "kazan", "name": "Kazan", "country": "Russie", "lat": 55.8304, "lng": 49.0661, "articles": ["alabuga-fr"]},
+    {"id": "sahel", "name": "Sahel", "country": "—", "lat": 15.5, "lng": 0.0, "articles": ["africa-flop-saison-2", "africa-flop-2025", "demo-hybrid-2024"]},
+    {"id": "turkey", "name": "Turquie", "country": "Turquie", "lat": 39.0, "lng": 35.0, "articles": ["demo-strategic-arms"]}
+  ]
+}
+/*DATA_END*/
+</script>
+
+<script>
+'use strict';
+
+// ============================================================
+// LOAD DATA
+// ============================================================
+async function loadData() {
+  try {
+    const res = await fetch('./data.json', { cache: 'no-store' });
+    if (res.ok) return await res.json();
+  } catch (e) { /* file:// or no data.json */ }
+  const inline = document.getElementById('inpact-data').textContent
+    .replace(/^[\s\S]*?\/\*DATA_START\*\//, '')
+    .replace(/\/\*DATA_END\*\/[\s\S]*$/, '');
+  return JSON.parse(inline);
+}
+
+// ============================================================
+// STATE
+// ============================================================
+const state = {
+  filters: {
+    categories: new Set(),     // empty = all
+    dateRange: null,           // [startISO, endISO] or null = all
+  },
+  layers: { heat: true, markers: true, links: false },
+  selectedPlaceId: null,
+};
+
+// Raw data + indices
+let DATA = null;
+let articlesById = {};
+
+// Map layer references (re-created on each render)
+let map;
+let heatLayer = null;
+let markerLayer;
+let linkLayer;
+let placeMarkers = {};
+
+// ============================================================
+// MAP INIT
+// ============================================================
+function initMap() {
+  map = L.map('map', {
+    center: [22, 12],
+    zoom: 3,
+    minZoom: 2,
+    maxZoom: 12,
+    worldCopyJump: true,
+    zoomControl: false,
+    attributionControl: true,
+  });
+  L.control.zoom({ position: 'bottomright' }).addTo(map);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+    attribution: '© OSM · © CartoDB · INPACT',
+    subdomains: 'abcd',
+    maxZoom: 19,
+  }).addTo(map);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png', {
+    subdomains: 'abcd',
+    maxZoom: 19,
+    pane: 'shadowPane',
+  }).addTo(map);
+  markerLayer = L.layerGroup().addTo(map);
+  linkLayer = L.layerGroup();
+  map.on('click', (e) => {
+    if (!e.originalEvent.target.closest('.leaflet-marker-icon')) {
+      clearSelection();
+    }
+  });
+}
+
+// ============================================================
+// FILTERING
+// ============================================================
+function articleMatchesFilters(a) {
+  if (state.filters.categories.size && !state.filters.categories.has(a.category)) return false;
+  if (state.filters.dateRange) {
+    const [s, e] = state.filters.dateRange;
+    if (a.date < s || a.date > e) return false;
+  }
+  return true;
+}
+
+function getFilteredData() {
+  const validArticleIds = new Set(
+    DATA.articles.filter(articleMatchesFilters).map(a => a.id)
+  );
+  const places = DATA.places
+    .map(p => ({ ...p, articles: p.articles.filter(id => validArticleIds.has(id)) }))
+    .filter(p => p.articles.length > 0);
+  return { validArticleIds, places };
+}
+
+// ============================================================
+// CO-OCCURRENCE LINKS
+// ============================================================
+function computeLinks(filteredPlaces, validArticleIds) {
+  // For each filtered article, get all places mentioning it; emit pair (i,j) for all pairs.
+  const articleToPlaces = {};
+  for (const p of filteredPlaces) {
+    for (const aid of p.articles) {
+      (articleToPlaces[aid] = articleToPlaces[aid] || []).push(p);
+    }
+  }
+  const linkMap = new Map();
+  for (const aid of Object.keys(articleToPlaces)) {
+    const places = articleToPlaces[aid];
+    if (places.length < 2) continue;
+    for (let i = 0; i < places.length; i++) {
+      for (let j = i + 1; j < places.length; j++) {
+        const [a, b] = places[i].id < places[j].id ? [places[i], places[j]] : [places[j], places[i]];
+        const key = `${a.id}|${b.id}`;
+        if (!linkMap.has(key)) {
+          linkMap.set(key, { a, b, articles: new Set() });
+        }
+        linkMap.get(key).articles.add(aid);
+      }
+    }
+  }
+  // Sort by weight desc, cap to top N to keep map readable
+  const MAX_LINKS = 120;
+  return [...linkMap.values()]
+    .map(l => ({ ...l, weight: l.articles.size }))
+    .sort((a, b) => b.weight - a.weight)
+    .slice(0, MAX_LINKS);
+}
+
+// ============================================================
+// RENDER : HEATMAP
+// ============================================================
+function renderHeatmap(filteredPlaces) {
+  if (heatLayer) { map.removeLayer(heatLayer); heatLayer = null; }
+  if (!state.layers.heat || !filteredPlaces.length) return;
+  const points = filteredPlaces.map(p => [p.lat, p.lng, Math.min(p.articles.length, 10)]);
+  heatLayer = L.heatLayer(points, {
+    radius: 32, blur: 28, maxZoom: 8, minOpacity: 0.35,
+    gradient: { 0.0: '#1a4d8f', 0.3: '#5a8acc', 0.5: '#ffd166', 0.7: '#ff8a3d', 1.0: '#e85a5a' },
+  }).addTo(map);
+}
+
+// ============================================================
+// RENDER : MARKERS
+// ============================================================
+function renderMarkers(filteredPlaces) {
+  markerLayer.clearLayers();
+  placeMarkers = {};
+  if (!state.layers.markers) {
+    if (map.hasLayer(markerLayer)) map.removeLayer(markerLayer);
+    return;
+  }
+  if (!map.hasLayer(markerLayer)) markerLayer.addTo(map);
+  for (const place of filteredPlaces) {
+    const count = place.articles.length;
+    const size = Math.min(8 + count * 2.5, 20);
+    const icon = L.divIcon({
+      className: '',
+      html: `<div class="place-marker${place.id === state.selectedPlaceId ? ' selected' : ''}" style="width:${size}px;height:${size}px;"></div>`,
+      iconSize: [size, size],
+      iconAnchor: [size/2, size/2],
+    });
+    const marker = L.marker([place.lat, place.lng], { icon, riseOnHover: true });
+    marker.bindTooltip(
+      `<strong>${place.name}</strong><div class="meta">${count} enquête${count>1?'s':''} · ${place.country}</div>`,
+      { direction: 'top', offset: [0, -size/2] }
+    );
+    marker.on('click', () => selectPlace(place.id));
+    placeMarkers[place.id] = marker;
+    marker.addTo(markerLayer);
+  }
+}
+
+// ============================================================
+// RENDER : LINKS
+// ============================================================
+function renderLinks(filteredPlaces, validArticleIds) {
+  linkLayer.clearLayers();
+  if (!state.layers.links) {
+    if (map.hasLayer(linkLayer)) map.removeLayer(linkLayer);
+    return;
+  }
+  if (!map.hasLayer(linkLayer)) linkLayer.addTo(map);
+  const links = computeLinks(filteredPlaces, validArticleIds);
+  if (!links.length) return;
+  const maxWeight = Math.max(...links.map(l => l.weight));
+  for (const link of links) {
+    const t = link.weight / maxWeight; // 0..1
+    const opacity = 0.18 + t * 0.5;
+    const weight = 0.8 + t * 2.2;
+    const polyline = L.polyline(
+      [[link.a.lat, link.a.lng], [link.b.lat, link.b.lng]],
+      {
+        color: '#ff8a3d',
+        weight: weight,
+        opacity: opacity,
+        smoothFactor: 1.5,
+        className: 'cooccurrence-link',
+        interactive: true,
+      }
+    );
+    polyline.bindTooltip(
+      `<strong>${link.a.name} ↔ ${link.b.name}</strong><div class="meta">${link.weight} enquête${link.weight>1?'s':''} les co-mentionne${link.weight>1?'nt':''}</div>`,
+      { sticky: true }
+    );
+    polyline.addTo(linkLayer);
+  }
+}
+
+// ============================================================
+// RENDER : STATS
+// ============================================================
+function renderStats(filteredPlaces, validArticleIds) {
+  const totalMentions = filteredPlaces.reduce((acc, p) => acc + p.articles.length, 0);
+  const filtersActive = state.filters.categories.size > 0 || state.filters.dateRange !== null;
+  document.getElementById('stat-places').textContent = filteredPlaces.length;
+  document.getElementById('stat-articles').textContent = validArticleIds.size;
+  document.getElementById('stat-mentions').textContent = totalMentions;
+  document.querySelectorAll('.stats strong').forEach(el =>
+    el.classList.toggle('filtered', filtersActive)
+  );
+}
+
+// ============================================================
+// RENDER : FILTER BAR
+// ============================================================
+function renderFilterBar() {
+  // Categories (from data, with article counts)
+  const categoryEl = document.getElementById('category-chips');
+  const categoryCounts = {};
+  for (const a of DATA.articles) {
+    categoryCounts[a.category] = (categoryCounts[a.category] || 0) + 1;
+  }
+  const cats = Object.keys(categoryCounts).sort();
+  categoryEl.innerHTML = cats.map(cat => {
+    const isActive = state.filters.categories.has(cat);
+    return `<button class="chip${isActive ? ' active' : ''}" data-cat="${escapeHtml(cat)}">
+              ${escapeHtml(cat)}<span class="count">${categoryCounts[cat]}</span>
+            </button>`;
+  }).join('');
+  categoryEl.querySelectorAll('.chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cat = btn.dataset.cat;
+      if (state.filters.categories.has(cat)) state.filters.categories.delete(cat);
+      else state.filters.categories.add(cat);
+      render();
+    });
+  });
+
+  // Filter status text + reset button
+  const status = document.getElementById('filter-status');
+  const filtersActive = state.filters.categories.size > 0 || state.filters.dateRange !== null;
+  if (filtersActive) {
+    const parts = [];
+    if (state.filters.categories.size) {
+      parts.push(`<strong>${state.filters.categories.size}</strong> cat.`);
+    }
+    if (state.filters.dateRange) {
+      parts.push(`<strong>${state.filters.dateRange[0].slice(0,7)}</strong> → <strong>${state.filters.dateRange[1].slice(0,7)}</strong>`);
+    }
+    status.innerHTML = `Filtres : ${parts.join(' · ')}`;
+  } else {
+    status.innerHTML = '';
+  }
+  document.getElementById('reset-btn').disabled = !filtersActive;
+}
+
+// ============================================================
+// MASTER RENDER
+// ============================================================
+function render() {
+  const { validArticleIds, places } = getFilteredData();
+
+  // If selected place is no longer visible, clear selection
+  if (state.selectedPlaceId && !places.some(p => p.id === state.selectedPlaceId)) {
+    state.selectedPlaceId = null;
+    clearSidebar();
+  }
+
+  renderHeatmap(places);
+  renderMarkers(places);
+  renderLinks(places, validArticleIds);
+  renderStats(places, validArticleIds);
+  renderFilterBar();
+  renderTimelineSelection();
+
+  // Update sidebar contents if a place is still selected (article list might shrink)
+  if (state.selectedPlaceId) {
+    const placeFiltered = places.find(p => p.id === state.selectedPlaceId);
+    if (placeFiltered) renderSidebar(placeFiltered);
+  }
+}
+
+// ============================================================
+// SIDEBAR
+// ============================================================
+function selectPlace(placeId) {
+  const { places } = getFilteredData();
+  const place = places.find(p => p.id === placeId);
+  if (!place) return;
+  state.selectedPlaceId = placeId;
+  // Highlight marker classes
+  for (const [id, marker] of Object.entries(placeMarkers)) {
+    const el = marker.getElement()?.querySelector('.place-marker');
+    if (el) el.classList.toggle('selected', id === placeId);
+  }
+  map.flyTo([place.lat, place.lng], Math.max(map.getZoom(), 5), { duration: 0.6 });
+  renderSidebar(place);
+}
+
+function renderSidebar(place) {
+  const articles = place.articles
+    .map(aid => articlesById[aid])
+    .filter(Boolean)
+    .sort((a, b) => b.date.localeCompare(a.date));
+  const fmtDate = d => {
+    const [y, m, day] = d.split('-');
+    const months = ['JAN','FÉV','MAR','AVR','MAI','JUN','JUL','AOÛ','SEP','OCT','NOV','DÉC'];
+    return `${day} ${months[parseInt(m,10)-1]} ${y}`;
+  };
+  const fmtCoord = (v, pos, neg) => `${Math.abs(v).toFixed(4)}° ${v >= 0 ? pos : neg}`;
+  const totalForPlace = (DATA.places.find(p => p.id === place.id) || {}).articles?.length || articles.length;
+  const filtersActive = state.filters.categories.size > 0 || state.filters.dateRange !== null;
+  const totalLine = filtersActive
+    ? `<span class="total">/ ${totalForPlace} sans filtre</span>` : '';
+  const sidebar = document.getElementById('sidebar');
+  sidebar.innerHTML = `
+    <div class="sidebar-header">
+      <button class="close-btn" id="sidebar-close" aria-label="Fermer">✕</button>
+      <div class="crumb">Lieu sélectionné</div>
+      <h2>${escapeHtml(place.name)}</h2>
+      <div class="country">${escapeHtml(place.country)}</div>
+      <div class="coords">
+        <span><strong>LAT</strong>${fmtCoord(place.lat, 'N', 'S')}</span>
+        <span><strong>LNG</strong>${fmtCoord(place.lng, 'E', 'W')}</span>
+      </div>
+      <div class="count">
+        <strong>${articles.length}</strong>
+        <span>enquête${articles.length>1?'s':''} mentionne${articles.length>1?'nt':''} ce lieu</span>
+        ${totalLine}
+      </div>
+    </div>
+    <ul class="articles-list">
+      ${articles.map(a => `
+        <li>
+          <a class="article-card" href="${escapeHtml(a.url)}" target="_blank" rel="noopener">
+            <div class="meta-row">
+              <span class="category">${escapeHtml(a.category)}</span>
+              <span class="date">${fmtDate(a.date)}</span>
+            </div>
+            <h3>${escapeHtml(a.title)}</h3>
+            <p class="excerpt">${escapeHtml(a.excerpt || '')}</p>
+            <span class="arrow">Lire l'enquête →</span>
+          </a>
+        </li>`).join('')}
+    </ul>`;
+  sidebar.classList.add('open');
+  document.getElementById('sidebar-close').addEventListener('click', clearSelection);
+}
+
+function clearSelection() {
+  state.selectedPlaceId = null;
+  for (const marker of Object.values(placeMarkers)) {
+    const el = marker.getElement()?.querySelector('.place-marker');
+    if (el) el.classList.remove('selected');
+  }
+  clearSidebar();
+}
+
+function clearSidebar() {
+  document.getElementById('sidebar').innerHTML = `
+    <div class="sidebar-empty">
+      <div class="icon">◈</div>
+      <p>Sélectionne un lieu sur la carte pour parcourir les enquêtes qui le mentionnent.</p>
+      <span class="hint">Clic ou tap sur un point</span>
+    </div>`;
+  document.getElementById('sidebar').classList.remove('open');
+}
+
+// ============================================================
+// TIMELINE (custom SVG with brush)
+// ============================================================
+const Timeline = (() => {
+  let bins = [];           // [{month: "YYYY-MM", count, startISO, endISO}]
+  let domain = null;       // [startISO, endISO] full range
+  let svg, svgEl;
+  const PAD_LEFT = 14, PAD_RIGHT = 14, PAD_TOP = 26, PAD_BOTTOM = 18;
+  let dims = { w: 0, h: 0 };
+  let dragging = null;     // { mode: 'create' | 'move' | 'left' | 'right', startX, originalRange }
+
+  function buildBins(articles) {
+    if (!articles.length) return [];
+    // Sort, find min/max dates
+    const sorted = articles.map(a => a.date).sort();
+    const minDate = sorted[0], maxDate = sorted[sorted.length-1];
+    let [y, m] = minDate.split('-').map(Number);
+    const [endY, endM] = maxDate.split('-').map(Number);
+    const counts = {};
+    for (const d of sorted) {
+      const k = d.substring(0, 7);
+      counts[k] = (counts[k] || 0) + 1;
+    }
+    const result = [];
+    while (y < endY || (y === endY && m <= endM)) {
+      const key = `${y}-${String(m).padStart(2,'0')}`;
+      const startISO = `${key}-01`;
+      // Last day of month
+      const lastDay = new Date(Date.UTC(y, m, 0)).getUTCDate();
+      const endISO = `${key}-${String(lastDay).padStart(2,'0')}`;
+      result.push({ month: key, count: counts[key] || 0, startISO, endISO });
+      m++;
+      if (m > 12) { m = 1; y++; }
+    }
+    return result;
+  }
+
+  function setupSize() {
+    const wrap = document.getElementById('timeline-wrap');
+    dims.w = wrap.clientWidth;
+    dims.h = wrap.clientHeight;
+    svgEl.setAttribute('viewBox', `0 0 ${dims.w} ${dims.h}`);
+    svgEl.setAttribute('width', dims.w);
+    svgEl.setAttribute('height', dims.h);
+  }
+
+  function xForBin(i) {
+    const innerW = dims.w - PAD_LEFT - PAD_RIGHT;
+    return PAD_LEFT + (i / Math.max(bins.length, 1)) * innerW;
+  }
+
+  function binAtX(x) {
+    const innerW = dims.w - PAD_LEFT - PAD_RIGHT;
+    const rel = (x - PAD_LEFT) / innerW;
+    return Math.max(0, Math.min(bins.length - 1, Math.floor(rel * bins.length)));
+  }
+
+  function draw() {
+    if (!bins.length) return;
+    setupSize();
+    const innerW = dims.w - PAD_LEFT - PAD_RIGHT;
+    const innerH = dims.h - PAD_TOP - PAD_BOTTOM;
+    const maxCount = Math.max(...bins.map(b => b.count), 1);
+    const barW = innerW / bins.length;
+
+    const range = state.filters.dateRange || domain;
+    let leftIdx = 0, rightIdx = bins.length - 1;
+    bins.forEach((b, i) => {
+      if (b.startISO <= range[0]) leftIdx = Math.min(i, bins.length - 1);
+      if (b.endISO <= range[1]) rightIdx = i;
+    });
+
+    // Build SVG
+    const bars = bins.map((b, i) => {
+      const x = PAD_LEFT + i * barW + 0.5;
+      const h = (b.count / maxCount) * innerH;
+      const y = PAD_TOP + innerH - h;
+      const inRange = i >= leftIdx && i <= rightIdx;
+      return `<rect class="timeline-bar${inRange ? ' in-range' : ''}" x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${(barW - 1).toFixed(1)}" height="${h.toFixed(1)}" />`;
+    }).join('');
+
+    // Year ticks (one per January, plus first/last)
+    const tickYears = new Set();
+    bins.forEach((b, i) => {
+      const [yr, mo] = b.month.split('-');
+      if (mo === '01' || i === 0 || i === bins.length - 1) {
+        tickYears.add(`${i}|${yr}`);
+      }
+    });
+    const ticks = [...tickYears].map(t => {
+      const [i, yr] = t.split('|');
+      const x = PAD_LEFT + parseInt(i, 10) * barW;
+      return `<text class="timeline-axis-tick" x="${x.toFixed(1)}" y="${(PAD_TOP - 8).toFixed(1)}" text-anchor="start">${yr}</text>`;
+    }).join('');
+
+    // Selection rectangle
+    const selXa = PAD_LEFT + leftIdx * barW;
+    const selXb = PAD_LEFT + (rightIdx + 1) * barW;
+    const selW = Math.max(2, selXb - selXa);
+    const selRect = `<rect class="timeline-selection" x="${selXa.toFixed(1)}" y="${PAD_TOP - 4}" width="${selW.toFixed(1)}" height="${(innerH + 8).toFixed(1)}" />`;
+
+    // Handles
+    const handleW = 4, handleH = innerH + 12;
+    const handleY = PAD_TOP - 6;
+    const leftHandle = `
+      <g class="handle-group" data-handle="left">
+        <rect class="timeline-handle" x="${(selXa - handleW/2).toFixed(1)}" y="${handleY}" width="${handleW}" height="${handleH}" />
+        <line class="timeline-handle-grip" x1="${selXa.toFixed(1)}" y1="${(handleY + 4).toFixed(1)}" x2="${selXa.toFixed(1)}" y2="${(handleY + handleH - 4).toFixed(1)}" />
+      </g>`;
+    const rightHandle = `
+      <g class="handle-group" data-handle="right">
+        <rect class="timeline-handle" x="${(selXb - handleW/2).toFixed(1)}" y="${handleY}" width="${handleW}" height="${handleH}" />
+        <line class="timeline-handle-grip" x1="${selXb.toFixed(1)}" y1="${(handleY + 4).toFixed(1)}" x2="${selXb.toFixed(1)}" y2="${(handleY + handleH - 4).toFixed(1)}" />
+      </g>`;
+
+    svgEl.innerHTML = `
+      <g class="bars">${bars}</g>
+      <g class="ticks">${ticks}</g>
+      <g class="selection">${selRect}${leftHandle}${rightHandle}</g>
+    `;
+    attachHandlers();
+    updateReadout(leftIdx, rightIdx);
+  }
+
+  function updateReadout(leftIdx, rightIdx) {
+    const totalArticles = bins
+      .slice(leftIdx, rightIdx + 1)
+      .reduce((s, b) => s + b.count, 0);
+    const fmt = m => {
+      const [y, mo] = m.split('-');
+      const months = ['Jan','Fév','Mar','Avr','Mai','Jun','Jul','Aoû','Sep','Oct','Nov','Déc'];
+      return `${months[parseInt(mo,10)-1]} ${y}`;
+    };
+    const start = bins[leftIdx]?.month, end = bins[rightIdx]?.month;
+    const filtersActive = state.filters.dateRange !== null;
+    const label = filtersActive ? 'Plage sélectionnée' : 'Couverture totale';
+    document.getElementById('timeline-readout').innerHTML =
+      `${label} : <strong>${fmt(start)} → ${fmt(end)}</strong> · ${totalArticles} enquête${totalArticles>1?'s':''}`;
+  }
+
+  function attachHandlers() {
+    svgEl.querySelectorAll('.handle-group').forEach(g => {
+      g.addEventListener('mousedown', startHandleDrag);
+      g.addEventListener('touchstart', startHandleDrag, { passive: false });
+    });
+    const sel = svgEl.querySelector('.timeline-selection');
+    if (sel) {
+      sel.addEventListener('mousedown', startMoveDrag);
+      sel.addEventListener('touchstart', startMoveDrag, { passive: false });
+    }
+  }
+
+  function getEventX(e) {
+    const rect = svgEl.getBoundingClientRect();
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    return ((clientX - rect.left) / rect.width) * dims.w;
+  }
+
+  function startHandleDrag(e) {
+    e.preventDefault(); e.stopPropagation();
+    const handle = e.currentTarget.dataset.handle;
+    const range = state.filters.dateRange || domain;
+    dragging = {
+      mode: handle, // 'left' | 'right'
+      startX: getEventX(e),
+      originalRange: [...range],
+    };
+    bindMoveEnd();
+  }
+
+  function startMoveDrag(e) {
+    e.preventDefault(); e.stopPropagation();
+    const range = state.filters.dateRange || domain;
+    dragging = {
+      mode: 'move',
+      startX: getEventX(e),
+      originalRange: [...range],
+    };
+    bindMoveEnd();
+  }
+
+  function startCreateDrag(e) {
+    if (e.target.closest('.handle-group') || e.target.closest('.timeline-selection')) return;
+    e.preventDefault();
+    const x = getEventX(e);
+    const idx = binAtX(x);
+    state.filters.dateRange = [bins[idx].startISO, bins[idx].endISO];
+    dragging = {
+      mode: 'create',
+      startX: x,
+      anchorIdx: idx,
+    };
+    bindMoveEnd();
+    render();
+  }
+
+  function bindMoveEnd() {
+    document.addEventListener('mousemove', onDragMove);
+    document.addEventListener('touchmove', onDragMove, { passive: false });
+    document.addEventListener('mouseup', endDrag);
+    document.addEventListener('touchend', endDrag);
+  }
+
+  function onDragMove(e) {
+    if (!dragging) return;
+    e.preventDefault();
+    const x = getEventX(e);
+    const idx = binAtX(x);
+    if (dragging.mode === 'left') {
+      const rightDate = dragging.originalRange[1];
+      const newStart = bins[idx].startISO;
+      if (newStart <= rightDate) {
+        state.filters.dateRange = [newStart, rightDate];
+      }
+    } else if (dragging.mode === 'right') {
+      const leftDate = dragging.originalRange[0];
+      const newEnd = bins[idx].endISO;
+      if (newEnd >= leftDate) {
+        state.filters.dateRange = [leftDate, newEnd];
+      }
+    } else if (dragging.mode === 'move') {
+      const innerW = dims.w - PAD_LEFT - PAD_RIGHT;
+      const barW = innerW / bins.length;
+      const deltaIdx = Math.round((x - dragging.startX) / barW);
+      const origLeftIdx = bins.findIndex(b => b.startISO === dragging.originalRange[0]);
+      const origRightIdx = bins.findIndex(b => b.endISO === dragging.originalRange[1]);
+      let newLeft = origLeftIdx + deltaIdx;
+      let newRight = origRightIdx + deltaIdx;
+      if (newLeft < 0) { newRight -= newLeft; newLeft = 0; }
+      if (newRight > bins.length - 1) { newLeft -= newRight - (bins.length - 1); newRight = bins.length - 1; }
+      newLeft = Math.max(0, newLeft);
+      newRight = Math.min(bins.length - 1, newRight);
+      state.filters.dateRange = [bins[newLeft].startISO, bins[newRight].endISO];
+    } else if (dragging.mode === 'create') {
+      const startIdx = Math.min(dragging.anchorIdx, idx);
+      const endIdx = Math.max(dragging.anchorIdx, idx);
+      state.filters.dateRange = [bins[startIdx].startISO, bins[endIdx].endISO];
+    }
+    // If selection covers everything, clear filter
+    const r = state.filters.dateRange;
+    if (r[0] === domain[0] && r[1] === domain[1]) state.filters.dateRange = null;
+    render();
+  }
+
+  function endDrag() {
+    dragging = null;
+    document.removeEventListener('mousemove', onDragMove);
+    document.removeEventListener('touchmove', onDragMove);
+    document.removeEventListener('mouseup', endDrag);
+    document.removeEventListener('touchend', endDrag);
+  }
+
+  function init() {
+    svgEl = document.getElementById('timeline-svg');
+    bins = buildBins(DATA.articles);
+    if (!bins.length) return;
+    domain = [bins[0].startISO, bins[bins.length - 1].endISO];
+
+    svgEl.addEventListener('mousedown', startCreateDrag);
+    svgEl.addEventListener('touchstart', startCreateDrag, { passive: false });
+    svgEl.addEventListener('dblclick', () => {
+      state.filters.dateRange = null;
+      render();
+    });
+    window.addEventListener('resize', () => draw());
+    draw();
+  }
+
+  return { init, draw };
+})();
+
+function renderTimelineSelection() { Timeline.draw(); }
+
+// ============================================================
+// SEARCH
+// ============================================================
+function setupSearch() {
+  const input = document.getElementById('search');
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      const q = e.target.value.toLowerCase().trim();
+      const { places } = getFilteredData();
+      const match = places.find(p => p.name.toLowerCase().includes(q));
+      if (match) { selectPlace(match.id); input.value = match.name; }
+    }
+    if (e.key === 'Escape') { input.value = ''; clearSelection(); }
+  });
+}
+
+// ============================================================
+// LAYER TOGGLES
+// ============================================================
+function setupToggles() {
+  document.querySelectorAll('[data-layer]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const layer = btn.dataset.layer;
+      state.layers[layer] = !state.layers[layer];
+      btn.classList.toggle('active', state.layers[layer]);
+      render();
+    });
+  });
+}
+
+// ============================================================
+// RESET
+// ============================================================
+function setupReset() {
+  document.getElementById('reset-btn').addEventListener('click', () => {
+    state.filters.categories.clear();
+    state.filters.dateRange = null;
+    render();
+  });
+}
+
+// ============================================================
+// HELPERS
+// ============================================================
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// ============================================================
+// BOOT
+// ============================================================
+(async function init() {
+  DATA = await loadData();
+  articlesById = Object.fromEntries(DATA.articles.map(a => [a.id, a]));
+  initMap();
+  clearSidebar();
+  setupSearch();
+  setupToggles();
+  setupReset();
+  Timeline.init();
+  render();
+})();
+</script>
+
+</body>
+</html>
