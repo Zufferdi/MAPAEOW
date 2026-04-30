@@ -3,20 +3,18 @@
 INPACT Investigation Mapper — Pipeline d'extraction
 ====================================================
 
-Récupère tous les articles via l'API REST WordPress.com,
+Récupère les articles via l'API REST WordPress.com,
 extrait les lieux mentionnés (NER multilingue FR/EN/RU/AR),
-les géocode via Nominatim, et produit `data.json` consommé par la carte.
+les géocode via Nominatim, applique 3 filtres automatiques anti-bruit,
+et produit `data.json`.
 
 Usage :
-    pip install -r requirements.txt
-    python -m spacy download fr_core_news_lg
-    python -m spacy download en_core_web_lg
-    python -m spacy download ru_core_news_lg
-    python -m spacy download xx_ent_wiki_sm   # fallback arabe + autres
-
     python pipeline.py
-    python pipeline.py --refresh       # ignore le cache d'articles
-    python pipeline.py --regeocode     # ré-interroge Nominatim
+    python pipeline.py --refresh           # ignore le cache d'articles
+    python pipeline.py --regeocode         # ré-interroge Nominatim
+    python pipeline.py --min-mentions 1    # garder même les lieux mentionnés 1× (par défaut 2)
+    python pipeline.py --no-prefix-filter  # désactive le filtre rues/bâtiments
+    python pipeline.py --no-type-filter    # désactive le filtre par type Nominatim
 """
 
 from __future__ import annotations
@@ -37,11 +35,7 @@ from tqdm import tqdm
 # ----------------------------------------------------------------------
 # Config
 # ----------------------------------------------------------------------
-# Le site est hébergé sur WordPress.com, donc on utilise l'API publique
-# de WordPress.com plutôt que l'endpoint /wp-json/wp/v2 standard.
-# Pour cibler un autre site, change juste la ligne ci-dessous.
 WP_API_BASE = "https://public-api.wordpress.com/wp/v2/sites/alleyesonwagner.org"
-
 USER_AGENT = "INPACT-InvestigationMapper/1.0 (research; contact tips.aeow@proton.me)"
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
 NOMINATIM_DELAY = 1.1
@@ -55,6 +49,41 @@ GEOCODE_CACHE = CACHE_DIR / "geocode.json"
 ALIASES_FILE = Path("place_aliases.json")
 OUTPUT_FILE = Path("data.json")
 
+# ----------------------------------------------------------------------
+# Filtres anti-bruit
+# ----------------------------------------------------------------------
+# Préfixes typiques de noms qui ne sont pas des "lieux d'enquête" pertinents.
+STREET_BUILDING_PREFIXES = (
+    # rues
+    "rue ", "avenue ", "boulevard ", "place ", "impasse ", "allée ", "allee ",
+    "chemin ", "quai ", "route ", "voie ", "cours ", "sentier ",
+    "street ", "road ", "square ", "lane ",
+    "calle ", "plaza ", "avenida ",
+    "улица ", "проспект ", "площадь ",  # russe
+    # bâtiments
+    "hôtel ", "hotel ", "palais ", "palace ", "stade ", "stadium ",
+    "aéroport ", "airport ", "gare ", "station ", "ambassade ", "embassy ",
+    "musée ", "museum ", "tour ", "cathédrale ", "cathedral ", "mosquée ", "mosque ",
+    "université ", "university ", "lycée ", "collège ",
+    "restaurant ", "café ", "bar ", "club ",
+    "monsieur ", "madame ", "saint-", "sainte-",  # noms propres mal taggés
+)
+
+# Types Nominatim qu'on garde (les autres = filtrés)
+# Liste basée sur la doc Nominatim : https://nominatim.org/release-docs/develop/api/Output/
+ALLOWED_NOMINATIM_TYPES = {
+    # places (le plus important)
+    "country", "state", "region", "province", "county", "district",
+    "city", "town", "village", "hamlet", "municipality", "neighbourhood",
+    "suburb", "quarter", "borough", "locality", "island", "archipelago",
+    "continent", "ocean", "sea", "bay",
+    # boundary
+    "administrative", "national_park", "protected_area",
+    # natural / désigné mais utile pour zones de conflit
+    "peak", "mountain_range", "desert", "plateau", "valley",
+}
+
+# Catégories blacklist par défaut (organisations, médias, mois...)
 DEFAULT_BLACKLIST = {
     "africa corps", "wagner", "africa", "wagner group", "afrique", "europe",
     "ouest", "est", "nord", "sud", "north", "south", "east", "west",
@@ -204,7 +233,7 @@ def clean_html(html: str) -> str:
 
 
 # ----------------------------------------------------------------------
-# Détection de langue : script-based pour ru/ar, lexicale pour fr/en
+# Détection de langue
 # ----------------------------------------------------------------------
 def detect_language(text: str) -> str:
     sample = text[:8000]
@@ -224,10 +253,9 @@ def detect_language(text: str) -> str:
 
 
 # ----------------------------------------------------------------------
-# NER : modèles multilingues chargés à la demande
+# NER
 # ----------------------------------------------------------------------
 class NERModels:
-    """Charge les modèles spaCy à la demande, garde un cache en mémoire."""
     def __init__(self):
         self._cache: dict[str, object] = {}
         try:
@@ -255,7 +283,6 @@ class NERModels:
             except OSError:
                 continue
         print(f"⚠  aucun modèle disponible pour lang={lang}, articles sautés")
-        print(f"   essaie : python -m spacy download {candidates[0]}")
         self._cache[lang] = None
         return None
 
@@ -270,7 +297,13 @@ def slugify(name: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", nfkd.lower()).strip("-") or f"x{abs(hash(name))%99999}"
 
 
-def extract_places(article: Article, ner: NERModels, blacklist: set[str], aliases: dict[str, str]) -> set[str]:
+def has_street_or_building_prefix(name: str) -> bool:
+    """Filtre 1 : rejette les noms commençant par 'rue', 'hôtel', 'street'..."""
+    lower = name.lower()
+    return any(lower.startswith(p) for p in STREET_BUILDING_PREFIXES)
+
+
+def extract_places(article: Article, ner: NERModels, blacklist: set[str], aliases: dict[str, str], use_prefix_filter: bool) -> set[str]:
     nlp = ner.get(article.lang)
     if nlp is None:
         return set()
@@ -288,6 +321,8 @@ def extract_places(article: Article, ner: NERModels, blacklist: set[str], aliase
             if name.lower() in blacklist:
                 continue
             if name.isdigit() or re.match(r"^\d", name):
+                continue
+            if use_prefix_filter and has_street_or_building_prefix(name):
                 continue
             canon = aliases.get(name, name)
             places.add(canon)
@@ -309,6 +344,7 @@ def save_geocode_cache(cache: dict) -> None:
 
 
 def geocode(name: str, cache: dict) -> dict | None:
+    """Retourne {lat, lng, country, type, class, display} ou None."""
     key = name.lower()
     if key in cache:
         return cache[key]
@@ -333,8 +369,12 @@ def geocode(name: str, cache: dict) -> dict | None:
     addr = hit.get("address", {})
     country = addr.get("country") or addr.get("country_code", "").upper() or "—"
     result = {
-        "lat": float(hit["lat"]), "lng": float(hit["lon"]),
-        "country": country, "display": hit.get("display_name", name),
+        "lat": float(hit["lat"]),
+        "lng": float(hit["lon"]),
+        "country": country,
+        "display": hit.get("display_name", name),
+        "type": hit.get("type", ""),       # ex: "city", "village", "highway"
+        "class": hit.get("class", ""),     # ex: "place", "boundary", "amenity"
     }
     cache[key] = result
     return result
@@ -364,7 +404,8 @@ def load_aliases_and_blacklist() -> tuple[dict[str, str], set[str], dict[str, di
 # ----------------------------------------------------------------------
 # Pipeline principal
 # ----------------------------------------------------------------------
-def run(refresh_articles: bool, regeocode: bool) -> None:
+def run(refresh_articles: bool, regeocode: bool, min_mentions: int,
+        use_prefix_filter: bool, use_type_filter: bool) -> None:
     CACHE_DIR.mkdir(exist_ok=True)
 
     raw_posts = fetch_all_posts(cache_articles=not refresh_articles)
@@ -377,19 +418,38 @@ def run(refresh_articles: bool, regeocode: bool) -> None:
     print(f"[wp] {len(articles)} articles parsés. Langues : "
           f"{', '.join(f'{k}={v}' for k,v in sorted(lang_counts.items()))}")
 
+    print(f"\n[filtres] préfixes={'ON' if use_prefix_filter else 'OFF'} · "
+          f"types Nominatim={'ON' if use_type_filter else 'OFF'} · "
+          f"min mentions={min_mentions}")
+
     ner = NERModels()
     aliases, blacklist, overrides = load_aliases_and_blacklist()
 
+    # Étape 1 : extraction NER (avec filtre préfixe optionnel)
     place_to_articles: dict[str, list[str]] = {}
-    print("[ner] extraction des lieux par article…")
+    print("\n[ner] extraction des lieux par article…")
     for art in tqdm(articles):
-        for place in extract_places(art, ner, blacklist, aliases):
+        for place in extract_places(art, ner, blacklist, aliases, use_prefix_filter):
             place_to_articles.setdefault(place, []).append(art.id)
     print(f"[ner] {len(place_to_articles)} lieux uniques extraits")
 
+    # Étape 2 : filtre par fréquence (avant géocodage = on évite des appels Nominatim inutiles)
+    before_freq = len(place_to_articles)
+    if min_mentions > 1:
+        place_to_articles = {
+            name: ids for name, ids in place_to_articles.items()
+            if len(set(ids)) >= min_mentions or name in overrides
+        }
+        dropped_freq = before_freq - len(place_to_articles)
+        print(f"[filtre fréquence] {dropped_freq} lieux écartés (mentionnés < {min_mentions} fois)")
+    else:
+        dropped_freq = 0
+
+    # Étape 3 : géocodage + filtre type Nominatim
     geocode_cache = {} if regeocode else load_geocode_cache()
     geocoded: list[Place] = []
-    print("[geo] géocodage Nominatim (≈1 req/s)…")
+    rejected_by_type: list[tuple[str, str, str]] = []  # (name, class, type)
+    print(f"\n[geo] géocodage Nominatim (≈1 req/s, {len(place_to_articles)} lieux)…")
     try:
         for name, art_ids in tqdm(sorted(place_to_articles.items())):
             if name in overrides:
@@ -403,6 +463,12 @@ def run(refresh_articles: bool, regeocode: bool) -> None:
             res = geocode(name, geocode_cache)
             if not res:
                 continue
+            # Filtre type Nominatim : on ne garde que villes / régions / pays
+            if use_type_filter:
+                osm_type = res.get("type", "")
+                if osm_type and osm_type not in ALLOWED_NOMINATIM_TYPES:
+                    rejected_by_type.append((name, res.get("class", ""), osm_type))
+                    continue
             geocoded.append(Place(
                 id=slugify(name), name=name, country=res["country"],
                 lat=res["lat"], lng=res["lng"],
@@ -411,16 +477,33 @@ def run(refresh_articles: bool, regeocode: bool) -> None:
     finally:
         save_geocode_cache(geocode_cache)
 
-    print(f"[geo] {len(geocoded)} lieux géocodés (sur {len(place_to_articles)})")
+    print(f"\n[geo] {len(geocoded)} lieux géocodés et retenus")
+    if rejected_by_type:
+        print(f"[filtre type] {len(rejected_by_type)} lieux écartés (mauvais type Nominatim)")
+        # Échantillon des 10 premiers pour info
+        sample = rejected_by_type[:10]
+        for name, cls, typ in sample:
+            print(f"   - {name!r} ({cls}/{typ})")
+        if len(rejected_by_type) > 10:
+            print(f"   ... et {len(rejected_by_type) - 10} autres")
 
+    # Output
     out = {
         "_meta": {
             "generated": time.strftime("%Y-%m-%d"),
             "source": WP_API_BASE,
             "articles_count": len(articles),
             "places_count": len(geocoded),
-            "places_dropped": len(place_to_articles) - len(geocoded),
             "languages": lang_counts,
+            "filters": {
+                "min_mentions": min_mentions,
+                "prefix_filter": use_prefix_filter,
+                "type_filter": use_type_filter,
+            },
+            "filter_stats": {
+                "dropped_by_frequency": dropped_freq,
+                "dropped_by_type": len(rejected_by_type),
+            },
         },
         "articles": [a.to_public() for a in articles],
         "places": [asdict(p) for p in sorted(geocoded, key=lambda x: -len(x.articles))],
@@ -431,10 +514,22 @@ def run(refresh_articles: bool, regeocode: bool) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--refresh", action="store_true")
-    parser.add_argument("--regeocode", action="store_true")
+    parser.add_argument("--refresh", action="store_true", help="Ignore le cache d'articles")
+    parser.add_argument("--regeocode", action="store_true", help="Ignore le cache de géocodage")
+    parser.add_argument("--min-mentions", type=int, default=2,
+                        help="Garde seulement les lieux mentionnés au moins N fois (défaut: 2)")
+    parser.add_argument("--no-prefix-filter", action="store_true",
+                        help="Désactive le filtre par préfixe (rues, bâtiments)")
+    parser.add_argument("--no-type-filter", action="store_true",
+                        help="Désactive le filtre par type Nominatim (villes/régions/pays)")
     args = parser.parse_args()
-    run(refresh_articles=args.refresh, regeocode=args.regeocode)
+    run(
+        refresh_articles=args.refresh,
+        regeocode=args.regeocode,
+        min_mentions=max(1, args.min_mentions),
+        use_prefix_filter=not args.no_prefix_filter,
+        use_type_filter=not args.no_type_filter,
+    )
 
 
 if __name__ == "__main__":
