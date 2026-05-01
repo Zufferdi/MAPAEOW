@@ -6,6 +6,7 @@ INPACT Investigation Mapper — Pipeline d'extraction
 Récupère les articles via l'API REST WordPress.com,
 extrait les lieux mentionnés (NER multilingue FR/EN/RU/AR),
 les géocode via Nominatim, applique 3 filtres automatiques anti-bruit,
+enrichit les articles avec les PDFs Google Drive qu'ils linkent,
 et produit `data.json`.
 
 Usage :
@@ -21,6 +22,7 @@ from __future__ import annotations
 
 import argparse
 import html as html_module
+import io
 import json
 import re
 import sys
@@ -47,8 +49,16 @@ MAX_PLACE_LEN = 60
 CACHE_DIR = Path("cache")
 ARTICLES_CACHE = CACHE_DIR / "articles.json"
 GEOCODE_CACHE = CACHE_DIR / "geocode.json"
+REPORTS_CACHE = CACHE_DIR / "reports.json"  # texte extrait des PDFs Google Drive
 ALIASES_FILE = Path("place_aliases.json")
 OUTPUT_FILE = Path("data.json")
+
+# Regex pour détecter les liens Google Drive dans le HTML des articles
+# Match : /file/d/{ID}/view, /file/d/{ID}/edit, /open?id={ID}, /uc?id={ID}
+DRIVE_LINK_RE = re.compile(
+    r"drive\.google\.com/(?:file/d/|open\?id=|uc\?(?:export=download&)?id=)([a-zA-Z0-9_-]{20,})"
+)
+MAX_PDF_SIZE = 50 * 1024 * 1024  # 50 Mo : sécurité contre PDFs énormes
 
 # ----------------------------------------------------------------------
 # Filtres anti-bruit
@@ -222,6 +232,164 @@ def clean_html(html: str) -> str:
     for s in soup(["script", "style"]):
         s.decompose()
     return re.sub(r"\s+", " ", soup.get_text(" ", strip=True))
+
+
+# ----------------------------------------------------------------------
+# Google Drive — extraction des PDFs liés dans les articles
+# ----------------------------------------------------------------------
+def load_reports_cache() -> dict:
+    """Cache des textes déjà extraits, keyé par ID Drive."""
+    if REPORTS_CACHE.exists():
+        return json.loads(REPORTS_CACHE.read_text("utf-8"))
+    return {}
+
+
+def save_reports_cache(cache: dict) -> None:
+    CACHE_DIR.mkdir(exist_ok=True)
+    REPORTS_CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=2), "utf-8")
+
+
+def fetch_drive_pdf_text(file_id: str) -> str:
+    """Télécharge un PDF public depuis Google Drive et en extrait le texte.
+    Retourne '' en cas d'échec (PDF privé, fichier non-PDF, etc.)."""
+    try:
+        from pypdf import PdfReader
+    except ImportError:
+        print("⚠  pypdf non installé : pip install pypdf")
+        return ""
+
+    base_url = f"https://drive.google.com/uc?export=download&id={file_id}"
+    sess = requests.Session()
+    try:
+        r = sess.get(base_url, timeout=60, allow_redirects=True, stream=True)
+        r.raise_for_status()
+    except Exception as e:
+        print(f"  ⚠  download Drive {file_id!r} échec : {e}")
+        return ""
+
+    # Si Drive renvoie une page HTML de confirmation (gros fichiers > 25 Mo)
+    ctype = r.headers.get("Content-Type", "")
+    if "text/html" in ctype:
+        # Extraire le token de confirmation
+        body = r.text[:50000]  # limite pour ne pas exploser la mémoire
+        token_match = re.search(r'name="confirm"\s+value="([^"]+)"', body) or \
+                      re.search(r'confirm=([0-9A-Za-z_-]+)', body)
+        if token_match:
+            token = token_match.group(1)
+            try:
+                r = sess.get(f"{base_url}&confirm={token}", timeout=120, allow_redirects=True, stream=True)
+                r.raise_for_status()
+            except Exception as e:
+                print(f"  ⚠  download Drive (confirm) {file_id!r} échec : {e}")
+                return ""
+        else:
+            print(f"  ⚠  Drive renvoie HTML pour {file_id!r} (privé ?)")
+            return ""
+
+    # Limite de taille
+    content_length = int(r.headers.get("Content-Length") or 0)
+    if content_length > MAX_PDF_SIZE:
+        print(f"  ⚠  PDF Drive {file_id!r} trop gros ({content_length // 1024 // 1024} Mo), skip")
+        return ""
+
+    # Lire le contenu en mémoire (avec garde-fou)
+    buf = io.BytesIO()
+    total = 0
+    for chunk in r.iter_content(chunk_size=64 * 1024):
+        buf.write(chunk)
+        total += len(chunk)
+        if total > MAX_PDF_SIZE:
+            print(f"  ⚠  PDF Drive {file_id!r} dépasse {MAX_PDF_SIZE // 1024 // 1024} Mo en streaming, skip")
+            return ""
+
+    buf.seek(0)
+    # Vérifie que c'est bien un PDF
+    head = buf.read(8)
+    buf.seek(0)
+    if not head.startswith(b"%PDF"):
+        print(f"  ⚠  Drive {file_id!r} : pas un PDF (signature : {head[:8]!r})")
+        return ""
+
+    # Extraire le texte
+    try:
+        reader = PdfReader(buf)
+        pages = []
+        for p in reader.pages:
+            try:
+                pages.append(p.extract_text() or "")
+            except Exception:
+                pages.append("")
+        text = "\n".join(pages)
+        text = re.sub(r"\s+", " ", text).strip()
+        return text
+    except Exception as e:
+        print(f"  ⚠  parsing PDF {file_id!r} échec : {e}")
+        return ""
+
+
+def extract_drive_links(html: str) -> list[str]:
+    """Retourne la liste des IDs Drive uniques trouvés dans le HTML."""
+    if not html:
+        return []
+    ids = DRIVE_LINK_RE.findall(html)
+    # Déduppe en préservant l'ordre
+    seen = set()
+    unique = []
+    for fid in ids:
+        if fid not in seen:
+            seen.add(fid)
+            unique.append(fid)
+    return unique
+
+
+def enrich_articles_with_drive_reports(articles: list, raw_posts: list[dict],
+                                       reports_cache: dict, refresh: bool) -> tuple[int, int]:
+    """Pour chaque article qui contient des liens Google Drive, télécharge les PDFs
+    et concatène leur texte au texte de l'article. Mise à jour in place.
+    Retourne (nb_articles_enrichis, nb_pdfs_extraits)."""
+    n_articles = 0
+    n_pdfs = 0
+    # Map id article → html brut (pour chercher les liens Drive)
+    raw_html_by_slug = {}
+    for post in raw_posts:
+        slug = post.get("slug") or str(post["id"])
+        raw_html_by_slug[slug] = post.get("content", {}).get("rendered", "")
+
+    for art in articles:
+        raw_html = raw_html_by_slug.get(art.id, "")
+        drive_ids = extract_drive_links(raw_html)
+        if not drive_ids:
+            continue
+
+        added = []
+        for fid in drive_ids:
+            if fid in reports_cache and not refresh:
+                # Déjà extrait
+                cached = reports_cache[fid]
+                if cached.get("text"):
+                    added.append(cached["text"])
+            else:
+                print(f"[drive] téléchargement PDF {fid} (article : {art.id})")
+                text = fetch_drive_pdf_text(fid)
+                reports_cache[fid] = {
+                    "text": text,
+                    "extracted_at": time.strftime("%Y-%m-%d"),
+                    "article_slug": art.id,
+                    "char_count": len(text),
+                }
+                if text:
+                    added.append(text)
+                    n_pdfs += 1
+                # Pause courtoisie entre downloads
+                time.sleep(1.0)
+
+        if added:
+            art.text = (art.text + "\n\n" + "\n\n".join(added)).strip()
+            n_articles += 1
+            print(f"  + {len(drive_ids)} rapport(s) ajouté(s) à {art.id!r} "
+                  f"(+{sum(len(t) for t in added)} chars)")
+
+    return n_articles, n_pdfs
 
 
 # ----------------------------------------------------------------------
@@ -410,6 +578,18 @@ def run(refresh_articles: bool, regeocode: bool, min_mentions: int,
     print(f"[wp] {len(articles)} articles parsés. Langues : "
           f"{', '.join(f'{k}={v}' for k,v in sorted(lang_counts.items()))}")
 
+    # Enrichissement : télécharger les PDFs Google Drive liés dans les articles
+    # et concaténer leur texte au texte de l'article (option A : fusion).
+    print("\n[drive] recherche de liens Google Drive dans les articles…")
+    reports_cache = load_reports_cache()
+    n_enriched, n_new_pdfs = enrich_articles_with_drive_reports(
+        articles, raw_posts, reports_cache, refresh=refresh_articles
+    )
+    save_reports_cache(reports_cache)
+    cached_count = sum(1 for v in reports_cache.values() if v.get("text"))
+    print(f"[drive] {n_enriched} article(s) enrichi(s), {n_new_pdfs} PDF(s) nouvellement extraits, "
+          f"{cached_count} PDF(s) en cache au total")
+
     print(f"\n[filtres] préfixes={'ON' if use_prefix_filter else 'OFF'} · "
           f"types Nominatim={'ON' if use_type_filter else 'OFF'} · "
           f"min mentions={min_mentions}")
@@ -417,6 +597,7 @@ def run(refresh_articles: bool, regeocode: bool, min_mentions: int,
     ner = NERModels()
     aliases, blacklist, overrides = load_aliases_and_blacklist()
 
+    # Étape 1 : extraction NER (avec filtre préfixe optionnel)
     place_to_articles: dict[str, list[str]] = {}
     print("\n[ner] extraction des lieux par article…")
     for art in tqdm(articles):
@@ -424,6 +605,7 @@ def run(refresh_articles: bool, regeocode: bool, min_mentions: int,
             place_to_articles.setdefault(place, []).append(art.id)
     print(f"[ner] {len(place_to_articles)} lieux uniques extraits")
 
+    # Étape 2 : filtre par fréquence (avant géocodage = on évite des appels Nominatim inutiles)
     before_freq = len(place_to_articles)
     if min_mentions > 1:
         place_to_articles = {
@@ -435,6 +617,7 @@ def run(refresh_articles: bool, regeocode: bool, min_mentions: int,
     else:
         dropped_freq = 0
 
+    # Étape 3 : géocodage + filtre type Nominatim
     geocode_cache = {} if regeocode else load_geocode_cache()
     geocoded: list[Place] = []
     rejected_by_type: list[tuple[str, str, str]] = []
@@ -474,6 +657,7 @@ def run(refresh_articles: bool, regeocode: bool, min_mentions: int,
         if len(rejected_by_type) > 10:
             print(f"   ... et {len(rejected_by_type) - 10} autres")
 
+    # Output
     out = {
         "_meta": {
             "generated": time.strftime("%Y-%m-%d"),
@@ -490,12 +674,17 @@ def run(refresh_articles: bool, regeocode: bool, min_mentions: int,
                 "dropped_by_frequency": dropped_freq,
                 "dropped_by_type": len(rejected_by_type),
             },
+            "reports": {
+                "articles_with_drive_pdfs": n_enriched,
+                "pdfs_indexed": cached_count,
+            },
         },
         "articles": [a.to_public() for a in articles],
         "places": [asdict(p) for p in sorted(geocoded, key=lambda x: -len(x.articles))],
     }
     OUTPUT_FILE.write_text(json.dumps(out, ensure_ascii=False, indent=2), "utf-8")
-    print(f"\n✓ {OUTPUT_FILE} écrit ({len(geocoded)} lieux, {len(articles)} enquêtes)")
+    print(f"\n✓ {OUTPUT_FILE} écrit ({len(geocoded)} lieux, {len(articles)} enquêtes, "
+          f"dont {n_enriched} enrichi(s) par PDF)")
 
 
 def main() -> None:
