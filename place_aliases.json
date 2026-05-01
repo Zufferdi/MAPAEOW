@@ -111,7 +111,47 @@
     "Moyen-Orient": "the Middle East",
     "Moyen Orient": "the Middle East",
     "Asia": "Asie",
-    "asia": "Asie"
+    "asia": "Asie",
+    "Belgium": "Belgique",
+    "Bulgaria": "Bulgarie",
+    "Switzerland": "Suisse",
+    "India": "Inde",
+    "Denmark": "Danemark",
+    "Estonia": "Estonie",
+    "Iraq": "Irak",
+    "Japan": "Japon",
+    "Latvia": "Lettonie",
+    "Netherlands": "Pays-Bas",
+    "Poland": "Pologne",
+    "Spain": "Espagne",
+    "Tanzania": "Tanzanie",
+    "Tunisia": "Tunisie",
+    "Zambia": "Zambie",
+    "Somalia": "Somalie",
+    "Gambia": "Gambie",
+    "Sri Lanka": "Sri Lanka",
+    "Ethiopie": "Éthiopie",
+    "Ivory Coast": "Côte d'Ivoire",
+    "Vienna": "Vienne",
+    "Prague": "Prague",
+    "Rome": "Rome",
+    "Bangkok": "Bangkok",
+    "Bratislava": "Bratislava",
+    "Budapest": "Budapest",
+    "Chisinau": "Chișinău",
+    "St Petersburg": "Saint-Pétersbourg",
+    "Téhéran": "Téhéran",
+    "Tehran": "Téhéran",
+    "HongKong": "Hong Kong",
+    "Hong Kong": "Hong Kong",
+    "Caire": "Le Caire",
+    "DRC": "République démocratique du Congo",
+    "RDC": "République démocratique du Congo",
+    "Burkina": "Burkina Faso",
+    "Faso": "Burkina Faso",
+    "ukraine": "Ukraine",
+    "Region Mopti": "Mopti",
+    "Méditerranée": "Mer Méditerranée"
   },
   "blacklist": [
     "afp",
@@ -137,12 +177,14 @@
     "brics",
     "canal telegram",
     "cedeao",
+    "center",
     "central africa",
     "central asia",
     "centre",
     "continent africain",
     "de l'est",
     "de l'ouest",
+    "donso",
     "du nord",
     "du sud",
     "décembre",
@@ -162,6 +204,7 @@
     "février",
     "glovo",
     "google",
+    "gulf",
     "instagram",
     "is",
     "is-s",
@@ -178,11 +221,14 @@
     "mai",
     "maison russe",
     "maisons",
+    "maliens",
     "marran",
     "mars",
+    "mines",
     "minusma",
     "nato",
     "nord",
+    "nord-ouest",
     "north",
     "novembre",
     "occident",
@@ -198,6 +244,7 @@
     "reuters",
     "rfi",
     "russes",
+    "russians",
     "russie afrique",
     "schengen",
     "septembre",
@@ -214,6 +261,7 @@
     "twitter",
     "ua",
     "ue",
+    "ukrainians",
     "un",
     "wagner",
     "wagner group",
@@ -358,6 +406,51 @@
       "lat": 45.0,
       "lng": 90.0,
       "country": "—"
+    },
+    "Donbass": {
+      "lat": 48.0,
+      "lng": 38.0,
+      "country": "Ukraine"
+    },
+    "Maghreb": {
+      "lat": 32.0,
+      "lng": 0.0,
+      "country": "—"
+    },
+    "Méditerranée": {
+      "lat": 35.0,
+      "lng": 18.0,
+      "country": "—"
+    },
+    "Atlantique": {
+      "lat": 30.0,
+      "lng": -40.0,
+      "country": "—"
+    },
+    "Golfe": {
+      "lat": 26.5,
+      "lng": 51.5,
+      "country": "—"
+    },
+    "Farcha": {
+      "lat": 12.18,
+      "lng": 15.04,
+      "country": "Tchad"
+    },
+    "Nampala": {
+      "lat": 14.86,
+      "lng": -5.69,
+      "country": "Mali"
+    },
+    "Serma": {
+      "lat": 14.5,
+      "lng": -1.4,
+      "country": "Mali"
+    },
+    "Moura": {
+      "lat": 14.65,
+      "lng": -4.68,
+      "country": "Mali"
     }
   }
 }

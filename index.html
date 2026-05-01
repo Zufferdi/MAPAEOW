@@ -1714,6 +1714,7 @@
       <div class="shortcut-row"><div class="shortcut-keys"><kbd>T</kbd></div><div class="shortcut-desc" data-i18n="kbd_tour">Lance/arrête le tour guidé</div></div>
       <div class="shortcut-row"><div class="shortcut-keys"><kbd>C</kbd></div><div class="shortcut-desc" data-i18n="kbd_compare">Mode comparaison de périodes</div></div>
       <div class="shortcut-row"><div class="shortcut-keys"><kbd>S</kbd></div><div class="shortcut-desc" data-i18n="kbd_stats">Onglet statistiques</div></div>
+      <div class="shortcut-row"><div class="shortcut-keys"><kbd>P</kbd></div><div class="shortcut-desc" data-i18n="kbd_countries">Afficher / cacher les pays</div></div>
       <div class="shortcut-row"><div class="shortcut-keys"><kbd>R</kbd></div><div class="shortcut-desc" data-i18n="kbd_reset">Réinitialiser tous les filtres</div></div>
       <div class="shortcut-row"><div class="shortcut-keys"><kbd>?</kbd></div><div class="shortcut-desc" data-i18n="kbd_help">Afficher cette aide</div></div>
     </div>
@@ -1761,6 +1762,9 @@
     <div class="filter-divider"></div>
     <span class="filter-label" data-i18n="filter_language">Langue</span>
     <div class="chips" id="language-chips"></div>
+    <div class="filter-divider"></div>
+    <span class="filter-label" data-i18n="filter_show">Afficher</span>
+    <button class="chip" id="toggle-countries" data-i18n="filter_countries">Pays</button>
     <div class="filter-divider"></div>
     <span class="filter-status" id="filter-status"></span>
     <button class="reset-btn" id="reset-btn" data-i18n="filter_reset">Réinitialiser</button>
@@ -1878,6 +1882,8 @@ const I18N = {
     filter_language: "Langue",
     filter_reset: "Réinitialiser",
     filter_filters: "Filtres",
+    filter_show: "Afficher",
+    filter_countries: "Pays",
     filter_cat_short: "cat.",
     filter_lang_short: "lang.",
 
@@ -1964,6 +1970,7 @@ const I18N = {
     kbd_tour: "Lance/arrête le tour guidé",
     kbd_compare: "Mode comparaison de périodes",
     kbd_stats: "Onglet statistiques",
+    kbd_countries: "Afficher / cacher les pays",
     kbd_reset: "Réinitialiser tous les filtres",
     kbd_help: "Afficher cette aide",
 
@@ -1996,6 +2003,8 @@ const I18N = {
     filter_language: "Language",
     filter_reset: "Reset",
     filter_filters: "Filters",
+    filter_show: "Show",
+    filter_countries: "Countries",
     filter_cat_short: "cat.",
     filter_lang_short: "lang.",
 
@@ -2073,6 +2082,7 @@ const I18N = {
     kbd_tour: "Start/stop guided tour",
     kbd_compare: "Period comparison mode",
     kbd_stats: "Statistics tab",
+    kbd_countries: "Show / hide countries",
     kbd_reset: "Reset all filters",
     kbd_help: "Show this help",
 
@@ -2238,6 +2248,7 @@ const state = {
     dateRange2: null,       // for compare mode
   },
   layers: { heat: true, markers: true, links: false },
+  showCountries: false,   // pays atténués par défaut, toggle dans la filterbar
   selectedPlaceId: null,
   hotPlaceIds: new Set(),
   emergingPlaceIds: new Set(),  // calculé selon la plage
@@ -2260,6 +2271,25 @@ let placeMarkers = {};
 let cooccLinkRefs = [];   // pour highlight focus narrative
 
 // ============================================================
+// PLACE TYPE : pays vs lieu précis
+// ============================================================
+// Un lieu est considéré comme "pays" quand son nom = son champ country
+// (insensible à la casse et aux accents légers comme États-Unis vs États-Unis d'Amérique)
+function normalizeForMatch(s) {
+  return (s || '').toLowerCase().trim();
+}
+function isCountry(place) {
+  if (!place || !place.country || place.country === '—') return false;
+  const name = normalizeForMatch(place.name);
+  const country = normalizeForMatch(place.country);
+  if (name === country) return true;
+  // Cas "États-Unis" name vs "États-Unis d'Amérique" country
+  if (country.startsWith(name + ' ') || country.startsWith(name + '-')) return true;
+  if (name.startsWith(country + ' ') || name.startsWith(country + '-')) return true;
+  return false;
+}
+
+// ============================================================
 // URL HASH SYNC (feature 1)
 // ============================================================
 function readUrlState() {
@@ -2280,6 +2310,7 @@ function readUrlState() {
     state.layers.markers = ls.includes('markers');
     state.layers.links = ls.includes('links');
   }
+  if (params.has('countries')) state.showCountries = params.get('countries') === '1';
   if (params.has('tab')) state.sidebarTab = params.get('tab') === 'stats' ? 'stats' : 'place';
 }
 
@@ -2303,6 +2334,7 @@ function writeUrlState() {
     if (state.layers.links) layers.push('links');
     const defaultLayers = state.layers.heat && state.layers.markers && !state.layers.links;
     if (!defaultLayers) params.set('layers', layers.join(','));
+    if (state.showCountries) params.set('countries', '1');
     if (state.sidebarTab === 'stats') params.set('tab', 'stats');
     const hash = params.toString();
     const newUrl = hash ? `#${hash}` : window.location.pathname + window.location.search;
@@ -2520,7 +2552,13 @@ function renderHeatmap(filteredPlaces) {
   if (heatLayer) { map.removeLayer(heatLayer); heatLayer = null; }
   if (!state.layers.heat || !filteredPlaces.length) return;
   if (state.compareMode) return;  // en mode compare, on n'affiche pas la heatmap mixte
-  const points = filteredPlaces.map(p => [p.lat, p.lng, Math.min(p.articles.length, 10)]);
+  // Heatmap : on inclut les pays uniquement si showCountries est activé
+  // (sinon ils dominent la visualisation, masquent les lieux précis)
+  const placesForHeat = state.showCountries
+    ? filteredPlaces
+    : filteredPlaces.filter(p => !isCountry(p));
+  if (!placesForHeat.length) return;
+  const points = placesForHeat.map(p => [p.lat, p.lng, Math.min(p.articles.length, 10)]);
   heatLayer = L.heatLayer(points, {
     radius: 32, blur: 28, maxZoom: 8, minOpacity: 0.35,
     gradient: { 0.0: '#1a4d8f', 0.3: '#5a8acc', 0.5: '#ffd166', 0.7: '#ff8a3d', 1.0: '#e85a5a' },
@@ -2594,11 +2632,15 @@ function renderMarkers(filteredPlaces) {
   const sorted = [...filteredPlaces].sort((a, b) => b.articles.length - a.articles.length);
   sorted.forEach((place, idx) => {
     const count = place.articles.length;
+    const placeIsCountry = isCountry(place);
+    // Si pays et toggle off : on saute carrément (pas de marker du tout)
+    if (placeIsCountry && !state.showCountries) return;
     const size = Math.min(8 + count * 2.5, 20);
     const isHot = state.hotPlaceIds.has(place.id);
     const isEmerging = state.emergingPlaceIds.has(place.id);
     const isSelected = place.id === state.selectedPlaceId;
     const classes = ['place-marker'];
+    if (placeIsCountry) classes.push('country');
     if (isHot) classes.push('hot');
     if (isEmerging && !isSelected) classes.push('emerging');
     if (isSelected) classes.push('selected');
@@ -2809,7 +2851,11 @@ function renderFilterBar() {
 // ============================================================
 function renderTopPlaces(filteredPlaces) {
   const list = document.getElementById('top-places-list');
-  const top = [...filteredPlaces]
+  // Le top 10 montre les lieux précis ; les pays apparaissent seulement si le toggle est on
+  const eligible = state.showCountries
+    ? filteredPlaces
+    : filteredPlaces.filter(p => !isCountry(p));
+  const top = [...eligible]
     .sort((a, b) => b.articles.length - a.articles.length)
     .slice(0, 10);
   list.innerHTML = top.map((p, idx) => {
@@ -3246,7 +3292,21 @@ function setupReset() {
     state.filters.languages.clear();
     state.filters.dateRange = null;
     state.filters.dateRange2 = null;
+    state.showCountries = false;
+    document.getElementById('toggle-countries').classList.remove('active');
     if (state.compareMode) toggleCompareMode();
+    render();
+    writeUrlState();
+  });
+}
+
+function setupCountriesToggle() {
+  const btn = document.getElementById('toggle-countries');
+  if (!btn) return;
+  btn.classList.toggle('active', state.showCountries);
+  btn.addEventListener('click', () => {
+    state.showCountries = !state.showCountries;
+    btn.classList.toggle('active', state.showCountries);
     render();
     writeUrlState();
   });
@@ -3396,6 +3456,7 @@ function setupKeyboardShortcuts() {
     else if (k === 'c') { toggleCompareMode(); }
     else if (k === 's') { state.sidebarTab = state.sidebarTab === 'stats' ? 'place' : 'stats'; render(); writeUrlState(); }
     else if (k === 'r') { document.getElementById('reset-btn').click(); }
+    else if (k === 'p') { document.getElementById('toggle-countries').click(); }
   });
 }
 
@@ -3802,6 +3863,7 @@ function setupCompareBtn() {
   setupSearch();
   setupToggles();
   setupReset();
+  setupCountriesToggle();
   setupCollapsibles();
   setupTour();
   setupCompareBtn();
