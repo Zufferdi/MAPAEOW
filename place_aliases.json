@@ -83,8 +83,8 @@
     "United States of America": "États-Unis",
     "U.S.": "États-Unis",
     "the U.S.": "États-Unis",
-    "the Soviet Union": "ex-URSS",
-    "Soviet Union": "ex-URSS",
+    "the Soviet Union": "Russie",
+    "Soviet Union": "Russie",
     "the Mediterranean": "Mer Méditerranée",
     "the Mediterranean Sea": "Mer Méditerranée",
     "the Red Sea": "Mer Rouge",
@@ -100,7 +100,7 @@
     "the Central African Republic": "République centrafricaine",
     "the mediterranean sea": "Mer Méditerranée",
     "the red sea": "Mer Rouge",
-    "the soviet union": "ex-URSS",
+    "the soviet union": "Russie",
     "the united states": "États-Unis",
     "the russian federation": "Russie",
     "the Russian Federation": "Russie",
@@ -109,7 +109,9 @@
     "république de centrafrique": "République centrafricaine",
     "République de Centrafrique": "République centrafricaine",
     "Moyen-Orient": "the Middle East",
-    "Moyen Orient": "the Middle East"
+    "Moyen Orient": "the Middle East",
+    "Asia": "Asie",
+    "asia": "Asie"
   },
   "blacklist": [
     "afp",
@@ -127,8 +129,6 @@
     "août",
     "ap",
     "aqim",
-    "asia",
-    "asie",
     "asie centrale",
     "avril",
     "balkans",
@@ -339,11 +339,6 @@
       "lng": 53.8478,
       "country": "Émirats arabes unis"
     },
-    "ex-URSS": {
-      "lat": 60.0,
-      "lng": 80.0,
-      "country": "—"
-    },
     "Qardabiyah": {
       "lat": 31.16,
       "lng": 16.68,
@@ -353,6 +348,16 @@
       "lat": 59.9275,
       "lng": 30.353,
       "country": "Russie"
+    },
+    "Le Caire": {
+      "lat": 30.0444,
+      "lng": 31.2357,
+      "country": "Égypte"
+    },
+    "Asie": {
+      "lat": 45.0,
+      "lng": 90.0,
+      "country": "—"
     }
   }
 }
