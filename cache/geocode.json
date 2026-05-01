@@ -865,5 +865,971 @@
     "class": "boundary"
   },
   "объединенных арабских эмиратах": null,
-  "центральноафриканской республике": null
+  "центральноафриканской республике": null,
+  "@ismaelamnar": null,
+  "@casusbellii": null,
+  "anacom": {
+    "lat": 38.7356808,
+    "lng": -9.1597697,
+    "country": "Portugal",
+    "display": "Anacom, 51, Rua Ramalho Ortigão, Campolide, Lisbonne, 1099-099, Portugal",
+    "type": "government",
+    "class": "office"
+  },
+  "accra": {
+    "lat": 5.5571096,
+    "lng": -0.2012376,
+    "country": "Ghana",
+    "display": "Accra, Korle-Klottey Municipal District, Région du Grand Accra, Ghana",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "africains": {
+    "lat": 43.301009,
+    "lng": 5.3681139,
+    "country": "France",
+    "display": "Musée des Arts Africains, Océaniens, Amérindiens, Rue Trigance, Le Panier, Les Grands Carmes, 2e Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, France métropolitaine, 13002, France",
+    "type": "museum",
+    "class": "tourism"
+  },
+  "amérique latine": {
+    "lat": 48.8861486,
+    "lng": 2.2899828,
+    "country": "France",
+    "display": "Square de l'Amérique Latine, Paris 17e Arrondissement, Paris, Île-de-France, France métropolitaine, 75017, France",
+    "type": "park",
+    "class": "leisure"
+  },
+  "ariana": {
+    "lat": 36.9685735,
+    "lng": 10.1219855,
+    "country": "Tunisie",
+    "display": "Gouvernorat Ariana, Tunisie",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "atlantique": {
+    "lat": 13.581921,
+    "lng": -38.320312,
+    "country": "—",
+    "display": "Océan Atlantique",
+    "type": "ocean",
+    "class": "place"
+  },
+  "axmin": null,
+  "bangkok": {
+    "lat": 13.7524938,
+    "lng": 100.4935089,
+    "country": "Thaïlande",
+    "display": "Bangkok, Thaïlande",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "belgique": {
+    "lat": 50.6402809,
+    "lng": 4.6667145,
+    "country": "Belgique",
+    "display": "Belgique",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "belgium": {
+    "lat": 50.6402809,
+    "lng": 4.6667145,
+    "country": "Belgique",
+    "display": "Belgique",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "bois rouge": {
+    "lat": 18.7788098,
+    "lng": -71.8967195,
+    "country": "Haïti",
+    "display": "Bois Rouge, 2e Juampas, Commune Lascahobas, Arrondissement Lascahobas, Centre Department, Haïti",
+    "type": "hamlet",
+    "class": "place"
+  },
+  "bratislava": {
+    "lat": 48.1359085,
+    "lng": 17.1597441,
+    "country": "Slovaquie",
+    "display": "Bratislava, District of Bratislava II, Région de Bratislava, Bratislavský kraj, Slovaquie",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "budapest": {
+    "lat": 47.4813896,
+    "lng": 19.1457723,
+    "country": "Hongrie",
+    "display": "Budapest, Hongrie centrale, Hongrie",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "bulgaria": {
+    "lat": 42.6073975,
+    "lng": 25.4856617,
+    "country": "Bulgarie",
+    "display": "Bulgarie",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "burkina": {
+    "lat": 12.0753083,
+    "lng": -1.6880314,
+    "country": "Burkina Faso",
+    "display": "Burkina Faso",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "burkina faso takoué": null,
+  "burkina kibaya": null,
+  "burundi": {
+    "lat": -3.426449,
+    "lng": 29.9324519,
+    "country": "Burundi",
+    "display": "Burundi",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "caire": {
+    "lat": 30.0332516,
+    "lng": 31.5621651,
+    "country": "Égypte",
+    "display": "Caire, Égypte",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "canada": {
+    "lat": 61.0666922,
+    "lng": -107.991707,
+    "country": "Canada",
+    "display": "Canada",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "center": {
+    "lat": 31.7952814,
+    "lng": -94.1803576,
+    "country": "États-Unis d'Amérique",
+    "display": "Center, Shelby County, Texas, 75935, États-Unis d'Amérique",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "cerapport": null,
+  "chisinau": {
+    "lat": 47.0245117,
+    "lng": 28.8322923,
+    "country": "Moldavie",
+    "display": "Chișinău, Municipalité de Chișinău, Moldavie",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "cocody": {
+    "lat": 5.357367,
+    "lng": -3.994934,
+    "country": "Côte d’Ivoire",
+    "display": "Cocody, Abidjan, Côte d’Ivoire",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "cuba": {
+    "lat": 23.0131338,
+    "lng": -80.8328748,
+    "country": "Cuba",
+    "display": "Cuba",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "drc": {
+    "lat": -2.9814344,
+    "lng": 23.8222636,
+    "country": "République démocratique du Congo",
+    "display": "République démocratique du Congo",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "dakar": {
+    "lat": 14.693425,
+    "lng": -17.447938,
+    "country": "Sénégal",
+    "display": "Dakar, Région de Dakar, Sénégal",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "denmark": {
+    "lat": 55.670249,
+    "lng": 10.3333283,
+    "country": "Danemark",
+    "display": "Danemark",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "donbas": {
+    "lat": 49.4183248,
+    "lng": 17.3108801,
+    "country": "Tchéquie",
+    "display": "Tovačovské jezero I, Tovačov, okres Přerov, Olomouc Region, Moravie centrale, Tchéquie",
+    "type": "lake",
+    "class": "water"
+  },
+  "donbass": {
+    "lat": 40.5928159,
+    "lng": 71.8919178,
+    "country": "Ouzbékistan",
+    "display": "Donbass, Tashlak District, Province de Ferghana, Ouzbékistan",
+    "type": "village",
+    "class": "place"
+  },
+  "donso": {
+    "lat": 57.6015513,
+    "lng": 11.803425,
+    "country": "Suède",
+    "display": "Donsö, Sydväst, Donsö, Göteborgs Stad, Comté de Västra Götaland, 430 82, Suède",
+    "type": "island",
+    "class": "place"
+  },
+  "douala": {
+    "lat": 4.0429389,
+    "lng": 9.7062018,
+    "country": "Cameroun",
+    "display": "Douala, Douala II, Communauté urbaine de Douala, Wouri, Région du Littoral, Cameroun",
+    "type": "city",
+    "class": "place"
+  },
+  "douamba": {
+    "lat": 5.3490709,
+    "lng": -3.9497092,
+    "country": "Côte d’Ivoire",
+    "display": "Rue Amidou Douamba, Riviéra 3, Cocody, Abidjan, Côte d’Ivoire",
+    "type": "residential",
+    "class": "highway"
+  },
+  "douentza": {
+    "lat": 15.0068749,
+    "lng": -2.9529649,
+    "country": "Mali",
+    "display": "Douentza, Cercle de Douentza, Mopti, Mali",
+    "type": "city",
+    "class": "place"
+  },
+  "eau": {
+    "lat": 44.8689683,
+    "lng": -91.4855007,
+    "country": "États-Unis d'Amérique",
+    "display": "Chippewa Valley Regional Airport, 3800, Starr Avenue, Eau Claire, Chippewa County, Wisconsin, 54703, États-Unis d'Amérique",
+    "type": "aerodrome",
+    "class": "aeroway"
+  },
+  "estonia": {
+    "lat": 58.7523778,
+    "lng": 25.3319078,
+    "country": "Estonie",
+    "display": "Estonie",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "ethiopie": {
+    "lat": 10.2116702,
+    "lng": 38.6521203,
+    "country": "Éthiopie",
+    "display": "Éthiopie",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "farcha": {
+    "lat": 47.1861169,
+    "lng": 15.6671796,
+    "country": "Autriche",
+    "display": "Farcha, Weiz, Bezirk Weiz, Styrie, 8181, Autriche",
+    "type": "village",
+    "class": "place"
+  },
+  "faso": {
+    "lat": 12.0753083,
+    "lng": -1.6880314,
+    "country": "Burkina Faso",
+    "display": "Burkina Faso",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "français": {
+    "lat": 3.9439622,
+    "lng": -53.0373015,
+    "country": "France",
+    "display": "Département d'outre-mer français, Guyane, France",
+    "type": "statistical",
+    "class": "boundary"
+  },
+  "gambia": {
+    "lat": 13.470062,
+    "lng": -15.4900464,
+    "country": "Gambie",
+    "display": "Gambie",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "georgia": {
+    "lat": 32.3293809,
+    "lng": -83.1137366,
+    "country": "États-Unis d'Amérique",
+    "display": "Géorgie, États-Unis d'Amérique",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "global south": {
+    "lat": 18.1960272,
+    "lng": -73.750679,
+    "country": "Haïti",
+    "display": "Global GPA services, Rue du Peuple, 1re Bourdet, Les Cayes, Arrondissement des Cayes, Sud Department, Haïti",
+    "type": "yes",
+    "class": "office"
+  },
+  "golfe": {
+    "lat": -7.5556411,
+    "lng": 144.8850036,
+    "country": "Papouasie-Nouvelle-Guinée",
+    "display": "Golfe, Southern Region, Papouasie-Nouvelle-Guinée",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "google earth": {
+    "lat": -0.9191736,
+    "lng": -80.4496163,
+    "country": "Équateur",
+    "display": "Cooperativa de Transporte Crucitahttps://earth.google.com/web/@-0.95852507,-80.69145646,21.64961062a,790.08329147d,35y,-0.00000005h,0.11675768t,-0r/data=CgRCAggBOgMKATBCAggASg0I____________ARAA, José Joaquín Olmedo, Rocafuerte, Parroquia Rocafuerte, Rocafuerte, Manabí, Équateur",
+    "type": "ticket",
+    "class": "shop"
+  },
+  "gourma": {
+    "lat": 12.2278267,
+    "lng": 0.5472078,
+    "country": "Burkina Faso",
+    "display": "Gourma, Est, Burkina Faso",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "gulf": {
+    "lat": 29.9665252,
+    "lng": -85.2175889,
+    "country": "États-Unis d'Amérique",
+    "display": "Gulf County, Floride, États-Unis d'Amérique",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "hombori": {
+    "lat": 15.2831164,
+    "lng": -1.6990741,
+    "country": "Mali",
+    "display": "Hombori, Cercle de Douentza, Mopti, Mali",
+    "type": "town",
+    "class": "place"
+  },
+  "homs": {
+    "lat": 34.7333334,
+    "lng": 36.7166667,
+    "country": "Syrie",
+    "display": "Homs, Sous-district de Homs, District de Homs, Gouvernorat de Homs, Syrie",
+    "type": "city",
+    "class": "place"
+  },
+  "hongkong": {
+    "lat": 22.3492155,
+    "lng": 114.1857978,
+    "country": "Chine",
+    "display": "Hong Kong, Chine",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "inde": {
+    "lat": 22.3511148,
+    "lng": 78.6677428,
+    "country": "Inde",
+    "display": "Inde",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "india": {
+    "lat": 22.3511148,
+    "lng": 78.6677428,
+    "country": "Inde",
+    "display": "Inde",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "irak": {
+    "lat": 33.0955793,
+    "lng": 44.1749775,
+    "country": "Irak",
+    "display": "Irak",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "iraq": {
+    "lat": 33.0955793,
+    "lng": 44.1749775,
+    "country": "Irak",
+    "display": "Irak",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "ivory coast": {
+    "lat": 7.9897371,
+    "lng": -5.5679458,
+    "country": "Côte d’Ivoire",
+    "display": "Côte d’Ivoire",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "izhevsk": {
+    "lat": 56.8605175,
+    "lng": 53.1977307,
+    "country": "Russie",
+    "display": "Izhevsk, Oudmourtie, District fédéral de la Volga, Russie",
+    "type": "city",
+    "class": "place"
+  },
+  "japan": {
+    "lat": 36.5748441,
+    "lng": 139.2394179,
+    "country": "Japon",
+    "display": "Japon",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "kalinka": {
+    "lat": 48.4938486,
+    "lng": 19.2786675,
+    "country": "District of Detva",
+    "display": "Vígľašská Huta-Kalinka, Région de Banská Bystrica, Stredné Slovensko, District of Detva, Slovaquie",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "kangamongoulou": null,
+  "klishchiivka": {
+    "lat": 48.5279,
+    "lng": 37.95828,
+    "country": "Ukraine",
+    "display": "Klichtchiïvka, Bakhmut urban hromada, Le raion de Bakhmout, Oblast de Donetsk, 84557, Ukraine",
+    "type": "village",
+    "class": "place"
+  },
+  "krasnokamensk": {
+    "lat": 50.096992,
+    "lng": 118.041344,
+    "country": "Russie",
+    "display": "Krasnokamensk, Krasnokamensky District, Kraï de Transbaïkalie, District fédéral extrême-oriental, Russie",
+    "type": "town",
+    "class": "place"
+  },
+  "krückesteht": null,
+  "kumasi": {
+    "lat": 6.6985605,
+    "lng": -1.6233086,
+    "country": "Ghana",
+    "display": "Kumasi, Kumasi Metropolitan District, Région Ashanti, AK-010-1295, Ghana",
+    "type": "city",
+    "class": "place"
+  },
+  "latvia": {
+    "lat": 56.8406494,
+    "lng": 24.7537645,
+    "country": "Lettonie",
+    "display": "Lettonie",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "le cam": {
+    "lat": 47.5004077,
+    "lng": -2.8380077,
+    "country": "France",
+    "display": "Le cam, Rue du Général de Gaulle, Kerfago, Cornaud, Saint-Gildas-de-Rhuys, Vannes, Morbihan, Bretagne, France métropolitaine, 56730, France",
+    "type": "seafood",
+    "class": "shop"
+  },
+  "le monde": {
+    "lat": 48.8408496,
+    "lng": 2.3676906,
+    "country": "France",
+    "display": "Groupe Le Monde, 67-69, Avenue Pierre Mendès France, Quartier de la Salpêtrière, Paris 13e Arrondissement, Paris, Île-de-France, France métropolitaine, 75013, France",
+    "type": "newspaper",
+    "class": "office"
+  },
+  "liubov valentinovna prigozhina": null,
+  "lobaye": {
+    "lat": 4.1034548,
+    "lng": 17.5653592,
+    "country": "République centrafricaine",
+    "display": "Lobaye, République centrafricaine",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "luxembourg": {
+    "lat": 49.8158683,
+    "lng": 6.1296751,
+    "country": "Luxembourg",
+    "display": "Luxembourg",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "maghreb": {
+    "lat": 33.3648003,
+    "lng": 44.3761825,
+    "country": "Irak",
+    "display": "Maghreb, Adhamiya, Al-Adhamiyah District, Bagdad, Al-Adhamiyah Municipality, Bagdad, Irak",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "malabo": {
+    "lat": 3.741877,
+    "lng": 8.7740663,
+    "country": "Guinée équatoriale",
+    "display": "Malabo, Distrito de Malabo, Bioko Nord, Région Insulaire, Guinée équatoriale",
+    "type": "city",
+    "class": "place"
+  },
+  "mali building": {
+    "lat": 14.7306634,
+    "lng": -3.0589227,
+    "country": "Mali",
+    "display": "building?, I think its a trail, Berdosso, Cercle de Koro, Mopti, Mali",
+    "type": "yes",
+    "class": "building"
+  },
+  "maliens": {
+    "lat": 46.8386477,
+    "lng": 9.3752432,
+    "country": "Suisse",
+    "display": "Maliens, Trin, Imboden, Grisons, 7014, Suisse",
+    "type": "hamlet",
+    "class": "place"
+  },
+  "maslovest": null,
+  "maxar": {
+    "lat": 34.1680673,
+    "lng": -118.158597,
+    "country": "États-Unis d'Amérique",
+    "display": "Maxar, 1250, Lincoln Avenue, Pasadena Council District 1, Pasadena, Los Angeles County, Californie, 91103, États-Unis d'Amérique",
+    "type": "company",
+    "class": "office"
+  },
+  "militärs": {
+    "lat": 43.2827006,
+    "lng": 5.3472959,
+    "country": "France",
+    "display": "Bains militaires, Endoume, 7e Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, France métropolitaine, 13007, France",
+    "type": "military",
+    "class": "landuse"
+  },
+  "mines": {
+    "lat": 27.5966781,
+    "lng": -99.5213704,
+    "country": "États-Unis d'Amérique",
+    "display": "Mines, Laredo, Webb County, Texas, 78045, États-Unis d'Amérique",
+    "type": "suburb",
+    "class": "place"
+  },
+  "moura": {
+    "lat": 38.1409785,
+    "lng": -7.4500699,
+    "country": "Portugal",
+    "display": "Moura, Beja, Portugal",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "mourmansk": {
+    "lat": 68.970665,
+    "lng": 33.07497,
+    "country": "Russie",
+    "display": "Mourmansk, Murmansk Urban Okrug, Oblast de Mourmansk, District fédéral du Nord-Ouest, Russie",
+    "type": "city",
+    "class": "place"
+  },
+  "méditerranée": {
+    "lat": 35.0000035,
+    "lng": 19.9999957,
+    "country": "—",
+    "display": "Mer Méditerranée",
+    "type": "sea",
+    "class": "place"
+  },
+  "ménaka": {
+    "lat": 16.6516783,
+    "lng": 2.8263136,
+    "country": "Mali",
+    "display": "Ménaka, Mali",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "nairobi": {
+    "lat": -1.2890006,
+    "lng": 36.8172812,
+    "country": "Kenya",
+    "display": "Nairobi, Comté de Nairobi, Kenya",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "nampala": {
+    "lat": -16.1220385,
+    "lng": 15.2191837,
+    "country": "Angola",
+    "display": "Calonga, Cunene, Angola",
+    "type": "village",
+    "class": "place"
+  },
+  "nasiriyah": {
+    "lat": 31.0439957,
+    "lng": 46.2399386,
+    "country": "Irak",
+    "display": "Nasiriyah, Al-Nasiriyah Central Subdistrict, Al-Nasiriyah District, Dhi Qar, 64002, Irak",
+    "type": "city",
+    "class": "place"
+  },
+  "netherlands": {
+    "lat": 52.2434979,
+    "lng": 5.6343227,
+    "country": "Pays-Bas",
+    "display": "Pays-Bas",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "nord-ouest": {
+    "lat": -26.1347819,
+    "lng": 25.6546729,
+    "country": "Afrique du Sud",
+    "display": "Nord-Ouest, Afrique du Sud",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "n’djamena": {
+    "lat": 12.1191543,
+    "lng": 15.0502758,
+    "country": "Tchad",
+    "display": "N'Djaména, Tchad",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "palmyre": {
+    "lat": 34.5526608,
+    "lng": 38.259261,
+    "country": "Syrie",
+    "display": "Palmyre, M 20, Ḩayy aḑ Ḑāhirīyah, Palmyre, Sous-district de Palmyre, District de Palmyre, Gouvernorat de Homs, Syrie",
+    "type": "attraction",
+    "class": "tourism"
+  },
+  "pantsir": {
+    "lat": 57.9792361,
+    "lng": 33.3021253,
+    "country": "Russie",
+    "display": "Pantsir-S1 96K6 (SA-22 Greyhound), Валдайский муниципальный округ, Oblast de Novgorod, District fédéral du Nord-Ouest, Russie",
+    "type": "military",
+    "class": "landuse"
+  },
+  "poland": {
+    "lat": 52.215933,
+    "lng": 19.134422,
+    "country": "Pologne",
+    "display": "Pologne",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "port harcourt": {
+    "lat": 4.7676576,
+    "lng": 7.0188527,
+    "country": "Nigéria",
+    "display": "Port Harcourt, État de Rivers, Nigéria",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "prague": {
+    "lat": 50.0874654,
+    "lng": 14.4212535,
+    "country": "Tchéquie",
+    "display": "Prague, Tchéquie",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "présidence centrafricaine": null,
+  "pyongyang": {
+    "lat": 39.0167979,
+    "lng": 125.7473609,
+    "country": "Corée du Nord",
+    "display": "Pyongyang, Corée du Nord",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "qatar": {
+    "lat": 25.3336984,
+    "lng": 51.2295295,
+    "country": "Qatar",
+    "display": "Qatar",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "region mopti": {
+    "lat": 14.514489,
+    "lng": -3.6464581,
+    "country": "Mali",
+    "display": "Mopti, Mali",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "rhissa": null,
+  "rome": {
+    "lat": 41.8933203,
+    "lng": 12.4829321,
+    "country": "Italie",
+    "display": "Rome, Roma Capitale, Latium, Italie",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "république démocratique du congo": {
+    "lat": -2.9814344,
+    "lng": 23.8222636,
+    "country": "République démocratique du Congo",
+    "display": "République démocratique du Congo",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "segou": {
+    "lat": 13.441518,
+    "lng": -6.268147,
+    "country": "Mali",
+    "display": "Ségou, Cercle de Ségou, Ségou, Mali",
+    "type": "city",
+    "class": "place"
+  },
+  "serma": {
+    "lat": 19.1913324,
+    "lng": 83.7839404,
+    "country": "Inde",
+    "display": "Serma, Gunupur, Rayagada, Odisha, 765029, Inde",
+    "type": "village",
+    "class": "place"
+  },
+  "shanghai": {
+    "lat": 31.2312707,
+    "lng": 121.4700152,
+    "country": "Chine",
+    "display": "Shanghai, Chine",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "sierra leone": {
+    "lat": 8.6400349,
+    "lng": -11.8400269,
+    "country": "Sierra Leone",
+    "display": "Sierra Leone",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "sloviansk": {
+    "lat": 48.8522691,
+    "lng": 37.6058241,
+    "country": "Ukraine",
+    "display": "Sloviansk, Sloviansk urban hromada, Kramatorsk Raion, Oblast de Donetsk, 84100-84129, Ukraine",
+    "type": "city",
+    "class": "place"
+  },
+  "somalia": {
+    "lat": 8.3676771,
+    "lng": 49.083416,
+    "country": "Somalie",
+    "display": "Somalie",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "somalie": {
+    "lat": 8.3676771,
+    "lng": 49.083416,
+    "country": "Somalie",
+    "display": "Somalie",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "spain": {
+    "lat": 39.3260685,
+    "lng": -4.8379791,
+    "country": "Espagne",
+    "display": "Espagne",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "sri lanka": {
+    "lat": 7.5554942,
+    "lng": 80.7137847,
+    "country": "Sri Lanka",
+    "display": "Sri Lanka",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "st petersburg": {
+    "lat": 59.938732,
+    "lng": 30.316229,
+    "country": "Russie",
+    "display": "Saint-Pétersbourg, District fédéral du Nord-Ouest, Russie",
+    "type": "city",
+    "class": "place"
+  },
+  "switzerland": {
+    "lat": 46.7985624,
+    "lng": 8.2319736,
+    "country": "Suisse",
+    "display": "Suisse",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "sévaré": {
+    "lat": 14.5224127,
+    "lng": -4.0921345,
+    "country": "Mali",
+    "display": "Sévaré, Cercle de Mopti, Mopti, Mali",
+    "type": "town",
+    "class": "place"
+  },
+  "tanzania": {
+    "lat": -6.5247123,
+    "lng": 35.7878438,
+    "country": "Tanzanie",
+    "display": "Tanzanie",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "tanzanie": {
+    "lat": -6.5247123,
+    "lng": 35.7878438,
+    "country": "Tanzanie",
+    "display": "Tanzanie",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "taraz": {
+    "lat": 42.8778381,
+    "lng": 71.3519903,
+    "country": "Kazakhstan",
+    "display": "Taraz, Oblys de Djamboul, 080000, Kazakhstan",
+    "type": "city",
+    "class": "place"
+  },
+  "tartous": {
+    "lat": 34.8936225,
+    "lng": 35.885167,
+    "country": "Syrie",
+    "display": "Tartous, Sous-district de Tartous, District de Tartous, Gouvernorat de Tartous, Syrie",
+    "type": "city",
+    "class": "place"
+  },
+  "tenenkou": {
+    "lat": 14.4547633,
+    "lng": -4.9164995,
+    "country": "Mali",
+    "display": "Ténenkou, Cercle de Tenenkou, Mopti, Mali",
+    "type": "city",
+    "class": "place"
+  },
+  "tombouctou": {
+    "lat": 16.7719091,
+    "lng": -3.0087272,
+    "country": "Mali",
+    "display": "Tombouctou, Cercle de Tombouctou, Tombouctou, Mali",
+    "type": "city",
+    "class": "place"
+  },
+  "tsvetochnaya": {
+    "lat": 55.7264783,
+    "lng": 49.1420676,
+    "country": "Russie",
+    "display": "Tsvetochnaya Street, Boriskovo, Приволжский район, Kazan, городской округ Казань, Tatarstan, District fédéral de la Volga, 420054, Russie",
+    "type": "residential",
+    "class": "highway"
+  },
+  "tunisia": {
+    "lat": 33.8439408,
+    "lng": 9.400138,
+    "country": "Tunisie",
+    "display": "Tunisie",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "tunisie": {
+    "lat": 33.8439408,
+    "lng": 9.400138,
+    "country": "Tunisie",
+    "display": "Tunisie",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "téhéran": {
+    "lat": 35.6892523,
+    "lng": 51.3896004,
+    "country": "Iran",
+    "display": "Téhéran, بخش مرکزی شهرستان تهران, Tehran County, Téhéran, Iran",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "urumqi": {
+    "lat": 43.8244074,
+    "lng": 87.6139038,
+    "country": "Chine",
+    "display": "Ürümqi, Xinjiang, Chine",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "verbindungen": {
+    "lat": 50.8029333,
+    "lng": 7.2726667,
+    "country": "Allemagne",
+    "display": "Komplizierte Verbindungen, Römerstraße, Braschoß, Kaldauen, Siegburg, Rhein-Sieg-Kreis, Rhénanie-du-Nord-Westphalie, 53721, Allemagne",
+    "type": "information",
+    "class": "tourism"
+  },
+  "vienna": {
+    "lat": 48.2083537,
+    "lng": 16.3725042,
+    "country": "Autriche",
+    "display": "Vienne, Autriche",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "vienne": {
+    "lat": 48.2083537,
+    "lng": 16.3725042,
+    "country": "Autriche",
+    "display": "Vienne, Autriche",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "zambia": {
+    "lat": -14.5189121,
+    "lng": 27.5589884,
+    "country": "Zambie",
+    "display": "Zambie",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "zambie": {
+    "lat": -14.5189121,
+    "lng": 27.5589884,
+    "country": "Zambie",
+    "display": "Zambie",
+    "type": "administrative",
+    "class": "boundary"
+  },
+  "pays du moyen-orient": null,
+  "the democratic republic of congo": {
+    "lat": 38.9040127,
+    "lng": -77.0407249,
+    "country": "États-Unis d'Amérique",
+    "display": "Ambassade de la République démocratique du Congo, 1100, Connecticut Avenue Northwest, Golden Triangle, Downtown, Ward 2, Washington, District de Columbia, 20036, États-Unis d'Amérique",
+    "type": "diplomatic",
+    "class": "office"
+  },
+  "the russian houses": null,
+  "the united kingdom": {
+    "lat": 52.4577754,
+    "lng": -1.8692099,
+    "country": "Royaume-Uni",
+    "display": "The (Oval) Banqueting Suite, 372, Stratford Road, Sparkhill, Sparkbrook, Birmingham, West Midlands, Angleterre, B11 4AB, Royaume-Uni",
+    "type": "retail",
+    "class": "building"
+  }
 }
