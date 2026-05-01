@@ -107,7 +107,9 @@
     "the united arab emirates": "Émirats arabes unis",
     "the United Arab Emirates": "Émirats arabes unis",
     "république de centrafrique": "République centrafricaine",
-    "République de Centrafrique": "République centrafricaine"
+    "République de Centrafrique": "République centrafricaine",
+    "Moyen-Orient": "the Middle East",
+    "Moyen Orient": "the Middle East"
   },
   "blacklist": [
     "afp",
@@ -125,6 +127,7 @@
     "août",
     "ap",
     "aqim",
+    "asia",
     "asie",
     "asie centrale",
     "avril",
