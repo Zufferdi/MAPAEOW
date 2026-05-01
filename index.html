@@ -2126,14 +2126,15 @@ function setLanguage(lang) {
     b.classList.toggle('active', b.dataset.setLang === lang);
   });
   applyI18n();
-  // Re-render TOUTE l'interface dynamique pour appliquer la nouvelle langue
+  // Mode B : appliquer le filtre langue automatiquement
+  // (on remplace le filtre langue, l'utilisateur peut toujours décocher la chip pour voir les deux)
+  if (typeof state !== 'undefined' && state.filters) {
+    state.filters.languages = new Set([lang]);
+  }
+  // Re-render TOUTE l'interface dynamique pour appliquer la nouvelle langue + le filtre
   if (typeof DATA !== 'undefined' && DATA) {
     render();
-    // Si splash actif, mettre à jour les libellés du compteur
-    const lbl = document.getElementById('splash-counter-label');
-    if (lbl) {
-      // Le splash gère déjà ses libellés via animateCounter, on relance proprement si encore actif
-    }
+    if (typeof writeUrlState === 'function') writeUrlState();
   }
 }
 
@@ -3786,8 +3787,14 @@ function setupCompareBtn() {
   setupLanding();
   fillLandingStats(DATA);
   // Si l'utilisateur a déjà choisi une langue (URL ou localStorage), on cache la landing
+  // ET on applique le filtre langue correspondant (mode B : "version FR" ou "version EN")
   if (shouldSkipLanding()) {
     hideLanding();
+    // Applique le filtre langue auto, sauf si l'URL contient déjà un filtre lang explicite
+    // (cas du partage de lien personnalisé qui doit primer)
+    if (state.filters.languages.size === 0) {
+      state.filters.languages = new Set([CURRENT_LANG]);
+    }
   }
 
   // 4. Init UI
