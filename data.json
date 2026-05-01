@@ -3,7 +3,7 @@
     "generated": "2026-05-01",
     "source": "https://public-api.wordpress.com/wp/v2/sites/alleyesonwagner.org",
     "articles_count": 103,
-    "places_count": 132,
+    "places_count": 130,
     "languages": {
       "fr": 52,
       "en": 49,
@@ -1533,8 +1533,8 @@
       "id": "bamako",
       "name": "Bamako",
       "country": "Mali",
-      "lat": 12.6132656,
-      "lng": -7.9847391,
+      "lat": 12.649319,
+      "lng": -8.000337,
       "articles": [
         "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
         "a-niamey-lattaque-nocturne-qui-revele-lengagement-russe",
@@ -1604,6 +1604,24 @@
         "wagner-legion-istra-the-return-of-veterans-in-concert",
         "wagner-like-nobodys-business",
         "wagner-peau-de-chagrin"
+      ]
+    },
+    {
+      "id": "asie",
+      "name": "Asie",
+      "country": "—",
+      "lat": 45.0,
+      "lng": 90.0,
+      "articles": [
+        "a-madagascar-la-russie-relance-son-operation-seduction-armes-drones-culture-et-offres-financieres-orchestrees-par-ses-emissaires",
+        "china-gets-nvidia-gpu-for-the-ai-race-through-vietnam-and-malaysia",
+        "le-forum-international-sur-la-securite-de-la-russie-le-temps-de-la-confrontation",
+        "le-reseau-catrosa-des-societes-europeennes-liees-aux-developpeurs-darmes-chimiques-russes",
+        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
+        "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan",
+        "russias-international-security-forum-time-for-confrontation",
+        "russias-renewed-charm-for-madagascar-weapons-drones-culture-and-financial-propositions-delivered-by-top-henchmen",
+        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers"
       ]
     },
     {
@@ -1893,6 +1911,21 @@
       ]
     },
     {
+      "id": "the-middle-east",
+      "name": "the Middle East",
+      "country": "—",
+      "lat": 29.0,
+      "lng": 41.0,
+      "articles": [
+        "3-ans-au-dela-de-lukraine",
+        "3-years-beyond-ukraine",
+        "after-wagner-russias-spin-doctors-take-over-in-africa",
+        "moscow-double-dealing-in-yemen",
+        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
+        "recruitment-campaigns-in-ukraine-and-africa-middle-east"
+      ]
+    },
+    {
       "id": "alabuga",
       "name": "Alabuga",
       "country": "Russie",
@@ -1904,20 +1937,6 @@
         "alabuga-the-central-hub-of-the-russian-hybrid-threat",
         "russias-renewed-charm-for-madagascar-weapons-drones-culture-and-financial-propositions-delivered-by-top-henchmen",
         "satellites-missiles-drones-les-dessous-du-soutien-russe-a-liran"
-      ]
-    },
-    {
-      "id": "asia",
-      "name": "Asia",
-      "country": "—",
-      "lat": 51.2086975,
-      "lng": 89.2343748,
-      "articles": [
-        "china-gets-nvidia-gpu-for-the-ai-race-through-vietnam-and-malaysia",
-        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
-        "russias-international-security-forum-time-for-confrontation",
-        "russias-renewed-charm-for-madagascar-weapons-drones-culture-and-financial-propositions-delivered-by-top-henchmen",
-        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers"
       ]
     },
     {
@@ -2117,20 +2136,6 @@
       ]
     },
     {
-      "id": "the-middle-east",
-      "name": "the Middle East",
-      "country": "—",
-      "lat": 29.0,
-      "lng": 41.0,
-      "articles": [
-        "3-years-beyond-ukraine",
-        "after-wagner-russias-spin-doctors-take-over-in-africa",
-        "moscow-double-dealing-in-yemen",
-        "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
-        "recruitment-campaigns-in-ukraine-and-africa-middle-east"
-      ]
-    },
-    {
       "id": "afghanistan",
       "name": "Afghanistan",
       "country": "Afghanistan",
@@ -2303,8 +2308,8 @@
       "id": "paris",
       "name": "Paris",
       "country": "France",
-      "lat": 48.8534951,
-      "lng": 2.3483915,
+      "lat": 48.8588897,
+      "lng": 2.320041,
       "articles": [
         "africa-politology-loffensive-feutree-de-moscou",
         "denis-pavlov-lhomme-de-bangui",
@@ -2472,9 +2477,9 @@
     {
       "id": "le-caire",
       "name": "Le Caire",
-      "country": "France",
-      "lat": 44.370353,
-      "lng": 6.0608068,
+      "country": "Égypte",
+      "lat": 30.0444,
+      "lng": 31.2357,
       "articles": [
         "love-me-alone-russias-no-rivals-doctrine",
         "recruitment-of-africans-in-ukraine-governments-act-in-the-face-of-growing-evidence",
@@ -3007,17 +3012,6 @@
       ]
     },
     {
-      "id": "ex-urss",
-      "name": "ex-URSS",
-      "country": "—",
-      "lat": 60.0,
-      "lng": 80.0,
-      "articles": [
-        "anatomy-of-deception-engineering-covert-influence-operations",
-        "the-legacy-of-influence-the-south-african-chapter"
-      ]
-    },
-    {
       "id": "ethiopie",
       "name": "Éthiopie",
       "country": "Éthiopie",
@@ -3026,16 +3020,6 @@
       "articles": [
         "russia-africa-a-forum-with-mixed-results-overshadowed-by-the-war-in-ukraine",
         "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa"
-      ]
-    },
-    {
-      "id": "moyen-orient",
-      "name": "Moyen-Orient",
-      "country": "—",
-      "lat": 29.0,
-      "lng": 41.0,
-      "articles": [
-        "3-ans-au-dela-de-lukraine"
       ]
     }
   ]

@@ -70,7 +70,7 @@
     "lat": 31.9515694,
     "lng": 35.9239625,
     "country": "Jordanie",
-    "display": "Amman, Amman Sub-District, Amman Qasabah District, Gouvernorat d'Amman, 11118, Jordanie",
+    "display": "Amman, Amman Sub-District, Amman Qasabah District, Gouvernorat d'Amman, 11110, Jordanie",
     "type": "city",
     "class": "place"
   },
@@ -122,14 +122,6 @@
     "type": "city",
     "class": "place"
   },
-  "asia": {
-    "lat": 51.2086975,
-    "lng": 89.2343748,
-    "country": "—",
-    "display": "Asie",
-    "type": "continent",
-    "class": "place"
-  },
   "bahreïn": {
     "lat": 26.1551249,
     "lng": 50.5344606,
@@ -139,8 +131,8 @@
     "class": "boundary"
   },
   "bamako": {
-    "lat": 12.6132656,
-    "lng": -7.9847391,
+    "lat": 12.649319,
+    "lng": -8.000337,
     "country": "Mali",
     "display": "Bamako, Mali",
     "type": "administrative",
@@ -442,14 +434,6 @@
     "type": "town",
     "class": "place"
   },
-  "le caire": {
-    "lat": 44.370353,
-    "lng": 6.0608068,
-    "country": "France",
-    "display": "Le Caire, Forcalquier, Alpes-de-Haute-Provence, Provence-Alpes-Côte d'Azur, France métropolitaine, 04250, France",
-    "type": "administrative",
-    "class": "boundary"
-  },
   "lengo songo": null,
   "liban": {
     "lat": 33.8750629,
@@ -613,8 +597,8 @@
     "class": "boundary"
   },
   "paris": {
-    "lat": 48.8534951,
-    "lng": 2.3483915,
+    "lat": 48.8588897,
+    "lng": 2.320041,
     "country": "France",
     "display": "Paris, Île-de-France, France métropolitaine, France",
     "type": "administrative",
