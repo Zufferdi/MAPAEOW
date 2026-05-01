@@ -2459,8 +2459,11 @@ function getFilteredData(range) {
 // ============================================================
 // HOT + EMERGING
 // ============================================================
-function computeHotPlaces() {
-  const sorted = [...DATA.places].sort((a, b) => b.articles.length - a.articles.length);
+function computeHotPlaces(filteredPlaces) {
+  // Recalculé à chaque render selon les filtres actifs (langues, catégories, dates)
+  // Un lieu est "hot" s'il est dans le top 5% des mentions sur la vue filtrée
+  const source = filteredPlaces || DATA.places;
+  const sorted = [...source].sort((a, b) => b.articles.length - a.articles.length);
   const cutoff = Math.max(1, Math.ceil(sorted.length * 0.05));
   state.hotPlaceIds = new Set(sorted.slice(0, cutoff).map(p => p.id));
 }
@@ -2569,12 +2572,13 @@ function renderHeatmap(filteredPlaces) {
 // TOOLTIP enrichi (feature 6)
 // ============================================================
 function buildTooltipHtml(place) {
-  // Compte uniquement les articles dans la langue active pour le tooltip
-  const articlesInLang = place.articles
-    .map(aid => articlesById[aid])
-    .filter(a => a && a.lang === CURRENT_LANG);
-  // Si rien dans la langue active, on affiche au moins le nom et le total toutes langues
-  const articles = articlesInLang.length > 0 ? articlesInLang : place.articles.map(aid => articlesById[aid]).filter(Boolean);
+  // Le tooltip reflète la langue (ou les langues) sélectionnée(s) dans les filtres.
+  // Si aucune langue cochée → on prend tous les articles
+  const langFilter = state.filters.languages;
+  const articlesAll = place.articles.map(aid => articlesById[aid]).filter(Boolean);
+  const articles = (langFilter && langFilter.size > 0)
+    ? articlesAll.filter(a => langFilter.has(a.lang))
+    : articlesAll;
   if (!articles.length) return `<strong>${escapeHtml(place.name)}</strong>`;
 
   // Sparkline par année
@@ -2887,6 +2891,8 @@ function render() {
     state.selectedPlaceId = null;
     if (state.sidebarTab !== 'stats') renderEmptySidebar();
   }
+  // Recalcul dynamique : hot spots et émergents selon les filtres actifs
+  computeHotPlaces(places);
   computeEmergingPlaces();
   renderHeatmap(places);
   renderMarkers(places);
@@ -3841,7 +3847,6 @@ function setupCompareBtn() {
   // 2. Charge les données
   DATA = await loadData();
   articlesById = Object.fromEntries(DATA.articles.map(a => [a.id, a]));
-  computeHotPlaces();
   readUrlState();
 
   // 3. Setup landing : remplit les chiffres
