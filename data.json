@@ -3,7 +3,7 @@
     "generated": "2026-05-01",
     "source": "https://public-api.wordpress.com/wp/v2/sites/alleyesonwagner.org",
     "articles_count": 103,
-    "places_count": 230,
+    "places_count": 204,
     "languages": {
       "fr": 52,
       "en": 49,
@@ -15,7 +15,7 @@
       "type_filter": true
     },
     "filter_stats": {
-      "dropped_by_frequency": 1381,
+      "dropped_by_frequency": 1373,
       "dropped_by_type": 20
     },
     "reports": {
@@ -1568,8 +1568,8 @@
       "id": "bamako",
       "name": "Bamako",
       "country": "Mali",
-      "lat": 12.649319,
-      "lng": -8.000337,
+      "lat": 12.6132656,
+      "lng": -7.9847391,
       "articles": [
         "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
         "a-niamey-lattaque-nocturne-qui-revele-lengagement-russe",
@@ -2046,8 +2046,8 @@
       "id": "paris",
       "name": "Paris",
       "country": "France",
-      "lat": 48.8588897,
-      "lng": 2.320041,
+      "lat": 48.8534951,
+      "lng": 2.3483915,
       "articles": [
         "africa-politology-loffensive-feutree-de-moscou",
         "car-prigozhins-blood-diamonds",
@@ -2113,8 +2113,8 @@
       "id": "bruxelles",
       "name": "Bruxelles",
       "country": "Belgique",
-      "lat": 50.8467372,
-      "lng": 4.352493,
+      "lat": 50.8551025,
+      "lng": 4.3510915,
       "articles": [
         "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
         "denis-pavlov-lhomme-de-bangui",
@@ -2155,6 +2155,22 @@
         "les-filieres-dacquisition-asiatiques-du-groupe-wagner",
         "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
         "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan"
+      ]
+    },
+    {
+      "id": "cote-d-ivoire",
+      "name": "Côte d'Ivoire",
+      "country": "Côte d’Ivoire",
+      "lat": 7.9897371,
+      "lng": -5.5679458,
+      "articles": [
+        "africa-flop-saison-2",
+        "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
+        "faces-of-the-gpci-network",
+        "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses",
+        "influence-as-a-service-lillustration-de-la-dame-de-sochi",
+        "le-business-du-desespoir",
+        "les-visages-du-reseau-gpci"
       ]
     },
     {
@@ -2316,18 +2332,18 @@
       ]
     },
     {
-      "id": "cote-d-ivoire",
-      "name": "Côte d'Ivoire",
-      "country": "Côte d’Ivoire",
-      "lat": 7.9897371,
-      "lng": -5.5679458,
+      "id": "irak",
+      "name": "Irak",
+      "country": "Irak",
+      "lat": 33.0955793,
+      "lng": 44.1749775,
       "articles": [
-        "africa-flop-saison-2",
-        "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
-        "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses",
-        "influence-as-a-service-lillustration-de-la-dame-de-sochi",
         "le-business-du-desespoir",
-        "les-visages-du-reseau-gpci"
+        "mediterranean-sea-objective-for-the-african-corps",
+        "objectif-mediterranee-pour-african-corps",
+        "one-year-of-wagner-in-mali",
+        "the-business-of-despair",
+        "un-an-de-wagner-au-mali"
       ]
     },
     {
@@ -2343,6 +2359,21 @@
         "satellites-missiles-drones-les-dessous-du-soutien-russe-a-liran",
         "the-business-of-despair",
         "touche-coule"
+      ]
+    },
+    {
+      "id": "le-caire",
+      "name": "Le Caire",
+      "country": "Égypte",
+      "lat": 30.0444,
+      "lng": 31.2357,
+      "articles": [
+        "le-business-du-desespoir",
+        "love-me-alone-russias-no-rivals-doctrine",
+        "recruitment-of-africans-in-ukraine-governments-act-in-the-face-of-growing-evidence",
+        "russia-africa-a-forum-with-mixed-results-overshadowed-by-the-war-in-ukraine",
+        "russie-afrique-un-forum-en-demi-teinte-a-lombre-de-la-guerre-en-ukraine",
+        "the-business-of-despair"
       ]
     },
     {
@@ -2391,6 +2422,36 @@
       ]
     },
     {
+      "id": "republique-democratique-du-congo",
+      "name": "République démocratique du Congo",
+      "country": "République démocratique du Congo",
+      "lat": -2.9814344,
+      "lng": 23.8222636,
+      "articles": [
+        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
+        "allez-creuse-bebe-contes-russes-de-lor-en-afrique-centrale",
+        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
+        "car-prigozhins-blood-diamonds",
+        "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
+        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
+      ]
+    },
+    {
+      "id": "ethiopie",
+      "name": "Éthiopie",
+      "country": "Éthiopie",
+      "lat": 10.2116702,
+      "lng": 38.6521203,
+      "articles": [
+        "alabuga-noeud-central-de-la-menace-hybride-russe",
+        "alabuga-the-central-hub-of-the-russian-hybrid-threat",
+        "russia-africa-a-forum-with-mixed-results-overshadowed-by-the-war-in-ukraine",
+        "russie-afrique-un-forum-en-demi-teinte-a-lombre-de-la-guerre-en-ukraine",
+        "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa",
+        "the-business-of-despair"
+      ]
+    },
+    {
       "id": "angola",
       "name": "Angola",
       "country": "Angola",
@@ -2402,6 +2463,20 @@
         "anatomy-of-deception-engineering-covert-influence-operations",
         "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
         "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses"
+      ]
+    },
+    {
+      "id": "belgique",
+      "name": "Belgique",
+      "country": "Belgique",
+      "lat": 50.6402809,
+      "lng": 4.6667145,
+      "articles": [
+        "car-prigozhins-blood-diamonds",
+        "denis-pavlov-lhomme-de-bangui",
+        "denis-pavlov-the-man-in-bangui",
+        "global-kombat",
+        "rca-les-diamants-de-sang-de-prigojine"
       ]
     },
     {
@@ -2458,6 +2533,34 @@
         "moscow-double-dealing-in-yemen",
         "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
         "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan"
+      ]
+    },
+    {
+      "id": "hong-kong",
+      "name": "Hong Kong",
+      "country": "Chine",
+      "lat": 22.3492155,
+      "lng": 114.1857978,
+      "articles": [
+        "car-prigozhins-blood-diamonds",
+        "china-gets-nvidia-gpu-for-the-ai-race-through-vietnam-and-malaysia",
+        "gru-inc-chasse-les-actifs-petroliers-de-prigojine-en-syrie",
+        "gru-inc-hunting-for-prigozhins-oil-assets-in-syria",
+        "rca-les-diamants-de-sang-de-prigojine"
+      ]
+    },
+    {
+      "id": "inde",
+      "name": "Inde",
+      "country": "Inde",
+      "lat": 22.3511148,
+      "lng": 78.6677428,
+      "articles": [
+        "car-prigozhins-blood-diamonds",
+        "china-gets-nvidia-gpu-for-the-ai-race-through-vietnam-and-malaysia",
+        "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
+        "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses",
+        "rca-les-diamants-de-sang-de-prigojine"
       ]
     },
     {
@@ -2638,6 +2741,19 @@
       ]
     },
     {
+      "id": "bulgarie",
+      "name": "Bulgarie",
+      "country": "Bulgarie",
+      "lat": 42.6073975,
+      "lng": 25.4856617,
+      "articles": [
+        "global-kombat",
+        "le-business-du-desespoir",
+        "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa",
+        "the-business-of-despair"
+      ]
+    },
+    {
       "id": "canada",
       "name": "Canada",
       "country": "Canada",
@@ -2690,45 +2806,6 @@
       ]
     },
     {
-      "id": "hong-kong",
-      "name": "Hong Kong",
-      "country": "Chine",
-      "lat": 22.2792968,
-      "lng": 114.1628907,
-      "articles": [
-        "china-gets-nvidia-gpu-for-the-ai-race-through-vietnam-and-malaysia",
-        "gru-inc-chasse-les-actifs-petroliers-de-prigojine-en-syrie",
-        "gru-inc-hunting-for-prigozhins-oil-assets-in-syria",
-        "rca-les-diamants-de-sang-de-prigojine"
-      ]
-    },
-    {
-      "id": "irak",
-      "name": "Irak",
-      "country": "Irak",
-      "lat": 33.0955793,
-      "lng": 44.1749775,
-      "articles": [
-        "le-business-du-desespoir",
-        "objectif-mediterranee-pour-african-corps",
-        "one-year-of-wagner-in-mali",
-        "un-an-de-wagner-au-mali"
-      ]
-    },
-    {
-      "id": "iraq",
-      "name": "Iraq",
-      "country": "Irak",
-      "lat": 33.0955793,
-      "lng": 44.1749775,
-      "articles": [
-        "mediterranean-sea-objective-for-the-african-corps",
-        "one-year-of-wagner-in-mali",
-        "the-business-of-despair",
-        "un-an-de-wagner-au-mali"
-      ]
-    },
-    {
       "id": "kenya",
       "name": "Kenya",
       "country": "Kenya",
@@ -2738,19 +2815,6 @@
         "le-business-du-desespoir",
         "recruitment-of-africans-in-ukraine-governments-act-in-the-face-of-growing-evidence",
         "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa",
-        "the-business-of-despair"
-      ]
-    },
-    {
-      "id": "le-caire",
-      "name": "Le Caire",
-      "country": "Égypte",
-      "lat": 30.0444,
-      "lng": 31.2357,
-      "articles": [
-        "love-me-alone-russias-no-rivals-doctrine",
-        "recruitment-of-africans-in-ukraine-governments-act-in-the-face-of-growing-evidence",
-        "russia-africa-a-forum-with-mixed-results-overshadowed-by-the-war-in-ukraine",
         "the-business-of-despair"
       ]
     },
@@ -2820,6 +2884,45 @@
       ]
     },
     {
+      "id": "somalie",
+      "name": "Somalie",
+      "country": "Somalie",
+      "lat": 8.3676771,
+      "lng": 49.083416,
+      "articles": [
+        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
+        "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
+        "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses",
+        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
+      ]
+    },
+    {
+      "id": "suisse",
+      "name": "Suisse",
+      "country": "Suisse",
+      "lat": 46.7985624,
+      "lng": 8.2319736,
+      "articles": [
+        "alabuga-the-central-hub-of-the-russian-hybrid-threat",
+        "global-kombat",
+        "influence-as-a-service-lillustration-de-la-dame-de-sochi",
+        "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa"
+      ]
+    },
+    {
+      "id": "tanzanie",
+      "name": "Tanzanie",
+      "country": "Tanzanie",
+      "lat": -6.5247123,
+      "lng": 35.7878438,
+      "articles": [
+        "after-wagner-russias-spin-doctors-take-over-in-africa",
+        "apres-wagner-les-spin-doctors-russes-prennent-le-relai-en-afrique",
+        "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
+        "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses"
+      ]
+    },
+    {
       "id": "tatarstan",
       "name": "Tatarstan",
       "country": "Russie",
@@ -2833,15 +2936,41 @@
       ]
     },
     {
-      "id": "ethiopie",
-      "name": "Éthiopie",
-      "country": "Éthiopie",
-      "lat": 10.2116702,
-      "lng": 38.6521203,
+      "id": "tunisie",
+      "name": "Tunisie",
+      "country": "Tunisie",
+      "lat": 33.8439408,
+      "lng": 9.400138,
       "articles": [
-        "alabuga-the-central-hub-of-the-russian-hybrid-threat",
-        "russia-africa-a-forum-with-mixed-results-overshadowed-by-the-war-in-ukraine",
-        "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa",
+        "le-business-du-desespoir",
+        "mediterranean-sea-objective-for-the-african-corps",
+        "objectif-mediterranee-pour-african-corps",
+        "the-business-of-despair"
+      ]
+    },
+    {
+      "id": "vienne",
+      "name": "Vienne",
+      "country": "Autriche",
+      "lat": 48.2083537,
+      "lng": 16.3725042,
+      "articles": [
+        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
+        "anatomy-of-deception-engineering-covert-influence-operations",
+        "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
+        "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses"
+      ]
+    },
+    {
+      "id": "zambie",
+      "name": "Zambie",
+      "country": "Zambie",
+      "lat": -14.5189121,
+      "lng": 27.5589884,
+      "articles": [
+        "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
+        "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses",
+        "le-business-du-desespoir",
         "the-business-of-despair"
       ]
     },
@@ -2867,30 +2996,6 @@
         "architecture-du-silence-comment-la-russie-censure-son-internet",
         "poly-technologies-inc-africas-arms-dealer-hand-in-hand-with-russias-rostec-dress-rehearsal-before-taiwan",
         "poly-technologies-inc-le-marchand-darmes-de-lafrique-main-dans-la-main-avec-le-russe-rostec-repetition-generale-avant-taiwan"
-      ]
-    },
-    {
-      "id": "belgium",
-      "name": "Belgium",
-      "country": "Belgique",
-      "lat": 50.6402809,
-      "lng": 4.6667145,
-      "articles": [
-        "car-prigozhins-blood-diamonds",
-        "denis-pavlov-the-man-in-bangui",
-        "global-kombat"
-      ]
-    },
-    {
-      "id": "bulgaria",
-      "name": "Bulgaria",
-      "country": "Bulgarie",
-      "lat": 42.6073975,
-      "lng": 25.4856617,
-      "articles": [
-        "global-kombat",
-        "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa",
-        "the-business-of-despair"
       ]
     },
     {
@@ -2954,15 +3059,27 @@
       ]
     },
     {
-      "id": "india",
-      "name": "India",
-      "country": "Inde",
-      "lat": 22.3511148,
-      "lng": 78.6677428,
+      "id": "espagne",
+      "name": "Espagne",
+      "country": "Espagne",
+      "lat": 39.3260685,
+      "lng": -4.8379791,
       "articles": [
-        "car-prigozhins-blood-diamonds",
-        "china-gets-nvidia-gpu-for-the-ai-race-through-vietnam-and-malaysia",
-        "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses"
+        "global-kombat",
+        "le-reseau-catrosa-des-societes-europeennes-liees-aux-developpeurs-darmes-chimiques-russes",
+        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers"
+      ]
+    },
+    {
+      "id": "estonie",
+      "name": "Estonie",
+      "country": "Estonie",
+      "lat": 58.7523778,
+      "lng": 25.3319078,
+      "articles": [
+        "global-kombat",
+        "le-business-du-desespoir",
+        "the-business-of-despair"
       ]
     },
     {
@@ -2999,6 +3116,18 @@
         "le-forum-international-sur-la-securite-de-la-russie-le-temps-de-la-confrontation",
         "recruitment-of-africans-in-ukraine-governments-act-in-the-face-of-growing-evidence",
         "russias-international-security-forum-time-for-confrontation"
+      ]
+    },
+    {
+      "id": "lettonie",
+      "name": "Lettonie",
+      "country": "Lettonie",
+      "lat": 56.8406494,
+      "lng": 24.7537645,
+      "articles": [
+        "global-kombat",
+        "le-business-du-desespoir",
+        "the-business-of-despair"
       ]
     },
     {
@@ -3053,8 +3182,8 @@
       "id": "nairobi",
       "name": "Nairobi",
       "country": "Kenya",
-      "lat": -1.2890006,
-      "lng": 36.8172812,
+      "lat": -1.302398,
+      "lng": 36.8288509,
       "articles": [
         "le-business-du-desespoir",
         "recruitment-of-africans-in-ukraine-governments-act-in-the-face-of-growing-evidence",
@@ -3074,6 +3203,30 @@
       ]
     },
     {
+      "id": "pays-bas",
+      "name": "Pays-Bas",
+      "country": "Pays-Bas",
+      "lat": 52.2434979,
+      "lng": 5.6343227,
+      "articles": [
+        "global-kombat",
+        "le-business-du-desespoir",
+        "the-business-of-despair"
+      ]
+    },
+    {
+      "id": "pologne",
+      "name": "Pologne",
+      "country": "Pologne",
+      "lat": 52.215933,
+      "lng": 19.134422,
+      "articles": [
+        "global-kombat",
+        "le-reseau-catrosa-des-societes-europeennes-liees-aux-developpeurs-darmes-chimiques-russes",
+        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers"
+      ]
+    },
+    {
       "id": "prague",
       "name": "Prague",
       "country": "Tchéquie",
@@ -3083,18 +3236,6 @@
         "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
         "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses",
         "la-chasse-continue"
-      ]
-    },
-    {
-      "id": "rdc",
-      "name": "RDC",
-      "country": "République démocratique du Congo",
-      "lat": -4.038,
-      "lng": 21.7587,
-      "articles": [
-        "allez-creuse-bebe-contes-russes-de-lor-en-afrique-centrale",
-        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
-        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
       ]
     },
     {
@@ -3134,30 +3275,6 @@
       ]
     },
     {
-      "id": "st-petersburg",
-      "name": "St Petersburg",
-      "country": "Russie",
-      "lat": 59.938732,
-      "lng": 30.316229,
-      "articles": [
-        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses",
-        "wood-for-mercenaries-on-the-road-to-international-markets"
-      ]
-    },
-    {
-      "id": "switzerland",
-      "name": "Switzerland",
-      "country": "Suisse",
-      "lat": 46.7985624,
-      "lng": 8.2319736,
-      "articles": [
-        "alabuga-the-central-hub-of-the-russian-hybrid-threat",
-        "global-kombat",
-        "svr-controlled-politology-labels-non-orthodox-christian-groups-as-western-agents-to-undermine-the-west-in-africa"
-      ]
-    },
-    {
       "id": "taiwan",
       "name": "Taiwan",
       "country": "Taïwan",
@@ -3179,6 +3296,18 @@
         "la-libye-de-la-deuxieme-chance-pour-la-russie",
         "objectif-mediterranee-pour-african-corps",
         "spaghetti-de-lampedusa"
+      ]
+    },
+    {
+      "id": "teheran",
+      "name": "Téhéran",
+      "country": "Iran",
+      "lat": 35.6892523,
+      "lng": 51.3896004,
+      "articles": [
+        "alabuga-noeud-central-de-la-menace-hybride-russe",
+        "alabuga-the-central-hub-of-the-russian-hybrid-threat",
+        "satellites-missiles-drones-les-dessous-du-soutien-russe-a-liran"
       ]
     },
     {
@@ -3263,8 +3392,8 @@
       "id": "atlantique",
       "name": "Atlantique",
       "country": "—",
-      "lat": 13.581921,
-      "lng": -38.320312,
+      "lat": 30.0,
+      "lng": -40.0,
       "articles": [
         "la-libye-de-la-deuxieme-chance-pour-la-russie",
         "opa-russe-sur-le-burkina"
@@ -3304,17 +3433,6 @@
       ]
     },
     {
-      "id": "belgique",
-      "name": "Belgique",
-      "country": "Belgique",
-      "lat": 50.6402809,
-      "lng": 4.6667145,
-      "articles": [
-        "denis-pavlov-lhomme-de-bangui",
-        "rca-les-diamants-de-sang-de-prigojine"
-      ]
-    },
-    {
       "id": "bishkek",
       "name": "Bishkek",
       "country": "Kirghizistan",
@@ -3350,7 +3468,7 @@
     {
       "id": "bratislava",
       "name": "Bratislava",
-      "country": "Slovaquie",
+      "country": "District of Bratislava II",
       "lat": 48.1359085,
       "lng": 17.1597441,
       "articles": [
@@ -3370,17 +3488,6 @@
       ]
     },
     {
-      "id": "burkina",
-      "name": "Burkina",
-      "country": "Burkina Faso",
-      "lat": 12.0753083,
-      "lng": -1.6880314,
-      "articles": [
-        "burkina-faso-under-influence",
-        "le-burkina-faso-sous-influence"
-      ]
-    },
-    {
       "id": "burundi",
       "name": "Burundi",
       "country": "Burundi",
@@ -3392,30 +3499,8 @@
       ]
     },
     {
-      "id": "caire",
-      "name": "Caire",
-      "country": "Égypte",
-      "lat": 30.0332516,
-      "lng": 31.5621651,
-      "articles": [
-        "le-business-du-desespoir",
-        "russie-afrique-un-forum-en-demi-teinte-a-lombre-de-la-guerre-en-ukraine"
-      ]
-    },
-    {
-      "id": "center",
-      "name": "Center",
-      "country": "États-Unis d'Amérique",
-      "lat": 31.7952814,
-      "lng": -94.1803576,
-      "articles": [
-        "campagne-de-recrutement-en-ukraine-et-sur-la-zone-afrique-moyen-orient",
-        "un-an-de-wagner-au-mali"
-      ]
-    },
-    {
       "id": "chisinau",
-      "name": "Chisinau",
+      "name": "Chișinău",
       "country": "Moldavie",
       "lat": 47.0245117,
       "lng": 28.8322923,
@@ -3436,17 +3521,6 @@
       ]
     },
     {
-      "id": "drc",
-      "name": "DRC",
-      "country": "République démocratique du Congo",
-      "lat": -2.9814344,
-      "lng": 23.8222636,
-      "articles": [
-        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "car-prigozhins-blood-diamonds"
-      ]
-    },
-    {
       "id": "dakar",
       "name": "Dakar",
       "country": "Sénégal",
@@ -3458,8 +3532,8 @@
       ]
     },
     {
-      "id": "denmark",
-      "name": "Denmark",
+      "id": "danemark",
+      "name": "Danemark",
       "country": "Danemark",
       "lat": 55.670249,
       "lng": 10.3333283,
@@ -3471,45 +3545,12 @@
     {
       "id": "donbass",
       "name": "Donbass",
-      "country": "Ouzbékistan",
-      "lat": 40.5928159,
-      "lng": 71.8919178,
+      "country": "Ukraine",
+      "lat": 48.0,
+      "lng": 38.0,
       "articles": [
         "campagne-de-recrutement-en-ukraine-et-sur-la-zone-afrique-moyen-orient",
         "le-business-du-desespoir"
-      ]
-    },
-    {
-      "id": "donso",
-      "name": "Donso",
-      "country": "Suède",
-      "lat": 57.6015513,
-      "lng": 11.803425,
-      "articles": [
-        "goni-habe-civilian-massacre-and-influence-operation",
-        "un-an-de-wagner-au-mali"
-      ]
-    },
-    {
-      "id": "estonia",
-      "name": "Estonia",
-      "country": "Estonie",
-      "lat": 58.7523778,
-      "lng": 25.3319078,
-      "articles": [
-        "global-kombat",
-        "the-business-of-despair"
-      ]
-    },
-    {
-      "id": "ethiopie",
-      "name": "Ethiopie",
-      "country": "Éthiopie",
-      "lat": 10.2116702,
-      "lng": 38.6521203,
-      "articles": [
-        "alabuga-noeud-central-de-la-menace-hybride-russe",
-        "russie-afrique-un-forum-en-demi-teinte-a-lombre-de-la-guerre-en-ukraine"
       ]
     },
     {
@@ -3526,28 +3567,17 @@
     {
       "id": "farcha",
       "name": "Farcha",
-      "country": "Autriche",
-      "lat": 47.1861169,
-      "lng": 15.6671796,
+      "country": "Tchad",
+      "lat": 12.18,
+      "lng": 15.04,
       "articles": [
         "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
         "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses"
       ]
     },
     {
-      "id": "faso",
-      "name": "Faso",
-      "country": "Burkina Faso",
-      "lat": 12.0753083,
-      "lng": -1.6880314,
-      "articles": [
-        "burkina-faso-under-influence",
-        "le-burkina-faso-sous-influence"
-      ]
-    },
-    {
-      "id": "gambia",
-      "name": "Gambia",
+      "id": "gambie",
+      "name": "Gambie",
       "country": "Gambie",
       "lat": 13.470062,
       "lng": -15.4900464,
@@ -3570,9 +3600,9 @@
     {
       "id": "golfe",
       "name": "Golfe",
-      "country": "Papouasie-Nouvelle-Guinée",
-      "lat": -7.5556411,
-      "lng": 144.8850036,
+      "country": "—",
+      "lat": 26.5,
+      "lng": 51.5,
       "articles": [
         "le-business-du-desespoir",
         "satellites-missiles-drones-les-dessous-du-soutien-russe-a-liran"
@@ -3587,17 +3617,6 @@
       "articles": [
         "africa-flop",
         "un-an-de-wagner-au-mali"
-      ]
-    },
-    {
-      "id": "gulf",
-      "name": "Gulf",
-      "country": "États-Unis d'Amérique",
-      "lat": 29.9665252,
-      "lng": -85.2175889,
-      "articles": [
-        "alabuga-the-central-hub-of-the-russian-hybrid-threat",
-        "the-business-of-despair"
       ]
     },
     {
@@ -3623,52 +3642,19 @@
       ]
     },
     {
-      "id": "hongkong",
-      "name": "HongKong",
-      "country": "Chine",
-      "lat": 22.3492155,
-      "lng": 114.1857978,
-      "articles": [
-        "car-prigozhins-blood-diamonds",
-        "rca-les-diamants-de-sang-de-prigojine"
-      ]
-    },
-    {
-      "id": "inde",
-      "name": "Inde",
-      "country": "Inde",
-      "lat": 22.3511148,
-      "lng": 78.6677428,
-      "articles": [
-        "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
-        "rca-les-diamants-de-sang-de-prigojine"
-      ]
-    },
-    {
-      "id": "ivory-coast",
-      "name": "Ivory Coast",
-      "country": "Côte d’Ivoire",
-      "lat": 7.9897371,
-      "lng": -5.5679458,
-      "articles": [
-        "faces-of-the-gpci-network",
-        "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses"
-      ]
-    },
-    {
       "id": "izhevsk",
       "name": "Izhevsk",
       "country": "Russie",
-      "lat": 56.8605175,
-      "lng": 53.1977307,
+      "lat": 56.8529729,
+      "lng": 53.2103071,
       "articles": [
         "alabuga-noeud-central-de-la-menace-hybride-russe",
         "alabuga-the-central-hub-of-the-russian-hybrid-threat"
       ]
     },
     {
-      "id": "japan",
-      "name": "Japan",
+      "id": "japon",
+      "name": "Japon",
       "country": "Japon",
       "lat": 36.5748441,
       "lng": 139.2394179,
@@ -3691,7 +3677,7 @@
     {
       "id": "kalinka",
       "name": "Kalinka",
-      "country": "District of Detva",
+      "country": "Slovaquie",
       "lat": 48.4938486,
       "lng": 19.2786675,
       "articles": [
@@ -3755,22 +3741,11 @@
       ]
     },
     {
-      "id": "latvia",
-      "name": "Latvia",
-      "country": "Lettonie",
-      "lat": 56.8406494,
-      "lng": 24.7537645,
-      "articles": [
-        "global-kombat",
-        "the-business-of-despair"
-      ]
-    },
-    {
       "id": "maghreb",
       "name": "Maghreb",
-      "country": "Irak",
-      "lat": 33.3648003,
-      "lng": 44.3761825,
+      "country": "—",
+      "lat": 32.0,
+      "lng": 0.0,
       "articles": [
         "le-business-du-desespoir",
         "un-an-de-wagner-au-mali"
@@ -3788,17 +3763,6 @@
       ]
     },
     {
-      "id": "maliens",
-      "name": "Maliens",
-      "country": "Suisse",
-      "lat": 46.8386477,
-      "lng": 9.3752432,
-      "articles": [
-        "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
-        "un-an-de-wagner-au-mali"
-      ]
-    },
-    {
       "id": "mexique",
       "name": "Mexique",
       "country": "Mexique",
@@ -3810,22 +3774,11 @@
       ]
     },
     {
-      "id": "mines",
-      "name": "Mines",
-      "country": "États-Unis d'Amérique",
-      "lat": 27.5966781,
-      "lng": -99.5213704,
-      "articles": [
-        "africa-flop",
-        "rca-les-diamants-de-sang-de-prigojine"
-      ]
-    },
-    {
       "id": "moura",
       "name": "Moura",
-      "country": "Portugal",
-      "lat": 38.1409785,
-      "lng": -7.4500699,
+      "country": "Mali",
+      "lat": 14.65,
+      "lng": -4.68,
       "articles": [
         "one-year-of-wagner-in-mali",
         "un-an-de-wagner-au-mali"
@@ -3854,22 +3807,11 @@
       ]
     },
     {
-      "id": "mediterranee",
-      "name": "Méditerranée",
-      "country": "—",
-      "lat": 35.0000035,
-      "lng": 19.9999957,
-      "articles": [
-        "la-libye-de-la-deuxieme-chance-pour-la-russie",
-        "objectif-mediterranee-pour-african-corps"
-      ]
-    },
-    {
       "id": "menaka",
       "name": "Ménaka",
       "country": "Mali",
-      "lat": 16.6516783,
-      "lng": 2.8263136,
+      "lat": 15.9167,
+      "lng": 2.4,
       "articles": [
         "africa-flop",
         "un-an-de-wagner-au-mali"
@@ -3878,9 +3820,9 @@
     {
       "id": "nampala",
       "name": "Nampala",
-      "country": "Angola",
-      "lat": -16.1220385,
-      "lng": 15.2191837,
+      "country": "Mali",
+      "lat": 14.86,
+      "lng": -5.69,
       "articles": [
         "one-year-of-wagner-in-mali",
         "un-an-de-wagner-au-mali"
@@ -3895,28 +3837,6 @@
       "articles": [
         "one-year-of-wagner-in-mali",
         "un-an-de-wagner-au-mali"
-      ]
-    },
-    {
-      "id": "netherlands",
-      "name": "Netherlands",
-      "country": "Pays-Bas",
-      "lat": 52.2434979,
-      "lng": 5.6343227,
-      "articles": [
-        "global-kombat",
-        "the-business-of-despair"
-      ]
-    },
-    {
-      "id": "nord-ouest",
-      "name": "Nord-Ouest",
-      "country": "Afrique du Sud",
-      "lat": -26.1347819,
-      "lng": 25.6546729,
-      "articles": [
-        "alabuga-noeud-central-de-la-menace-hybride-russe",
-        "allez-creuse-bebe-contes-russes-de-lor-en-afrique-centrale"
       ]
     },
     {
@@ -3960,17 +3880,6 @@
       "lng": 122.7312101,
       "articles": [
         "le-reseau-catrosa-des-societes-europeennes-liees-aux-developpeurs-darmes-chimiques-russes",
-        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers"
-      ]
-    },
-    {
-      "id": "poland",
-      "name": "Poland",
-      "country": "Pologne",
-      "lat": 52.215933,
-      "lng": 19.134422,
-      "articles": [
-        "global-kombat",
         "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers"
       ]
     },
@@ -4019,17 +3928,6 @@
       ]
     },
     {
-      "id": "region-mopti",
-      "name": "Region Mopti",
-      "country": "Mali",
-      "lat": 14.514489,
-      "lng": -3.6464581,
-      "articles": [
-        "one-year-of-wagner-in-mali",
-        "un-an-de-wagner-au-mali"
-      ]
-    },
-    {
       "id": "rosatom",
       "name": "Rosatom",
       "country": "Russie",
@@ -4052,17 +3950,6 @@
       ]
     },
     {
-      "id": "republique-democratique-du-congo",
-      "name": "République démocratique du Congo",
-      "country": "République démocratique du Congo",
-      "lat": -2.9814344,
-      "lng": 23.8222636,
-      "articles": [
-        "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
-        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
-      ]
-    },
-    {
       "id": "sanaa",
       "name": "Sanaa",
       "country": "Yémen",
@@ -4077,8 +3964,8 @@
       "id": "segou",
       "name": "Segou",
       "country": "Mali",
-      "lat": 13.441518,
-      "lng": -6.268147,
+      "lat": 14.0487608,
+      "lng": -6.0047091,
       "articles": [
         "one-year-of-wagner-in-mali",
         "un-an-de-wagner-au-mali"
@@ -4087,9 +3974,9 @@
     {
       "id": "serma",
       "name": "Serma",
-      "country": "Inde",
-      "lat": 19.1913324,
-      "lng": 83.7839404,
+      "country": "Mali",
+      "lat": 14.5,
+      "lng": -1.4,
       "articles": [
         "the-serma-yirma-killings-why-documenting-is-important",
         "un-an-de-wagner-au-mali"
@@ -4129,39 +4016,6 @@
       ]
     },
     {
-      "id": "somalia",
-      "name": "Somalia",
-      "country": "Somalie",
-      "lat": 8.3676771,
-      "lng": 49.083416,
-      "articles": [
-        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses"
-      ]
-    },
-    {
-      "id": "somalie",
-      "name": "Somalie",
-      "country": "Somalie",
-      "lat": 8.3676771,
-      "lng": 49.083416,
-      "articles": [
-        "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
-        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
-      ]
-    },
-    {
-      "id": "spain",
-      "name": "Spain",
-      "country": "Espagne",
-      "lat": 39.3260685,
-      "lng": -4.8379791,
-      "articles": [
-        "global-kombat",
-        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers"
-      ]
-    },
-    {
       "id": "sri-lanka",
       "name": "Sri Lanka",
       "country": "Sri Lanka",
@@ -4184,33 +4038,11 @@
       ]
     },
     {
-      "id": "tanzania",
-      "name": "Tanzania",
-      "country": "Tanzanie",
-      "lat": -6.5247123,
-      "lng": 35.7878438,
-      "articles": [
-        "after-wagner-russias-spin-doctors-take-over-in-africa",
-        "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses"
-      ]
-    },
-    {
-      "id": "tanzanie",
-      "name": "Tanzanie",
-      "country": "Tanzanie",
-      "lat": -6.5247123,
-      "lng": 35.7878438,
-      "articles": [
-        "apres-wagner-les-spin-doctors-russes-prennent-le-relai-en-afrique",
-        "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes"
-      ]
-    },
-    {
       "id": "taraz",
       "name": "Taraz",
       "country": "Kazakhstan",
-      "lat": 42.8778381,
-      "lng": 71.3519903,
+      "lat": 42.9015945,
+      "lng": 71.3769302,
       "articles": [
         "alabuga-noeud-central-de-la-menace-hybride-russe",
         "alabuga-the-central-hub-of-the-russian-hybrid-threat"
@@ -4261,39 +4093,6 @@
       ]
     },
     {
-      "id": "tunisia",
-      "name": "Tunisia",
-      "country": "Tunisie",
-      "lat": 33.8439408,
-      "lng": 9.400138,
-      "articles": [
-        "mediterranean-sea-objective-for-the-african-corps",
-        "the-business-of-despair"
-      ]
-    },
-    {
-      "id": "tunisie",
-      "name": "Tunisie",
-      "country": "Tunisie",
-      "lat": 33.8439408,
-      "lng": 9.400138,
-      "articles": [
-        "le-business-du-desespoir",
-        "objectif-mediterranee-pour-african-corps"
-      ]
-    },
-    {
-      "id": "teheran",
-      "name": "Téhéran",
-      "country": "Iran",
-      "lat": 35.6892523,
-      "lng": 51.3896004,
-      "articles": [
-        "alabuga-noeud-central-de-la-menace-hybride-russe",
-        "satellites-missiles-drones-les-dessous-du-soutien-russe-a-liran"
-      ]
-    },
-    {
       "id": "urumqi",
       "name": "Urumqi",
       "country": "Chine",
@@ -4324,61 +4123,6 @@
       "articles": [
         "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
         "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
-      ]
-    },
-    {
-      "id": "vienna",
-      "name": "Vienna",
-      "country": "Autriche",
-      "lat": 48.2083537,
-      "lng": 16.3725042,
-      "articles": [
-        "anatomy-of-deception-engineering-covert-influence-operations",
-        "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses"
-      ]
-    },
-    {
-      "id": "vienne",
-      "name": "Vienne",
-      "country": "Autriche",
-      "lat": 48.2083537,
-      "lng": 16.3725042,
-      "articles": [
-        "anatomie-dune-manipulation-les-rouages-des-operations-dinfluence-clandestines",
-        "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes"
-      ]
-    },
-    {
-      "id": "zambia",
-      "name": "Zambia",
-      "country": "Zambie",
-      "lat": -14.5189121,
-      "lng": 27.5589884,
-      "articles": [
-        "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses",
-        "the-business-of-despair"
-      ]
-    },
-    {
-      "id": "zambie",
-      "name": "Zambie",
-      "country": "Zambie",
-      "lat": -14.5189121,
-      "lng": 27.5589884,
-      "articles": [
-        "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
-        "le-business-du-desespoir"
-      ]
-    },
-    {
-      "id": "ukraine",
-      "name": "ukraine",
-      "country": "Ukraine",
-      "lat": 49.4871968,
-      "lng": 31.2718321,
-      "articles": [
-        "one-year-of-wagner-in-mali",
-        "the-business-of-despair"
       ]
     }
   ]
