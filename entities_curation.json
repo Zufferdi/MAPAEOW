@@ -1,14 +1,443 @@
 {
-  "_doc": "Curation manuelle des entités (γ-light). Format : key -> {keep, aliases, canonical_name, type, notes}. Une entité absente de ce fichier est gérée en mode auto.",
-  "_example_prigozhin": {
+  "_doc": "Curation manuelle des entités. Une entité absente de ce fichier est gérée en mode auto. Le pipeline applique : (1) blacklist par défaut + 'keep:false' ici, (2) merge des 'aliases' sous une clé canonique, (3) force du 'type' et 'canonical_name' si présents, (4) injection des 'notes' dans la fiche.",
+  "wagner group": {
     "keep": true,
+    "type": "ORG",
+    "canonical_name": "Wagner Group",
     "aliases": [
-      "Yevgeny Prigozhin",
-      "Evgueni Prigojine",
-      "Пригожин"
+      "Wagner",
+      "#Wagner",
+      "The Wagner Group",
+      "WAGNER GROUP",
+      "the Wagner Group's",
+      "the Wagner Group's",
+      "the Wagner Group",
+      "Groupe Wagner",
+      "leGroupeWagner",
+      "Wagner-Söldner",
+      "the 'Wagner Group'",
+      "#Wagner Group's",
+      "the 'Wagner Group'",
+      "Wagner/Prigozhin"
     ],
-    "canonical_name": "Yevgeny Prigozhin",
+    "notes": "Groupe paramilitaire russe fondé par Yevgeny Prigozhin, actif en Syrie, Libye, Mali, Centrafrique, Soudan, Ukraine. Officiellement dissous après la mort de Prigozhin en 2023, ses éléments ont été réorganisés sous l'Africa Corps."
+  },
+  "evgeny prigozhin": {
+    "keep": true,
     "type": "PERSON",
-    "notes": "Fondateur de Wagner Group, mort en août 2023."
+    "canonical_name": "Yevgeny Prigozhin",
+    "aliases": [
+      "Prigozhin",
+      "Evgeny Prigozhin",
+      "Evgeny Prigojine",
+      "Yevgeny Prigozhin",
+      "Prigojine",
+      "Evgeny Prigozhin's",
+      "Evgeni Prigozhin",
+      "Evgeni Prigojine",
+      "Yevgeny Prigozhin's",
+      "Prigojine -",
+      "Prigozhine",
+      "Evgueni Prigojine"
+    ],
+    "notes": "Fondateur de Wagner Group et de Concord Catering. Architecte de l'Internet Research Agency (Olgino). Mort dans un crash d'avion le 23 août 2023, deux mois après sa mutinerie contre le commandement militaire russe."
+  },
+  "pavel prigozhin": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Pavel Prigozhin",
+    "aliases": [
+      "Pavel Prigojine"
+    ],
+    "notes": "Fils de Yevgeny Prigozhin, héritier présumé de l'empire Concord après la mort de son père."
+  },
+  "vladimir putin": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Vladimir Putin",
+    "aliases": [
+      "Vladimir POUTINE",
+      "Vladimir Poutine",
+      "Putin",
+      "Poutine",
+      "Wladimir Putin",
+      "Путин"
+    ],
+    "notes": "Président de la Fédération de Russie depuis 2000 (à l'exception du mandat de Medvedev 2008-2012)."
+  },
+  "africa corps": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Africa Corps",
+    "aliases": [
+      "AFRICAN CORPS",
+      "the 'Africa Corps'",
+      "African Corps",
+      "the Africa Corps"
+    ],
+    "notes": "Force paramilitaire russe créée fin 2023 sous le contrôle direct du GRU pour reprendre les opérations africaines de Wagner (Mali, Burkina Faso, Niger, Centrafrique, Libye)."
+  },
+  "ministere de la defense russe": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Ministère de la Défense (Russie)",
+    "aliases": [
+      "Ministère de la Défense Russe",
+      "Ministère de la Défense",
+      "Ministère russe de la Défense",
+      "the Russian Ministry of Defense",
+      "the Ministry of Defense",
+      "Ministry of Defense",
+      "Defense Ministry",
+      "The Russian Defense Ministry",
+      "Russian Ministry of Defense",
+      "Russian Defense Ministry",
+      "Ministre de la Défense",
+      "Ministre russe de la Défense"
+    ],
+    "notes": "Ministère de la Défense de la Fédération de Russie. A absorbé une partie des opérations Wagner après 2023 via la création de l'Africa Corps."
+  },
+  "africa politology": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Africa Politology",
+    "aliases": [
+      "Africa Politology's",
+      "Africa Politologie"
+    ],
+    "notes": "Société écran liée à l'écosystème Prigozhin / Concord, active en Centrafrique et au Mali pour des opérations d'influence."
+  },
+  "lobaye invest": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Lobaye Invest",
+    "notes": "Société d'extraction d'or et de diamants en Centrafrique, vitrine économique du dispositif Prigozhin / Wagner en RCA."
+  },
+  "diamville": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Diamville",
+    "aliases": [
+      "Wagner Diamville"
+    ],
+    "notes": "Société exportatrice de diamants liée à Wagner / Prigozhin en Centrafrique."
+  },
+  "andrey averyanov": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Andrey Averyanov",
+    "aliases": [
+      "Averyanov"
+    ],
+    "notes": "Général russe du GRU, dirigeant présumé de l'unité 29155 et coordinateur de l'Africa Corps depuis 2023."
+  },
+  "denis pavlov": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Denis Pavlov",
+    "aliases": [
+      "Pavlov"
+    ]
+  },
+  "assimi goita": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Assimi Goïta",
+    "aliases": [
+      "Assimi Goita",
+      "Goïta",
+      "Goita"
+    ],
+    "notes": "Chef de la junte militaire malienne issue du coup d'État de 2020, président de la transition."
+  },
+  "touadera": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Faustin-Archange Touadéra",
+    "aliases": [
+      "Touadéra",
+      "Touadera",
+      "Faustin Archange Touadéra"
+    ],
+    "notes": "Président de la République centrafricaine depuis 2016, allié majeur de Wagner / Africa Corps."
+  },
+  "yunus bek yevkurov": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Yunus-Bek Yevkurov",
+    "aliases": [
+      "Yunus Bek Yevkurov",
+      "Yevkurov"
+    ],
+    "notes": "Vice-ministre russe de la Défense, principal négociateur des opérations africaines post-Prigozhin."
+  },
+  "haftar": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Khalifa Haftar",
+    "aliases": [
+      "maréchal Haftar –",
+      "maréchal Haftar",
+      "Khalifa Haftar"
+    ],
+    "notes": "Maréchal libyen, commandant de l'Armée nationale libyenne (LNA) basée en Cyrénaïque, allié des forces russes en Libye."
+  },
+  "dimitri sytyi": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Dimitri Sytyi",
+    "aliases": [
+      "Dmitri Sytyi",
+      "Dmitry Sytyi",
+      "Sytyi",
+      "Dimitry Sytyi"
+    ],
+    "notes": "Cadre de l'écosystème Prigozhin en Centrafrique, responsable d'Africa Politology et de la Russian House à Bangui."
+  },
+  "mali": {
+    "keep": false
+  },
+  "niger": {
+    "keep": false
+  },
+  "africa": {
+    "keep": false
+  },
+  "alabuga": {
+    "keep": false
+  },
+  "kemi seba": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Kemi Seba",
+    "notes": "Activiste panafricaniste pro-russe, conseiller de plusieurs juntes ouest-africaines."
+  },
+  "africa initiative": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "African Initiative",
+    "aliases": [
+      "African Initiative",
+      "Africa Initiative"
+    ],
+    "notes": "Agence de presse russe lancée en 2023, vitrine d'influence post-Wagner, basée à Moscou avec correspondants en Afrique."
+  },
+  "rossotrudnichestvo": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Rossotrudnichestvo",
+    "notes": "Agence fédérale russe de coopération internationale (homologue d'Alliance française), mais utilisée comme façade pour des opérations d'influence soft power."
+  },
+  "redut": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Redut",
+    "aliases": [
+      "REDUT"
+    ],
+    "notes": "Société militaire privée russe rivale de Wagner, liée au GRU, opérationnelle en Ukraine."
+  },
+  "rostec": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Rostec",
+    "aliases": [
+      "ROSTEC"
+    ],
+    "notes": "Conglomérat industriel russe d'État, dirigé par Sergei Chemezov, central dans les exportations d'armement."
+  },
+  "meroe gold": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Meroe Gold",
+    "notes": "Société d'exploitation aurifère au Soudan liée à l'écosystème Prigozhin / M-Invest, sanctionnée par l'OFAC."
+  },
+  "midas resources": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Midas Resources",
+    "notes": "Société minière liée au dispositif Wagner / Prigozhin, active en Centrafrique."
+  },
+  "ndassima": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Ndassima",
+    "notes": "Mine d'or en Centrafrique, principal site d'extraction de Lobaye Invest / écosystème Wagner."
+  },
+  "kremlin": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Kremlin",
+    "aliases": [
+      "pro-Kremlin",
+      "the Kremlin"
+    ],
+    "notes": "Présidence russe."
+  },
+  "gru": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "GRU",
+    "aliases": [
+      "G.R.U.",
+      "Главное разведывательное управление"
+    ],
+    "notes": "Direction principale du renseignement militaire russe (Главное управление). Coordonnateur des opérations Africa Corps depuis 2023."
+  },
+  "fsb": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "FSB",
+    "notes": "Service fédéral de sécurité russe (Федеральная служба безопасности), héritier du KGB, en charge de la sécurité intérieure."
+  },
+  "svr": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "SVR",
+    "notes": "Service de renseignement extérieur russe (Служба внешней разведки)."
+  },
+  "excerpt": {
+    "keep": false
+  },
+  "company": {
+    "keep": false
+  },
+  "parliament": {
+    "keep": false
+  },
+  "foundation": {
+    "keep": false
+  },
+  "defense": {
+    "keep": false
+  },
+  "president": {
+    "keep": false
+  },
+  "président": {
+    "keep": false
+  },
+  "janvier": {
+    "keep": false
+  },
+  "llc": {
+    "keep": false
+  },
+  "pmc": {
+    "keep": false
+  },
+  "osint": {
+    "keep": false
+  },
+  "drc": {
+    "keep": false
+  },
+  "rca": {
+    "keep": false
+  },
+  "ues": {
+    "keep": false
+  },
+  "aes": {
+    "keep": false
+  },
+  "abr": {
+    "keep": false
+  },
+  "csp": {
+    "keep": false
+  },
+  "ana": {
+    "keep": false
+  },
+  "gpci": {
+    "keep": false
+  },
+  "mohamed": {
+    "keep": false
+  },
+  "human rights watch": {
+    "keep": false
+  },
+  "the dossier center": {
+    "keep": false
+  },
+  "rfe": {
+    "keep": false
+  },
+  "novaya gazeta": {
+    "keep": false
+  },
+  "ria novosti": {
+    "keep": false
+  },
+  "tass": {
+    "keep": false
+  },
+  "africa intelligence": {
+    "keep": false
+  },
+  "african intelligence": {
+    "keep": false
+  },
+  "acled": {
+    "keep": false
+  },
+  "minusma": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "MINUSMA",
+    "notes": "Mission multidimensionnelle intégrée des Nations unies pour la stabilisation au Mali, retirée fin 2023 sous pression de la junte malienne."
+  },
+  "minusca": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "MINUSCA",
+    "notes": "Mission multidimensionnelle intégrée des Nations unies pour la stabilisation en Centrafrique."
+  },
+  "the european union": {
+    "keep": false
+  },
+  "european union": {
+    "keep": false
+  },
+  "the us treasury": {
+    "keep": false
+  },
+  "us treasury": {
+    "keep": false
+  },
+  "ofac": {
+    "keep": false
+  },
+  "office of foreign assets control": {
+    "keep": false
+  },
+  "rfi": {
+    "keep": false
+  },
+  "russian house": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Russian House (Maison russe)",
+    "aliases": [
+      "Russian House",
+      "the Russian House",
+      "the \"Russian House",
+      "Maison russe"
+    ],
+    "notes": "Réseau de centres culturels russes utilisés comme vecteurs d'influence et de propagande, particulièrement actifs en Afrique francophone (Bangui, Bamako, etc.)."
+  },
+  "faca": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "FACA",
+    "notes": "Forces armées centrafricaines, formées et encadrées par les instructeurs Wagner depuis 2018."
+  },
+  "kgb": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "KGB",
+    "notes": "Comité pour la sécurité de l'État de l'Union soviétique (1954-1991), ancêtre du FSB et du SVR."
   }
 }
