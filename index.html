@@ -1043,6 +1043,50 @@
     font-size: 11px;
     margin-left: auto;
   }
+  /* AI place summary block */
+  .place-ai-summary {
+    margin-top: 16px;
+    padding: 12px 14px;
+    background: rgba(255, 90, 54, 0.05);
+    border-left: 2px solid var(--accent);
+    border-radius: 0 2px 2px 0;
+    position: relative;
+  }
+  .place-ai-summary-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .place-ai-summary-label::before {
+    content: '◈';
+    font-size: 8px;
+    opacity: 0.7;
+  }
+  .place-ai-summary-text {
+    font-family: var(--serif);
+    font-size: 13.5px;
+    font-style: italic;
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin: 0;
+  }
+  .place-ai-summary-text.loading {
+    color: var(--text-faint);
+    font-style: normal;
+    font-size: 12px;
+    font-family: var(--mono);
+    animation: pulse-text 1.4s ease-in-out infinite;
+  }
+  @keyframes pulse-text {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
   .share-row {
     display: flex;
     gap: 8px;
@@ -3372,6 +3416,45 @@ function attachTabHandlers() {
   });
 }
 
+// Cache des résumés générés pour éviter les appels répétés
+const _aiSummaryCache = {};
+
+async function generatePlaceSummary(place, articles, lang) {
+  const cacheKey = `${place.id}_${lang}_${articles.map(a=>a.id).join(',')}`;
+  if (_aiSummaryCache[cacheKey]) return _aiSummaryCache[cacheKey];
+
+  const excerpts = articles.map(a =>
+    `[${a.title}] ${a.excerpt || ''}`.slice(0, 400)
+  ).join('\n\n');
+
+  const systemPrompt = lang === 'fr'
+    ? `Tu es un assistant de veille journalistique. En te basant uniquement sur les extraits d'articles fournis, rédige un résumé factuel de 1 à 2 phrases (max 200 caractères) expliquant pourquoi ce lieu géographique est mentionné dans ces enquêtes. Sois précis et factuel. Réponds uniquement avec le résumé, sans introduction ni guillemets.`
+    : `You are a journalistic intelligence assistant. Based only on the article excerpts provided, write a factual 1-2 sentence summary (max 200 characters) explaining why this geographic location is mentioned in these investigations. Be precise and factual. Reply only with the summary, no intro or quotes.`;
+
+  const userPrompt = lang === 'fr'
+    ? `Lieu : ${place.name} (${place.country})\n\nExtraits d'articles :\n${excerpts}`
+    : `Location: ${place.name} (${place.country})\n\nArticle excerpts:\n${excerpts}`;
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        system: systemPrompt,
+        messages: [{ role: 'user', content: userPrompt }]
+      })
+    });
+    const data = await res.json();
+    const summary = data.content?.find(b => b.type === 'text')?.text?.trim() || '';
+    if (summary) _aiSummaryCache[cacheKey] = summary;
+    return summary;
+  } catch (e) {
+    return '';
+  }
+}
+
 function renderSidebar(place) {
   // Articles dans la langue active
   const allArticles = place.articles.map(aid => articlesById[aid]).filter(Boolean);
@@ -3470,6 +3553,10 @@ function renderSidebar(place) {
           <span>${t('sidebar_copy_link')}</span>
         </button>
       </div>
+      ${allArticles.length > 0 ? `<div class="place-ai-summary" id="place-ai-summary-block">
+        <div class="place-ai-summary-label">${CURRENT_LANG === 'fr' ? 'En bref' : 'In brief'}</div>
+        <p class="place-ai-summary-text loading" id="place-ai-summary-text">···</p>
+      </div>` : ''}
     </div>
     <ul class="articles-list" id="articles-list-primary">
       ${articlesInLang.map(articleCard).join('')}
@@ -3493,6 +3580,24 @@ function renderSidebar(place) {
       } else {
         otherList.style.display = 'none';
         showOther.querySelector('span').textContent = `+ ${articlesOtherLang.length} ${t('sidebar_show_other_lang').toLowerCase()}`;
+      }
+    });
+  }
+
+  // Génération asynchrone du résumé IA si des articles sont présents
+  if (allArticles.length > 0) {
+    const summaryEl = document.getElementById('place-ai-summary-text');
+    const currentPlaceId = place.id;
+    generatePlaceSummary(place, allArticles, CURRENT_LANG).then(summary => {
+      // Vérifier que le panneau est toujours celui du même lieu
+      const stillEl = document.getElementById('place-ai-summary-text');
+      if (stillEl && state.selectedPlaceId === currentPlaceId) {
+        if (summary) {
+          stillEl.textContent = summary;
+          stillEl.classList.remove('loading');
+        } else {
+          document.getElementById('place-ai-summary-block')?.remove();
+        }
       }
     });
   }
