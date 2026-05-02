@@ -1,0 +1,2009 @@
+{
+  "_meta": {
+    "generated": "2026-05-02",
+    "model": "claude-haiku-4-5-20251001",
+    "total_places": 200
+  },
+  "summaries": {
+    "russie": {
+      "fr": "La Russie figure comme centre de coordination des opérations d'influence, de mercenariat et de prédation économique du groupe Wagner et de l'Africa Corps en Afrique, notamment en Centrafrique, Libye, Mali et Burkina Faso. Le territoire russe abrite aussi les infrastructures de soutien logistique (bases de formation en Biélorussie), les structures de renseignement reprenant le contrôle post-Prigozhin (SVR), les réseaux de consultants politiques, et les entreprises extractives contournant les sanctions internationales pour l'or, les diamants et les ressources naturelles africaines.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 90,
+        "input_tokens": 9672,
+        "output_tokens": 158
+      }
+    },
+    "ukraine": {
+      "fr": "L'Ukraine apparaît comme le théâtre central de la guerre qui a redéfini les opérations russes, notamment en démontrant l'utilisation massive de drones et en générant des données critiques pour les enquêtes OSINT. Le conflit a servi de catalyseur à la transformation du modèle opérationnel russe, du groupe Wagner vers des structures de renseignement et d'influence, tout en motivant des campagnes de recrutement de mercenaires africains et des réorientations stratégiques en Afrique, au Moyen-Orient et en Méditerranée.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 59,
+        "input_tokens": 6483,
+        "output_tokens": 147
+      }
+    },
+    "moscou": {
+      "fr": "Moscou apparaît comme centre de commandement et de réorganisation des opérations d'influence russes en Afrique et au-delà, particulièrement suite à la mort de Prigozhin en 2023. Le contrôle de la branche influence du Wagner Group a été transféré aux services de renseignement russes (SVR), tandis que Moscou déploie des structures alternatives : spin doctors politiques, agences de lobbying, centres culturels russes et réseaux de désinformation coordonnés depuis la capitale.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 51,
+        "input_tokens": 5646,
+        "output_tokens": 130
+      }
+    },
+    "republique-centrafricaine": {
+      "fr": "La République centrafricaine est un pivot stratégique des opérations russes en Afrique, servant de base aux activités extractives du groupe Wagner puis du SVR après la mort de Prigozhin. Le pays concentre des opérations d'exploitation d'or et de diamants, le déploiement de mercenaires auprès des forces de sécurité locales, ainsi que des réseaux d'influence médiatique et de désinformation coordonnés via des structures comme Africa Politology.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 41,
+        "input_tokens": 4631,
+        "output_tokens": 121
+      }
+    },
+    "mali": {
+      "fr": "Le Mali constitue un théâtre majeur du déploiement militaire russe en Afrique, avec environ 2500 hommes d'Africa Corps stationnés sur une vingtaine de bases depuis 2022, ainsi que des opérations antiterroristes conjointes avec les forces armées maliennes. Au-delà des opérations de terrain, la présence russe s'appuie sur des campagnes d'influence coordonnées et des réseaux de désinformation, tandis que Wagner a tenté sans succès de s'implanter dans le secteur minier aurifère, modèle éprouvé en Centrafrique.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 39,
+        "input_tokens": 4440,
+        "output_tokens": 156
+      }
+    },
+    "syrie": {
+      "fr": "La Syrie apparaît comme un hub logistique et opérationnel clé pour le Wagner Group et les services russes. Elle accueille des contingents militaires russes et Wagner à l'aéroport de Latakia, servant de plateforme de transit pour les opérations régionales, notamment les livraisons d'armes vers la Libye et l'Afrique. Les actifs pétroliers et les structures d'influence de Prigozhin en Syrie ont été progressivement repris par les services russes après sa mort, illustrant la réorganisation du contrôle opérationnel.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 32,
+        "input_tokens": 3690,
+        "output_tokens": 148
+      }
+    },
+    "soudan": {
+      "fr": "Le Soudan apparaît dans les enquêtes en tant que point de passage logistique et territorial pour les opérations russes en Afrique, notamment dans les chaînes d'approvisionnement en armes et ressources naturelles. Les opérations hybrides du groupe Wagner et de ses successeurs, ainsi que les réseaux de désinformation et d'influence liés à la Russie, y sont documentés comme éléments d'une stratégie géopolitique plus large impliquant la Libye, la Centrafrique et le Mali.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 29,
+        "input_tokens": 3483,
+        "output_tokens": 132
+      }
+    },
+    "etats-unis": {
+      "fr": "Les États-Unis apparaissent dans ces enquêtes principalement comme puissance sanctionnante et rivale technologique face aux opérations russes. Ils figurent dans le contexte des sanctions contre les actifs et appareils russes (avions militaires, entités de la galaxie Prigozhin), des restrictions d'exportation de semi-conducteurs vers la Chine, et comme référent de la stratégie de désinformation russe visant à affaiblir l'influence occidentale en Afrique et au-delà.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 29,
+        "input_tokens": 3509,
+        "output_tokens": 129
+      }
+    },
+    "libye": {
+      "fr": "La Libye figure comme plateforme logistique majeure du groupe Wagner et de la Russie en Afrique du Nord. Base aérienne d'Al Khadim, extraction de ressources naturelles, liaisons avec la Syrie et partenariats avec le Maréchal Haftar structurent la présence militaire et économique russe. Après le décès de Prigozhin, les opérations d'influence passent sous contrôle du SVR, tandis que le pays demeure un centre stratégique pour les déploiements de l'Africa Corps et le transit d'armements vers d'autres théâtres africains.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 26,
+        "input_tokens": 3248,
+        "output_tokens": 157
+      }
+    },
+    "niger": {
+      "fr": "Le Niger apparaît comme un centre stratégique des opérations russes en Afrique de l'Ouest, particulièrement pour le déploiement de l'Africa Corps et les activités de Wagner. La présence russe s'y manifeste par des bases aériennes, des opérations de renseignement et le contrôle de ressources critiques comme l'uranium, transporté vers d'autres destinations africaines via des corridors sécurisés par des groupes armés affiliés.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 25,
+        "input_tokens": 3139,
+        "output_tokens": 119
+      }
+    },
+    "burkina-faso": {
+      "fr": "Le Burkina Faso figure dans ces enquêtes comme un foyer majeur d'opérations d'influence russe, où le groupe Wagner a tenté d'établir une présence sécuritaire auprès de la junte militaire. L'écosystème informationnel burkinabè a été soumis à des campagnes de désinformation orchestrées via les réseaux sociaux, tandis que des réseaux d'influence comme le GPCI et des structures de soft power russe travaillent à façonner le récit politique local.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 24,
+        "input_tokens": 2951,
+        "output_tokens": 136
+      }
+    },
+    "france": {
+      "fr": "La France apparaît dans ces enquêtes principalement comme base d'investigation et de surveillance des opérations russes en Afrique et au-delà. Les médias français, notamment Viginum, ont identifié des réseaux de désinformation russes comme Pravda Network, tandis que des documents internes du groupe Wagner et de ses structures associées ont été analysés par des consortiums journalistiques internationaux basés en Europe, révélant le contrôle progressif de ces opérations d'influence par les services de renseignement russes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 24,
+        "input_tokens": 2839,
+        "output_tokens": 131
+      }
+    },
+    "bamako": {
+      "fr": "Bamako est un centre opérationnel majeur du déploiement russe en Afrique de l'Ouest, avec la présence de Wagner et de l'Africa Corps implantés sur une vingtaine de bases depuis 2022. Le Mali apparaît comme un terrain clé pour les opérations offensives russes, les réseaux d'influence clandestins et les campagnes de désinformation, tout en demeurant un théâtre d'affrontements internes et externes affectant l'image du groupe Wagner.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 16,
+        "input_tokens": 2163,
+        "output_tokens": 129
+      }
+    },
+    "chine": {
+      "fr": "La Chine apparaît dans ces enquêtes principalement comme fournisseur stratégique de la Russie, notamment via des canaux logistiques contournant les sanctions pour l'accès aux composants électroniques avancés et équipements militaires. Les relations sino-russes s'intensifient depuis la guerre en Ukraine, avec des alignements narratifs et des flux continus de capital et de matériel, tandis que la Chine renforce également sa présence en Afrique par des intermédiaires comme Poly Technologies, créant des synergies géopolitiques complexes entre puissances rivales.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 16,
+        "input_tokens": 2103,
+        "output_tokens": 147
+      }
+    },
+    "bielorussie": {
+      "fr": "La Biélorussie accueille une base opérationnelle majeure de Wagner à Asipovichy, servant de centre de commandement et de coordination pour les activités du groupe en Afrique et ailleurs. Le pays figure également dans les enquêtes sur les réseaux d'approvisionnement hybrides reliant la Russie à ses opérations africaines, notamment via des partenariats logistiques et commerciaux impliquant des entreprises russo-biélorusses.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 14,
+        "input_tokens": 1984,
+        "output_tokens": 116
+      }
+    },
+    "algerie": {
+      "fr": "L'Algérie apparaît dans le contexte régional des opérations russes en Afrique du Nord et de l'Ouest, notamment par les réajustements du dispositif russe en Libye voisine et les implications stratégiques pour la présence de l'Africa Corps au Mali. Le pays est également mentionné en lien avec les forums diplomatiques russo-africains et les enjeux géopolitiques plus larges du repositionnement militaire russe dans la région méditerranéenne et sahélienne.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 13,
+        "input_tokens": 1834,
+        "output_tokens": 125
+      }
+    },
+    "togo": {
+      "fr": "Le Togo apparaît comme hub logistique et destination finale de convois d'uranium en provenance du Niger, acheminés à travers des zones contrôlées par des groupes armés, avec des acheteurs présumément russes. Le pays est également mentionné dans le contexte plus large des opérations d'influence russe en Afrique, incluant les réseaux médiatiques du GPCI et les maisons culturelles russes servant d'instruments de soft power et de coordination informationnelle.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 13,
+        "input_tokens": 1825,
+        "output_tokens": 122
+      }
+    },
+    "egypte": {
+      "fr": "L'Égypte apparaît comme un centre stratégique des opérations russes en Afrique, notamment lors du deuxième forum ministériel Russie-Afrique tenu au Caire en décembre. Elle constitue également une zone cible de désinformation et de manipulation d'influence via des réseaux comme Africa Politology et The Africanists, opérés par des structures affiliées à Prigozhin et contrôlées par le SVR.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 13,
+        "input_tokens": 1839,
+        "output_tokens": 115
+      }
+    },
+    "iran": {
+      "fr": "L'Iran apparaît dans ces enquêtes comme partenaire stratégique de la Russie dans plusieurs domaines : transfert de technologie militaire (drones Geran-2, systèmes de défense anti-drones Verba) et alignement dans les opérations régionales au Moyen-Orient. Les enquêtes documentent également le rôle des proxies iraniens dans les conflits régionaux, notamment en Mer Rouge, et les échanges technologiques entre Moscou et Téhéran face aux sanctions internationales.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 12,
+        "input_tokens": 1700,
+        "output_tokens": 132
+      }
+    },
+    "emirats-arabes-unis": {
+      "fr": "Les Émirats arabes unis constituent un nœud central des opérations d'influence russe en Afrique, notamment dans le circuit de l'exploitation aurifère reliant la Russie à la République centrafricaine et à la RDC. Ce territoire sert de plateforme de transit et de blanchiment pour les ressources extraites par le groupe Wagner, tandis que les services de renseignement russes y coordonnent des opérations de déstabilisation et d'influence politique dans le Sud Global depuis la réorganisation post-Prigozhin.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 12,
+        "input_tokens": 1883,
+        "output_tokens": 135
+      }
+    },
+    "afrique-du-sud": {
+      "fr": "L'Afrique du Sud figure dans ces enquêtes comme centre opérationnel clé du transfert de contrôle des opérations d'influence russes, notamment suite à la mort d'Evgueni Prigozhin, avec la reprise par les services de renseignement russes (SVR) de l'appareil Wagner. Le pays est également un foyer de recrutement de combattants africains pour l'armée russe en Ukraine, ainsi qu'un terrain d'application des Maisons russes et d'opérations de désinformation ciblant les groupes religieux non-orthodoxes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 11,
+        "input_tokens": 1659,
+        "output_tokens": 148
+      }
+    },
+    "bangui": {
+      "fr": "Bangui est le cœur des opérations d'influence de la galaxie Prigozhin/Wagner en Centrafrique, impliquant le contrôle de secteurs économiques clés comme les diamants et l'exploitation forestière, ainsi que la formation des forces de sécurité locales. Depuis la mort de Prigozhin, ces activités ont été reprises par les services de renseignement russes (SVR), marquant une transition du groupe mercenaire vers une mainmise institutionnelle russe sur les intérêts stratégiques et commerciaux du pays.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 11,
+        "input_tokens": 1617,
+        "output_tokens": 141
+      }
+    },
+    "cameroun": {
+      "fr": "Le Cameroun apparaît comme base opérationnelle des réseaux d'influence russe en Afrique, notamment à travers les activités de désinformation orchestrées par Africa Politology, entité contrôlée par le SVR identifiée dans les documents internes de « La Société ». Le pays est également un point de recrutement pour les combattants africains enrôlés dans l'armée russe, et un acteur dans les chaînes d'approvisionnement en ressources (diamants, bois) liées à l'empire commercial de Prigojine et Wagner.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 11,
+        "input_tokens": 1660,
+        "output_tokens": 146
+      }
+    },
+    "kidal": {
+      "fr": "Kidal, région clé du Mali septentrional, représente un enjeu stratégique central pour les opérations de Wagner et l'Africa Corps depuis leur déploiement en 2021. La prise symbolique de la ville et les affrontements avec les séparatistes du Nord Mali ont marqué un tournant critique : destruction d'unités russes, revers tactiques et crise de légitimité pour le groupe, illustrant les difficultés opérationnelles et réputationnelles de la présence russe dans la région.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 11,
+        "input_tokens": 1652,
+        "output_tokens": 129
+      }
+    },
+    "alabuga": {
+      "fr": "Alabuga fonctionne comme centre stratégique de production et de contournement des sanctions russes, notamment pour la fabrication de drones et systèmes d'armes utilisés en Ukraine. Le site accueille une augmentation de la production, l'expansion des installations militaires et un recrutement croissant de main-d'œuvre étrangère, intégrant cette zone dans l'infrastructure globale des opérations hybrides russes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 10,
+        "input_tokens": 1584,
+        "output_tokens": 106
+      }
+    },
+    "asie": {
+      "fr": "L'Asie apparaît dans ces enquêtes à travers plusieurs axes d'opérations russes : le transport d'équipements militaires vers Madagascar via les Seychelles, les partenariats sino-russes impliquant l'armement et les technologies, et les réseaux logistiques contournant les sanctions américaines. La Chine figure comme fournisseur stratégique de capitaux et équipements militaires à la Russie depuis la guerre en Ukraine, tandis que des sociétés opèrent des canaux commerciaux détournés pour les composants technologiques et l'armement.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 10,
+        "input_tokens": 1621,
+        "output_tokens": 148
+      }
+    },
+    "dubai": {
+      "fr": "Dubaï apparaît comme un centre logistique et financier clé pour les opérations d'influence russe en Afrique et au-delà, notamment dans le contrôle des entreprises minières et d'export de diamants liées à l'empire Prigozhin. La ville sert également de point de passage pour le recrutement de combattants étrangers destinés à l'armée russe et pour la coordination des activités du groupe Wagner désormais sous supervision du SVR.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 10,
+        "input_tokens": 1542,
+        "output_tokens": 120
+      }
+    },
+    "kirghizistan": {
+      "fr": "Le Kirghizistan apparaît comme un point de passage et de coordination dans les réseaux d'influence russe, notamment dans le contexte du recrutement de combattants étrangers pour l'armée russe et de l'exportation de tactiques hybrides. Le pays figure également dans les investigations portant sur les infrastructure de contrôle informationnel et les réseaux commerciaux liés aux services de sécurité russes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 10,
+        "input_tokens": 1554,
+        "output_tokens": 105
+      }
+    },
+    "zimbabwe": {
+      "fr": "Le Zimbabwe apparaît comme un pays source de recrutement pour l'armée russe, avec des citoyens engagés comme soldats étrangers dans les forces russes et ayant obtenu des passeports russes. Ces opérations s'inscrivent dans une stratégie plus large d'influence russe en Afrique, impliquant le déploiement d'armes, de drones et des opérations de manipulation documentées par plusieurs enquêtes internationales sur les activités hybrides russes sur le continent.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 10,
+        "input_tokens": 1643,
+        "output_tokens": 125
+      }
+    },
+    "kazakhstan": {
+      "fr": "Le Kazakhstan figure comme centre logistique et manufacturier clé des opérations hybrides russes, notamment le complexe d'Alabuga qui contourne les sanctions pour augmenter la production de drones d'attaque et d'autres équipements militaires tout en renforçant ses installations. Le pays constitue également un point de transit pour les réseaux d'approvisionnement chimique et les flux de main-d'œuvre étrangère intégrée dans l'armée russe.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 9,
+        "input_tokens": 1442,
+        "output_tokens": 117
+      }
+    },
+    "madagascar": {
+      "fr": "Madagascar apparaît dans ces enquêtes comme un lieu de déploiement d'opérations d'influence russe multidimensionnelles : mouvements d'avions militaires russes sanctionnés, établissement de Maisons russes servant de vecteurs de soft power culturel, et activités de manipulation politique coordonnées par des structures d'influence clandestines. Ces opérations s'inscrivent dans une stratégie plus large combinant armes, drones, propagande culturelle et interventions politiques menées par des acteurs affiliés au réseau Wagner.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 9,
+        "input_tokens": 1471,
+        "output_tokens": 136
+      }
+    },
+    "saint-petersbourg": {
+      "fr": "Saint-Pétersbourg apparaît comme centre névralgique de l'empire commercial de Prigozhin et du groupe Wagner, notamment à travers la holding Concord qui coordonne les activités du réseau. Les enquêtes documentent le transfert du contrôle de cet appareil d'influence vers les services de renseignement russes après la mort de Prigozhin, ainsi que les structures écran gérées depuis la ville pour les opérations en Centrafrique, incluant l'exploitation de ressources naturelles et les activités mercenaires.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 9,
+        "input_tokens": 1393,
+        "output_tokens": 135
+      }
+    },
+    "senegal": {
+      "fr": "Le Sénégal figure comme centre stratégique des opérations d'influence russes en Afrique de l'Ouest, notamment suite à la transition du contrôle des activités Wagner vers les services de renseignement russes. Les enquêtes documentent le déploiement de réseaux de recrutement, de spin doctors politiques, et l'utilisation d'institutions culturelles pour consolider la présence russe et le narratif du Kremlin dans la région.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 9,
+        "input_tokens": 1487,
+        "output_tokens": 114
+      }
+    },
+    "allemagne": {
+      "fr": "L'Allemagne apparaît comme destination et plateforme pour les opérations hybrides russes, notamment le réseau de désinformation Pravda opérant depuis le territoire allemand. Le pays joue également un rôle dans le recrutement de combattants étrangers pour l'armée russe et dans les circuits de contournement des sanctions, illustrant l'imbrication des activités Wagner avec les infrastructures et réseaux européens.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 8,
+        "input_tokens": 1247,
+        "output_tokens": 108
+      }
+    },
+    "guinee": {
+      "fr": "La Guinée apparaît dans les enquêtes sur les opérations d'influence russes en Afrique, notamment en tant que terrain d'expansion des réseaux de soft power moscovites après le retrait opérationnel de Wagner. Les activités documentées incluent le déploiement de communicants et officines de lobbying russes, ainsi que l'utilisation des Maisons russes comme vecteurs de présence stratégique et de recrutement de combattants étrangers pour l'armée russe.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 8,
+        "input_tokens": 1311,
+        "output_tokens": 125
+      }
+    },
+    "maroc": {
+      "fr": "Le Maroc apparaît dans ces enquêtes principalement en lien avec les opérations d'influence et de recrutement russes en Afrique du Nord et au Sahel. Les investigations documentent le rôle du GPCI, réseau de propagande russe identifié en 2023, ainsi que les trajectoires de recrues africaines intégrées dans l'armée russe, certaines en provenance de la région maghrébine. Ces enquêtes cartographient également les réajustements stratégiques russes suite aux bouleversements au Moyen-Orient et en Libye.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 8,
+        "input_tokens": 1354,
+        "output_tokens": 145
+      }
+    },
+    "paris": {
+      "fr": "Paris apparaît comme centre de coordination pour les enquêtes conjointes documentant les opérations russes en Afrique, notamment les activités de Wagner et ses réseaux d'influence. La ville accueille des consortiums journalistiques internationaux qui ont analysé les documents internes de \"The Company\", les opérations de désinformation via Africa Politology, les circuits de diamants via Diamville, et l'instrumentalisation des Maisons russes comme vecteurs de soft power hybride.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 8,
+        "input_tokens": 1306,
+        "output_tokens": 119
+      }
+    },
+    "tchad": {
+      "fr": "Le Tchad apparaît dans les enquêtes sur les opérations d'influence russes comme nœud des activités de Wagner et de structures de soft power. Les documents internes de « La Société » révèlent les mécanismes de désinformation et de manipulation orchestrés par Africa Politology, tandis que les Maisons russes servent de relais culturels pour les intérêts stratégiques russes dans la région sahélienne.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 8,
+        "input_tokens": 1327,
+        "output_tokens": 110
+      }
+    },
+    "washington": {
+      "fr": "Washington apparaît dans ces enquêtes en tant que centre de décision stratégique face aux enjeux géopolitiques impliquant la Russie et ses alliés. Les articles mentionnent les contrôles américains sur les technologies sensibles, les forums de sécurité russes et les opérations impliquant Wagner en Afrique, reflétant une confrontation entre les États-Unis et la Russie sur la scène internationale, notamment dans les domaines technologiques, militaires et d'influence régionale.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 8,
+        "input_tokens": 1313,
+        "output_tokens": 123
+      }
+    },
+    "abidjan": {
+      "fr": "Abidjan accueille des opérations de communication et d'influence liées aux activités de Wagner au Mali, notamment la diffusion de contenus vidéo relatifs à des incidents impliquant des forces conjointes FAMA-Wagner. La ville sert de relais médiatique pour des campagnes de relations publiques visant à façonner la narration autour des opérations militaires du groupe en Afrique de l'Ouest, incluant l'utilisation de canaux de diffusion locaux et de centres culturels russes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 7,
+        "input_tokens": 1243,
+        "output_tokens": 129
+      }
+    },
+    "bruxelles": {
+      "fr": "Bruxelles apparaît comme un centre logistique et diplomatique clé pour les opérations d'influence russe en Europe. La ville accueille des réseaux liés aux Maisons russes, structures de soft power culturel de plus en plus privatisées, ainsi que des connexions avec des acteurs du renseignement russe (SVR) et des organisations comme Rossotrudnichestvo impliquées dans les opérations hybrides menées notamment en Afrique centrale.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 7,
+        "input_tokens": 1211,
+        "output_tokens": 116
+      }
+    },
+    "benin": {
+      "fr": "Le Bénin apparaît dans ces enquêtes comme point de passage potentiel et zone d'intérêt dans les réseaux d'influence russes en Afrique de l'Ouest. Africa Politology, identifiée comme structure d'opérations clandestines d'influence, y est active, tandis que le pays s'inscrit dans les corridors logistiques régionaux impliquant les transferts d'armes et de ressources minérales liés aux acteurs russes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 7,
+        "input_tokens": 1271,
+        "output_tokens": 122
+      }
+    },
+    "coree-du-nord": {
+      "fr": "La Corée du Nord apparaît dans les enquêtes concernant les filières d'acquisition asiatiques mobilisées par la Russie pour contourner les sanctions imposées après l'invasion de l'Ukraine. Elle s'inscrit dans un réseau plus large de soutien logistique et militaire impliquant des acteurs asiatiques comme la Chine, visant à approvisionner l'effort de guerre russe en équipements et technologies stratégiques.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 7,
+        "input_tokens": 1205,
+        "output_tokens": 113
+      }
+    },
+    "cote-d-ivoire": {
+      "fr": "La Côte d'Ivoire apparaît comme un point nodal des opérations d'influence russe en Afrique de l'Ouest, notamment à travers le Groupe Panafricain pour le Commerce et l'Investissement (GPCI), réseau de propagande médiatique identifié en 2023. Le pays accueille également des infrastructures de soft power russe, dont les Maisons russes privatisées, ainsi que des recrutements pour l'armée russe parmi des civils africains.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 7,
+        "input_tokens": 1295,
+        "output_tokens": 128
+      }
+    },
+    "ghana": {
+      "fr": "Le Ghana apparaît dans ces enquêtes en tant que source potentielle de recrutement pour l'armée russe et la guerre en Ukraine. Les documents internes de sociétés d'influence russes révèlent des opérations de manipulation visant le continent africain, tandis que des bases de données fuites documentent des milliers de ressortissants africains, dont des Ghanéens, enrôlés comme soldats étrangers dans les forces russes avec des taux de mortalité significatifs.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 7,
+        "input_tokens": 1225,
+        "output_tokens": 125
+      }
+    },
+    "mauritanie": {
+      "fr": "La Mauritanie apparaît dans ces enquêtes comme point focal de la stratégie russe en Afrique de l'Ouest, notamment à travers les opérations du groupe Wagner au Mali voisin et les initiatives diplomatiques moscovites dans la région. Le pays figure également dans le cadre des campagnes de désinformation du réseau Pravda et des efforts russes pour étendre son influence méditerranéenne et sahélienne.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 7,
+        "input_tokens": 1232,
+        "output_tokens": 105
+      }
+    },
+    "pekin": {
+      "fr": "Pékin apparaît comme centre de coordination des soutiens chinois à la Russie depuis le conflit ukrainien, via des déclarations officielles, un alignement narratif et l'accès à des capitaux financiers et équipements militaires. La Chine facilite également des contournements de sanctions technologiques et de restrictions d'exportation de semiconducteurs, notamment par des filières asiatiques d'acquisition pour les besoins russes et des partenariats entre entités comme Poly Technologies et ROSTEC.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 7,
+        "input_tokens": 1221,
+        "output_tokens": 126
+      }
+    },
+    "tripoli": {
+      "fr": "Tripoli figure dans ces enquêtes comme centre stratégique des opérations russes en Méditerranée et en Afrique. Le Wagner Group y maintient une plateforme logistique pour acheminer des armes vers d'autres théâtres d'opération, notamment vers le Soudan, tandis que des contacts officiels russes s'y nouent avec le commandement militaire libyen, notamment le Maréchal Haftar, dans un réajustement des dispositifs russes post-syrien.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 7,
+        "input_tokens": 1285,
+        "output_tokens": 124
+      }
+    },
+    "turquie": {
+      "fr": "La Turquie apparaît dans ces enquêtes principalement comme un hub logistique et commercial pour les opérations russes en Afrique, notamment pour l'Africa Corps et Wagner Group. Elle sert également de point de transit ou de base pour les réseaux d'approvisionnement en produits chimiques liés aux développeurs d'armes russes, et intervient dans les chaînes d'exportation de ressources africaines vers les marchés internationaux.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 7,
+        "input_tokens": 1227,
+        "output_tokens": 111
+      }
+    },
+    "yemen": {
+      "fr": "Moscou entretient une double stratégie au Yémen, combinant un soutien supposé aux Houthis dans leur conflit contre Israël et l'Occident avec une présence diplomatique formalisée dans le pays. Les opérations russes, incluant les activités navales en Mer Rouge, s'inscrivent dans une logique plus large de repositionnement stratégique de la Russie en Afrique et au Moyen-Orient, au-delà des seules opérations militaires de type Wagner.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 7,
+        "input_tokens": 1290,
+        "output_tokens": 130
+      }
+    },
+    "the-middle-east": {
+      "fr": "Le Moyen-Orient apparaît dans ces enquêtes comme zone d'expansion des opérations russes au-delà de l'Ukraine, notamment à travers des rapprochements avec les Houthis au Yémen et des échanges d'armements impliquant la Chine et le groupe ROSTEC. La région figure également dans les dynamiques de recrutement de mercenaires et les opérations de désinformation menées par la Russie, en parallèle de ses activités en Afrique.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 7,
+        "input_tokens": 1161,
+        "output_tokens": 126
+      }
+    },
+    "arlit": {
+      "fr": "Arlit représente un nœud critique dans les opérations russes au Niger, en tant que zone de transit pour le transport d'uranium vers le Togo à travers des territoires contrôlés par des groupes armés. La présence russe à proximité, révélée lors de l'attaque de l'aéroport de Niamey en janvier 2026, s'inscrit dans le cadre du contrôle exercé par les services de renseignement russes sur les réseaux d'influence héritées de Wagner.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 6,
+        "input_tokens": 1219,
+        "output_tokens": 131
+      }
+    },
+    "concord": {
+      "fr": "Concord est le holding commercial de Yevgeny Prigozhin qui a structuré l'empire économique et militaire de Wagner en Afrique, en Syrie et ailleurs. Après la mort de Prigozhin, les enquêtes documentent le démantèlement de ce réseau de centaines de sociétés écrans et la redistribution de ses actifs entre services de sécurité russes, illustrant l'imbrication entre mercenariat privé et structures d'État russes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 6,
+        "input_tokens": 1152,
+        "output_tokens": 122
+      }
+    },
+    "irak": {
+      "fr": "L'Irak apparaît en contexte de recrutement de combattants étrangers pour l'armée russe, aux côtés d'autres régions du Moyen-Orient impliquées dans les opérations de Wagner et de l'Africa Corps. Les enquêtes documentent le déploiement stratégique russe en Méditerranée et au Sahel, où le groupe Wagner a mené des opérations militaires et des campagnes d'influence depuis 2023.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 6,
+        "input_tokens": 1129,
+        "output_tokens": 119
+      }
+    },
+    "israel": {
+      "fr": "Israël figure dans ces enquêtes principalement en tant que cible des opérations de groupes armés régionaux, notamment les Houthis soutenus par l'Iran, particulièrement dans le contexte de la guerre maritime en Mer Rouge depuis octobre 2023. La Russie apparaît comme acteur indirect à travers son soutien stratégique à l'Iran via la fourniture de systèmes d'armes avancés et ses contacts avec les Houthis, dans un contexte de convergence russo-iranienne au Moyen-Orient.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 6,
+        "input_tokens": 1156,
+        "output_tokens": 135
+      }
+    },
+    "le-caire": {
+      "fr": "Le Caire a accueilli le deuxième Forum de partenariat ministériel Russie-Afrique en décembre, rassemblant plusieurs pays africains et des représentants de la CEDEAO pour discuter de la stratégie moscovite en Afrique. Ce forum s'est déroulé dans un contexte marqué par des révélations sur le recrutement massif de combattants africains par la Russie, documenté à partir de bases de données fuites listant plus de 1 400 ressortissants africains engagés dans l'armée russe.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 6,
+        "input_tokens": 1141,
+        "output_tokens": 145
+      }
+    },
+    "liban": {
+      "fr": "Le Liban apparaît dans les enquêtes sur les réseaux d'approvisionnement et les flux financiers liés à l'empire de Prigojine, notamment via des circuits de commerce de diamants et de ressources naturelles transitant par la région. Le pays est aussi mentionné dans le contexte des opérations hybrides et des tensions géopolitiques en Méditerranée orientale impliquant des acteurs régionaux et des puissances externes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 6,
+        "input_tokens": 1141,
+        "output_tokens": 112
+      }
+    },
+    "namibie": {
+      "fr": "La Namibie apparaît comme un terrain d'opérations pour les réseaux d'influence russes, notamment à travers Africa Politology et les structures de soft power contrôlées après la mort de Prigozhin. Le pays est mentionné dans le contexte du transfert du contrôle des opérations d'influence du groupe Wagner vers les services de renseignement russes, ainsi que dans les activités des Maisons russes en tant qu'instruments de présence stratégique.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 6,
+        "input_tokens": 1192,
+        "output_tokens": 119
+      }
+    },
+    "niamey": {
+      "fr": "Niamey apparaît comme centre nerveux de l'engagement russe au Niger, notamment via une présence militaire à la base aérienne adjacente à l'aéroport et l'utilisation de structures culturelles comme instruments d'influence hybride. La capitale est aussi impliquée dans des flux logistiques sensibles, dont le transport d'uranium vers le Togo passant par des zones sous contrôle de groupes armés, révélant les réseaux d'approvisionnement stratégiques liés aux intérêts russes dans la région.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 6,
+        "input_tokens": 1168,
+        "output_tokens": 133
+      }
+    },
+    "republique-democratique-du-congo": {
+      "fr": "La République démocratique du Congo apparaît dans ces enquêtes en tant que zone d'extraction de ressources naturelles impliquées dans les réseaux d'influence russes, particulièrement l'or et les diamants. Le groupe Wagner, puis les structures de renseignement russe qui en ont repris le contrôle après la mort de Prigozhin, ont développé des opérations commerciales et de désinformation liées à ces filières extractives en RDC et en Afrique centrale, coordonnées via divers instruments de soft power.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 6,
+        "input_tokens": 1256,
+        "output_tokens": 133
+      }
+    },
+    "ethiopie": {
+      "fr": "L'Éthiopie apparaît dans le contexte des forums diplomatiques russo-africains tenus au Caire, où Moscou cherche à renforcer ses partenariats avec plusieurs pays africains malgré les tensions liées à la guerre en Ukraine. Le pays est également mentionné dans les opérations de désinformation et de recrutement de combattants étrangers menées par des acteurs russes pour soutenir l'effort militaire.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 6,
+        "input_tokens": 1152,
+        "output_tokens": 111
+      }
+    },
+    "angola": {
+      "fr": "Angola apparaît comme théâtre d'opérations d'influence clandestines coordonnées par des entités russes. Deux ressortissants russes y ont été arrêtés pour financement du terrorisme et organisation d'opérations de déstabilisation, avec saisie de matériel électronique et de liquidités. Les structures de soft power russe, notamment les Maisons russes, servent également de vecteurs pour ces activités hybrides dans le pays.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 5,
+        "input_tokens": 1063,
+        "output_tokens": 116
+      }
+    },
+    "belgique": {
+      "fr": "La Belgique apparaît comme destination potentielle de diamants exportés par Diamville, une société centrafricaine liée à la galaxie Prigozhin/Wagner, soulevant des questions sur les chaînes d'approvisionnement et les clients finaux de ces ressources. Elle est également mentionnée en tant que zone de couverture du Pravda Network, un réseau de désinformation russe en expansion mondiale documenté par les enquêteurs.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 5,
+        "input_tokens": 1000,
+        "output_tokens": 112
+      }
+    },
+    "berlin": {
+      "fr": "Berlin apparaît comme centre opérationnel des réseaux d'influence liés à Wagner et aux structures associées. Les enquêtes documentent le rôle de « Maisons russes » privatisées et des opérations clandestines coordonnées par des entités comme Africa Politology, utilisées pour déployer des campagnes de désinformation et d'influence ciblant les démocraties libérales en Europe et au-delà.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 5,
+        "input_tokens": 1070,
+        "output_tokens": 110
+      }
+    },
+    "chypre": {
+      "fr": "Chypre apparaît comme point de passage aérien dans les corridors logistiques du groupe Wagner reliant la Libye à la Syrie, notamment pour des livraisons d'armements vers des acteurs non-étatiques. L'île représente également un hub régional pour les opérations hybrides russes en Méditerranée, où transite le dispositif d'influence du groupe après la réorganisation en Africa Corps.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 5,
+        "input_tokens": 1074,
+        "output_tokens": 105
+      }
+    },
+    "conakry": {
+      "fr": "Conakry apparaît dans les enquêtes sur l'expansion de l'Africa Corps russe en Afrique de l'Ouest, où la Russie déploie des forces militaires et des bases opérationnelles coûteuses depuis 2022. La ville est également mentionnée dans le contexte des Maisons russes, structures de soft power culturel progressivement privatisées et utilisées par des organisations russes pour consolider l'influence dans des pays d'intérêt stratégique.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 5,
+        "input_tokens": 1056,
+        "output_tokens": 121
+      }
+    },
+    "gaza": {
+      "fr": "Gaza est mentionnée en tant que contexte géopolitique régional dans les analyses sur les tensions du Moyen-Orient depuis octobre 2023. Les enquêtes examinent comment le conflit israélo-palestinien mobilise les acteurs régionaux, notamment les Houthis et leurs soutiens étrangers, y compris les implications de l'implication russe dans les dynamiques de la mer Rouge et les alliances géopolitiques autour de ce foyer de tension.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 5,
+        "input_tokens": 1057,
+        "output_tokens": 113
+      }
+    },
+    "hong-kong": {
+      "fr": "Hong Kong apparaît comme un hub de transit pour les actifs et transactions liées à l'empire économique de Prigozhin, notamment dans le commerce de diamants et les flux financiers internationaux. La ville figure également dans les enquêtes sur les contournements de sanctions russes et les réseaux d'approvisionnement technologique alternatifs utilisés par la Chine face aux restrictions occidentales sur les semi-conducteurs.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 5,
+        "input_tokens": 1035,
+        "output_tokens": 102
+      }
+    },
+    "inde": {
+      "fr": "L'Inde apparaît dans ces enquêtes principalement en tant que marché ou destination potentielle pour les diamants exportés par Diamville, la structure centrafricaine affiliée à la galaxie Prigozhin/Wagner. Le pays figure également dans le contexte plus large des rivalités géopolitiques impliquant la Russie, notamment concernant les technologies sensibles et les instruments de soft power russe opérant dans des zones stratégiques.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 5,
+        "input_tokens": 1014,
+        "output_tokens": 108
+      }
+    },
+    "italie": {
+      "fr": "L'Italie apparaît comme un point de passage dans des réseaux européens de circulation de substances chimiques destinées à des développeurs d'armes russes et à des agences de renseignement. Le pays est également mentionné en connexion avec des infrastructures de désinformation et d'influence opérées par des entités russes, notamment à travers des réseaux hybrides coordonnés à l'échelle globale.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 5,
+        "input_tokens": 1042,
+        "output_tokens": 105
+      }
+    },
+    "lome": {
+      "fr": "Lomé apparaît comme destination d'un transport d'uranium en provenance du Niger traversant des zones contrôlées par des groupes armés, dont l'acheteur serait presenti comme russe. La capitale togolaise est également identifiée comme nœud du réseau d'influence médiatique russe GPCI (Groupe Panafricain pour le Commerce et l'Investissement), impliqué dans des campagnes de désinformation coordonnées au Sahel.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 5,
+        "input_tokens": 1051,
+        "output_tokens": 118
+      }
+    },
+    "madrid": {
+      "fr": "Madrid apparaît comme centre de coordination des opérations d'influence hybrides russes, notamment à travers des réseaux de désinformation et des organisations liées à Wagner identifiées dans des documents internes analysés par un consortium d'enquête international. La ville concentre aussi des structures de soft power comme les Maisons russes, progressivement privatisées et réaffectées à des opérations de désinformation clandestine en soutien aux activités du groupe en Afrique.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 5,
+        "input_tokens": 1021,
+        "output_tokens": 117
+      }
+    },
+    "molkino": {
+      "fr": "Molkino apparaît dans des enquêtes portant sur les opérations de recrutement de Wagner et son expansion géographique en Afrique et au Moyen-Orient. Le lieu est associé aux infrastructures logistiques du groupe Wagner en tant que centre impliqué dans le processus d'enrôlement de mercenaires et la coordination des déploiements vers les zones d'opération, notamment au Mali.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 5,
+        "input_tokens": 1029,
+        "output_tokens": 101
+      }
+    },
+    "ouagadougou": {
+      "fr": "Ouagadougou apparaît dans ces enquêtes comme centre de négociations et de déploiement des intérêts russes au Burkina Faso. Des cadres du groupe Wagner auraient tenté de conclure des accords de services de sécurité avec la junte militaire, tandis que la ville figure comme point de passage dans les réseaux logistiques régionaux incluant le transport d'uranium. Les institutions culturelles russes opèrent également dans la capitale comme vecteurs de soft power.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 5,
+        "input_tokens": 1046,
+        "output_tokens": 125
+      }
+    },
+    "royaume-uni": {
+      "fr": "Le Royaume-Uni apparaît comme centre d'identification et de documentation des opérations de désinformation russes, notamment le réseau Pravda utilisé par les services de renseignement russes pour étendre leur influence globale. Le territoire est aussi mentionné dans le contexte des alliances sino-russes et des opérations de guerre hybride affectant les intérêts britanniques et occidentaux.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 5,
+        "input_tokens": 1119,
+        "output_tokens": 99
+      }
+    },
+    "tessalit": {
+      "fr": "Tessalit figure comme point clé de la présence militaire de Wagner et Africa Corps au Mali, où ces forces russes ont assuré un soutien aux autorités militaires locales. La capture d'unités russes par les séparatistes du Nord Mali et la perte de contrôle territorial, notamment autour de Kidal, marquent le déclin opérationnel de ces groupes et la fin de leur domination militaire dans la région.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 5,
+        "input_tokens": 1055,
+        "output_tokens": 108
+      }
+    },
+    "afghanistan": {
+      "fr": "L'Afghanistan apparaît dans ces enquêtes comme point de référence contextuel pour les opérations russes. Les enquêtes traitent principalement de la transition des activités russes en Afrique, passant des opérations militaires de Wagner à des campagnes de désinformation et d'influence politique orchestrées par des cabinets de conseil et réseaux de lobbying, documentées à travers les archives internes d'Africa Politology.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 961,
+        "output_tokens": 109
+      }
+    },
+    "anefis": {
+      "fr": "Anefis, situé en Azawad au nord du Mali, est le théâtre de confrontations militaires entre le groupe Wagner, l'Africa Corps et les séparatistes du Nord Mali. Ces enquêtes documentent la destruction et la capture d'unités de Wagner par les indépendantistes, marquant l'effondrement du mythe de supériorité militaire du groupe et générant une crise de réputation pour les opérations russes dans la région.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 961,
+        "output_tokens": 113
+      }
+    },
+    "arabie-saoudite": {
+      "fr": "L'Arabie saoudite apparaît dans ces enquêtes en tant qu'acteur régional affecté par les stratégies russes au Yémen, où Moscou maintient un double jeu entre soutien aux Houthis et relations officielles. Les corridors logistiques russes, notamment via la Libye et la Syrie, supportent des opérations régionales impliquant des groupes armés dans la zone, dans un contexte de tensions géopolitiques plus larges autour d'Israël et de l'Occident.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 979,
+        "output_tokens": 135
+      }
+    },
+    "benghazi": {
+      "fr": "Benghazi accueille la base aérienne d'Al Khadim, un avant-poste stratégique russe en Libye servant de hub logistique pour les opérations d'extraction de ressources naturelles via des entités russes spécialisées. Le site constitue un point d'ancrage pour les activités de Wagner et Africa Corps dans la région méditerranéenne, consolidé par les contacts diplomatiques entre responsables russes et le commandement libyen local.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 1022,
+        "output_tokens": 116
+      }
+    },
+    "bolivie": {
+      "fr": "La Bolivie figure dans les enquêtes comme terrain d'opérations d'influence du groupe Wagner et de ses structures affiliées, notamment Africa Politology. Ces opérations, initialement contrôlées par Evgueni Prigozhin, ont été progressivement transférées aux services de renseignement russes (SVR) suite à sa mort, démontrant la continuité des activités de manipulation informationnelle dans le Sud Global.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 1006,
+        "output_tokens": 106
+      }
+    },
+    "bulgarie": {
+      "fr": "La Bulgarie constitue un hub pour les opérations de désinformation russe, notamment le réseau Pravda qui y est basé et cible plusieurs continents avec une portée croissante. Elle servit également de point de transit pour le recrutement de combattants étrangers destinés à l'armée russe, intégrant des soldats en provenance d'Afrique via des réseaux de recrutement clandestins.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 919,
+        "output_tokens": 107
+      }
+    },
+    "canada": {
+      "fr": "Le Canada figure dans des enquêtes sur les opérations hybrides russes, notamment en tant que cible potentielle de la Pravda Network, un réseau de désinformation contrôlé par Moscou qui élargit ses activités de manipulation informationnelle. Le pays apparaît aussi dans le contexte des trajectoires de mercenaires étrangers engagés par l'armée russe, certains provenant d'Afrique et ayant obtenu des documents russes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 915,
+        "output_tokens": 115
+      }
+    },
+    "gao": {
+      "fr": "Gao constitue un point d'ancrage majeur des opérations de l'Africa Corps en Afrique de l'Ouest, avec un déploiement de plusieurs milliers de combattants russes répartis sur une vingtaine de bases au Mali depuis 2022. Le lieu illustre les revers militaires du groupe Wagner face aux forces indépendantistes, notamment par la capture d'unités complètes, tandis que ces opérations se sont accompagnées de rapports documentant des violations des droits humains et des campagnes de désinformation.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 981,
+        "output_tokens": 135
+      }
+    },
+    "gouni-habe": {
+      "fr": "Gouni-Habé a été le site d'un massacre de civils lors d'une opération conjointe FAMA/Wagner en septembre 2022, documenté par des vidéos d'habitants diffusées sur Facebook. Cet incident illustre les violences accompagnant l'expansion du groupe Wagner au Mali, où les opérations militaires se sont accompagnées de rapports récurrents d'abus humanitaires et d'une campagne d'influence publique.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 935,
+        "output_tokens": 115
+      }
+    },
+    "guinee-equatoriale": {
+      "fr": "La Guinée équatoriale figure dans les enquêtes comme un terrain d'opérations de la stratégie russe post-Wagner en Afrique, impliquant le déploiement de consultants politiques, de structures de lobbying et de réseaux d'influence du Kremlin. Les Maisons russes et des organisations connexes y servent d'instruments de soft power privatisés et franchisés, tandis que des groupes d'influence comme Africa Politology mènent des opérations de manipulation narrative documentées par les archives internes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 924,
+        "output_tokens": 131
+      }
+    },
+    "kenya": {
+      "fr": "Le Kenya est un point de recrutement pour des soldats étrangers africains engagés dans l'armée russe en Ukraine, avec des trajets de départ documentés depuis le pays. Des opérations de désinformation menées par des structures russes ciblent également le continent africain, notamment via la diffusion de documents internes visant à discréditer certains groupes religieux non-orthodoxes en tant qu'agents occidentaux.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 934,
+        "output_tokens": 106
+      }
+    },
+    "mopti": {
+      "fr": "Mopti figure dans les enquêtes en tant que zone d'opérations du groupe Wagner et de l'Africa Corps au Mali depuis 2022. Le déploiement de ces forces dans la région s'est accompagné de rapports documentant des violations des droits humains et des incidents de sécurité, ainsi que d'une campagne d'influence publique menée en parallèle des opérations militaires.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 926,
+        "output_tokens": 101
+      }
+    },
+    "mumbai": {
+      "fr": "Mumbai apparaît dans des enquêtes sur les opérations d'influence clandestines liées à Wagner et à la Société, notamment via l'identification d'Africa Politology comme réseau de désinformation. La ville est mentionnée dans le contexte d'une architecture documentée d'influence hybride orchestrée par des structures affiliées au groupe Prigozhin en Afrique et au-delà.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 931,
+        "output_tokens": 99
+      }
+    },
+    "nigeria": {
+      "fr": "Le Nigeria apparaît dans ces enquêtes en tant que point de recrutement potentiel pour des combattants étrangers intégrés aux forces russes en Afrique. Les investigations documentent les trajets de soldats africains rejoignant l'armée russe, ainsi que les opérations russes d'influence régionale incluant le déploiement d'équipements militaires et les activités minières liées à Wagner en Afrique de l'Ouest et centrale.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 978,
+        "output_tokens": 116
+      }
+    },
+    "oman": {
+      "fr": "Oman apparaît dans les enquêtes sur la stratégie russe au Yémen, notamment en relation avec le double jeu diplomatique et militaire de Moscou envers les Houthis. Le pays sert de point d'ancrage géopolitique pour les opérations russes dans la région, illustrant comment Oman demeure un élément clé de la présence russe en Mer Rouge et dans la péninsule arabique aux côtés des acteurs régionaux.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 981,
+        "output_tokens": 119
+      }
+    },
+    "sofara": {
+      "fr": "Sofara est mentionnée dans le contexte des opérations conjointes entre les Forces armées maliennes (FAMA) et Wagner au Mali, notamment lors d'opérations antiterroristes en 2022. La localité apparaît dans les enquêtes en lien avec des incidents civils associés à ces opérations et aux campagnes d'influence médiatique qui les accompagnent.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 931,
+        "output_tokens": 98
+      }
+    },
+    "somalie": {
+      "fr": "La Somalie figure dans les enquêtes sur le transfert du contrôle des opérations d'influence du groupe Wagner aux services de renseignement russes suite à la mort de Prigozhin. Le pays est également mentionné dans le contexte de la privatisation et franchisation des Maisons russes, qui servent d'instruments de soft power et de coordination des opérations hybrides russes dans les régions stratégiques du Sud global.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 983,
+        "output_tokens": 107
+      }
+    },
+    "suisse": {
+      "fr": "La Suisse apparaît comme un foyer de coordination des opérations d'influence russe, notamment par le biais du Pravda Network, réseau de désinformation identifié pour son expansion géographique et thématique. Elle figure également dans les enquêtes portant sur les mécanismes d'ingérence informationnelle exploitant les libertés démocratiques, ainsi que dans la documentation des opérations hybrides coordonnées par les services russes visant à fragmenter les démocraties occidentales et à discréditer certains groupes en Afrique.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 942,
+        "output_tokens": 138
+      }
+    },
+    "tanzanie": {
+      "fr": "La Tanzanie apparaît comme un site d'opérations russes de remplacement post-Wagner, où Moscou déploie des consultants politiques, des réseaux d'influence et des officines de lobbying pour façonner les récits médiatiques. Les Maisons russes, présentées comme centres culturels, servent de vecteurs de soft power et opérations hybrides, étant de plus en plus privatisées et gérées par des organisations russes dans cette zone d'importance stratégique.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 942,
+        "output_tokens": 125
+      }
+    },
+    "tatarstan": {
+      "fr": "La zone franche d'Alabuga en Tatarstan fonctionne comme centre logistique majeur du contournement des sanctions occidentales contre la Russie, avec intensification de la production militaire et expansion des installations depuis le conflit en Ukraine. Ce nœud est également utilisé pour le recrutement et l'organisation de personnel étranger, notamment des soldats africains intégrés à l'armée russe.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 941,
+        "output_tokens": 102
+      }
+    },
+    "tunisie": {
+      "fr": "La Tunisie apparaît comme point de départ et zone de recrutement pour des soldats étrangers africains intégrés dans l'armée russe, qui transitent par le pays avant de rejoindre les forces russes. Elle s'inscrit dans la stratégie régionale plus large de la Russie en Méditerranée et en Afrique du Nord, notamment via ses contacts avec les forces libyennes et ses opérations de mobilisation de combattants étrangers.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 970,
+        "output_tokens": 118
+      }
+    },
+    "vienne": {
+      "fr": "Vienne apparaît comme centre de coordination pour des opérations d'influence clandestines, avec la présence documentée d'Africa Politology et d'autres structures liées à des activités de désinformation en Afrique. La ville accueille également une Maison russe, infrastructure culturelle réorientée vers des objectifs hybrides au service d'organisations russes non-étatiques.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 955,
+        "output_tokens": 97
+      }
+    },
+    "zambie": {
+      "fr": "La Zambie apparaît comme un site de recrutement et d'opérations de soft power russes. Des individus originaires du pays sont identifiés parmi les soldats étrangers engagés dans l'armée russe, tandis que les « Maisons russes » locales fonctionnent comme des centres d'influence culturelle, potentiellement impliqués dans des stratégies hybrides au-delà de leur mission traditionnelle de promotion linguistique et culturelle.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 4,
+        "input_tokens": 931,
+        "output_tokens": 117
+      }
+    },
+    "argentine": {
+      "fr": "L'Argentine apparaît dans les enquêtes sur les opérations d'influence clandestines menées par des structures liées à Wagner et à l'appareil de renseignement russe. Ces investigations documentent les activités de réseaux de désinformation, notamment Africa Politology, qui opèrent depuis des territoires d'Amérique du Sud pour coordonner des campagnes visant à discréditer certains groupes religieux et acteurs occidentaux en Afrique.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 863,
+        "output_tokens": 117
+      }
+    },
+    "bahrein": {
+      "fr": "Bahreïn apparaît dans des enquêtes traitant des réseaux de télécommunications et des échanges d'équipements militaires impliquant la Russie et ses partenaires. Les articles examinent l'infrastructure numérique russe, les mécanismes de contrôle d'Internet, ainsi que les relations commerciales entre entités russes comme ROSTEC et des fournisseurs d'armement opérant en Afrique et au-delà.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 885,
+        "output_tokens": 117
+      }
+    },
+    "casablanca": {
+      "fr": "Casablanca accueille des nœuds opérationnels du réseau d'influence russe en Afrique, notamment le Groupe Panafricain pour le Commerce et l'Investissement (GPCI), plateforme de propagande médiatique identifiée en 2023. La ville figure également dans les investigations sur les circuits commerciaux liés à la galaxie Prigojine, impliquant des opérations de transit et de blanchiment de ressources africaines vers la Russie.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 864,
+        "output_tokens": 122
+      }
+    },
+    "cuba": {
+      "fr": "Cuba apparaît dans les enquêtes sur le recrutement de soldats africains dans l'armée russe, en tant que destination ou point de passage dans les trajets de mercenaires provenant du continent africain. Le lieu est également mentionné en relation avec l'héritage historique des influences soviétiques et russes en Afrique, illustrant les continuités entre les engagements géopolitiques passés et les opérations militaires russes contemporaines.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 825,
+        "output_tokens": 110
+      }
+    },
+    "damas": {
+      "fr": "La Syrie constitue un théâtre majeur de réorganisation des actifs russes suite au démantèlement de l'empire commercial de Prigojine, avec une prise de contrôle par les services de sécurité russes des activités pétrolières et de sécurité privée. Le départ précipité des forces russes de Syrie s'inscrit dans un redéploiement stratégique vers d'autres zones, notamment la Libye, réorientant les opérations régionales russes en Afrique.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 854,
+        "output_tokens": 133
+      }
+    },
+    "douala": {
+      "fr": "Douala apparaît comme hub logistique et commercial pour l'écoulement de ressources extraites en Afrique centrale sous contrôle de la galaxie Prigojine/Wagner. La ville sert de point de transit pour les diamants de Centrafrique via la société Diamville et pour le bois destiné aux marchés internationaux, intégrant les chaînes d'approvisionnement liées aux opérations mercenaires russes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 827,
+        "output_tokens": 109
+      }
+    },
+    "douentza": {
+      "fr": "Douentza figure dans les enquêtes comme un lieu où les opérations du groupe Wagner au Mali se sont accompagnées de rapports de violations des droits humains et de massacres. La ville apparaît en particulier dans la documentation de violences datant de mars-avril 2022, illustrant l'expansion territoriale de Wagner et ses impacts humanitaires, parallèlement à des campagnes d'influence menées dans le pays.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 809,
+        "output_tokens": 103
+      }
+    },
+    "espagne": {
+      "fr": "L'Espagne apparaît comme un hub logistique et de désinformation pour les opérations russes en Europe. D'une part, un réseau d'entreprises dirigé par une famille russo-espagnole a fourni des produits chimiques à des développeurs d'armes et services de renseignement russes. D'autre part, le Pravda Network, réseau de désinformation russe, a étendu ses opérations de propagande hybride vers le pays et ses audiences.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 846,
+        "output_tokens": 120
+      }
+    },
+    "estonie": {
+      "fr": "L'Estonie apparaît dans les enquêtes sur les réseaux de désinformation russes, notamment le Pravda Network identifié par Viginum, qui étend son influence à travers plusieurs pays et audiences. Le pays est également mentionné en lien avec le recrutement de combattants étrangers pour l'armée russe, certains provenant du continent africain et obtenant des passeports russes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 820,
+        "output_tokens": 103
+      }
+    },
+    "georgie": {
+      "fr": "La Géorgie apparaît dans les enquêtes sur les réseaux de désinformation et d'influence russes, notamment au travers de la Pravda Network, identifiée comme un vecteur majeur de campagnes hybrides ciblant plusieurs pays. Elle est également mentionnée en lien avec le réseau Catrosa, impliqué dans le commerce de produits chimiques destinés à des développeurs d'armes russes et à des agences de renseignement, révélant des chaînes d'approvisionnement transnationales liées aux capacités militaires russes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 848,
+        "output_tokens": 143
+      }
+    },
+    "johannesburg": {
+      "fr": "Johannesburg apparaît comme un centre majeur de la présence et de l'influence russe en Afrique du Sud, point focal des opérations du groupe Wagner et de son réseau d'influence. Suite au décès d'Evgueni Prigojine, le contrôle de ces structures a été transféré à l'intelligence russe (SVR), qui poursuit les opérations offensives et d'influence dans le Sud Global depuis cette localisation stratégique.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 883,
+        "output_tokens": 114
+      }
+    },
+    "jufra": {
+      "fr": "Jufra constitue une plateforme logistique clé pour les opérations du Groupe Wagner en Libye, permettant l'acheminement d'armes vers la Syrie et d'autres théâtres d'opération. La région, contrôlée par l'Armée Nationale Libyenne, a été le siège de rencontres entre représentants russes de haut niveau et le commandement libyen avant la restructuration des forces russes en Afrique.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 908,
+        "output_tokens": 119
+      }
+    },
+    "kiev": {
+      "fr": "Kiev apparaît comme centre de coordination des opérations de recrutement russes en Ukraine, où plus de 1 400 ressortissants africains ont été enrôlés par la Russie, dont plus de 300 tués au combat selon des bases de données fuites. La ville symbolise également un enjeu majeur de la confrontation hybride russe, mise en perspective lors du Forum international sur la sécurité organisé par Moscou pour promouvoir son influence géopolitique globale.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 848,
+        "output_tokens": 120
+      }
+    },
+    "lettonie": {
+      "fr": "La Lettonie figure dans des enquêtes sur les réseaux de désinformation russes, notamment le Pravda Network identifié par des organismes français de surveillance, qui cible plusieurs pays et audiences en Europe et au-delà. Le pays apparaît également dans le contexte du recrutement de soldats étrangers africains pour l'armée russe, certains obtenant des passeports russes après leur engagement.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 820,
+        "output_tokens": 101
+      }
+    },
+    "lobaye": {
+      "fr": "La Lobaye est un centre d'exploitation de ressources naturelles contrôlé par le réseau Prigojine-Wagner en République centrafricaine. Des entreprises affiliées à cette galaxie y opèrent dans l'extraction et l'exportation de diamants ainsi que dans l'exploitation forestière, constituant des chaînes de valeur alimentant les intérêts russes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 837,
+        "output_tokens": 93
+      }
+    },
+    "londres": {
+      "fr": "Londres apparaît comme centre de coordination des enquêtes investigatives sur le transfert du contrôle des opérations d'influence du groupe Wagner vers les services de renseignement russes, notamment le SVR. La ville accueille le consortium journalistique international chargé d'analyser les 1 431 pages de documents internes révélant les réseaux d'influence et les opérations offensives russes déployés dans le Sud Global.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 883,
+        "output_tokens": 108
+      }
+    },
+    "luxembourg": {
+      "fr": "Le Luxembourg accueille des infrastructures impliquées dans les opérations hybrides russes, notamment des maisons russes utilisées au-delà de leur rôle culturel traditionnel. Le pays constitue également un point de passage ou de coordination pour les réseaux de désinformation comme le Pravda Network et les filières d'acquisition liées aux opérations du groupe Wagner en Europe.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 782,
+        "output_tokens": 92
+      }
+    },
+    "mozambique": {
+      "fr": "Le Mozambique apparaît comme un territoire d'opérations pour les activités d'influence russes, dans le contexte de la réorganisation du groupe Wagner suivant le décès de son fondateur. Le contrôle de l'appareil d'influence autrefois dirigé par Prigojine a été transféré aux services de renseignement russes, notamment le SVR, pour poursuivre les opérations offensives dans le Sud Global.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 881,
+        "output_tokens": 110
+      }
+    },
+    "nairobi": {
+      "fr": "Nairobi apparaît comme point de passage ou centre de coordination pour le recrutement de combattants africains engagés dans l'armée russe en Ukraine. Les enquêtes documentent le parcours de soldats étrangers originaires du continent africain, dont plus de 1 400 ont été identifiés dans des bases de données fuites, avec un bilan de plus de 300 morts au combat.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 838,
+        "output_tokens": 100
+      }
+    },
+    "pakistan": {
+      "fr": "Le Pakistan apparaît dans une enquête sur les opérations de censure Internet russe, explorant les mécanismes techniques de filtrage des données sur les réseaux de télécommunications. Il est également mentionné en lien avec les activités d'extraction d'or et de ressources naturelles liées aux opérations du groupe Wagner en Afrique, dans le contexte des chaînes logistiques internationales et des sanctions contre les facilitateurs militaires russes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 819,
+        "output_tokens": 112
+      }
+    },
+    "pays-bas": {
+      "fr": "Les Pays-Bas servent de point de transit et de base logistique pour le recrutement de combattants étrangers africains engagés dans l'armée russe, ces soldats y recevant des billets de voyage avant leur déploiement. Le pays figure aussi dans le mapping des opérations de désinformation du Pravda Network, réseau d'influence russe en expansion mondiale identifié par les services français.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 824,
+        "output_tokens": 104
+      }
+    },
+    "pologne": {
+      "fr": "La Pologne figure dans les opérations de désinformation du Réseau Pravda, plateforme russe d'influence hybride qui cible plusieurs pays européens avec une portée croissante. Elle est également impliquée dans les circuits logistiques du Réseau Catrosa, un réseau d'entreprises vendant des produits chimiques destinés aux développeurs d'armes et aux agences de renseignement russes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 846,
+        "output_tokens": 106
+      }
+    },
+    "prague": {
+      "fr": "Prague apparaît dans des enquêtes sur les Maisons russes, centres culturels traditionnels convertis en instruments de soft power privatisés et confiés à des organisations russes. Ces structures, implantées dans des pays stratégiques, servent de relais aux opérations d'influence hybride russe, notamment en Europe centrale où la Tchéquie revêt une importance géopolitique particulière pour Moscou.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 852,
+        "output_tokens": 102
+      }
+    },
+    "rome": {
+      "fr": "Rome figure dans ces enquêtes comme centre de coordination des Maisons russes, structures culturelles privatisées servant d'instruments de soft power et de façade pour des opérations hybrides russes. La ville est également mentionnée dans le contexte d'une campagne de désinformation orchestrée par des entités liées aux services de renseignement russes (SVR) visant à discréditer des groupes chrétiens non-orthodoxes en Afrique et en Occident.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 842,
+        "output_tokens": 118
+      }
+    },
+    "sierra-leone": {
+      "fr": "Sierra Leone est mentionnée dans des enquêtes portant sur les opérations hybrides russes en Afrique de l'Ouest. Les investigations documentent le rôle des Maisons russes comme vecteurs de soft power privatisé et l'engagement de combattants étrangers africains recrutés par la Russie, reflétant les stratégies d'influence et de mobilisation militaire menées par Moscou dans la région.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 848,
+        "output_tokens": 107
+      }
+    },
+    "sochi": {
+      "fr": "Sochi apparaît comme un centre de coordination pour les opérations de la galaxie Prigozhin, avec des annonces via des canaux Telegram liés à Wagner concernant le déploiement de cadres en Afrique. La ville symbolise également les stratégies russes d'influence hybride exploitant les libertés démocratiques à travers des opérations de désinformation ciblant les sociétés occidentales.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 898,
+        "output_tokens": 105
+      }
+    },
+    "taiwan": {
+      "fr": "Taïwan apparaît dans les enquêtes comme enjeu géopolitique majeur dans la rivalité sino-américaine en matière de technologies sensibles et de contrôles d'exportation de semiconducteurs avancés. Le lieu symbolise également un potentiel théâtre de conflit où les alignements Russia-Chine et les réseaux d'influence hybrides pourraient se cristalliser, notamment à travers les chaînes d'approvisionnement militaires et technologiques impliquant ROSTEC et d'autres acteurs russes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 808,
+        "output_tokens": 132
+      }
+    },
+    "tobrouk": {
+      "fr": "Tobrouk constitue un point d'ancrage stratégique pour les opérations russes en Libye, notamment suite au réajustement du dispositif militaire après le départ de Syrie. La ville, contrôlée par l'Armée Nationale Libyenne du Maréchal Haftar, accueille des installations russes et biélorusses servant de base logistique et de projection de force vers la Méditerranée et l'Afrique.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 888,
+        "output_tokens": 117
+      }
+    },
+    "teheran": {
+      "fr": "Téhéran apparaît dans ces enquêtes en tant que centre de coopération militaire et technologique entre la Russie et l'Iran, impliquant notamment le transfert de systèmes d'armes avancés et de technologies de drones. La ville est aussi un nœud de contournement de sanctions, où la Russie s'approvisionne en composants et en expertise pour augmenter sa production militaire, particulièrement dans le domaine des véhicules aériens sans pilote adaptés au conflit ukrainien.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 883,
+        "output_tokens": 132
+      }
+    },
+    "uzbekistan": {
+      "fr": "L'Ouzbékistan apparaît comme zone de production et de transit pour les opérations hybrides russes, notamment via la plateforme industrielle d'Alabuga qui augmente sa capacité de fabrication de drones et contourne les sanctions internationales. Le pays accueille également des réseaux de consultants politiques et d'influence liés à Prigozhin, mobilisés pour soutenir les narratifs russes en Afrique et au-delà.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 3,
+        "input_tokens": 838,
+        "output_tokens": 113
+      }
+    },
+    "accra": {
+      "fr": "Accra sert de point de transit ou de contact pour le recrutement de soldats africains engagés par l'armée russe. Les enquêtes documentent comment des individus en provenance de différents pays africains, dont le Ghana, sont intégrés dans les forces militaires russes, certains obtenant par la suite une nationalité russe.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 743,
+        "output_tokens": 86
+      }
+    },
+    "aden": {
+      "fr": "Aden apparaît comme un terrain d'opérations où la Russie maintient une présence diplomatique et militaire ambiguë au Yémen. Moscou navigue entre un soutien officieux aux Houthis et une formalisation de ses positions, illustrant une stratégie d'influence hybride dans le conflit régional impliquant Israël et les puissances occidentales.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 759,
+        "output_tokens": 98
+      }
+    },
+    "aguelhok": {
+      "fr": "Aguelhok est le lieu d'une confrontation militaire majeure entre les forces de Wagner et Africa Corps et les groupes indépendantistes du nord du Mali. Cet engagement a marqué un tournant symbolique dans les opérations russes en Afrique de l'Ouest, mettant en évidence les limites de ces unités face aux forces de résistance locale dans la région de l'Azawad.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 773,
+        "output_tokens": 102
+      }
+    },
+    "amman": {
+      "fr": "Amman apparaît comme un point d'observation des négociations et du positionnement diplomatique de Moscou au Yémen. La Jordanie s'inscrit dans le contexte régional plus large où la Russie maintient des relations avec les Houthis tout en gérant ses intérêts officiels face aux puissances occidentales et à Israël.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 758,
+        "output_tokens": 91
+      }
+    },
+    "antananarivo": {
+      "fr": "Antananarivo accueille des opérations russes de séduction diplomatique et militaire, incluant des livraisons d'armes, de drones et des propositions financières. Un avion militaire russe sanctionné par les États-Unis a été détecté à l'aéroport international Ivato en décembre 2025, révélant l'intensification de l'engagement de Moscou auprès de Madagascar par des canaux officiels et des émissaires.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 813,
+        "output_tokens": 117
+      }
+    },
+    "ariana": {
+      "fr": "Ariana apparaît comme un point de départ pour le recrutement de soldats étrangers africains intégrés dans l'armée russe. Ces individus, originaires de différents pays du continent, ont été contactés via des canaux non officiels avant de rejoindre les forces russes, certains obtenant par la suite la nationalité russe.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 746,
+        "output_tokens": 87
+      }
+    },
+    "bangkok": {
+      "fr": "Bangkok apparaît dans les enquêtes portant sur Diamville, une structure d'export de diamants centrafricains liée à la galaxie Prigojine/Wagner. La ville constitue un point de transit ou de commercialisation identifié dans les réseaux logistiques et commerciaux reliant les opérations extractives en Centrafrique aux marchés internationaux des diamants.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 746,
+        "output_tokens": 95
+      }
+    },
+    "bangladesh": {
+      "fr": "Le Bangladesh apparaît dans ces enquêtes en tant que point d'intersection des réseaux d'approvisionnement militaires impliquant les sociétés chinoises Poly Technologies et le groupe russe ROSTEC. Ces articles examinent les flux d'équipements militaires et de capitaux financiers établis entre la Chine et la Russie depuis la guerre en Ukraine, dans un contexte d'alignement géopolitique stratégique.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 780,
+        "output_tokens": 106
+      }
+    },
+    "barcelone": {
+      "fr": "Barcelone apparaît comme un centre opérationnel pour des réseaux liés à l'infrastructure russe en Europe. Un réseau d'entreprises dirigé par une famille russo-espagnole établie dans la ville commercialisait des produits chimiques destinés à des développeurs d'armes russes et à des agences de renseignement. La ville figure également dans les communications internes du groupe Wagner concernant ses opérations en Afrique centrale.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 807,
+        "output_tokens": 110
+      }
+    },
+    "bishkek": {
+      "fr": "Bishkek apparaît dans les enquêtes comme centre potentiel des opérations de communication et d'influence russes en Afrique après le retrait de Wagner. Ces articles examinent la transition de Moscou vers des stratégies de propagande utilisant des consultants politiques, des réseaux d'influence et des officines de lobbying pour maintenir sa présence narrative sur le continent.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 759,
+        "output_tokens": 94
+      }
+    },
+    "botswana": {
+      "fr": "Le Botswana apparaît dans les enquêtes sur les réseaux d'approvisionnement militaire reliant la Chine et la Russie. Ces investigations examinent les partenariats entre Poly Technologies et ROSTEC, ainsi que les flux d'équipements militaires et de capital financier établis depuis le déclenchement de la guerre en Ukraine, dans un contexte plus large de coordination sino-russe.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 786,
+        "output_tokens": 102
+      }
+    },
+    "bratislava": {
+      "fr": "Les maisons russes de Bratislava fonctionnent comme des centres culturels servant le soft power russe, promouvant la langue et la culture. Ces institutions, traditionnellement contrôlées par l'État, ont été progressivement privatisées et confiées à des organisations russes opérant dans des pays d'importance stratégique.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 747,
+        "output_tokens": 84
+      }
+    },
+    "budapest": {
+      "fr": "Les Maisons russes à Budapest fonctionnent comme des centres culturels russes privatisés et confiés en franchise à des organisations russes. Ces structures, traditionnellement des instruments de soft power étatique, sont mobilisées dans des opérations de guerre hybride, utilisant des ressortissants russes implantés en Hongrie, pays d'importance stratégique pour les intérêts russes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 743,
+        "output_tokens": 99
+      }
+    },
+    "burundi": {
+      "fr": "Le Burundi est un point de départ pour le recrutement de combattants africains engagés dans l'armée russe. Ces soldats étrangers, originaires de différents pays du continent, entreprennent des voyages organisés qui les mènent à combattre sous le drapeau russe, certains obtenant par la suite la nationalité russe.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 745,
+        "output_tokens": 89
+      }
+    },
+    "chisinau": {
+      "fr": "Les Maisons russes à Chișinău fonctionnent comme centres culturels privatisés, servant d'instruments de soft power déguisé pour la promotion de la langue et de la culture russes auprès des populations locales. Ces structures, concédées en franchise à des organisations russes, représentent un vecteur de l'influence hybride russe dans un pays stratégiquement important pour Moscou.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 748,
+        "output_tokens": 100
+      }
+    },
+    "cocody": {
+      "fr": "Les maisons russes de Cocody fonctionnent comme des centres culturels qui ont progressivement basculé vers une privatisation et une gestion par des organisations russes. Ces structures, traditionnellement des instruments de soft power étatique, sont devenues des vecteurs d'influence hybride impliquant des nationaux russes dans des zones stratégiques pour Moscou.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 750,
+        "output_tokens": 89
+      }
+    },
+    "dakar": {
+      "fr": "Les maisons russes à Dakar, présentées comme des centres culturels, servent de points d'appui au soft power russe en promouvant la langue et la culture. Ces institutions, de plus en plus privatisées et confiées à des organisations russes, s'appuient sur des ressortissants russes dans des pays revêtant une importance stratégique pour les objectifs russes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 747,
+        "output_tokens": 98
+      }
+    },
+    "danemark": {
+      "fr": "Le Danemark apparaît dans le cadre de la surveillance des opérations d'influence hybride russes, notamment via le Pravda Network, un réseau de désinformation identifié par les autorités françaises qui étend progressivement ses activités géographiques et thématiques. Le pays est également mentionné en relation avec les enquêtes sur les chaînes d'approvisionnement de mercenaires et les réseaux commerciaux internationaux liés à ces opérations.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 716,
+        "output_tokens": 117
+      }
+    },
+    "donbass": {
+      "fr": "Le Donbass constitue un théâtre opérationnel majeur pour le recrutement de mercenaires par le groupe Wagner, qui ajuste sa masse salariale en fonction de la demande géopolitique. Cette région voit également l'engagement de combattants étrangers, notamment africains, intégrés dans les forces armées russes et bénéficiant de naturalisations, reflétant l'expansion des opérations de mercenariat du groupe Wagner.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 773,
+        "output_tokens": 113
+      }
+    },
+    "evropolis": {
+      "fr": "Evropolis apparaît dans les enquêtes portant sur le démantèlement des actifs du groupe Prigojine en Syrie, notamment ses opérations pétrolières. Les services de sécurité russes, en particulier le GRU, procèdent à la réorganisation et au contrôle de ces activités commerciales dans le contexte des sanctions internationales imposées à la Russie.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 767,
+        "output_tokens": 101
+      }
+    },
+    "farcha": {
+      "fr": "À Farcha, au Tchad, une maison russe fonctionne comme centre culturel, instrument de soft power prétendument dédié à la promotion de la langue et de la culture russes. Cette institution a été privatisée et confiée en franchise à des organisations russes, s'appuyant sur des ressortissants russes implantés dans ce pays d'importance stratégique pour les intérêts moscovites.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 745,
+        "output_tokens": 105
+      }
+    },
+    "gambie": {
+      "fr": "La Gambie apparaît dans ces enquêtes en tant que pays d'origine de ressortissants recrutés pour servir comme soldats étrangers dans l'armée russe. Une base de données divulguée documente le recrutement de citoyens gambiens, dont certains ont été tués au combat en Ukraine. Ces enquêtes cartographient un réseau de recrutement transnational impliquant des acteurs russes qui ciblent des combattants africains.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 734,
+        "output_tokens": 116
+      }
+    },
+    "golfe": {
+      "fr": "Le Golfe constitue un théâtre de recrutement de combattants étrangers pour l'armée russe, avec des soldats en provenance d'Afrique intégrés aux forces russes et ayant acquis la nationalité. La région est aussi le lieu d'une coopération militaire approfondie entre la Russie et l'Iran, impliquant le transfert de systèmes d'armes avancés incluant des défenses anti-drones et anti-missiles.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 791,
+        "output_tokens": 119
+      }
+    },
+    "gourma": {
+      "fr": "La région du Gourma au Burkina Faso est mentionnée en lien avec les opérations du groupe Wagner au Mali, notamment dans le contexte de l'expansion territoriale et des activités du groupe mercenaire dans la zone sahélienne. Les enquêtes documentent les violations de droits humains et les massacres rapportés dans cette région, ainsi que les campagnes d'influence accompagnant la présence de Wagner dans le Sahel.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 761,
+        "output_tokens": 109
+      }
+    },
+    "hombori": {
+      "fr": "Hombori figure dans les enquêtes sur la présence de Wagner au Mali, où le groupe a déployé des opérations militaires accompagnées d'une campagne d'influence publique. Le lieu illustre les violations des droits humains et les massacres documentés lors de l'expansion territoriale du groupe Wagner dans le pays.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 719,
+        "output_tokens": 80
+      }
+    },
+    "homs": {
+      "fr": "Homs figure dans les enquêtes sur le redéploiement russe en Syrie et ses implications stratégiques régionales. Les enquêtes documentent le retrait opérationnel russe de Syrie et son impact sur la réorganisation des opérations en Libye et Afrique, révélant les connexions entre les activités de Prigozhin et le Wagner Group en Méditerranée.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 732,
+        "output_tokens": 101
+      }
+    },
+    "izhevsk": {
+      "fr": "Izhevsk accueille des installations de production militaire intégrées aux réseaux de contournement des sanctions russes, notamment dans le secteur des drones. La ville constitue un nœud logistique clé pour l'augmentation de la capacité productive et la militarisation des infrastructures soutenant les opérations en Ukraine, avec un recours croissant à une main-d'œuvre étrangère.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 756,
+        "output_tokens": 103
+      }
+    },
+    "japon": {
+      "fr": "Le Japon apparaît dans le contexte des opérations de contournement de sanctions russes et de la production militarisée, notamment concernant les drones d'attaque Geran-2 d'origine iranienne utilisés en Ukraine. Le pays est également ciblé par les campagnes de désinformation du réseau Pravda, identifié comme infrastructure d'influence russe opérant à l'échelle mondiale auprès de différents publics.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 725,
+        "output_tokens": 112
+      }
+    },
+    "jordanie": {
+      "fr": "La Jordanie apparaît dans une enquête sur les opérations de censure d'Internet en Russie, examinant les mécanismes techniques de contrôle des données sur les réseaux de télécommunications russes. Elle est également mentionnée dans le contexte des déplacements diplomatiques liés aux opérations d'Africa Corps en Méditerranée et en Afrique du Nord.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 782,
+        "output_tokens": 98
+      }
+    },
+    "kalinka": {
+      "fr": "Kalinka accueille une Maison russe, centre culturel initialement instrument de soft power étatique pour la promotion de la langue et de la culture russes. Ces structures ont progressivement été privatisées et confiées à des organisations russes, servant de points d'ancrage dans des pays jugés stratégiquement importants pour les intérêts russes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 746,
+        "output_tokens": 88
+      }
+    },
+    "kassai": {
+      "fr": "La région de Kassai apparaît dans les enquêtes portant sur les activités du groupe Wagner en République démocratique du Congo, notamment en lien avec des opérations de formation et de présence militaire. Les investigations documentent également des activités d'exploitation de ressources naturelles, particulièrement le bois, impliquant des réseaux marchands internationaux connectés aux opérations de mercenaires.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 726,
+        "output_tokens": 99
+      }
+    },
+    "klishchiivka": {
+      "fr": "Klishchiivka est un lieu de combat en Ukraine où combattent des soldats étrangers recrutés dans l'armée russe, issus de divers pays africains. Ces combattants étrangers intégrés à l'effort de guerre russe constituent un élément documenté des opérations militaires russes sur le territoire ukrainien.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 746,
+        "output_tokens": 86
+      }
+    },
+    "koupela": {
+      "fr": "Koupéla apparaît sur le parcours d'un convoi de transport d'uranium acheminé du Niger vers le Togo à travers des zones contrôlées par des groupes armés terroristes. Ce transit de matières premières stratégiques traverse des enclaves de la région, soulevant des questions sur les acteurs impliqués et les réseaux logistiques utilisés dans ce contexte de instabilité sécuritaire au Sahel.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 759,
+        "output_tokens": 112
+      }
+    },
+    "krasnokamensk": {
+      "fr": "Krasnokamensk apparaît comme un lieu de recrutement et de transit de soldats étrangers africains pour l'armée russe. Des combattants provenant de différents pays africains y sont passés dans leurs parcours d'enrôlement, certains obtenant par la suite la nationalité russe et s'intégrant aux forces armées.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 748,
+        "output_tokens": 88
+      }
+    },
+    "kumasi": {
+      "fr": "Kumasi apparaît dans ces enquêtes comme point de départ ou lieu de recrutement pour des ressortissants africains enrôlés comme soldats étrangers dans l'armée russe. Les enquêtes documentent les parcours d'individus de différents pays du continent qui ont accepté de combattre sous le drapeau russe, certains ayant obtenu des passeports russes.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 743,
+        "output_tokens": 100
+      }
+    },
+    "malabo": {
+      "fr": "Les Maisons russes de Malabo fonctionnent comme instruments de soft power culturel, progressivement privatisées et confiées à des organisations russes pour promouvoir la langue et la culture russes en Guinée équatoriale. Ces structures opèrent dans un pays d'importance stratégique, s'appuyant sur des ressortissants russes pour leurs activités.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 748,
+        "output_tokens": 92
+      }
+    },
+    "mexique": {
+      "fr": "Le Mexique apparaît en tant que terrain potentiel de déploiement des stratégies russes de communication et d'influence post-Wagner, incluant les réseaux de spin doctors et les officines de lobbying. Le pays est également examiné dans le contexte des infrastructures numériques russes et des mécanismes de contrôle d'Internet, suggérant des dimensions hybrides des opérations russes s'étendant au-delà des zones de conflit traditionnelles.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 766,
+        "output_tokens": 119
+      }
+    },
+    "moura": {
+      "fr": "Moura constitue un point d'ancrage territorial de Wagner au Mali, où le groupe a établi une présence opérationnelle environ un an après son arrivée initiale dans le pays. La ville s'inscrit dans un contexte de rapports documentant des violations des droits humains et des massacres, parallèlement à des campagnes d'influence publique menées par le groupe de mercenaires.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 718,
+        "output_tokens": 97
+      }
+    },
+    "mourmansk": {
+      "fr": "Mourmansk apparaît comme port stratégique dans les restructurations opérationnelles russes suite au déploiement en Libye et au réajustement des forces après le départ de Syrie. Le lieu est également mentionné dans le contexte des infrastructures et actifs du groupe Wagner et de la holding Concord, l'empire commercial liée aux opérations russes en Afrique.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 749,
+        "output_tokens": 98
+      }
+    },
+    "muscat": {
+      "fr": "Muscat apparaît comme un point de coordination pour les opérations diplomatiques et militaires russes au Yémen. La Russie y maintient une présence officielle tout en développant parallèlement des liens avec les Houthis, illustrant une stratégie de double jeu visant à étendre son influence régionale sans compromettre ses relations formelles.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 758,
+        "output_tokens": 88
+      }
+    },
+    "menaka": {
+      "fr": "Ménaka est mentionnée comme zone d'opération du groupe Wagner au Mali, dans le contexte de son déploiement militaire lancé environ un an avant l'enquête. Les rapports documentent des violations des droits humains et des massacres attribués aux mercenaires dans cette région, parallèlement à une campagne d'influence menée par le groupe.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 756,
+        "output_tokens": 89
+      }
+    },
+    "nampala": {
+      "fr": "Nampala figure dans les enquêtes comme l'un des sites d'opérations du groupe Wagner au Mali, une année après l'arrivée des mercenaires dans le pays. Cette présence s'inscrit dans un contexte documenté de violations des droits humains et de campagnes d'influence menées parallèlement à l'expansion territoriale du groupe.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 719,
+        "output_tokens": 88
+      }
+    },
+    "nasiriyah": {
+      "fr": "Nasiriyah apparaît dans les enquêtes documentant la présence de Wagner au Mali sur une période d'un an. Le lieu est associé aux rapports de violations des droits humains, de massacres et aux campagnes d'influence menées parallèlement à l'expansion territoriale du groupe Wagner dans la région.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 722,
+        "output_tokens": 78
+      }
+    },
+    "northern-mali": {
+      "fr": "Wagner et Africa Corps ont déployé des forces militaires en Afrique du Nord du Mali à partir de 2021, engagées dans des opérations contre les séparatistes de l'Azawad et dans la lutte pour le contrôle territorial, notamment de Kidal. Parallèlement, le groupe a tenté d'exploiter les ressources aurifères locales selon un modèle opérationnel développé en Centrafrique, avec des membres du groupe facilités par des personnalités officielles identifiées par des sanctions internationales.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 724,
+        "output_tokens": 131
+      }
+    },
+    "ndjamena": {
+      "fr": "N'Djamena est identifiée comme un centre d'opérations pour des activités de Wagner Group et Africa Politology, révélées par des documents internes obtenus par un consortium d'enquêtes. La capitale tchadienne accueille également des structures de soft power russe, notamment des centres culturels russes, qui ont été progressivement privatisés et utilisés par des organisations russes pour consolider l'influence stratégique.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 724,
+        "output_tokens": 106
+      }
+    },
+    "petropavlovsk-kamchatsky": {
+      "fr": "Petropavlovsk-Kamchatsky est mentionnée comme point de référence dans le démantèlement des actifs de Prigojine suite à sa mort. Les services de sécurité russes, notamment le GRU, auraient procédé à la reprise des opérations commerciales du groupe Wagner à des prix réduits, dans un contexte de sanctions internationales contre la Russie.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 776,
+        "output_tokens": 99
+      }
+    },
+    "philippines": {
+      "fr": "Les Philippines apparaissent dans une enquête sur un réseau de sociétés russo-espagnoles impliquées dans le commerce de produits chimiques vers des développeurs d'armes et des agences liées aux services de renseignement russes. Ce réseau, désigné sous le nom de Catrosa, illustre les circuits d'approvisionnement en précurseurs chimiques destinés aux programmes d'armement russes via des intermédiaires commerciaux établis en Europe et opérant à l'échelle internationale.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 767,
+        "output_tokens": 127
+      }
+    },
+    "port-harcourt": {
+      "fr": "Port Harcourt apparaît dans les enquêtes concernant le recrutement de soldats africains pour l'armée russe. Les investigations documentent les parcours de ressortissants du continent qui ont accepté de combattre comme soldats étrangers, certains obtenant la nationalité russe, avec des trajets initiés par des intermédiaires basés dans la région.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 748,
+        "output_tokens": 92
+      }
+    },
+    "pyongyang": {
+      "fr": "Pyongyang est mentionnée dans le contexte des chaînes d'approvisionnement russes contournant les sanctions internationales, notamment en relation avec les drones utilisés dans le conflit ukrainien. Les enquêtes établissent des liens entre les installations de production militarisées russes et les partenariats technologiques impliquant des acteurs nord-coréens pour la fourniture de composants ou de main-d'œuvre spécialisée.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 757,
+        "output_tokens": 113
+      }
+    },
+    "qardabiyah": {
+      "fr": "Qardabiyah sert de plateforme logistique au groupe Wagner pour le transit d'armes destinées aux Forces de soutien rapide soudanaises. Les opérations impliquent des mouvements aériens via la Libye vers des zones de regroupement russe en Syrie, documentés par des données satellites et de suivi de trafic aérien.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 777,
+        "output_tokens": 94
+      }
+    },
+    "qatar": {
+      "fr": "Le Qatar apparaît comme un point de transit dans les trajets de recrutement de soldats africains pour l'armée russe. Des individus en provenance du continent africain ont emprunté des itinéraires de voyage impliquant le Qatar avant de rejoindre les forces russes, illustrant les réseaux logistiques et les routes de mobilité utilisés par Wagner pour l'enrôlement international.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 741,
+        "output_tokens": 98
+      }
+    },
+    "rosatom": {
+      "fr": "Rosatom apparaît dans les enquêtes en lien avec des opérations logistiques d'uranium en Afrique de l'Ouest. L'entreprise russe est mentionnée comme acheteur potentiel d'uranium transporté de Niger vers Togo via des zones contrôlées par des groupes armés, dans un contexte où la Russie déploie des stratégies d'influence post-Wagner combinant consultants politiques et réseaux de lobbying.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 733,
+        "output_tokens": 117
+      }
+    },
+    "rostov": {
+      "fr": "Rostov apparaît comme point de transit dans les réseaux logistiques reliant les opérations russes en Libye, notamment la base aérienne d'Al Khadim et les sites d'extraction minière contrôlés par Wagner. Les enquêtes documentent les mouvements de personnel russe impliqué dans l'exploitation des ressources naturelles libyennes, révélant les connexions entre les installations militaires et les activités extractives.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 780,
+        "output_tokens": 110
+      }
+    },
+    "sanaa": {
+      "fr": "Sanaa, capitale du Yémen contrôlée par les Houthis, est mentionnée dans le contexte des opérations de guerre hybride en mer Rouge depuis octobre 2023. Les enquêtes couvrent les activités militaires maritimes des groupes armés régionaux, proxies iraniens, intervenant dans le conflit israélo-palestinien.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 748,
+        "output_tokens": 91
+      }
+    },
+    "segou": {
+      "fr": "Ségou figure dans les enquêtes comme zone d'implantation du groupe Wagner au Mali, environ un an après l'arrivée des mercenaires dans le pays. La région est documentée dans le contexte des rapports de violations des droits humains et de massacres, ainsi que des campagnes d'influence publique menées parallèlement à l'expansion territoriale de Wagner.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 718,
+        "output_tokens": 92
+      }
+    },
+    "serma": {
+      "fr": "Serma est le site d'un massacre documenté en mars-avril 2022, peu après l'arrivée du groupe Wagner au Mali. Les enquêtes établissent un lien entre la présence de Wagner et les violations des droits humains généralisées survenues dans le pays durant cette période, s'inscrivant dans une campagne de documentation des opérations du groupe mercenaire.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 739,
+        "output_tokens": 93
+      }
+    },
+    "seychelles": {
+      "fr": "Les Seychelles constituent un point de transit pour les opérations militaires russes en région océan Indien. Un avion militaire du ministère russe de la Défense, basé aux Seychelles et soumis à des sanctions américaines, a été utilisé en décembre 2025 pour acheminer du matériel vers Madagascar dans le cadre d'une campagne d'influence russe incluant armes, drones et propositions financières.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 815,
+        "output_tokens": 110
+      }
+    },
+    "shanghai": {
+      "fr": "Shanghai apparaît dans les enquêtes sur les activités commerciales liées à Wagner en Centrafrique, notamment concernant l'exploitation forestière et le commerce du bois. Le lieu est mentionné en relation avec les chaînes d'approvisionnement internationales reliant les opérations d'extraction de ressources en Afrique centrale aux marchés mondiaux.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 729,
+        "output_tokens": 88
+      }
+    },
+    "sloviansk": {
+      "fr": "Les Maisons russes à Sloviansk fonctionnent comme des vecteurs de soft power culturel russe, traditionnellement dédiées à la promotion de la langue et de la culture, mais de plus en plus privatisées et concédées à des organisations russes. Ces structures s'appuient sur des ressortissants russes stationnés dans des zones d'importance stratégique pour étendre l'influence russe à travers des instruments hybrides.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 744,
+        "output_tokens": 109
+      }
+    },
+    "sri-lanka": {
+      "fr": "Sri Lanka apparaît comme point de transit dans les trajets de recrutement de combattants africains vers l'armée russe. Le pays figure dans les parcours documentés de soldats étrangers qui ont rejoint les forces russes, certains ayant obtenu la nationalité russe par la suite.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 743,
+        "output_tokens": 73
+      }
+    },
+    "sevare": {
+      "fr": "Sévaré figure dans les enquêtes comme l'une des bases de déploiement du groupe Wagner et de l'Africa Corps au Mali. Ces opérations militaires russes, mobilisant plusieurs milliers de combattants sur une vingtaine de sites depuis 2022, sont documentées aux côtés de rapports récurrents de violations des droits humains et de massacres signalés dans le pays.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 767,
+        "output_tokens": 97
+      }
+    },
+    "taraz": {
+      "fr": "Taraz est mentionnée comme un site de production et d'approvisionnement impliqué dans le contournement des sanctions contre la Russie, en lien avec l'expansion des capacités militaires russes. Les enquêtes documentent l'augmentation de la production d'équipements militaires et le renforcement des installations, notamment pour soutenir les opérations en Ukraine, avec une mobilisation accrue de main-d'œuvre étrangère dans cette région du Kazakhstan.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 752,
+        "output_tokens": 115
+      }
+    },
+    "tartous": {
+      "fr": "Tartous est mentionnée comme point d'appui stratégique dans le redéploiement des forces russes depuis la Syrie vers la Libye et l'Afrique. Les enquêtes documentent la transition de la présence russe entre ces deux régions et l'implication d'African Corps dans les opérations méditerranéennes, notamment après les évolutions au sein des structures de contrôle opérationnel.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 772,
+        "output_tokens": 104
+      }
+    },
+    "tenenkou": {
+      "fr": "Tenenkou figure dans les enquêtes en tant que localité malienne affectée par la présence de Wagner durant sa première année d'opérations dans le pays. La région a été le théâtre de violations des droits humains et de massacres documentés parallèlement à une campagne d'influence publique menée par le groupe.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 719,
+        "output_tokens": 81
+      }
+    },
+    "tenkodogo": {
+      "fr": "Tenkodogo figure dans les enquêtes en tant que point de passage du convoi d'uranium transitant du Niger vers le Togo, traversant des zones contrôlées par des groupes armés. Ce transport, probablement destiné à des acheteurs russes, emprunte les routes de la région du Burkina Faso, illustrant les réseaux logistiques d'approvisionnement en ressources minérales à travers des territoires fragmentés.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 759,
+        "output_tokens": 113
+      }
+    },
+    "tombouctou": {
+      "fr": "Tombouctou figure dans les enquêtes sur la présence du groupe Wagner au Mali, particulièrement concernant les opérations militaires menées dans la région de l'Azawad et les difficultés rencontrées lors de la bataille de Tin Za Ouatine. La région est aussi documentée dans le contexte des violations de droits humains et des massacres signalés suite à l'arrivée des mercenaires russes, ainsi que des campagnes de communication liées à cette expansion.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 756,
+        "output_tokens": 121
+      }
+    },
+    "urumqi": {
+      "fr": "Urumqi apparaît dans ces enquêtes comme point de liaison dans les réseaux logistiques russes contournant les sanctions, en relation avec la zone d'Alabuga. Les investigations documentent les flux de composants et technologies destinés à la production de drones et d'armements russes, notamment dans le contexte de la guerre en Ukraine et de l'utilisation généralisée de drones d'attaque.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 755,
+        "output_tokens": 100
+      }
+    },
+    "vatican": {
+      "fr": "Le Vatican est mentionné dans le contexte des opérations de désinformation russes visant à discréditer les groupes chrétiens non-orthodoxes en Afrique, présentés comme des agents occidentaux par des structures contrôlées par les services de renseignement russes. Ces campagnes d'influence hybride font partie d'une stratégie plus large coordonnée par des agences russes comme Rossotrudnichestvo pour affaiblir la présence occidentale et religieuse concurrente sur le continent africain.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 779,
+        "output_tokens": 131
+      }
+    },
+    "venezuela": {
+      "fr": "Le Venezuela apparaît dans des enquêtes documentant le transfert du contrôle des opérations d'influence du groupe Wagner vers le SVR russe suite à la mort d'Evgueni Prigojine. Ces documents révèlent comment les structures créées par Prigojine ont été réorganisées sous contrôle direct des services de renseignement russes pour mener des opérations offensives dans le Sud Global.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 2,
+        "input_tokens": 793,
+        "output_tokens": 106
+      }
+    },
+    "geneva": {
+      "fr": "Les opérations du groupe Wagner en République centrafricaine ont impliqué des cadres russes basés à Genève, illustrant les connexions entre les structures mercenaires et les agences de renseignement russes. Le recrutement et la coordination des activités à partir de la Suisse reflètent l'infrastructure logistique et administrative mise en place pour soutenir les opérations russes en Afrique centrale.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 1,
+        "input_tokens": 638,
+        "output_tokens": 102
+      }
+    },
+    "geneve": {
+      "fr": "Genève apparaît dans cette enquête dans le contexte des opérations du SVR russe et de ses connexions avec les activités en Centrafrique. Le lieu intervient dans les structures de coordination et de renseignement liées aux opérations russes hybrides en Afrique centrale, notamment autour des personnels formés et accompagnés par le groupe Wagner.",
+      "meta": {
+        "model": "claude-haiku-4-5-20251001",
+        "generated": "2026-05-02",
+        "articles_count": 1,
+        "input_tokens": 658,
+        "output_tokens": 89
+      }
+    }
+  }
+}
