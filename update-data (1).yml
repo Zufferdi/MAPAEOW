@@ -1,0 +1,94 @@
+name: Update map data
+
+on:
+  workflow_dispatch:
+    inputs:
+      regeocode:
+        description: "Ré-géocoder tout (vide le cache Nominatim)"
+        type: boolean
+        default: false
+      refresh:
+        description: "Re-télécharger les articles (vide le cache WP)"
+        type: boolean
+        default: false
+      min_mentions:
+        description: "Min. mentions par lieu (défaut: 2)"
+        type: string
+        default: "2"
+  schedule:
+    - cron: "0 4 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout (avec history)
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Download spaCy models
+        run: |
+          python -m spacy download fr_core_news_lg
+          python -m spacy download en_core_web_lg
+          python -m spacy download ru_core_news_lg
+          python -m spacy download xx_ent_wiki_sm
+
+      - name: Run pipeline
+        run: |
+          set -x
+          ARGS="--min-mentions ${{ github.event.inputs.min_mentions || '2' }}"
+          if [ "${{ github.event.inputs.regeocode }}" = "true" ]; then
+            ARGS="$ARGS --regeocode"
+          fi
+          if [ "${{ github.event.inputs.refresh }}" = "true" ]; then
+            ARGS="$ARGS --refresh"
+          fi
+          python -u pipeline.py $ARGS
+
+      - name: Inspect outputs
+        if: always()
+        run: |
+          echo "=== Working dir ==="
+          ls -la
+          echo "=== data.json _meta ==="
+          [ -f data.json ] && python -c "import json; print(json.dumps(json.load(open('data.json'))['_meta'], indent=2))" || echo "data.json absent"
+          echo "=== entities.json _meta ==="
+          [ -f entities.json ] && python -c "import json; print(json.dumps(json.load(open('entities.json'))['_meta'], indent=2))" || echo "entities.json absent"
+          echo "=== cache/ ==="
+          [ -d cache ] && ls -la cache/ || echo "cache/ absent"
+
+      - name: Commit & push si des changements
+        if: success()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          [ -f data.json ] && git add data.json
+          [ -f entities.json ] && git add entities.json
+          [ -f entities_curation.json ] && git add entities_curation.json
+          [ -f place_summaries.json ] && git add place_summaries.json
+          [ -d cache ] && git ls-files --others --exclude-standard cache/ | xargs -r git add
+          [ -d cache ] && git add -u cache/
+          [ -f place_aliases.json ] && git add place_aliases.json
+
+          if git diff --staged --quiet; then
+            echo "Pas de changement, rien à commiter."
+          else
+            git commit -m "🌍 Mise à jour data ($(date -u +%Y-%m-%d))"
+            git push
+          fi
