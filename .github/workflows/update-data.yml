@@ -89,7 +89,12 @@ jobs:
           python -u pipeline.py $ARGS
 
       - name: Generate place summaries (Claude API)
-        if: github.event.inputs.generate_summaries == 'manquants_seulement' || github.event.inputs.generate_summaries == 'tous'
+        # Sur schedule (run auto hebdomadaire) : par défaut --only-missing.
+        # Sur dispatch manuel : selon le choix de l'utilisateur.
+        if: |
+          github.event_name == 'schedule' ||
+          github.event.inputs.generate_summaries == 'manquants_seulement' ||
+          github.event.inputs.generate_summaries == 'tous'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
@@ -100,19 +105,28 @@ jobs:
             exit 1
           fi
 
-          MODE_ARGS=""
-          if [ "${{ github.event.inputs.generate_summaries }}" = "manquants_seulement" ]; then
-            MODE_ARGS="--only-missing"
+          # Sur schedule : --only-missing par défaut. Sur dispatch : selon input.
+          MODE_ARGS="--only-missing"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ github.event.inputs.generate_summaries }}" = "tous" ]; then
+            MODE_ARGS=""
           fi
 
+          # Sur schedule : langue FR par défaut. Sur dispatch : selon input (avec fallback fr).
           LANGS="${{ github.event.inputs.summaries_lang }}"
+          if [ -z "$LANGS" ]; then
+            LANGS="fr"
+          fi
           for LANG in $(echo "$LANGS" | tr '+' ' '); do
-            echo "=== Génération des résumés en $LANG ==="
+            echo "=== Génération des résumés de lieux en $LANG (mode: ${MODE_ARGS:-tous}) ==="
             python -u generate_summaries.py --lang "$LANG" $MODE_ARGS
           done
 
       - name: Generate entity summaries (Claude API)
-        if: github.event.inputs.generate_entity_summaries == 'manquants_seulement' || github.event.inputs.generate_entity_summaries == 'tous'
+        # Sur schedule : par défaut --only-missing. Sur dispatch : selon input.
+        if: |
+          github.event_name == 'schedule' ||
+          github.event.inputs.generate_entity_summaries == 'manquants_seulement' ||
+          github.event.inputs.generate_entity_summaries == 'tous'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
@@ -122,14 +136,24 @@ jobs:
             exit 1
           fi
 
-          MODE_ARGS="--min-mentions ${{ github.event.inputs.entity_summaries_min || '2' }}"
-          if [ "${{ github.event.inputs.generate_entity_summaries }}" = "manquants_seulement" ]; then
-            MODE_ARGS="$MODE_ARGS --only-missing"
+          # Min-mentions : input ou défaut 2
+          MIN_MENTIONS="${{ github.event.inputs.entity_summaries_min }}"
+          if [ -z "$MIN_MENTIONS" ]; then
+            MIN_MENTIONS="2"
+          fi
+          MODE_ARGS="--min-mentions $MIN_MENTIONS --only-missing"
+
+          # Sur dispatch + 'tous' : retire --only-missing pour tout regénérer
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ github.event.inputs.generate_entity_summaries }}" = "tous" ]; then
+            MODE_ARGS="--min-mentions $MIN_MENTIONS"
           fi
 
           LANGS="${{ github.event.inputs.summaries_lang }}"
+          if [ -z "$LANGS" ]; then
+            LANGS="fr"
+          fi
           for LANG in $(echo "$LANGS" | tr '+' ' '); do
-            echo "=== Génération des résumés d'entités en $LANG ==="
+            echo "=== Génération des résumés d'entités en $LANG (mode: ${MODE_ARGS}) ==="
             python -u generate_entity_summaries.py --lang "$LANG" $MODE_ARGS
           done
 
