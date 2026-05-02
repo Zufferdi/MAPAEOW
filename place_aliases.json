@@ -153,7 +153,9 @@
     "Region Mopti": "Mopti",
     "Méditerranée": "Mer Méditerranée",
     "Bois Rouge": "Bangui",
-    "bois rouge": "Bangui"
+    "bois rouge": "Bangui",
+    "Georgia": "Géorgie",
+    "Géorgie": "Géorgie"
   },
   "blacklist": [
     "afp",
@@ -445,6 +447,11 @@
       "lat": 46.2044,
       "lng": 6.1432,
       "country": "Suisse"
+    },
+    "Géorgie": {
+      "lat": 42.3154,
+      "lng": 43.3569,
+      "country": "Géorgie"
     }
   }
 }
