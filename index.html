@@ -294,6 +294,34 @@
   }
   .icon-btn:hover { border-color: var(--accent); color: var(--accent); }
 
+  /* Lien Index dans le header */
+  .header-link-index {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 32px;
+    padding: 0 12px;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .header-link-index:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .header-link-index .header-link-arrow {
+    color: var(--accent);
+    font-size: 12px;
+    line-height: 1;
+  }
+
   .stats {
     display: flex;
     gap: 18px;
@@ -1835,6 +1863,15 @@
     line-height: 1.5;
     text-align: center;
   }
+  .tutorial-link {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-soft);
+    transition: border-color 0.15s;
+  }
+  .tutorial-link:hover {
+    border-bottom-color: var(--accent);
+  }
 
   /* Bouton "Explorer la carte" : version primary, plus large */
   .lang-btn-primary {
@@ -1953,6 +1990,10 @@
             <span class="tutorial-icon">⊕</span>
             <span data-i18n="tutorial_countries">Le bouton « Pays » affiche les mentions au niveau national</span>
           </li>
+          <li>
+            <span class="tutorial-icon">◈</span>
+            <span data-i18n="tutorial_index">Un <a href="./entities/" class="tutorial-link" target="_blank" rel="noopener">index des personnes &amp; organisations</a> citées est aussi disponible</span>
+          </li>
         </ul>
       </div>
 
@@ -2032,6 +2073,10 @@
         <button id="tour-btn" class="tour-btn" data-i18n="layer_tour">Tour</button>
       </div>
       <button class="icon-btn" id="help-btn" aria-label="Raccourcis clavier" title="Raccourcis (touche ?)">?</button>
+      <a href="./entities/" class="header-link-index" data-i18n-title="header_index_title" title="Index des personnes & organisations">
+        <span data-i18n="header_index">Index</span>
+        <span class="header-link-arrow">↗</span>
+      </a>
       <div class="lang-switch" role="group" aria-label="Langue / Language">
         <button data-set-lang="fr">FR</button>
         <button data-set-lang="en">EN</button>
@@ -2165,6 +2210,8 @@ const I18N = {
     layer_links: "Liens",
     layer_compare: "Compare",
     layer_tour: "Tour",
+    header_index: "Index",
+    header_index_title: "Index des personnes et organisations citées",
 
     // Filterbar
     filter_category: "Catégorie",
@@ -2280,6 +2327,7 @@ const I18N = {
     tutorial_links: "Activez « Liens » pour voir les co-occurrences entre lieux",
     tutorial_timeline: "Glissez sur la timeline en bas pour filtrer par période",
     tutorial_countries: "Le bouton « Pays » affiche les mentions au niveau national",
+    tutorial_index: 'Un <a href="./entities/" class="tutorial-link" target="_blank" rel="noopener">index des personnes &amp; organisations</a> citées est aussi disponible',
   },
   en: {
     splash_init: "initializing…",
@@ -2296,6 +2344,8 @@ const I18N = {
     layer_links: "Links",
     layer_compare: "Compare",
     layer_tour: "Tour",
+    header_index: "Index",
+    header_index_title: "Index of people and organizations cited",
 
     filter_category: "Category",
     filter_language: "Language",
@@ -2400,6 +2450,7 @@ const I18N = {
     tutorial_links: '"Links" toggle shows co-occurrences between locations',
     tutorial_timeline: "Drag on the timeline below to filter by period",
     tutorial_countries: 'The "Countries" button shows mentions at the national level',
+    tutorial_index: 'An <a href="./entities/" class="tutorial-link" target="_blank" rel="noopener">index of people &amp; organizations</a> cited is also available',
   }
 };
 
@@ -2419,6 +2470,10 @@ function applyI18n() {
   // Placeholder
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     el.placeholder = t(el.getAttribute('data-i18n-placeholder'));
+  });
+  // Title (tooltip natif)
+  document.querySelectorAll('[data-i18n-title]').forEach(el => {
+    el.title = t(el.getAttribute('data-i18n-title'));
   });
   // Splash titre (avec HTML)
   const splashLogo = document.getElementById('splash-logo');
