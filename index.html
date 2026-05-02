@@ -256,6 +256,78 @@
   input[type="search"]:focus { border-color: var(--accent); background: var(--bg-elev-2); }
   input[type="search"]:focus + kbd { display: none; }
 
+  /* === Search dropdown unifié (lieux + entités + articles) === */
+  .search-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    width: 360px;
+    max-height: 460px;
+    overflow-y: auto;
+    background: var(--bg-elev);
+    border: 1px solid var(--border-strong);
+    box-shadow: var(--shadow-pop);
+    z-index: 1000;
+    display: none;
+  }
+  .search-dropdown.open { display: block; }
+  .search-section-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    padding: 10px 14px 6px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .search-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 14px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-soft);
+    cursor: pointer;
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--text);
+    text-align: left;
+    text-decoration: none;
+    transition: background 0.12s;
+  }
+  .search-item:hover { background: var(--bg-elev-2); color: var(--accent); }
+  .search-icon {
+    flex-shrink: 0;
+    width: 14px;
+    color: var(--accent);
+    font-size: 11px;
+  }
+  .search-icon-dot {
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .search-icon-dot.person { background: var(--emerging); }
+  .search-icon-dot.org { background: #6cb6ff; }
+  .search-name {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .search-meta {
+    flex-shrink: 0;
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
   .toggle-group {
     display: flex;
     border: 1px solid var(--border);
@@ -1490,6 +1562,77 @@
   }
   .modal-close:hover { color: var(--accent); }
   .modal-body { padding: 18px 24px 24px; }
+
+  /* Variante large pour la modale "À propos" */
+  .modal-large { width: 720px; max-width: 92vw; max-height: 85vh; }
+
+  /* === Modale About : sections === */
+  .about-body { padding: 24px 32px 32px; }
+  .about-section { margin-bottom: 28px; }
+  .about-section:last-child { margin-bottom: 0; }
+  .about-section-title {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--accent);
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .about-section p {
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text);
+    margin: 0 0 10px;
+  }
+  .about-section p:last-child { margin-bottom: 0; }
+  .about-section a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+  .about-section a:hover { border-bottom-color: var(--accent); }
+  .about-section em {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-style: normal;
+    color: var(--text-dim);
+  }
+  .about-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .about-list li {
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text);
+    padding: 6px 0 6px 18px;
+    position: relative;
+  }
+  .about-list li::before {
+    content: "·";
+    position: absolute;
+    left: 4px;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .about-warnings li::before {
+    content: "⚠";
+    font-size: 10px;
+    color: var(--accent);
+    top: 7px;
+  }
+  .about-warnings li {
+    color: var(--text);
+  }
+  .about-warnings li strong {
+    color: var(--text);
+  }
   .shortcut-row {
     display: grid;
     grid-template-columns: 100px 1fr;
@@ -2082,6 +2225,110 @@
   </div>
 </div>
 
+<div class="modal-backdrop" id="about-modal">
+  <div class="modal modal-large" role="dialog" aria-labelledby="about-title">
+    <div class="modal-header">
+      <h3 id="about-title" data-i18n="about_title">À propos · Méthodologie</h3>
+      <button class="modal-close" id="about-close" aria-label="Fermer">✕</button>
+    </div>
+    <div class="modal-body about-body">
+      <!-- FR -->
+      <div data-lang-content="fr">
+        <div class="about-section">
+          <div class="about-section-title">Le projet</div>
+          <p>Cette carte interactive cartographie l'ensemble des enquêtes publiées sur <a href="https://alleyesonwagner.org" target="_blank" rel="noopener">alleyesonwagner.org</a> par <strong>All Eyes On Wagner</strong>, une initiative du collectif <strong>INPACT</strong> documentant les opérations d'influence russe (Wagner, Africa Corps, Russian House, etc.) en Afrique, en Europe et au-delà.</p>
+          <p>Elle vise à faciliter la lecture transversale du corpus, le briefing de partenaires médias ou de chercheurs, et l'identification rapide des acteurs et des théâtres documentés.</p>
+        </div>
+
+        <div class="about-section">
+          <div class="about-section-title">Ce que contient cette carte</div>
+          <ul class="about-list">
+            <li>Plus de 100 enquêtes publiées par AEOW (en français, anglais, russe)</li>
+            <li>Près de 200 lieux géolocalisés mentionnés dans ces enquêtes</li>
+            <li>Plus de 700 personnes et organisations indexées (<a href="./entities/">voir l'index</a>)</li>
+            <li>Des résumés thématiques générés par IA pour chaque lieu et entité majeure</li>
+            <li>Mise à jour automatique chaque lundi</li>
+          </ul>
+        </div>
+
+        <div class="about-section">
+          <div class="about-section-title">Méthodologie technique</div>
+          <p><strong>Pipeline d'extraction</strong> : récupération des articles via l'API WordPress, téléchargement des PDFs liés à Google Drive, extraction du texte, reconnaissance d'entités nommées (NER) multilingue via <em>spaCy</em>, géocodage des lieux via <em>Nominatim / OpenStreetMap</em>.</p>
+          <p><strong>Curation</strong> : un fichier de blacklist et de fusion manuelle est tenu à jour pour éliminer les faux positifs (artefacts d'extraction, mots communs, journalistes-sources) et fusionner les variantes orthographiques (FR/EN/RU/translittérations).</p>
+          <p><strong>Résumés IA</strong> : générés par <em>Claude Haiku</em> (Anthropic) avec des prompts stricts excluant l'invention, la spéculation, et la nomination de témoins ou sources protégées. Les résumés synthétisent uniquement les informations déjà publiées dans les enquêtes.</p>
+          <p><strong>Reproductibilité</strong> : tout le code (pipeline, curation, génération de résumés, interface) est public sur <a href="https://github.com/Zufferdi/MAPAEOW" target="_blank" rel="noopener">GitHub</a> sous licence MIT.</p>
+        </div>
+
+        <div class="about-section">
+          <div class="about-section-title">Limites connues</div>
+          <ul class="about-list about-warnings">
+            <li><strong>Couverture limitée</strong> : la carte ne reflète que les enquêtes publiées sur AEOW. Les enquêtes d'autres médias (Bellingcat, Le Monde, RFI, etc.) ne sont pas indexées ici.</li>
+            <li><strong>Géocodage approximatif</strong> : certains lieux ambigus peuvent être mal localisés (homonymes entre pays). Les corrections manuelles sont en cours.</li>
+            <li><strong>Vérification des résumés</strong> : les résumés IA-générés synthétisent les enquêtes mais ne les remplacent pas. Pour citation ou usage éditorial, vérifier dans les articles originaux (liés sur chaque fiche).</li>
+            <li><strong>Curation en cours</strong> : l'index entités contient encore du bruit résiduel (faux positifs en queue de liste). Le top du classement est curé manuellement.</li>
+            <li><strong>Notes éditoriales en français uniquement</strong> : les notes courtes sur les entités sont actuellement disponibles uniquement en français. Les résumés thématiques sont bilingues.</li>
+          </ul>
+        </div>
+
+        <div class="about-section">
+          <div class="about-section-title">Crédits & contact</div>
+          <p><strong>Enquêtes</strong> : All Eyes On Wagner / INPACT</p>
+          <p><strong>Pipeline et interface</strong> : projet open source sur <a href="https://github.com/Zufferdi/MAPAEOW" target="_blank" rel="noopener">github.com/Zufferdi/MAPAEOW</a>. Pour signaler une erreur ou suggérer une amélioration, ouvrir une issue sur GitHub.</p>
+          <p><strong>Sources cartographiques</strong> : <a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a>, <a href="https://carto.com/" target="_blank" rel="noopener">CartoDB Dark Matter</a>, <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>.</p>
+          <p><strong>Modèles d'extraction</strong> : <a href="https://spacy.io" target="_blank" rel="noopener">spaCy</a> (NER multilingue), <a href="https://nominatim.org/" target="_blank" rel="noopener">Nominatim</a> (géocodage), <a href="https://www.anthropic.com/" target="_blank" rel="noopener">Claude</a> (résumés thématiques).</p>
+        </div>
+      </div>
+
+      <!-- EN -->
+      <div data-lang-content="en" style="display:none">
+        <div class="about-section">
+          <div class="about-section-title">The project</div>
+          <p>This interactive map charts all the investigations published on <a href="https://alleyesonwagner.org" target="_blank" rel="noopener">alleyesonwagner.org</a> by <strong>All Eyes On Wagner</strong>, an initiative of the <strong>INPACT</strong> collective documenting Russian influence operations (Wagner, Africa Corps, Russian House, etc.) in Africa, Europe and beyond.</p>
+          <p>It aims to facilitate cross-corpus reading, briefing of media partners or researchers, and rapid identification of documented actors and theaters.</p>
+        </div>
+
+        <div class="about-section">
+          <div class="about-section-title">What this map contains</div>
+          <ul class="about-list">
+            <li>More than 100 investigations published by AEOW (French, English, Russian)</li>
+            <li>Nearly 200 geolocated places mentioned in these investigations</li>
+            <li>More than 700 indexed people and organizations (<a href="./entities/">see the index</a>)</li>
+            <li>AI-generated thematic summaries for each major place and entity</li>
+            <li>Automatic update every Monday</li>
+          </ul>
+        </div>
+
+        <div class="about-section">
+          <div class="about-section-title">Technical methodology</div>
+          <p><strong>Extraction pipeline</strong>: articles fetched via the WordPress API, linked PDFs downloaded from Google Drive, text extracted, multilingual named-entity recognition (NER) via <em>spaCy</em>, places geocoded via <em>Nominatim / OpenStreetMap</em>.</p>
+          <p><strong>Curation</strong>: a manual blacklist and merge file is maintained to remove false positives (extraction artifacts, common words, source journalists) and merge spelling variants (FR/EN/RU/transliterations).</p>
+          <p><strong>AI summaries</strong>: generated by <em>Claude Haiku</em> (Anthropic) with strict prompts excluding fabrication, speculation, and naming of protected witnesses or sources. Summaries synthesize only information already published in the investigations.</p>
+          <p><strong>Reproducibility</strong>: all code (pipeline, curation, summary generation, interface) is publicly available on <a href="https://github.com/Zufferdi/MAPAEOW" target="_blank" rel="noopener">GitHub</a> under MIT license.</p>
+        </div>
+
+        <div class="about-section">
+          <div class="about-section-title">Known limitations</div>
+          <ul class="about-list about-warnings">
+            <li><strong>Limited coverage</strong>: the map only reflects investigations published on AEOW. Investigations from other outlets (Bellingcat, Le Monde, RFI, etc.) are not indexed here.</li>
+            <li><strong>Approximate geocoding</strong>: some ambiguous places may be incorrectly located (cross-country homonyms). Manual corrections are ongoing.</li>
+            <li><strong>Summary verification</strong>: AI-generated summaries synthesize the investigations but do not replace them. For citation or editorial use, verify against the original articles (linked on each card).</li>
+            <li><strong>Ongoing curation</strong>: the entity index still contains residual noise (false positives at the tail). The top ranking is manually curated.</li>
+            <li><strong>Editorial notes in French only</strong>: short editorial notes on entities are currently available in French only. Thematic summaries are bilingual.</li>
+          </ul>
+        </div>
+
+        <div class="about-section">
+          <div class="about-section-title">Credits & contact</div>
+          <p><strong>Investigations</strong>: All Eyes On Wagner / INPACT</p>
+          <p><strong>Pipeline and interface</strong>: open source project at <a href="https://github.com/Zufferdi/MAPAEOW" target="_blank" rel="noopener">github.com/Zufferdi/MAPAEOW</a>. To report an error or suggest an improvement, open an issue on GitHub.</p>
+          <p><strong>Cartographic sources</strong>: <a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a>, <a href="https://carto.com/" target="_blank" rel="noopener">CartoDB Dark Matter</a>, <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>.</p>
+          <p><strong>Extraction models</strong>: <a href="https://spacy.io" target="_blank" rel="noopener">spaCy</a> (multilingual NER), <a href="https://nominatim.org/" target="_blank" rel="noopener">Nominatim</a> (geocoding), <a href="https://www.anthropic.com/" target="_blank" rel="noopener">Claude</a> (thematic summaries).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="app">
   <header>
     <div class="brand">
@@ -2104,6 +2351,7 @@
         <button id="tour-btn" class="tour-btn" data-i18n="layer_tour">Tour</button>
       </div>
       <button class="icon-btn" id="help-btn" aria-label="Raccourcis clavier" title="Raccourcis (touche ?)">?</button>
+      <button class="icon-btn" id="about-btn" aria-label="À propos" data-i18n-title="about_title" title="À propos · Méthodologie">i</button>
       <a href="./entities/" class="header-link-index" data-i18n-title="header_index_title" title="Index des personnes & organisations">
         <span data-i18n="header_index">Index</span>
         <span class="header-link-arrow">↗</span>
@@ -2235,7 +2483,7 @@ const I18N = {
     stat_places: "Lieux",
     stat_investigations: "Enquêtes",
     stat_mentions: "Mentions",
-    search_placeholder: "Rechercher un lieu...",
+    search_placeholder: "Rechercher un lieu, une personne, une enquête...",
     layer_heatmap: "Heatmap",
     layer_points: "Points",
     layer_links: "Liens",
@@ -2243,6 +2491,12 @@ const I18N = {
     layer_tour: "Tour",
     header_index: "Index",
     header_index_title: "Index des personnes et organisations citées",
+    about_title: "À propos · Méthodologie",
+    search_places: "Lieux",
+    search_entities: "Personnes & organisations",
+    search_articles: "Enquêtes",
+    entity_person: "Personne",
+    entity_org: "Organisation",
 
     // Filterbar
     filter_category: "Catégorie",
@@ -2370,7 +2624,7 @@ const I18N = {
     stat_places: "Locations",
     stat_investigations: "Investigations",
     stat_mentions: "Mentions",
-    search_placeholder: "Search a location...",
+    search_placeholder: "Search a place, person, investigation...",
     layer_heatmap: "Heatmap",
     layer_points: "Points",
     layer_links: "Links",
@@ -2378,6 +2632,12 @@ const I18N = {
     layer_tour: "Tour",
     header_index: "Index",
     header_index_title: "Index of people and organizations cited",
+    about_title: "About · Methodology",
+    search_places: "Places",
+    search_entities: "People & organizations",
+    search_articles: "Investigations",
+    entity_person: "Person",
+    entity_org: "Organization",
 
     filter_category: "Category",
     filter_language: "Language",
@@ -3753,14 +4013,122 @@ function renderStatsPanel(filteredPlaces, validArticleIds) {
 // ============================================================
 function setupSearch() {
   const input = document.getElementById('search');
+  const wrap = input.closest('.search-wrap');
+
+  // Crée le dropdown s'il n'existe pas
+  let dropdown = document.getElementById('search-dropdown');
+  if (!dropdown) {
+    dropdown = document.createElement('div');
+    dropdown.id = 'search-dropdown';
+    dropdown.className = 'search-dropdown';
+    wrap.appendChild(dropdown);
+  }
+
+  function buildResults(query) {
+    const q = query.toLowerCase().trim();
+    if (q.length < 2) return { places: [], entities: [], articles: [] };
+    const { places } = getFilteredData();
+
+    // Lieux : nom / pays match
+    const placesMatched = places
+      .filter(p => p.name.toLowerCase().includes(q) || (p.country || '').toLowerCase().includes(q))
+      .slice(0, 5);
+
+    // Entités : nom / notes match (depuis ENTITIES global)
+    const entitiesMatched = ENTITIES && ENTITIES.entities
+      ? ENTITIES.entities
+          .filter(e => e.name.toLowerCase().includes(q) || (e.notes || '').toLowerCase().includes(q))
+          .slice(0, 5)
+      : [];
+
+    // Articles : titre / excerpt match
+    const articlesMatched = (DATA.articles || [])
+      .filter(a => (a.title || '').toLowerCase().includes(q) || (a.excerpt || '').toLowerCase().includes(q))
+      .slice(0, 4);
+
+    return { places: placesMatched, entities: entitiesMatched, articles: articlesMatched };
+  }
+
+  function renderDropdown(query) {
+    const { places, entities, articles } = buildResults(query);
+    if (places.length === 0 && entities.length === 0 && articles.length === 0) {
+      dropdown.classList.remove('open');
+      dropdown.innerHTML = '';
+      return;
+    }
+    let html = '';
+    if (places.length) {
+      html += `<div class="search-section-label">${t('search_places')}</div>`;
+      html += places.map(p => `<button class="search-item" data-action="place" data-id="${escapeHtml(p.id)}">
+        <span class="search-icon">●</span>
+        <span class="search-name">${escapeHtml(p.name)}</span>
+        <span class="search-meta">${escapeHtml(p.country || '')} · ${p.articles.length}</span>
+      </button>`).join('');
+    }
+    if (entities.length) {
+      html += `<div class="search-section-label">${t('search_entities')}</div>`;
+      html += entities.map(e => {
+        const dotClass = e.type === 'PERSON' ? 'person' : 'org';
+        return `<button class="search-item" data-action="entity" data-key="${escapeHtml(e.key)}">
+          <span class="search-icon-dot ${dotClass}"></span>
+          <span class="search-name">${escapeHtml(e.name)}</span>
+          <span class="search-meta">${e.type === 'PERSON' ? t('entity_person') : t('entity_org')} · ${e.count}</span>
+        </button>`;
+      }).join('');
+    }
+    if (articles.length) {
+      html += `<div class="search-section-label">${t('search_articles')}</div>`;
+      html += articles.map(a => `<a class="search-item" href="${escapeHtml(a.url)}" target="_blank" rel="noopener">
+        <span class="search-icon">▢</span>
+        <span class="search-name">${escapeHtml(a.title || '')}</span>
+        <span class="search-meta">${escapeHtml(a.lang.toUpperCase())} · ${escapeHtml(a.date.slice(0, 7))}</span>
+      </a>`).join('');
+    }
+    dropdown.innerHTML = html;
+    dropdown.classList.add('open');
+
+    // Attach handlers
+    dropdown.querySelectorAll('button.search-item').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const action = btn.dataset.action;
+        if (action === 'place') {
+          selectPlace(btn.dataset.id);
+          input.value = '';
+          dropdown.classList.remove('open');
+        } else if (action === 'entity') {
+          window.open(`./entities/?#entity=${encodeURIComponent(btn.dataset.key)}`, '_blank');
+        }
+      });
+    });
+  }
+
+  input.addEventListener('input', e => {
+    renderDropdown(e.target.value);
+  });
+  input.addEventListener('focus', e => {
+    if (e.target.value.length >= 2) renderDropdown(e.target.value);
+  });
   input.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
       const q = e.target.value.toLowerCase().trim();
       const { places } = getFilteredData();
       const match = places.find(p => p.name.toLowerCase().includes(q));
-      if (match) { selectPlace(match.id); input.value = match.name; }
+      if (match) {
+        selectPlace(match.id);
+        input.value = match.name;
+        dropdown.classList.remove('open');
+      }
     }
-    if (e.key === 'Escape') { input.value = ''; input.blur(); clearSelection(); }
+    if (e.key === 'Escape') {
+      input.value = '';
+      input.blur();
+      dropdown.classList.remove('open');
+      clearSelection();
+    }
+  });
+  // Click outside : ferme dropdown
+  document.addEventListener('click', e => {
+    if (!wrap.contains(e.target)) dropdown.classList.remove('open');
   });
 }
 
@@ -3915,6 +4283,24 @@ function setupShortcutsModal() {
 }
 
 // ============================================================
+// MODALE À PROPOS / MÉTHODOLOGIE
+// ============================================================
+function setupAboutModal() {
+  const modal = document.getElementById('about-modal');
+  const open = () => {
+    // Sync le contenu avec la langue active
+    modal.querySelectorAll('[data-lang-content]').forEach(el => {
+      el.style.display = el.getAttribute('data-lang-content') === CURRENT_LANG ? '' : 'none';
+    });
+    modal.classList.add('open');
+  };
+  const close = () => modal.classList.remove('open');
+  document.getElementById('about-btn').addEventListener('click', open);
+  document.getElementById('about-close').addEventListener('click', close);
+  modal.addEventListener('click', e => { if (e.target === modal) close(); });
+}
+
+// ============================================================
 // RACCOURCIS CLAVIER (feature 5)
 // ============================================================
 function setupKeyboardShortcuts() {
@@ -3928,6 +4314,8 @@ function setupKeyboardShortcuts() {
     if (e.key === 'Escape') {
       const modal = document.getElementById('shortcuts-modal');
       if (modal.classList.contains('open')) { modal.classList.remove('open'); return; }
+      const aboutModal = document.getElementById('about-modal');
+      if (aboutModal.classList.contains('open')) { aboutModal.classList.remove('open'); return; }
       if (state.tour.active) { stopTour(); return; }
       if (state.selectedPlaceId) clearSelection();
       return;
@@ -4392,6 +4780,7 @@ function setupCompareBtn() {
   setupTour();
   setupCompareBtn();
   setupShortcutsModal();
+  setupAboutModal();
   setupKeyboardShortcuts();
   setupLangSwitch();
   Timeline.init();
