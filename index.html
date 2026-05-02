@@ -1040,6 +1040,73 @@
   .share-btn.copied { border-color: var(--emerging); color: var(--emerging); }
   .share-btn svg { width: 11px; height: 11px; }
 
+  /* === Place entities section (en bas de sidebar lieu) === */
+  .place-entities-section {
+    border-top: 1px solid var(--border);
+    padding: 22px 24px 30px;
+    background: var(--bg);
+  }
+  .place-entities-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+  }
+  .place-entities-link {
+    color: var(--accent);
+    font-size: 9px;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+  }
+  .place-entities-link:hover { text-decoration: underline; }
+  .place-entities-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .place-entity-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    background: var(--bg-elev-2);
+    border: 1px solid var(--border-soft);
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+  .place-entity-pill:hover {
+    color: var(--text);
+    border-color: var(--accent);
+  }
+  .place-entity-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text-dim);
+    flex-shrink: 0;
+  }
+  .place-entity-pill[data-type="PERSON"] .place-entity-dot { background: var(--emerging); }
+  .place-entity-pill[data-type="ORG"] .place-entity-dot { background: #6cb6ff; }
+  .place-entity-name {
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .place-entity-count {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent);
+  }
+
   .articles-list { padding: 8px 0; list-style: none; margin: 0; }
   .article-card {
     padding: 18px 24px;
@@ -2154,6 +2221,8 @@ const I18N = {
     sidebar_count_total: "sans filtre",
     sidebar_emerging: "↑ Émergent",
     sidebar_copy_link: "Copier le lien",
+    sidebar_related_entities: "Personnes & organisations citées",
+    sidebar_open_index: "VOIR L'INDEX",
     sidebar_copied: "Copié !",
     sidebar_read: "Lire l'enquête →",
     sidebar_no_articles_lang: "Aucune enquête disponible en français pour ce lieu.",
@@ -2277,6 +2346,8 @@ const I18N = {
     sidebar_count_total: "unfiltered",
     sidebar_emerging: "↑ Emerging",
     sidebar_copy_link: "Copy link",
+    sidebar_related_entities: "People & organizations cited",
+    sidebar_open_index: "OPEN INDEX",
     sidebar_copied: "Copied!",
     sidebar_read: "Read the investigation →",
     sidebar_no_articles_lang: "No investigation available in English for this location.",
@@ -2509,6 +2580,14 @@ async function loadData() {
   return JSON.parse(inline);
 }
 
+async function loadEntities() {
+  try {
+    const res = await fetch('./entities.json', { cache: 'no-store' });
+    if (res.ok) return await res.json();
+  } catch (e) {}
+  return null;  // entities.json optionnel : la carte marche sans
+}
+
 // ============================================================
 // STATE
 // ============================================================
@@ -2534,6 +2613,8 @@ const state = {
 };
 
 let DATA = null;
+let ENTITIES = null;            // Optionnel : entités par lieu
+let entitiesByPlace = {};       // place_id -> [entities]
 let articlesById = {};
 let map;
 let heatLayer = null;
@@ -3289,6 +3370,29 @@ function renderSidebar(place) {
       </div>`;
   }
 
+  // Section "Entités liées" : personnes/orgs co-mentionnées dans les articles de ce lieu
+  const placeEntities = (entitiesByPlace[place.id] || []).slice(0, 12);
+  let entitiesSection = '';
+  if (placeEntities.length > 0) {
+    const baseHref = './entities/';
+    entitiesSection = `
+      <div class="place-entities-section">
+        <div class="place-entities-title">
+          <span>${t('sidebar_related_entities')}</span>
+          <a href="${baseHref}" target="_blank" rel="noopener" class="place-entities-link">${t('sidebar_open_index')} ↗</a>
+        </div>
+        <div class="place-entities-list">
+          ${placeEntities.map(e => `
+            <a href="${baseHref}#entity=${encodeURIComponent(e.key)}" target="_blank" rel="noopener" class="place-entity-pill" data-type="${e.type}">
+              <span class="place-entity-dot"></span>
+              <span class="place-entity-name">${escapeHtml(e.name)}</span>
+              <span class="place-entity-count">${e.count_at_place}</span>
+            </a>
+          `).join('')}
+        </div>
+      </div>`;
+  }
+
   sidebar.innerHTML = `
     ${buildSidebarTabs()}
     <div class="sidebar-header">
@@ -3318,7 +3422,8 @@ function renderSidebar(place) {
     ${otherLangSection}
     <ul class="articles-list" id="articles-list-other" style="display:none">
       ${articlesOtherLang.map(articleCard).join('')}
-    </ul>`;
+    </ul>
+    ${entitiesSection}`;
   sidebar.classList.add('open');
   attachTabHandlers();
   document.getElementById('sidebar-close').addEventListener('click', clearSelection);
@@ -4116,9 +4221,36 @@ function setupCompareBtn() {
   CURRENT_LANG = detectInitialLang();
   applyI18n();
 
-  // 2. Charge les données
-  DATA = await loadData();
+  // 2. Charge les données (data.json + entities.json optionnel en parallèle)
+  const [dataResult, entitiesResult] = await Promise.all([
+    loadData(),
+    loadEntities(),
+  ]);
+  DATA = dataResult;
+  ENTITIES = entitiesResult;
   articlesById = Object.fromEntries(DATA.articles.map(a => [a.id, a]));
+  if (ENTITIES && ENTITIES.entities) {
+    // Index pour lookup rapide par lieu
+    entitiesByPlace = {};
+    ENTITIES.entities.forEach(e => {
+      (e.co_places || []).forEach(cp => {
+        if (!entitiesByPlace[cp.place_id]) entitiesByPlace[cp.place_id] = [];
+        entitiesByPlace[cp.place_id].push({
+          key: e.key,
+          name: e.name,
+          type: e.type,
+          count_at_place: cp.count,
+          total_count: e.count,
+          notes: e.notes,
+          curated: e.curated,
+        });
+      });
+    });
+    // Tri par nb de mentions au lieu
+    Object.values(entitiesByPlace).forEach(list =>
+      list.sort((a, b) => b.count_at_place - a.count_at_place)
+    );
+  }
   readUrlState();
 
   // 3. Setup landing : remplit les chiffres
