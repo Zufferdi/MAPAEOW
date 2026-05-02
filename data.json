@@ -1,9 +1,9 @@
 {
   "_meta": {
-    "generated": "2026-05-01",
+    "generated": "2026-05-02",
     "source": "https://public-api.wordpress.com/wp/v2/sites/alleyesonwagner.org",
     "articles_count": 103,
-    "places_count": 204,
+    "places_count": 200,
     "languages": {
       "fr": 52,
       "en": 49,
@@ -15,7 +15,7 @@
       "type_filter": true
     },
     "filter_stats": {
-      "dropped_by_frequency": 1373,
+      "dropped_by_frequency": 1369,
       "dropped_by_type": 20
     },
     "reports": {
@@ -1465,40 +1465,6 @@
       ]
     },
     {
-      "id": "sahel",
-      "name": "Sahel",
-      "country": "—",
-      "lat": 15.5,
-      "lng": 0.0,
-      "articles": [
-        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "africa-flop",
-        "africa-flop-saison-2",
-        "after-wagner-russias-spin-doctors-take-over-in-africa",
-        "apres-wagner-les-spin-doctors-russes-prennent-le-relai-en-afrique",
-        "beyond-the-sahelian-illusion",
-        "burkina-faso-under-influence",
-        "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
-        "disarray-in-azawad",
-        "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses",
-        "la-libye-de-la-deuxieme-chance-pour-la-russie",
-        "le-burkina-faso-sous-influence",
-        "le-forum-international-sur-la-securite-de-la-russie-le-temps-de-la-confrontation",
-        "love-me-alone-russias-no-rivals-doctrine",
-        "mediterranean-sea-objective-for-the-african-corps",
-        "objectif-mediterranee-pour-african-corps",
-        "one-year-of-wagner-in-mali",
-        "ordre-de-debandade-en-azawad",
-        "russia-africa-a-forum-with-mixed-results-overshadowed-by-the-war-in-ukraine",
-        "russias-international-security-forum-time-for-confrontation",
-        "russie-afrique-un-forum-en-demi-teinte-a-lombre-de-la-guerre-en-ukraine",
-        "the-madmax-uranium-express-le-convoi-de-tous-les-dangers",
-        "the-madmax-uranium-express-the-convoy-of-all-dangers",
-        "un-an-de-wagner-au-mali",
-        "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
-      ]
-    },
-    {
       "id": "burkina-faso",
       "name": "Burkina Faso",
       "country": "Burkina Faso",
@@ -1766,6 +1732,26 @@
       ]
     },
     {
+      "id": "bangui",
+      "name": "Bangui",
+      "country": "République centrafricaine",
+      "lat": 4.3635118,
+      "lng": 18.5835913,
+      "articles": [
+        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
+        "car-prigozhins-blood-diamonds",
+        "come-follow-the-redwood-trees-tracking-wagners-forestry-business-in-car",
+        "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
+        "denis-pavlov-lhomme-de-bangui",
+        "denis-pavlov-the-man-in-bangui",
+        "dimitri-sytyi-cadre-de-wagner-en-centrafrique",
+        "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses",
+        "la-chasse-continue",
+        "rca-les-diamants-de-sang-de-prigojine",
+        "wood-for-mercenaries-on-the-road-to-international-markets"
+      ]
+    },
+    {
       "id": "cameroun",
       "name": "Cameroun",
       "country": "Cameroun",
@@ -1841,25 +1827,6 @@
         "russias-international-security-forum-time-for-confrontation",
         "russias-renewed-charm-for-madagascar-weapons-drones-culture-and-financial-propositions-delivered-by-top-henchmen",
         "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers"
-      ]
-    },
-    {
-      "id": "bangui",
-      "name": "Bangui",
-      "country": "République centrafricaine",
-      "lat": 4.3635118,
-      "lng": 18.5835913,
-      "articles": [
-        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "car-prigozhins-blood-diamonds",
-        "come-follow-the-redwood-trees-tracking-wagners-forestry-business-in-car",
-        "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
-        "denis-pavlov-lhomme-de-bangui",
-        "denis-pavlov-the-man-in-bangui",
-        "dimitri-sytyi-cadre-de-wagner-en-centrafrique",
-        "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses",
-        "rca-les-diamants-de-sang-de-prigojine",
-        "wood-for-mercenaries-on-the-road-to-international-markets"
       ]
     },
     {
@@ -2046,8 +2013,8 @@
       "id": "paris",
       "name": "Paris",
       "country": "France",
-      "lat": 48.8534951,
-      "lng": 2.3483915,
+      "lat": 48.8588897,
+      "lng": 2.320041,
       "articles": [
         "africa-politology-loffensive-feutree-de-moscou",
         "car-prigozhins-blood-diamonds",
@@ -2113,8 +2080,8 @@
       "id": "bruxelles",
       "name": "Bruxelles",
       "country": "Belgique",
-      "lat": 50.8551025,
-      "lng": 4.3510915,
+      "lat": 50.8467372,
+      "lng": 4.352493,
       "articles": [
         "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
         "denis-pavlov-lhomme-de-bangui",
@@ -2203,22 +2170,6 @@
         "russia-africa-a-forum-with-mixed-results-overshadowed-by-the-war-in-ukraine",
         "russie-afrique-un-forum-en-demi-teinte-a-lombre-de-la-guerre-en-ukraine",
         "un-an-de-wagner-au-mali"
-      ]
-    },
-    {
-      "id": "mer-mediterranee",
-      "name": "Mer Méditerranée",
-      "country": "—",
-      "lat": 35.0,
-      "lng": 18.0,
-      "articles": [
-        "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
-        "al-khadim-airbase-an-essential-russian-outpost-in-libya",
-        "la-base-aerienne-dal-khadim-un-avant-poste-russe-incontournable-en-libye",
-        "la-libye-de-la-deuxieme-chance-pour-la-russie",
-        "mediterranean-sea-objective-for-the-african-corps",
-        "objectif-mediterranee-pour-african-corps",
-        "russias-renewed-charm-for-madagascar-weapons-drones-culture-and-financial-propositions-delivered-by-top-henchmen"
       ]
     },
     {
@@ -2539,8 +2490,8 @@
       "id": "hong-kong",
       "name": "Hong Kong",
       "country": "Chine",
-      "lat": 22.3492155,
-      "lng": 114.1857978,
+      "lat": 22.2792968,
+      "lng": 114.1628907,
       "articles": [
         "car-prigozhins-blood-diamonds",
         "china-gets-nvidia-gpu-for-the-ai-race-through-vietnam-and-malaysia",
@@ -2603,20 +2554,6 @@
         "de-dostoievsky-aux-frappes-de-drone-la-double-vie-des-maisons-russes",
         "from-dostoevsky-to-drone-strikes-the-double-life-of-russian-houses",
         "one-year-of-wagner-in-mali"
-      ]
-    },
-    {
-      "id": "mer-rouge",
-      "name": "Mer Rouge",
-      "country": "—",
-      "lat": 22.0,
-      "lng": 38.0,
-      "articles": [
-        "beyond-the-sahelian-illusion",
-        "hit-and-sunk",
-        "russia-africa-a-forum-with-mixed-results-overshadowed-by-the-war-in-ukraine",
-        "russie-afrique-un-forum-en-demi-teinte-a-lombre-de-la-guerre-en-ukraine",
-        "touche-coule"
       ]
     },
     {
@@ -3389,17 +3326,6 @@
       ]
     },
     {
-      "id": "atlantique",
-      "name": "Atlantique",
-      "country": "—",
-      "lat": 30.0,
-      "lng": -40.0,
-      "articles": [
-        "la-libye-de-la-deuxieme-chance-pour-la-russie",
-        "opa-russe-sur-le-burkina"
-      ]
-    },
-    {
       "id": "bangkok",
       "name": "Bangkok",
       "country": "Thaïlande",
@@ -3444,17 +3370,6 @@
       ]
     },
     {
-      "id": "bois-rouge",
-      "name": "Bois Rouge",
-      "country": "Haïti",
-      "lat": 18.7788098,
-      "lng": -71.8967195,
-      "articles": [
-        "la-chasse-continue",
-        "rca-les-diamants-de-sang-de-prigojine"
-      ]
-    },
-    {
       "id": "botswana",
       "name": "Botswana",
       "country": "Botswana",
@@ -3468,7 +3383,7 @@
     {
       "id": "bratislava",
       "name": "Bratislava",
-      "country": "District of Bratislava II",
+      "country": "Slovaquie",
       "lat": 48.1359085,
       "lng": 17.1597441,
       "articles": [
@@ -3645,8 +3560,8 @@
       "id": "izhevsk",
       "name": "Izhevsk",
       "country": "Russie",
-      "lat": 56.8529729,
-      "lng": 53.2103071,
+      "lat": 56.8605175,
+      "lng": 53.1977307,
       "articles": [
         "alabuga-noeud-central-de-la-menace-hybride-russe",
         "alabuga-the-central-hub-of-the-russian-hybrid-threat"
@@ -3741,17 +3656,6 @@
       ]
     },
     {
-      "id": "maghreb",
-      "name": "Maghreb",
-      "country": "—",
-      "lat": 32.0,
-      "lng": 0.0,
-      "articles": [
-        "le-business-du-desespoir",
-        "un-an-de-wagner-au-mali"
-      ]
-    },
-    {
       "id": "malabo",
       "name": "Malabo",
       "country": "Guinée équatoriale",
@@ -3810,8 +3714,8 @@
       "id": "menaka",
       "name": "Ménaka",
       "country": "Mali",
-      "lat": 15.9167,
-      "lng": 2.4,
+      "lat": 16.6516783,
+      "lng": 2.8263136,
       "articles": [
         "africa-flop",
         "un-an-de-wagner-au-mali"
@@ -4041,8 +3945,8 @@
       "id": "taraz",
       "name": "Taraz",
       "country": "Kazakhstan",
-      "lat": 42.9015945,
-      "lng": 71.3769302,
+      "lat": 42.8778381,
+      "lng": 71.3519903,
       "articles": [
         "alabuga-noeud-central-de-la-menace-hybride-russe",
         "alabuga-the-central-hub-of-the-russian-hybrid-threat"
@@ -4123,6 +4027,26 @@
       "articles": [
         "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
         "un-nouveau-chef-en-cuisine-le-svr-prend-le-controle-de-la-branche-influence-du-groupe-wagner-pour-les-operations-offensives-dans-le-sud-global"
+      ]
+    },
+    {
+      "id": "geneva",
+      "name": "Geneva",
+      "country": "Suisse",
+      "lat": 46.2044,
+      "lng": 6.1432,
+      "articles": [
+        "denis-pavlov-the-man-in-bangui"
+      ]
+    },
+    {
+      "id": "geneve",
+      "name": "Genève",
+      "country": "Suisse",
+      "lat": 46.2044,
+      "lng": 6.1432,
+      "articles": [
+        "denis-pavlov-lhomme-de-bangui"
       ]
     }
   ]

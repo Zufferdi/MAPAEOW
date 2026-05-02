@@ -253,14 +253,6 @@
     "type": "administrative",
     "class": "boundary"
   },
-  "bois rouge": {
-    "lat": 18.7788098,
-    "lng": -71.8967195,
-    "country": "Haïti",
-    "display": "Bois Rouge, 2e Juampas, Commune Lascahobas, Arrondissement Lascahobas, Centre Department, Haïti",
-    "type": "hamlet",
-    "class": "place"
-  },
   "bolivie": {
     "lat": -17.0568696,
     "lng": -64.9912286,
@@ -280,14 +272,14 @@
   "bratislava": {
     "lat": 48.1359085,
     "lng": 17.1597441,
-    "country": "District of Bratislava II",
-    "display": "Bratislava, Région de Bratislava, Bratislavský kraj, District of Bratislava II, Slovaquie",
+    "country": "Slovaquie",
+    "display": "Bratislava, District of Bratislava II, Région de Bratislava, Bratislavský kraj, Slovaquie",
     "type": "administrative",
     "class": "boundary"
   },
   "bruxelles": {
-    "lat": 50.8551025,
-    "lng": 4.3510915,
+    "lat": 50.8467372,
+    "lng": 4.352493,
     "country": "Belgique",
     "display": "Bruxelles, Bruxelles-Capitale, Belgique",
     "type": "administrative",
@@ -607,8 +599,8 @@
     "class": "place"
   },
   "hong kong": {
-    "lat": 22.3492155,
-    "lng": 114.1857978,
+    "lat": 22.2792968,
+    "lng": 114.1628907,
     "country": "Chine",
     "display": "Hong Kong, Chine",
     "type": "administrative",
@@ -657,12 +649,12 @@
     "class": "boundary"
   },
   "izhevsk": {
-    "lat": 56.8529729,
-    "lng": 53.2103071,
+    "lat": 56.8605175,
+    "lng": 53.1977307,
     "country": "Russie",
-    "display": "Ijevsk, Oudmourtie, District fédéral de la Volga, Russie",
-    "type": "administrative",
-    "class": "boundary"
+    "display": "Izhevsk, Oudmourtie, District fédéral de la Volga, Russie",
+    "type": "city",
+    "class": "place"
   },
   "japon": {
     "lat": 36.5748441,
@@ -880,7 +872,7 @@
     "lat": 14.7306634,
     "lng": -3.0589227,
     "country": "Mali",
-    "display": "building?, I think its a trail, Berdosso, Cercle de Koro, Mopti, Mali",
+    "display": "building?, I think its a trail, Berda, Berdosso, Cercle de Koro, Mopti, Mali",
     "type": "yes",
     "class": "building"
   },
@@ -967,12 +959,12 @@
     "class": "boundary"
   },
   "ménaka": {
-    "lat": 15.9167,
-    "lng": 2.4,
+    "lat": 16.6516783,
+    "lng": 2.8263136,
     "country": "Mali",
     "display": "Ménaka, Mali",
-    "type": "city",
-    "class": "place"
+    "type": "administrative",
+    "class": "boundary"
   },
   "nairobi": {
     "lat": -1.302398,
@@ -1055,16 +1047,16 @@
     "class": "tourism"
   },
   "pantsir": {
-    "lat": 58.02638,
-    "lng": 33.3027331,
+    "lat": 57.9539183,
+    "lng": 33.2788178,
     "country": "Russie",
-    "display": "Pantsir-S1 96K6 (SA-22 Greyhound), Долгие Бороды, Валдайский муниципальный округ, Oblast de Novgorod, District fédéral du Nord-Ouest, Russie",
+    "display": "Pantsir-S1 96K6 (SA-22 Greyhound), Зимогорье, Валдайский муниципальный округ, Oblast de Novgorod, District fédéral du Nord-Ouest, 175419, Russie",
     "type": "military",
     "class": "landuse"
   },
   "paris": {
-    "lat": 48.8534951,
-    "lng": 2.3483915,
+    "lat": 48.8588897,
+    "lng": 2.320041,
     "country": "France",
     "display": "Paris, Île-de-France, France métropolitaine, France",
     "type": "administrative",
@@ -1158,7 +1150,7 @@
     "lat": 47.2222596,
     "lng": 39.7198736,
     "country": "Russie",
-    "display": "Rostov-sur-le-Don, Rostov-on-Don, District fédéral du Sud, Russie",
+    "display": "Rostov-sur-le-Don, Rostov-on-Don, Oblast de Rostov, District fédéral du Sud, Russie",
     "type": "city",
     "class": "place"
   },
@@ -1331,12 +1323,12 @@
     "class": "boundary"
   },
   "taraz": {
-    "lat": 42.9015945,
-    "lng": 71.3769302,
+    "lat": 42.8778381,
+    "lng": 71.3519903,
     "country": "Kazakhstan",
-    "display": "Taraz, Oblys de Djamboul, Kazakhstan",
-    "type": "administrative",
-    "class": "boundary"
+    "display": "Taraz, Oblys de Djamboul, 080000, Kazakhstan",
+    "type": "city",
+    "class": "place"
   },
   "tartous": {
     "lat": 34.8936225,
@@ -1543,11 +1535,11 @@
   },
   "the russian houses": null,
   "the united kingdom": {
-    "lat": 51.5115165,
-    "lng": -0.0012658,
+    "lat": 52.4577754,
+    "lng": -1.8692099,
     "country": "Royaume-Uni",
-    "display": "Telehouse East, Coriander Avenue, Telehouse Docklands Campus, Blackwall, London Borough of Tower Hamlets, Grand Londres, Angleterre, E14 2AA, Royaume-Uni",
-    "type": "data_center",
+    "display": "The (Oval) Banqueting Suite, 372, Stratford Road, Sparkhill, Sparkbrook, Birmingham, West Midlands, Angleterre, B11 4AB, Royaume-Uni",
+    "type": "retail",
     "class": "building"
   },
   "égypte": {
