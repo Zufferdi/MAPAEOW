@@ -30,7 +30,7 @@ on:
           - "fr"
           - "en"
           - "fr+en"
-        default: "fr"
+        default: "fr+en"
       generate_entity_summaries:
         description: "Générer / régénérer les résumés contextuels d'entités (Claude API, ~0.50-1.50 USD selon le scope)"
         type: choice
@@ -114,7 +114,7 @@ jobs:
           # Sur schedule : langue FR par défaut. Sur dispatch : selon input (avec fallback fr).
           LANGS="${{ github.event.inputs.summaries_lang }}"
           if [ -z "$LANGS" ]; then
-            LANGS="fr"
+            LANGS="fr+en"
           fi
           for LANG in $(echo "$LANGS" | tr '+' ' '); do
             echo "=== Génération des résumés de lieux en $LANG (mode: ${MODE_ARGS:-tous}) ==="
@@ -150,7 +150,7 @@ jobs:
 
           LANGS="${{ github.event.inputs.summaries_lang }}"
           if [ -z "$LANGS" ]; then
-            LANGS="fr"
+            LANGS="fr+en"
           fi
           for LANG in $(echo "$LANGS" | tr '+' ' '); do
             echo "=== Génération des résumés d'entités en $LANG (mode: ${MODE_ARGS}) ==="
