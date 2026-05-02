@@ -6,7 +6,6 @@ INPACT Investigation Mapper — Pipeline d'extraction
 Récupère les articles via l'API REST WordPress.com,
 extrait les lieux mentionnés (NER multilingue FR/EN/RU/AR),
 les géocode via Nominatim, applique 3 filtres automatiques anti-bruit,
-enrichit les articles avec les PDFs Google Drive qu'ils linkent,
 et produit `data.json`.
 
 Usage :
@@ -63,29 +62,38 @@ MAX_PDF_SIZE = 50 * 1024 * 1024  # 50 Mo : sécurité contre PDFs énormes
 # ----------------------------------------------------------------------
 # Filtres anti-bruit
 # ----------------------------------------------------------------------
+# Préfixes typiques de noms qui ne sont pas des "lieux d'enquête" pertinents.
 STREET_BUILDING_PREFIXES = (
+    # rues
     "rue ", "avenue ", "boulevard ", "place ", "impasse ", "allée ", "allee ",
     "chemin ", "quai ", "route ", "voie ", "cours ", "sentier ",
     "street ", "road ", "square ", "lane ",
     "calle ", "plaza ", "avenida ",
-    "улица ", "проспект ", "площадь ",
+    "улица ", "проспект ", "площадь ",  # russe
+    # bâtiments
     "hôtel ", "hotel ", "palais ", "palace ", "stade ", "stadium ",
     "aéroport ", "airport ", "gare ", "station ", "ambassade ", "embassy ",
     "musée ", "museum ", "tour ", "cathédrale ", "cathedral ", "mosquée ", "mosque ",
     "université ", "university ", "lycée ", "collège ",
     "restaurant ", "café ", "bar ", "club ",
-    "monsieur ", "madame ", "saint-", "sainte-",
+    "monsieur ", "madame ", "saint-", "sainte-",  # noms propres mal taggés
 )
 
+# Types Nominatim qu'on garde (les autres = filtrés)
+# Liste basée sur la doc Nominatim : https://nominatim.org/release-docs/develop/api/Output/
 ALLOWED_NOMINATIM_TYPES = {
+    # places (le plus important)
     "country", "state", "region", "province", "county", "district",
     "city", "town", "village", "hamlet", "municipality", "neighbourhood",
     "suburb", "quarter", "borough", "locality", "island", "archipelago",
     "continent", "ocean", "sea", "bay",
+    # boundary
     "administrative", "national_park", "protected_area",
+    # natural / désigné mais utile pour zones de conflit
     "peak", "mountain_range", "desert", "plateau", "valley",
 }
 
+# Catégories blacklist par défaut (organisations, médias, mois...)
 DEFAULT_BLACKLIST = {
     "africa corps", "wagner", "africa", "wagner group", "afrique", "europe",
     "ouest", "est", "nord", "sud", "north", "south", "east", "west",
@@ -464,29 +472,52 @@ def has_street_or_building_prefix(name: str) -> bool:
 
 
 def extract_places(article: Article, ner: NERModels, blacklist: set[str], aliases: dict[str, str], use_prefix_filter: bool) -> set[str]:
+    """Extrait les lieux d'un article (compatibilité). Pour aussi extraire
+    les personnes/orgs en une seule passe NER, utiliser extract_entities()."""
+    places, _ = extract_places_and_entities(article, ner, blacklist, aliases, use_prefix_filter)
+    return places
+
+
+def extract_places_and_entities(article: Article, ner: NERModels,
+                                 blacklist: set[str], aliases: dict[str, str],
+                                 use_prefix_filter: bool) -> tuple[set[str], list[tuple[str, str]]]:
+    """Une seule passe NER pour les lieux ET les personnes/organisations.
+    Retourne (set des lieux canoniques, liste de (name, type) pour les entités).
+    Les entités gardent leur casse d'origine pour préserver les noms propres."""
     nlp = ner.get(article.lang)
     if nlp is None:
-        return set()
+        return set(), []
+
     places: set[str] = set()
+    entity_hits: list[tuple[str, str]] = []  # (name, type) pour personnes/orgs
     text = article.text
     for start in range(0, len(text), 800_000):
         chunk = text[start:start + 800_000]
         doc = nlp(chunk)
         for ent in doc.ents:
-            if ent.label_ not in {"GPE", "LOC"}:
-                continue
-            name = normalize_name(ent.text)
-            if not (MIN_PLACE_LEN <= len(name) <= MAX_PLACE_LEN):
-                continue
-            if name.lower() in blacklist:
-                continue
-            if name.isdigit() or re.match(r"^\d", name):
-                continue
-            if use_prefix_filter and has_street_or_building_prefix(name):
-                continue
-            canon = aliases.get(name, name)
-            places.add(canon)
-    return places
+            label = ent.label_
+            # Lieux
+            if label in {"GPE", "LOC"}:
+                name = normalize_name(ent.text)
+                if not (MIN_PLACE_LEN <= len(name) <= MAX_PLACE_LEN):
+                    continue
+                if name.lower() in blacklist:
+                    continue
+                if name.isdigit() or re.match(r"^\d", name):
+                    continue
+                if use_prefix_filter and has_street_or_building_prefix(name):
+                    continue
+                canon = aliases.get(name, name)
+                places.add(canon)
+            # Personnes / organisations
+            elif label in {"PERSON", "PER", "ORG"}:
+                name = normalize_name(ent.text)
+                if not (MIN_PLACE_LEN <= len(name) <= MAX_PLACE_LEN):
+                    continue
+                # Type unifié : PERSON pour personnes (PER ou PERSON selon modèle), ORG pour orgs
+                ent_type = "PERSON" if label in {"PERSON", "PER"} else "ORG"
+                entity_hits.append((name, ent_type))
+    return places, entity_hits
 
 
 # ----------------------------------------------------------------------
@@ -533,8 +564,8 @@ def geocode(name: str, cache: dict) -> dict | None:
         "lng": float(hit["lon"]),
         "country": country,
         "display": hit.get("display_name", name),
-        "type": hit.get("type", ""),
-        "class": hit.get("class", ""),
+        "type": hit.get("type", ""),       # ex: "city", "village", "highway"
+        "class": hit.get("class", ""),     # ex: "place", "boundary", "amenity"
     }
     cache[key] = result
     return result
@@ -559,6 +590,215 @@ def load_aliases_and_blacklist() -> tuple[dict[str, str], set[str], dict[str, di
     blacklist = {b.lower() for b in cfg.get("blacklist", [])} | DEFAULT_BLACKLIST
     overrides = cfg.get("overrides", {})
     return aliases, blacklist, overrides
+
+
+# ----------------------------------------------------------------------
+# Entities (PERSON / ORG) - extraction et curation
+# ----------------------------------------------------------------------
+ENTITIES_FILE = Path("entities.json")
+ENTITIES_CURATION = Path("entities_curation.json")  # JSON plutôt que YAML pour rester sans dep
+
+# Blacklist par défaut : médias, journalistes connus, partenaires AEOW.
+# Extensible via entities_curation.json (key = nom normalisé, value: {keep: false}).
+DEFAULT_ENTITY_BLACKLIST = {
+    # Médias / agences
+    "afp", "reuters", "ap", "bbc", "cnn", "rfi", "tass", "ria novosti",
+    "le monde", "the new york times", "the washington post", "the guardian",
+    "le figaro", "libération", "mediapart", "rfe/rl", "radio free europe",
+    "radio liberty", "der spiegel", "die zeit", "the wall street journal",
+    "financial times", "ft", "bloomberg", "voice of america", "voa",
+    "courrier international", "france 24", "tv5 monde", "deutsche welle",
+    "novaya gazeta", "moscow times", "the moscow times", "meduza",
+    "rt", "russia today", "sputnik", "channel one",
+    # Partenaires AEOW connus
+    "all eyes on wagner", "aeow", "inpact", "openfacto", "open facto",
+    "forbidden stories", "bellingcat", "the continent", "eic", "eic.network",
+    "european investigative collaborations",
+    "dossier centre", "dossier center", "istories", "openDemocracy",
+    # Plateformes / outils mentionnés mais pas des "sujets"
+    "google", "facebook", "twitter", "x", "instagram", "telegram", "tiktok",
+    "youtube", "whatsapp", "signal", "wikipedia", "wikileaks",
+    "openstreetmap", "osm", "google maps", "google earth", "google drive",
+    "linkedin",
+    # Génériques institutionnels (rarement éclairants en eux-mêmes)
+    "european union", "union européenne", "ue", "eu", "european commission",
+    "commission européenne", "european parliament", "parlement européen",
+    "united nations", "nations unies", "onu", "un", "nato", "otan",
+    "african union", "union africaine",
+}
+
+
+def normalize_entity_key(name: str) -> str:
+    """Clé canonique pour merger les variantes d'une même entité."""
+    s = name.strip().lower()
+    s = re.sub(r"[^\w\s-]", "", s)  # retire ponctuation
+    s = re.sub(r"\s+", " ", s).strip()
+    return s
+
+
+def load_entities_curation() -> dict:
+    """Lit entities_curation.json. Le fichier ne contient QUE les entités où
+    l'utilisateur a fait une intervention manuelle (γ-light) :
+      {
+        "key": {
+          "keep": false,                    # blacklister
+          "aliases": ["alt name 1", ...],   # noms à fusionner sous cette clé
+          "canonical_name": "Nom propre",   # forcer un nom d'affichage
+          "type": "PERSON" | "ORG",         # forcer le type si ambigu
+          "notes": "Texte libre"
+        },
+        ...
+      }
+    Les entités absentes de ce fichier sont gérées en mode auto.
+    """
+    if not ENTITIES_CURATION.exists():
+        return {}
+    try:
+        return json.loads(ENTITIES_CURATION.read_text("utf-8"))
+    except Exception as e:
+        print(f"⚠  entities_curation.json illisible : {e}")
+        return {}
+
+
+def build_entities(articles: list, place_to_articles: dict[str, list[str]],
+                    ner: NERModels, blacklist: set[str], aliases: dict[str, str],
+                    use_prefix_filter: bool, min_mentions: int) -> dict:
+    """Génère le dataset entities en réutilisant la passe NER faite pour les lieux.
+    Mais comme `extract_places` ne retourne que les lieux, on relance NER ici.
+    Pour économiser : on demande UNE passe avec les deux types d'extraction."""
+    curation = load_entities_curation()
+    # Reverse alias map : pour chaque variante listée dans curation, retrouve la clé canonique
+    alias_to_key: dict[str, str] = {}
+    for key, info in curation.items():
+        for alt in info.get("aliases", []):
+            alias_to_key[normalize_entity_key(alt)] = key
+        # Le nom canonique lui-même
+        if info.get("canonical_name"):
+            alias_to_key[normalize_entity_key(info["canonical_name"])] = key
+
+    # Compteurs
+    entity_data: dict[str, dict] = {}  # key -> {name, type, count, articles, langs}
+    print("\n[entities] extraction des personnes et organisations…")
+    for art in tqdm(articles):
+        _, hits = extract_places_and_entities(art, ner, blacklist, aliases, use_prefix_filter)
+        # Dédupe par article : on compte 1 mention par article même si l'entité apparaît 5x
+        seen_in_article: dict[str, str] = {}  # key -> type (premier vu)
+        for name, etype in hits:
+            norm = normalize_entity_key(name)
+            if not norm:
+                continue
+            # Skip si dans la blacklist d'entités
+            if norm in DEFAULT_ENTITY_BLACKLIST:
+                continue
+            # Résolution alias via curation
+            canonical_key = alias_to_key.get(norm, norm)
+            # Skip si l'entité curée est marquée keep=false
+            curated = curation.get(canonical_key, {})
+            if curated.get("keep") is False:
+                continue
+            if canonical_key not in seen_in_article:
+                seen_in_article[canonical_key] = etype
+
+        for canonical_key, etype in seen_in_article.items():
+            curated = curation.get(canonical_key, {})
+            display_name = curated.get("canonical_name") or _restore_display_name(canonical_key, hits)
+            forced_type = curated.get("type")
+            if canonical_key not in entity_data:
+                entity_data[canonical_key] = {
+                    "key": canonical_key,
+                    "name": display_name,
+                    "type": forced_type or etype,
+                    "count": 0,
+                    "articles": [],
+                    "langs": {},
+                    "notes": curated.get("notes", ""),
+                    "curated": bool(curated),
+                }
+            ent = entity_data[canonical_key]
+            ent["count"] += 1
+            ent["articles"].append(art.id)
+            ent["langs"][art.lang] = ent["langs"].get(art.lang, 0) + 1
+
+    # Filtre fréquence : on garde seulement les entités mentionnées au moins min_mentions fois,
+    # SAUF si l'entité a été curée (note ou alias définis)
+    before = len(entity_data)
+    filtered = {
+        k: v for k, v in entity_data.items()
+        if v["count"] >= min_mentions or v["curated"]
+    }
+    dropped = before - len(filtered)
+    print(f"[entities] {before} entités candidates, {dropped} écartées par fréquence (<{min_mentions}), "
+          f"{len(filtered)} retenues")
+
+    # Calcul des lieux co-mentionnés pour chaque entité
+    # Un lieu est "co-mentionné" avec une entité s'il apparaît dans un des articles où l'entité est mentionnée
+    place_articles_set: dict[str, set[str]] = {p: set(ids) for p, ids in place_to_articles.items()}
+    for key, ent in filtered.items():
+        ent_articles = set(ent["articles"])
+        cooc: list[tuple[str, int]] = []
+        for place, art_ids in place_articles_set.items():
+            shared = len(ent_articles & art_ids)
+            if shared > 0:
+                cooc.append((place, shared))
+        cooc.sort(key=lambda x: -x[1])
+        # On garde le top 30 pour ne pas exploser le JSON
+        ent["co_places"] = [{"place": p, "count": c} for p, c in cooc[:30]]
+
+    # Calcul des dates first/last seen
+    article_dates = {a.id: a.date for a in articles}
+    for ent in filtered.values():
+        dates = [article_dates.get(aid) for aid in ent["articles"]]
+        dates = [d for d in dates if d]
+        if dates:
+            ent["first_seen"] = min(dates)
+            ent["last_seen"] = max(dates)
+        else:
+            ent["first_seen"] = ent["last_seen"] = None
+
+    return filtered
+
+
+def _restore_display_name(key: str, hits: list[tuple[str, str]]) -> str:
+    """Choisit un display name correctement capitalisé parmi les variantes vues."""
+    candidates = [name for name, _ in hits if normalize_entity_key(name) == key]
+    if not candidates:
+        return key.title()
+    # On prend la variante la plus longue (souvent la plus complète : "Yevgeny Prigozhin" > "Prigozhin")
+    # Si égalité, celle avec le plus de majuscules (= mieux capitalisée)
+    candidates.sort(key=lambda s: (-len(s), -sum(1 for c in s if c.isupper())))
+    return candidates[0]
+
+
+def write_entities_outputs(entities: dict, articles_count: int) -> None:
+    """Écrit entities.json (consommé par UI) et un template entities_curation.json
+    si pas encore présent."""
+    out = {
+        "_meta": {
+            "generated": time.strftime("%Y-%m-%d"),
+            "entities_count": len(entities),
+            "articles_count": articles_count,
+        },
+        "entities": sorted(entities.values(), key=lambda e: -e["count"]),
+    }
+    ENTITIES_FILE.write_text(json.dumps(out, ensure_ascii=False, indent=2), "utf-8")
+    print(f"✓ {ENTITIES_FILE} écrit ({len(entities)} entités)")
+
+    # Génère un template de curation aidant si pas existant
+    if not ENTITIES_CURATION.exists():
+        template = {
+            "_doc": "Curation manuelle des entités (γ-light). Format : key -> {keep, aliases, canonical_name, type, notes}. Une entité absente de ce fichier est gérée en mode auto. Exemple :",
+            "_example": {
+                "prigozhin": {
+                    "keep": True,
+                    "aliases": ["Yevgeny Prigozhin", "Evgueni Prigojine", "Пригожин"],
+                    "canonical_name": "Yevgeny Prigozhin",
+                    "type": "PERSON",
+                    "notes": "Fondateur de Wagner Group, mort en août 2023."
+                }
+            }
+        }
+        ENTITIES_CURATION.write_text(json.dumps(template, ensure_ascii=False, indent=2), "utf-8")
+        print(f"  ↳ {ENTITIES_CURATION} template créé (édite-le pour enrichir)")
 
 
 # ----------------------------------------------------------------------
@@ -596,14 +836,74 @@ def run(refresh_articles: bool, regeocode: bool, min_mentions: int,
 
     ner = NERModels()
     aliases, blacklist, overrides = load_aliases_and_blacklist()
+    entity_curation = load_entities_curation()
+    # Reverse alias map pour entités
+    entity_alias_to_key: dict[str, str] = {}
+    for key, info in entity_curation.items():
+        if not isinstance(info, dict):
+            continue
+        for alt in info.get("aliases", []):
+            entity_alias_to_key[normalize_entity_key(alt)] = key
+        if info.get("canonical_name"):
+            entity_alias_to_key[normalize_entity_key(info["canonical_name"])] = key
 
-    # Étape 1 : extraction NER (avec filtre préfixe optionnel)
+    # Étape 1 : extraction NER (lieux + entités personnes/orgs en une seule passe)
     place_to_articles: dict[str, list[str]] = {}
-    print("\n[ner] extraction des lieux par article…")
+    entity_data: dict[str, dict] = {}  # key -> agrégat
+    print("\n[ner] extraction des lieux et entités par article…")
     for art in tqdm(articles):
-        for place in extract_places(art, ner, blacklist, aliases, use_prefix_filter):
+        places, entity_hits = extract_places_and_entities(
+            art, ner, blacklist, aliases, use_prefix_filter
+        )
+        # Lieux
+        for place in places:
             place_to_articles.setdefault(place, []).append(art.id)
-    print(f"[ner] {len(place_to_articles)} lieux uniques extraits")
+        # Entités : dédup par article (1 mention par article max)
+        seen_keys: dict[str, str] = {}  # key -> type (premier vu)
+        seen_names: dict[str, str] = {}  # key -> nom le mieux capitalisé vu
+        for name, etype in entity_hits:
+            norm = normalize_entity_key(name)
+            if not norm or norm in DEFAULT_ENTITY_BLACKLIST:
+                continue
+            canonical_key = entity_alias_to_key.get(norm, norm)
+            curated = entity_curation.get(canonical_key, {})
+            if isinstance(curated, dict) and curated.get("keep") is False:
+                continue
+            if canonical_key not in seen_keys:
+                seen_keys[canonical_key] = etype
+                seen_names[canonical_key] = name
+            else:
+                # Garde la variante la plus longue / la mieux capitalisée
+                prev = seen_names[canonical_key]
+                if (len(name), sum(1 for c in name if c.isupper())) > \
+                   (len(prev), sum(1 for c in prev if c.isupper())):
+                    seen_names[canonical_key] = name
+        for canonical_key, etype in seen_keys.items():
+            curated = entity_curation.get(canonical_key, {})
+            curated = curated if isinstance(curated, dict) else {}
+            if canonical_key not in entity_data:
+                entity_data[canonical_key] = {
+                    "key": canonical_key,
+                    "name": curated.get("canonical_name") or seen_names[canonical_key],
+                    "type": curated.get("type") or etype,
+                    "count": 0,
+                    "articles": [],
+                    "langs": {},
+                    "notes": curated.get("notes", ""),
+                    "curated": bool(curated),
+                }
+            ent = entity_data[canonical_key]
+            ent["count"] += 1
+            ent["articles"].append(art.id)
+            ent["langs"][art.lang] = ent["langs"].get(art.lang, 0) + 1
+            # Met à jour le name si on rencontre une variante mieux capitalisée
+            if not curated.get("canonical_name"):
+                cur = ent["name"]
+                cand = seen_names[canonical_key]
+                if (len(cand), sum(1 for c in cand if c.isupper())) > \
+                   (len(cur), sum(1 for c in cur if c.isupper())):
+                    ent["name"] = cand
+    print(f"[ner] {len(place_to_articles)} lieux uniques · {len(entity_data)} entités candidates")
 
     # Étape 2 : filtre par fréquence (avant géocodage = on évite des appels Nominatim inutiles)
     before_freq = len(place_to_articles)
@@ -620,7 +920,7 @@ def run(refresh_articles: bool, regeocode: bool, min_mentions: int,
     # Étape 3 : géocodage + filtre type Nominatim
     geocode_cache = {} if regeocode else load_geocode_cache()
     geocoded: list[Place] = []
-    rejected_by_type: list[tuple[str, str, str]] = []
+    rejected_by_type: list[tuple[str, str, str]] = []  # (name, class, type)
     print(f"\n[geo] géocodage Nominatim (≈1 req/s, {len(place_to_articles)} lieux)…")
     try:
         for name, art_ids in tqdm(sorted(place_to_articles.items())):
@@ -635,6 +935,7 @@ def run(refresh_articles: bool, regeocode: bool, min_mentions: int,
             res = geocode(name, geocode_cache)
             if not res:
                 continue
+            # Filtre type Nominatim : on ne garde que villes / régions / pays
             if use_type_filter:
                 osm_type = res.get("type", "")
                 if osm_type and osm_type not in ALLOWED_NOMINATIM_TYPES:
@@ -651,6 +952,7 @@ def run(refresh_articles: bool, regeocode: bool, min_mentions: int,
     print(f"\n[geo] {len(geocoded)} lieux géocodés et retenus")
     if rejected_by_type:
         print(f"[filtre type] {len(rejected_by_type)} lieux écartés (mauvais type Nominatim)")
+        # Échantillon des 10 premiers pour info
         sample = rejected_by_type[:10]
         for name, cls, typ in sample:
             print(f"   - {name!r} ({cls}/{typ})")
@@ -685,6 +987,96 @@ def run(refresh_articles: bool, regeocode: bool, min_mentions: int,
     OUTPUT_FILE.write_text(json.dumps(out, ensure_ascii=False, indent=2), "utf-8")
     print(f"\n✓ {OUTPUT_FILE} écrit ({len(geocoded)} lieux, {len(articles)} enquêtes, "
           f"dont {n_enriched} enrichi(s) par PDF)")
+
+    # ============================================================
+    # Sortie entités
+    # ============================================================
+    print("\n[entities] finalisation…")
+    # Filtre fréquence (mêmes règles que pour les lieux : >=min_mentions, sauf curées)
+    before_ent = len(entity_data)
+    filtered_entities = {
+        k: v for k, v in entity_data.items()
+        if v["count"] >= min_mentions or v["curated"]
+    }
+    dropped_ent = before_ent - len(filtered_entities)
+    print(f"[entities] {dropped_ent} entités écartées (mentionnées < {min_mentions} fois et non curées)")
+
+    # Calcul des dates first/last seen
+    article_dates = {a.id: a.date for a in articles}
+    # Calcul des lieux co-mentionnés (lieux qui apparaissent dans les articles où l'entité est citée)
+    place_articles_set: dict[str, set[str]] = {p: set(ids) for p, ids in place_to_articles.items()}
+    geocoded_names = {pl.name: pl for pl in geocoded}  # pour ne garder que les lieux finalement géocodés
+    for ent in filtered_entities.values():
+        ent_articles = set(ent["articles"])
+        # Co-mentions
+        cooc: list[tuple[str, int]] = []
+        for place, art_ids in place_articles_set.items():
+            if place not in geocoded_names:
+                continue  # ignore les lieux écartés par filtre type
+            shared = len(ent_articles & art_ids)
+            if shared > 0:
+                cooc.append((place, shared))
+        cooc.sort(key=lambda x: -x[1])
+        ent["co_places"] = [
+            {"place": p, "place_id": geocoded_names[p].id, "count": c}
+            for p, c in cooc[:30]
+        ]
+        # First / last seen
+        dates = [article_dates.get(aid) for aid in ent["articles"]]
+        dates = [d for d in dates if d]
+        ent["first_seen"] = min(dates) if dates else None
+        ent["last_seen"] = max(dates) if dates else None
+
+    # Co-mentions entité↔entité (top 10 par entité, pour suggestions de fiches liées)
+    for ent in filtered_entities.values():
+        ent_articles = set(ent["articles"])
+        cooc_e: list[tuple[str, str, int]] = []
+        for other_key, other_ent in filtered_entities.items():
+            if other_key == ent["key"]:
+                continue
+            shared = len(ent_articles & set(other_ent["articles"]))
+            if shared > 0:
+                cooc_e.append((other_key, other_ent["name"], shared))
+        cooc_e.sort(key=lambda x: -x[2])
+        ent["co_entities"] = [
+            {"key": k, "name": n, "count": c} for k, n, c in cooc_e[:10]
+        ]
+
+    # Écriture entities.json
+    entities_out = {
+        "_meta": {
+            "generated": time.strftime("%Y-%m-%d"),
+            "source": WP_API_BASE,
+            "articles_count": len(articles),
+            "entities_count": len(filtered_entities),
+            "filter_stats": {
+                "candidates": before_ent,
+                "dropped_by_frequency": dropped_ent,
+            },
+            "type_breakdown": {
+                "PERSON": sum(1 for e in filtered_entities.values() if e["type"] == "PERSON"),
+                "ORG": sum(1 for e in filtered_entities.values() if e["type"] == "ORG"),
+            },
+        },
+        "entities": sorted(filtered_entities.values(), key=lambda e: -e["count"]),
+    }
+    ENTITIES_FILE.write_text(json.dumps(entities_out, ensure_ascii=False, indent=2), "utf-8")
+    print(f"✓ {ENTITIES_FILE} écrit ({len(filtered_entities)} entités)")
+
+    # Crée un template de curation si pas existant
+    if not ENTITIES_CURATION.exists():
+        template = {
+            "_doc": "Curation manuelle des entités (γ-light). Format : key -> {keep, aliases, canonical_name, type, notes}. Une entité absente de ce fichier est gérée en mode auto.",
+            "_example_prigozhin": {
+                "keep": True,
+                "aliases": ["Yevgeny Prigozhin", "Evgueni Prigojine", "Пригожин"],
+                "canonical_name": "Yevgeny Prigozhin",
+                "type": "PERSON",
+                "notes": "Fondateur de Wagner Group, mort en août 2023."
+            }
+        }
+        ENTITIES_CURATION.write_text(json.dumps(template, ensure_ascii=False, indent=2), "utf-8")
+        print(f"  ↳ {ENTITIES_CURATION} template créé")
 
 
 def main() -> None:
