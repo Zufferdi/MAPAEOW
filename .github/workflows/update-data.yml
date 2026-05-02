@@ -15,6 +15,22 @@ on:
         description: "Min. mentions par lieu (défaut: 2)"
         type: string
         default: "2"
+      generate_summaries:
+        description: "Générer / régénérer les résumés thématiques (Claude API, ~0.20 USD)"
+        type: choice
+        options:
+          - "non"
+          - "manquants_seulement"
+          - "tous"
+        default: "non"
+      summaries_lang:
+        description: "Langue des résumés (si génération activée)"
+        type: choice
+        options:
+          - "fr"
+          - "en"
+          - "fr+en"
+        default: "fr"
   schedule:
     - cron: "0 4 * * 1"
 
@@ -60,6 +76,29 @@ jobs:
           fi
           python -u pipeline.py $ARGS
 
+      - name: Generate place summaries (Claude API)
+        if: github.event.inputs.generate_summaries == 'manquants_seulement' || github.event.inputs.generate_summaries == 'tous'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set -e
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "⚠ Secret ANTHROPIC_API_KEY non défini dans Settings → Secrets → Actions."
+            echo "  Va sur Settings du repo, ajoute ce secret avec ta clé Claude API."
+            exit 1
+          fi
+
+          MODE_ARGS=""
+          if [ "${{ github.event.inputs.generate_summaries }}" = "manquants_seulement" ]; then
+            MODE_ARGS="--only-missing"
+          fi
+
+          LANGS="${{ github.event.inputs.summaries_lang }}"
+          for LANG in $(echo "$LANGS" | tr '+' ' '); do
+            echo "=== Génération des résumés en $LANG ==="
+            python -u generate_summaries.py --lang "$LANG" $MODE_ARGS
+          done
+
       - name: Inspect outputs
         if: always()
         run: |
@@ -69,6 +108,8 @@ jobs:
           [ -f data.json ] && python -c "import json; print(json.dumps(json.load(open('data.json'))['_meta'], indent=2))" || echo "data.json absent"
           echo "=== entities.json _meta ==="
           [ -f entities.json ] && python -c "import json; print(json.dumps(json.load(open('entities.json'))['_meta'], indent=2))" || echo "entities.json absent"
+          echo "=== place_summaries.json _meta ==="
+          [ -f place_summaries.json ] && python -c "import json; print(json.dumps(json.load(open('place_summaries.json'))['_meta'], indent=2))" || echo "place_summaries.json absent"
           echo "=== cache/ ==="
           [ -d cache ] && ls -la cache/ || echo "cache/ absent"
 
