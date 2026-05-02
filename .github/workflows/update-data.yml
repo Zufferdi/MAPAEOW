@@ -31,6 +31,18 @@ on:
           - "en"
           - "fr+en"
         default: "fr"
+      generate_entity_summaries:
+        description: "Générer / régénérer les résumés contextuels d'entités (Claude API, ~0.50-1.50 USD selon le scope)"
+        type: choice
+        options:
+          - "non"
+          - "manquants_seulement"
+          - "tous"
+        default: "non"
+      entity_summaries_min:
+        description: "Min. mentions pour générer un résumé d'entité (défaut: 2)"
+        type: string
+        default: "2"
   schedule:
     - cron: "0 4 * * 1"
 
@@ -99,6 +111,28 @@ jobs:
             python -u generate_summaries.py --lang "$LANG" $MODE_ARGS
           done
 
+      - name: Generate entity summaries (Claude API)
+        if: github.event.inputs.generate_entity_summaries == 'manquants_seulement' || github.event.inputs.generate_entity_summaries == 'tous'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set -e
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "⚠ Secret ANTHROPIC_API_KEY non défini dans Settings → Secrets → Actions."
+            exit 1
+          fi
+
+          MODE_ARGS="--min-mentions ${{ github.event.inputs.entity_summaries_min || '2' }}"
+          if [ "${{ github.event.inputs.generate_entity_summaries }}" = "manquants_seulement" ]; then
+            MODE_ARGS="$MODE_ARGS --only-missing"
+          fi
+
+          LANGS="${{ github.event.inputs.summaries_lang }}"
+          for LANG in $(echo "$LANGS" | tr '+' ' '); do
+            echo "=== Génération des résumés d'entités en $LANG ==="
+            python -u generate_entity_summaries.py --lang "$LANG" $MODE_ARGS
+          done
+
       - name: Inspect outputs
         if: always()
         run: |
@@ -110,6 +144,8 @@ jobs:
           [ -f entities.json ] && python -c "import json; print(json.dumps(json.load(open('entities.json'))['_meta'], indent=2))" || echo "entities.json absent"
           echo "=== place_summaries.json _meta ==="
           [ -f place_summaries.json ] && python -c "import json; print(json.dumps(json.load(open('place_summaries.json'))['_meta'], indent=2))" || echo "place_summaries.json absent"
+          echo "=== entity_summaries.json _meta ==="
+          [ -f entity_summaries.json ] && python -c "import json; print(json.dumps(json.load(open('entity_summaries.json'))['_meta'], indent=2))" || echo "entity_summaries.json absent"
           echo "=== cache/ ==="
           [ -d cache ] && ls -la cache/ || echo "cache/ absent"
 
@@ -123,6 +159,7 @@ jobs:
           [ -f entities.json ] && git add entities.json
           [ -f entities_curation.json ] && git add entities_curation.json
           [ -f place_summaries.json ] && git add place_summaries.json
+          [ -f entity_summaries.json ] && git add entity_summaries.json
           [ -d cache ] && git ls-files --others --exclude-standard cache/ | xargs -r git add
           [ -d cache ] && git add -u cache/
           [ -f place_aliases.json ] && git add place_aliases.json
