@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Entités · INPACT · All Eyes On Wagner</title>
+<meta name="description" content="Index des personnes et organisations citées dans les enquêtes All Eyes On Wagner / INPACT.">
+
+<!-- Favicon (réutilise ceux de la carte parente) -->
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+
+<meta name="theme-color" content="#0a0b0e">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #0a0b0e;
+    --bg-elevated: #14161b;
+    --bg-row-hover: #1a1d23;
+    --border: #1f2229;
+    --border-strong: #2a2e37;
+    --text: #e6e7ea;
+    --text-dim: #8a8d96;
+    --text-faint: #5a5d66;
+    --accent: #ff8a3d;
+    --accent-bright: #ffa666;
+    --accent-soft: rgba(255, 138, 61, 0.12);
+    --person: #9aff8a;       /* vert pour personnes */
+    --person-soft: rgba(154, 255, 138, 0.08);
+    --org: #6cb6ff;          /* bleu pour organisations */
+    --org-soft: rgba(108, 182, 255, 0.08);
+    --serif: 'Instrument Serif', 'Times New Roman', serif;
+    --sans: 'Manrope', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+  /* ============= HEADER ============= */
+  header {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    z-index: 100;
+  }
+  .brand {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .brand-eyebrow {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  .brand-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+  .brand-title em {
+    color: var(--accent);
+    font-style: italic;
+  }
+
+  .header-search {
+    flex: 1;
+    max-width: 480px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .header-search input {
+    width: 100%;
+    padding: 10px 16px 10px 38px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--text);
+    transition: border-color 0.2s;
+  }
+  .header-search input:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  .header-search input::placeholder { color: var(--text-faint); }
+  .header-search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-faint);
+    font-size: 13px;
+    pointer-events: none;
+  }
+  .header-search-clear {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-faint);
+    font-size: 14px;
+    padding: 4px;
+    display: none;
+  }
+  .header-search-clear.visible { display: block; }
+  .header-search-clear:hover { color: var(--text); }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .header-link {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+  .header-link:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+  .header-link .arrow {
+    margin-left: 6px;
+    color: var(--accent);
+  }
+
+  /* ============= FILTERBAR ============= */
+  .filterbar {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    overflow-x: auto;
+    flex-wrap: wrap;
+  }
+  .filter-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    flex-shrink: 0;
+  }
+  .filter-divider {
+    width: 1px;
+    height: 22px;
+    background: var(--border);
+    flex-shrink: 0;
+  }
+  .chips {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .chip {
+    padding: 6px 12px;
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--text-dim);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    transition: all 0.15s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .chip:hover {
+    color: var(--text);
+    border-color: var(--border-strong);
+  }
+  .chip.active {
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-color: var(--accent);
+  }
+  .chip-count {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-faint);
+  }
+  .chip.active .chip-count { color: var(--accent-bright); }
+
+  .filter-status {
+    margin-left: auto;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    flex-shrink: 0;
+  }
+
+  /* ============= MAIN ============= */
+  main {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+  }
+
+  /* === Liste à gauche === */
+  .list-pane {
+    flex: 1;
+    min-width: 0;
+    overflow-y: auto;
+    border-right: 1px solid var(--border);
+  }
+  .entity-row {
+    display: grid;
+    grid-template-columns: 32px 1fr auto auto;
+    gap: 14px;
+    align-items: center;
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: background 0.12s;
+  }
+  .entity-row:hover { background: var(--bg-row-hover); }
+  .entity-row.selected {
+    background: var(--accent-soft);
+    border-left: 2px solid var(--accent);
+    padding-left: 22px;
+  }
+
+  .entity-type-badge {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+  .entity-type-badge.person {
+    color: var(--person);
+    background: var(--person-soft);
+    border: 1px solid var(--person-soft);
+  }
+  .entity-type-badge.org {
+    color: var(--org);
+    background: var(--org-soft);
+    border: 1px solid var(--org-soft);
+  }
+
+  .entity-main { min-width: 0; }
+  .entity-name {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .entity-meta {
+    margin-top: 3px;
+    display: flex;
+    gap: 12px;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .entity-meta .curated-flag {
+    color: var(--accent);
+  }
+
+  .entity-langs {
+    display: flex;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+  .lang-pill {
+    font-family: var(--mono);
+    font-size: 9px;
+    padding: 2px 6px;
+    border: 1px solid var(--border-strong);
+    border-radius: 3px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .entity-count {
+    font-family: var(--mono);
+    font-size: 22px;
+    color: var(--accent);
+    font-weight: 500;
+    flex-shrink: 0;
+    min-width: 36px;
+    text-align: right;
+  }
+
+  /* === Détails à droite === */
+  .detail-pane {
+    width: 580px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    background: var(--bg-elevated);
+  }
+  .detail-pane.empty {
+    display: grid;
+    place-items: center;
+    color: var(--text-faint);
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding: 60px 30px;
+  }
+  .detail-pane.empty::before {
+    content: "←";
+    display: block;
+    font-family: var(--serif);
+    font-size: 80px;
+    color: var(--border-strong);
+    margin-bottom: 18px;
+    line-height: 1;
+  }
+  .detail-empty-text { max-width: 280px; line-height: 1.5; }
+
+  .detail-inner {
+    padding: 32px 36px 60px;
+  }
+
+  .detail-eyebrow {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .detail-eyebrow::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .detail-name {
+    font-family: var(--serif);
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    margin-bottom: 16px;
+  }
+
+  .detail-stats {
+    display: flex;
+    gap: 24px;
+    padding: 16px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+  }
+  .detail-stat-num {
+    font-family: var(--mono);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .detail-stat-label {
+    margin-top: 4px;
+    font-family: var(--mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-faint);
+  }
+
+  .detail-section { margin-bottom: 28px; }
+  .detail-section-title {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .detail-section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .detail-notes {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--text);
+    border-left: 2px solid var(--accent);
+    padding-left: 16px;
+  }
+  .detail-notes-empty {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .detail-articles { display: flex; flex-direction: column; gap: 8px; }
+  .article-card {
+    display: block;
+    padding: 12px 14px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: all 0.15s;
+  }
+  .article-card:hover {
+    border-color: var(--accent);
+    transform: translateX(2px);
+  }
+  .article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+  .article-category { color: var(--accent); }
+  .article-title {
+    font-family: var(--serif);
+    font-size: 15px;
+    line-height: 1.3;
+    color: var(--text);
+  }
+
+  .related-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+  .related-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--text-dim);
+    transition: all 0.15s;
+  }
+  .related-pill:hover {
+    color: var(--text);
+    border-color: var(--accent);
+  }
+  .related-pill .count {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent);
+    margin-left: 4px;
+  }
+  .related-pill.entity::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text-dim);
+    flex-shrink: 0;
+  }
+  .related-pill.entity[data-type="PERSON"]::before { background: var(--person); }
+  .related-pill.entity[data-type="ORG"]::before { background: var(--org); }
+
+  .detail-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+  .action-btn {
+    flex: 1;
+    padding: 12px 16px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    transition: all 0.15s;
+  }
+  .action-btn:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+  .action-btn.primary {
+    background: var(--accent-soft);
+    color: var(--accent-bright);
+    border-color: var(--accent);
+  }
+
+  /* === Empty / loading === */
+  .list-empty {
+    padding: 80px 40px;
+    text-align: center;
+    color: var(--text-faint);
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    line-height: 1.6;
+  }
+
+  .loading {
+    padding: 60px 40px;
+    text-align: center;
+    color: var(--text-dim);
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  /* ============= Mobile ============= */
+  @media (max-width: 920px) {
+    header {
+      flex-wrap: wrap;
+      padding: 12px 16px;
+      gap: 12px;
+    }
+    .header-search { order: 3; flex-basis: 100%; max-width: none; }
+    .filterbar { padding: 10px 16px; }
+    main { flex-direction: column; }
+    .list-pane { border-right: none; border-bottom: 1px solid var(--border); }
+    .detail-pane {
+      width: 100%;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 200;
+      transform: translateX(100%);
+      transition: transform 0.25s;
+    }
+    .detail-pane.open { transform: translateX(0); }
+    .entity-row { padding: 12px 16px; }
+    .entity-row.selected { padding-left: 14px; }
+    .detail-inner { padding: 22px 20px 60px; }
+    .detail-name { font-size: 32px; }
+    .detail-back {
+      display: flex !important;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+  }
+  .detail-back { display: none; }
+
+  /* ============= PRINT (export PDF) ============= */
+  @media print {
+    @page { size: A4; margin: 18mm 16mm; }
+    html, body { background: white; color: black; height: auto; overflow: visible; }
+    header, .filterbar, .list-pane, .detail-actions, .detail-back { display: none !important; }
+    main { display: block; height: auto; }
+    .detail-pane {
+      width: 100% !important;
+      position: static !important;
+      transform: none !important;
+      background: white !important;
+      overflow: visible !important;
+    }
+    .detail-inner { padding: 0; }
+    .detail-eyebrow { color: #ff5500; }
+    .detail-eyebrow::before { background: #ff5500; }
+    .detail-name { color: black; }
+    .detail-stats { border-color: #ccc; }
+    .detail-stat-num { color: #ff5500; }
+    .detail-stat-label { color: #666; }
+    .detail-section-title { color: #666; }
+    .detail-section-title::after { background: #ddd; }
+    .detail-notes { color: #222; border-color: #ff5500; }
+    .article-card { border-color: #ccc; background: white; page-break-inside: avoid; }
+    .article-title { color: black; }
+    .related-pill { background: white; border-color: #ccc; color: #444; }
+    .article-meta, .article-category { color: #666; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="brand-eyebrow">All Eyes On Wagner · INPACT</div>
+    <div class="brand-title">Index <em>des entités</em></div>
+  </div>
+
+  <div class="header-search">
+    <span class="header-search-icon">⌕</span>
+    <input id="search-input" type="text" placeholder="Rechercher une personne, une organisation…" autocomplete="off">
+    <button class="header-search-clear" id="search-clear" title="Effacer">✕</button>
+  </div>
+
+  <div class="header-actions">
+    <a href="../" class="header-link">
+      <span>Carte</span>
+      <span class="arrow">↗</span>
+    </a>
+  </div>
+</header>
+
+<div class="filterbar">
+  <span class="filter-label">Type</span>
+  <div class="chips" id="type-chips"></div>
+  <div class="filter-divider"></div>
+  <span class="filter-label">Langue</span>
+  <div class="chips" id="lang-chips"></div>
+  <div class="filter-divider"></div>
+  <span class="filter-label">Statut</span>
+  <div class="chips">
+    <button class="chip" data-curation="curated">
+      <span>Annotées</span>
+      <span class="chip-count" id="curation-count">0</span>
+    </button>
+  </div>
+  <span class="filter-status" id="filter-status"></span>
+</div>
+
+<main>
+  <div class="list-pane" id="list-pane">
+    <div class="loading">Chargement…</div>
+  </div>
+  <div class="detail-pane empty" id="detail-pane">
+    <div class="detail-empty-text">
+      Sélectionne une entité pour voir sa fiche, ses articles et ses liens.
+    </div>
+  </div>
+</main>
+
+<script>
+'use strict';
+
+// ============================================================
+// STATE
+// ============================================================
+const state = {
+  entities: [],
+  meta: {},
+  filters: {
+    types: new Set(),         // 'PERSON', 'ORG'
+    langs: new Set(),          // 'fr', 'en', 'ru'
+    onlyCurated: false,
+    search: '',
+  },
+  selectedKey: null,
+};
+
+let articlesById = {};         // chargé depuis ../data.json pour avoir les titres/dates
+let placesById = {};
+
+// ============================================================
+// LOAD
+// ============================================================
+async function loadAll() {
+  try {
+    // Charge en parallèle entities.json et data.json (pour titres articles + lieux)
+    const [entitiesResp, dataResp] = await Promise.all([
+      fetch('../entities.json').catch(() => null),
+      fetch('../data.json').catch(() => null),
+    ]);
+    if (!entitiesResp || !entitiesResp.ok) {
+      throw new Error("entities.json introuvable. Lance d'abord pipeline.py.");
+    }
+    const entitiesData = await entitiesResp.json();
+    state.entities = entitiesData.entities || [];
+    state.meta = entitiesData._meta || {};
+
+    if (dataResp && dataResp.ok) {
+      const data = await dataResp.json();
+      articlesById = Object.fromEntries((data.articles || []).map(a => [a.id, a]));
+      placesById = Object.fromEntries((data.places || []).map(p => [p.id, p]));
+    }
+
+    initFilters();
+    render();
+  } catch (e) {
+    document.getElementById('list-pane').innerHTML =
+      `<div class="list-empty">⚠ Erreur de chargement<br><br>${escapeHtml(e.message)}</div>`;
+  }
+}
+
+// ============================================================
+// FILTERS
+// ============================================================
+function initFilters() {
+  // Types : compte
+  const typeCounts = { PERSON: 0, ORG: 0 };
+  const langCounts = {};
+  state.entities.forEach(e => {
+    typeCounts[e.type] = (typeCounts[e.type] || 0) + 1;
+    Object.keys(e.langs || {}).forEach(lang => {
+      langCounts[lang] = (langCounts[lang] || 0) + 1;
+    });
+  });
+
+  const typesEl = document.getElementById('type-chips');
+  typesEl.innerHTML = '';
+  [['PERSON', 'Personnes'], ['ORG', 'Organisations']].forEach(([key, label]) => {
+    const btn = document.createElement('button');
+    btn.className = 'chip';
+    btn.dataset.type = key;
+    btn.innerHTML = `<span>${label}</span><span class="chip-count">${typeCounts[key] || 0}</span>`;
+    btn.addEventListener('click', () => {
+      if (state.filters.types.has(key)) state.filters.types.delete(key);
+      else state.filters.types.add(key);
+      render();
+    });
+    typesEl.appendChild(btn);
+  });
+
+  const langsEl = document.getElementById('lang-chips');
+  langsEl.innerHTML = '';
+  const langLabels = { fr: 'FR', en: 'EN', ru: 'RU', ar: 'AR' };
+  Object.entries(langCounts).sort((a,b) => b[1]-a[1]).forEach(([lang, count]) => {
+    const btn = document.createElement('button');
+    btn.className = 'chip';
+    btn.dataset.lang = lang;
+    btn.innerHTML = `<span>${langLabels[lang] || lang.toUpperCase()}</span><span class="chip-count">${count}</span>`;
+    btn.addEventListener('click', () => {
+      if (state.filters.langs.has(lang)) state.filters.langs.delete(lang);
+      else state.filters.langs.add(lang);
+      render();
+    });
+    langsEl.appendChild(btn);
+  });
+
+  // Curation chip
+  const curatedCount = state.entities.filter(e => e.curated).length;
+  document.getElementById('curation-count').textContent = curatedCount;
+  document.querySelector('[data-curation="curated"]').addEventListener('click', e => {
+    state.filters.onlyCurated = !state.filters.onlyCurated;
+    render();
+  });
+
+  // Search
+  const searchInput = document.getElementById('search-input');
+  const searchClear = document.getElementById('search-clear');
+  searchInput.addEventListener('input', e => {
+    state.filters.search = e.target.value.toLowerCase();
+    searchClear.classList.toggle('visible', state.filters.search.length > 0);
+    render();
+  });
+  searchClear.addEventListener('click', () => {
+    searchInput.value = '';
+    state.filters.search = '';
+    searchClear.classList.remove('visible');
+    searchInput.focus();
+    render();
+  });
+  // Slash pour focus search
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement !== searchInput) {
+      e.preventDefault();
+      searchInput.focus();
+    }
+    if (e.key === 'Escape') {
+      if (state.selectedKey) {
+        state.selectedKey = null;
+        render();
+      }
+    }
+  });
+}
+
+function applyFilters(entities) {
+  const f = state.filters;
+  return entities.filter(e => {
+    if (f.types.size && !f.types.has(e.type)) return false;
+    if (f.langs.size) {
+      const has = Object.keys(e.langs || {}).some(l => f.langs.has(l));
+      if (!has) return false;
+    }
+    if (f.onlyCurated && !e.curated) return false;
+    if (f.search) {
+      const haystack = (e.name + ' ' + (e.notes || '')).toLowerCase();
+      if (!haystack.includes(f.search)) return false;
+    }
+    return true;
+  });
+}
+
+// ============================================================
+// RENDER
+// ============================================================
+function render() {
+  // Reflect chip active states
+  document.querySelectorAll('[data-type]').forEach(c => {
+    c.classList.toggle('active', state.filters.types.has(c.dataset.type));
+  });
+  document.querySelectorAll('[data-lang]').forEach(c => {
+    c.classList.toggle('active', state.filters.langs.has(c.dataset.lang));
+  });
+  document.querySelector('[data-curation="curated"]').classList.toggle('active', state.filters.onlyCurated);
+
+  const filtered = applyFilters(state.entities);
+  document.getElementById('filter-status').textContent =
+    filtered.length === state.entities.length
+      ? `${filtered.length} entités`
+      : `${filtered.length} / ${state.entities.length} entités`;
+
+  renderList(filtered);
+  renderDetail();
+}
+
+function renderList(entities) {
+  const pane = document.getElementById('list-pane');
+  if (!entities.length) {
+    pane.innerHTML = `<div class="list-empty">Aucune entité ne correspond aux filtres.</div>`;
+    return;
+  }
+  // On limite l'affichage initial pour les perfs (mais le scroll va bien jusqu'à 5000)
+  const max = 500;
+  const slice = entities.slice(0, max);
+  pane.innerHTML = slice.map(e => {
+    const langPills = Object.keys(e.langs || {})
+      .sort()
+      .map(l => `<span class="lang-pill">${escapeHtml(l)}</span>`)
+      .join('');
+    const isSelected = e.key === state.selectedKey;
+    const typeClass = e.type === 'PERSON' ? 'person' : 'org';
+    const typeLetter = e.type === 'PERSON' ? 'P' : 'O';
+    const curatedFlag = e.curated ? `<span class="curated-flag">● annotée</span>` : '';
+    return `<div class="entity-row${isSelected ? ' selected' : ''}" data-key="${escapeHtml(e.key)}">
+      <div class="entity-type-badge ${typeClass}" title="${e.type}">${typeLetter}</div>
+      <div class="entity-main">
+        <div class="entity-name">${escapeHtml(e.name)}</div>
+        <div class="entity-meta">
+          <span>${e.type === 'PERSON' ? 'Personne' : 'Organisation'}</span>
+          ${e.first_seen ? `<span>${e.first_seen.slice(0,4)}${e.last_seen && e.last_seen.slice(0,4) !== e.first_seen.slice(0,4) ? '–' + e.last_seen.slice(0,4) : ''}</span>` : ''}
+          ${curatedFlag}
+        </div>
+      </div>
+      <div class="entity-langs">${langPills}</div>
+      <div class="entity-count">${e.count}</div>
+    </div>`;
+  }).join('') + (entities.length > max
+    ? `<div class="list-empty">Plus de ${max} entités. Affine la recherche pour voir le reste.</div>`
+    : '');
+  pane.querySelectorAll('.entity-row').forEach(row => {
+    row.addEventListener('click', () => {
+      state.selectedKey = row.dataset.key;
+      render();
+      // Sur mobile, afficher le detail-pane
+      document.getElementById('detail-pane').classList.add('open');
+    });
+  });
+}
+
+function renderDetail() {
+  const pane = document.getElementById('detail-pane');
+  const ent = state.entities.find(e => e.key === state.selectedKey);
+  if (!ent) {
+    pane.classList.add('empty');
+    pane.classList.remove('open');
+    pane.innerHTML = `<div class="detail-empty-text">Sélectionne une entité pour voir sa fiche, ses articles et ses liens.</div>`;
+    return;
+  }
+  pane.classList.remove('empty');
+
+  // Articles enrichis (titre, date, catégorie, langue, url) via articlesById
+  const articles = (ent.articles || [])
+    .map(id => articlesById[id])
+    .filter(Boolean)
+    .sort((a, b) => b.date.localeCompare(a.date));
+
+  // Lieux co-mentionnés
+  const coPlaces = ent.co_places || [];
+  // Entités co-mentionnées
+  const coEntities = ent.co_entities || [];
+
+  const langPills = Object.entries(ent.langs || {})
+    .sort((a,b) => b[1]-a[1])
+    .map(([l, c]) => `<span class="lang-pill">${escapeHtml(l)} · ${c}</span>`)
+    .join(' ');
+
+  const dateRange = ent.first_seen
+    ? (ent.first_seen === ent.last_seen
+        ? formatDate(ent.first_seen)
+        : `${formatDate(ent.first_seen)} → ${formatDate(ent.last_seen)}`)
+    : '—';
+
+  pane.innerHTML = `
+    <button class="detail-back" id="detail-back">← Retour</button>
+    <div class="detail-inner">
+      <div class="detail-eyebrow">${ent.type === 'PERSON' ? 'Personne' : 'Organisation'}</div>
+      <h1 class="detail-name">${escapeHtml(ent.name)}</h1>
+
+      <div class="detail-stats">
+        <div>
+          <div class="detail-stat-num">${ent.count}</div>
+          <div class="detail-stat-label">Mentions</div>
+        </div>
+        <div>
+          <div class="detail-stat-num">${(coPlaces).length}</div>
+          <div class="detail-stat-label">Lieux liés</div>
+        </div>
+        <div>
+          <div class="detail-stat-num">${coEntities.length}</div>
+          <div class="detail-stat-label">Entités liées</div>
+        </div>
+        <div style="flex:1"></div>
+        <div style="text-align:right">
+          <div class="detail-stat-label" style="margin-bottom:4px">Période</div>
+          <div style="font-family:var(--mono);font-size:12px;color:var(--text-dim)">${dateRange}</div>
+        </div>
+      </div>
+
+      <div class="detail-section">
+        <div class="detail-section-title">Notes</div>
+        ${ent.notes
+          ? `<div class="detail-notes">${escapeHtml(ent.notes)}</div>`
+          : `<div class="detail-notes-empty">Pas de note rédigée. Édite <code>entities_curation.json</code> pour en ajouter.</div>`
+        }
+      </div>
+
+      ${langPills ? `
+      <div class="detail-section">
+        <div class="detail-section-title">Langues</div>
+        ${langPills}
+      </div>` : ''}
+
+      ${coPlaces.length ? `
+      <div class="detail-section">
+        <div class="detail-section-title">Lieux co-mentionnés</div>
+        <div class="related-pills">
+          ${coPlaces.slice(0, 20).map(cp => `
+            <a class="related-pill" href="../#place=${encodeURIComponent(cp.place_id || '')}" target="_blank" rel="noopener">
+              ${escapeHtml(cp.place)}
+              <span class="count">${cp.count}</span>
+            </a>
+          `).join('')}
+        </div>
+      </div>` : ''}
+
+      ${coEntities.length ? `
+      <div class="detail-section">
+        <div class="detail-section-title">Entités co-mentionnées</div>
+        <div class="related-pills">
+          ${coEntities.slice(0, 15).map(ce => {
+            const otherEnt = state.entities.find(x => x.key === ce.key);
+            const otherType = otherEnt ? otherEnt.type : 'PERSON';
+            return `<button class="related-pill entity" data-type="${otherType}" data-jump-key="${escapeHtml(ce.key)}">
+              ${escapeHtml(ce.name)}
+              <span class="count">${ce.count}</span>
+            </button>`;
+          }).join('')}
+        </div>
+      </div>` : ''}
+
+      <div class="detail-section">
+        <div class="detail-section-title">${articles.length} ${articles.length === 1 ? 'enquête' : 'enquêtes'}</div>
+        <div class="detail-articles">
+          ${articles.map(a => `
+            <a class="article-card" href="${escapeHtml(a.url)}" target="_blank" rel="noopener">
+              <div class="article-meta">
+                <span class="article-category">${escapeHtml(a.category || '—')}</span>
+                <span>${formatDate(a.date)} · ${escapeHtml((a.lang || '').toUpperCase())}</span>
+              </div>
+              <div class="article-title">${escapeHtml(a.title || '(sans titre)')}</div>
+            </a>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="detail-actions">
+        <button class="action-btn primary" id="action-print">Exporter / Imprimer</button>
+        <button class="action-btn" id="action-copy">Copier le lien</button>
+      </div>
+    </div>
+  `;
+
+  // Wire actions
+  document.getElementById('action-print').addEventListener('click', () => window.print());
+  document.getElementById('action-copy').addEventListener('click', () => {
+    const url = `${window.location.origin}${window.location.pathname}#entity=${encodeURIComponent(ent.key)}`;
+    navigator.clipboard.writeText(url).then(() => {
+      const btn = document.getElementById('action-copy');
+      const original = btn.textContent;
+      btn.textContent = '✓ Copié';
+      setTimeout(() => { btn.textContent = original; }, 1500);
+    }).catch(() => {});
+  });
+  document.getElementById('detail-back').addEventListener('click', () => {
+    pane.classList.remove('open');
+  });
+  pane.querySelectorAll('[data-jump-key]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.selectedKey = btn.dataset.jumpKey;
+      render();
+      pane.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+}
+
+// ============================================================
+// HELPERS
+// ============================================================
+function escapeHtml(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+const monthsFR = ['JAN', 'FÉV', 'MAR', 'AVR', 'MAI', 'JUIN', 'JUIL', 'AOÛT', 'SEPT', 'OCT', 'NOV', 'DÉC'];
+function formatDate(iso) {
+  if (!iso) return '—';
+  const [y, m, d] = iso.split('-');
+  if (!y || !m) return iso;
+  const monthIdx = parseInt(m, 10) - 1;
+  const month = monthsFR[monthIdx] || m;
+  return `${parseInt(d || '1', 10)} ${month} ${y}`;
+}
+
+// ============================================================
+// URL HASH SYNC
+// ============================================================
+function readUrlHash() {
+  const params = new URLSearchParams(window.location.hash.slice(1));
+  if (params.has('entity')) {
+    state.selectedKey = params.get('entity');
+  }
+}
+
+// ============================================================
+// BOOT
+// ============================================================
+readUrlHash();
+loadAll();
+</script>
+</body>
+</html>
