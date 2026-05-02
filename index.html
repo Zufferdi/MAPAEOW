@@ -1620,6 +1620,143 @@
     background: var(--accent-soft);
   }
 
+  /* === WIZARD 2 ÉTAPES === */
+  .landing-step {
+    flex: 1;
+    display: none;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .landing-step.active { display: flex; }
+
+  /* Étape 1 : choix de langue */
+  .landing-step-1 { justify-content: center; align-items: center; }
+  .landing-step-1.fade-out { animation: landing-fade-out 0.35s ease forwards; }
+  @keyframes landing-fade-out {
+    to { opacity: 0; transform: translateY(-16px); }
+  }
+  .landing-step-1-inner {
+    max-width: 520px;
+    padding: 40px 32px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .landing-step-1-inner .landing-eyebrow {
+    margin-bottom: 0;
+  }
+  .lang-question {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    opacity: 0;
+    animation: landing-rise 0.7s ease 0.2s forwards;
+  }
+  .lang-question-fr {
+    font-family: var(--serif);
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--text);
+  }
+  .lang-question-en {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--text-dim);
+    line-height: 1.1;
+  }
+  .lang-choice {
+    margin-bottom: 0 !important;
+    width: 100%;
+    opacity: 0;
+    animation: landing-rise 0.7s ease 0.45s forwards;
+  }
+
+  /* Étape 2 : onboarding (réutilise l'essentiel de l'ancien CSS) */
+  .landing-step-2.active { display: flex; }
+  .landing-step-2.fade-in {
+    animation: landing-fade-in 0.4s ease forwards;
+  }
+  @keyframes landing-fade-in {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Tutoriel */
+  .landing-tutorial {
+    margin-bottom: 36px;
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    opacity: 0;
+    animation: landing-rise 0.8s ease 0.7s forwards;
+  }
+  .landing-tutorial-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .landing-tutorial-label::before {
+    content: '';
+    display: inline-block;
+    width: 18px; height: 1px;
+    background: var(--accent);
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  .landing-tutorial-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .landing-tutorial-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.45;
+  }
+  .tutorial-icon {
+    flex-shrink: 0;
+    width: 22px;
+    color: var(--accent);
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  /* Bouton "Explorer la carte" : version primary, plus large */
+  .lang-btn-primary {
+    flex: 1;
+    min-width: 100%;
+    background: var(--accent-soft);
+    color: var(--accent-bright);
+    font-size: 17px;
+    padding: 20px 28px;
+    justify-content: center;
+    text-align: center;
+  }
+  .lang-btn-primary span:first-child {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .lang-btn-primary:hover {
+    background: rgba(255, 138, 61, 0.18);
+  }
+
   @media (max-width: 700px) {
     .landing-inner { padding: 50px 22px 32px; }
     .landing-title { font-size: 44px; }
@@ -1628,6 +1765,11 @@
     .landing-stat-num { font-size: 24px; }
     .lang-btn { min-width: 0; padding: 16px 18px; font-size: 15px; }
     .landing-footer { padding: 14px 22px; flex-direction: column; gap: 8px; text-align: center; }
+    .lang-question-fr { font-size: 28px; }
+    .lang-question-en { font-size: 18px; }
+    .landing-step-1-inner { padding: 32px 22px; gap: 24px; }
+    .landing-tutorial { padding: 16px 0; margin-bottom: 28px; }
+    .landing-tutorial-list li { font-size: 13px; gap: 10px; }
   }
 </style>
 </head>
@@ -1635,51 +1777,100 @@
 
 <!-- LANDING PAGE BILINGUE -->
 <div id="landing">
-  <div class="landing-inner">
-    <div class="landing-eyebrow">All Eyes On Wagner · INPACT</div>
-    <h1 class="landing-title" id="landing-title">Cartographier les <em>enquêtes</em></h1>
-    <div class="landing-sub" id="landing-sub">A bilingual investigation map · Une cartographie bilingue des enquêtes</div>
 
-    <div class="landing-text" id="landing-text">
-      <p data-lang="fr"><em>All Eyes On Wagner</em>, projet de l'écosystème INPACT, publie depuis plusieurs années des enquêtes consacrées à l'influence russe en Afrique, en Europe et au-delà — Africa Corps, opérations hybrides, réseaux d'acquisition d'armes, financements occultes.</p>
-      <p data-lang="fr">Cette carte rassemble pour la première fois ces enquêtes par lieu. Chaque marqueur correspond à un endroit mentionné — une capitale, une base, une zone d'opération — et donne accès aux articles qui en parlent. Les liens entre points révèlent les axes logistiques, les réseaux d'influence, les couloirs récurrents.</p>
-      <p data-lang="fr">Un outil pour les journalistes, les chercheurs, et toute personne qui souhaite comprendre où se joue concrètement la confrontation hybride en cours.</p>
-
-      <p data-lang="en" style="display:none"><em>All Eyes On Wagner</em>, a project of the INPACT ecosystem, has spent years investigating Russian influence in Africa, Europe and beyond — Africa Corps, hybrid operations, weapons acquisition networks, covert financing.</p>
-      <p data-lang="en" style="display:none">This map brings these investigations together by location for the first time. Each marker is a place mentioned in the reporting — a capital, a base, a zone of operations — and opens the articles that cover it. The links between points reveal logistics corridors, influence networks, recurring patterns.</p>
-      <p data-lang="en" style="display:none">A tool for journalists, researchers, and anyone trying to understand where today's hybrid confrontation is actually taking place.</p>
-    </div>
-
-    <div class="landing-stats">
-      <div>
-        <div class="landing-stat-num" id="landing-stat-articles">—</div>
-        <div class="landing-stat-label" data-i18n="landing_stat_investigations">Enquêtes</div>
+  <!-- ========== ÉTAPE 1 : CHOIX DE LANGUE ========== -->
+  <div class="landing-step landing-step-1" id="landing-step-1">
+    <div class="landing-step-1-inner">
+      <div class="landing-eyebrow">All Eyes On Wagner · INPACT</div>
+      <div class="lang-question">
+        <div class="lang-question-fr">Quelle est votre langue préférée ?</div>
+        <div class="lang-question-en">What is your preferred language?</div>
       </div>
-      <div>
-        <div class="landing-stat-num" id="landing-stat-places">—</div>
-        <div class="landing-stat-label" data-i18n="landing_stat_locations">Lieux cartographiés</div>
+      <div class="landing-cta lang-choice">
+        <button class="lang-btn" data-choose-lang="fr">
+          <span>Français</span>
+          <span class="lang-arrow">→</span>
+        </button>
+        <button class="lang-btn" data-choose-lang="en">
+          <span>English</span>
+          <span class="lang-arrow">→</span>
+        </button>
       </div>
-      <div>
-        <div class="landing-stat-num" id="landing-stat-countries">—</div>
-        <div class="landing-stat-label" data-i18n="landing_stat_countries">Pays couverts</div>
-      </div>
-    </div>
-
-    <div class="landing-cta">
-      <button class="lang-btn" data-enter-lang="fr">
-        <span>Explorer en français</span>
-        <span class="lang-arrow">→</span>
-      </button>
-      <button class="lang-btn" data-enter-lang="en">
-        <span>Explore in English</span>
-        <span class="lang-arrow">→</span>
-      </button>
     </div>
   </div>
-  <div class="landing-footer">
-    <span>© <span id="landing-year"></span> INPACT · All Eyes On Wagner</span>
-    <a href="https://alleyesonwagner.org" target="_blank" rel="noopener">alleyesonwagner.org →</a>
+
+  <!-- ========== ÉTAPE 2 : ONBOARDING ========== -->
+  <div class="landing-step landing-step-2" id="landing-step-2">
+    <div class="landing-inner">
+      <div class="landing-eyebrow">All Eyes On Wagner · INPACT</div>
+      <h1 class="landing-title" id="landing-title">Cartographier les <em>enquêtes</em></h1>
+      <div class="landing-sub" id="landing-sub">A bilingual investigation map · Une cartographie bilingue des enquêtes</div>
+
+      <div class="landing-text" id="landing-text">
+        <p data-lang="fr"><em>All Eyes On Wagner</em>, projet de l'écosystème INPACT, publie depuis plusieurs années des enquêtes consacrées à l'influence russe en Afrique, en Europe et au-delà — Africa Corps, opérations hybrides, réseaux d'acquisition d'armes, financements occultes.</p>
+        <p data-lang="fr">Cette carte rassemble pour la première fois ces enquêtes par lieu. Chaque marqueur correspond à un endroit mentionné — une capitale, une base, une zone d'opération — et donne accès aux articles qui en parlent. Les liens entre points révèlent les axes logistiques, les réseaux d'influence, les couloirs récurrents.</p>
+        <p data-lang="fr">Un outil pour les journalistes, les chercheurs, et toute personne qui souhaite comprendre où se joue concrètement la confrontation hybride en cours.</p>
+
+        <p data-lang="en" style="display:none"><em>All Eyes On Wagner</em>, a project of the INPACT ecosystem, has spent years investigating Russian influence in Africa, Europe and beyond — Africa Corps, hybrid operations, weapons acquisition networks, covert financing.</p>
+        <p data-lang="en" style="display:none">This map brings these investigations together by location for the first time. Each marker is a place mentioned in the reporting — a capital, a base, a zone of operations — and opens the articles that cover it. The links between points reveal logistics corridors, influence networks, recurring patterns.</p>
+        <p data-lang="en" style="display:none">A tool for journalists, researchers, and anyone trying to understand where today's hybrid confrontation is actually taking place.</p>
+      </div>
+
+      <div class="landing-stats">
+        <div>
+          <div class="landing-stat-num" id="landing-stat-articles">—</div>
+          <div class="landing-stat-label" data-i18n="landing_stat_investigations">Enquêtes</div>
+        </div>
+        <div>
+          <div class="landing-stat-num" id="landing-stat-places">—</div>
+          <div class="landing-stat-label" data-i18n="landing_stat_locations">Lieux cartographiés</div>
+        </div>
+        <div>
+          <div class="landing-stat-num" id="landing-stat-countries">—</div>
+          <div class="landing-stat-label" data-i18n="landing_stat_countries">Pays couverts</div>
+        </div>
+      </div>
+
+      <!-- Mini tutoriel -->
+      <div class="landing-tutorial">
+        <div class="landing-tutorial-label" data-i18n="tutorial_label">Comment l'utiliser</div>
+        <ul class="landing-tutorial-list">
+          <li>
+            <span class="tutorial-icon">◉</span>
+            <span data-i18n="tutorial_click">Cliquez sur un point pour voir les enquêtes qui mentionnent ce lieu</span>
+          </li>
+          <li>
+            <span class="tutorial-icon">◢</span>
+            <span data-i18n="tutorial_heatmap">La heatmap révèle les zones d'intérêt principales</span>
+          </li>
+          <li>
+            <span class="tutorial-icon">↔</span>
+            <span data-i18n="tutorial_links">Activez « Liens » pour voir les co-occurrences entre lieux</span>
+          </li>
+          <li>
+            <span class="tutorial-icon">◁▷</span>
+            <span data-i18n="tutorial_timeline">Glissez sur la timeline en bas pour filtrer par période</span>
+          </li>
+          <li>
+            <span class="tutorial-icon">⊕</span>
+            <span data-i18n="tutorial_countries">Le bouton « Pays » affiche les mentions au niveau national</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="landing-cta">
+        <button class="lang-btn lang-btn-primary" id="enter-map-btn">
+          <span data-i18n="landing_enter_map">Explorer la carte</span>
+          <span class="lang-arrow">→</span>
+        </button>
+      </div>
+    </div>
+    <div class="landing-footer">
+      <span>© <span id="landing-year"></span> INPACT · All Eyes On Wagner</span>
+      <a href="https://alleyesonwagner.org" target="_blank" rel="noopener">alleyesonwagner.org →</a>
+    </div>
   </div>
+
 </div>
 
 
@@ -1982,6 +2173,13 @@ const I18N = {
     landing_stat_locations: "Lieux cartographiés",
     landing_stat_countries: "Pays couverts",
     landing_enter: "Explorer en français",
+    landing_enter_map: "Explorer la carte",
+    tutorial_label: "Comment l'utiliser",
+    tutorial_click: "Cliquez sur un point pour voir les enquêtes qui mentionnent ce lieu",
+    tutorial_heatmap: "La heatmap révèle les zones d'intérêt principales",
+    tutorial_links: "Activez « Liens » pour voir les co-occurrences entre lieux",
+    tutorial_timeline: "Glissez sur la timeline en bas pour filtrer par période",
+    tutorial_countries: "Le bouton « Pays » affiche les mentions au niveau national",
   },
   en: {
     splash_init: "initializing…",
@@ -2093,6 +2291,13 @@ const I18N = {
     landing_stat_locations: "Locations mapped",
     landing_stat_countries: "Countries covered",
     landing_enter: "Explore in English",
+    landing_enter_map: "Open the map",
+    tutorial_label: "How to use it",
+    tutorial_click: "Click any point to see the investigations that mention it",
+    tutorial_heatmap: "The heatmap reveals the main areas of interest",
+    tutorial_links: '"Links" toggle shows co-occurrences between locations',
+    tutorial_timeline: "Drag on the timeline below to filter by period",
+    tutorial_countries: 'The "Countries" button shows mentions at the national level',
   }
 };
 
@@ -2173,16 +2378,52 @@ function setupLanding() {
   const yearEl = document.getElementById('landing-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Boutons "Explorer" : enregistrent la langue puis enlèvent la landing
-  document.querySelectorAll('[data-enter-lang]').forEach(btn => {
+  // État initial : étape 1 active, étape 2 cachée
+  showLandingStep(1);
+
+  // ÉTAPE 1 → ÉTAPE 2 : un clic sur Français/English
+  document.querySelectorAll('[data-choose-lang]').forEach(btn => {
     btn.addEventListener('click', () => {
-      const lang = btn.dataset.enterLang;
+      const lang = btn.dataset.chooseLang;
+      // Applique la langue (UI + filtre auto via setLanguage)
       setLanguage(lang);
+      // Transition step 1 → step 2
+      transitionToStep2();
+    });
+  });
+
+  // ÉTAPE 2 → CARTE : clic sur "Explorer la carte"
+  const enterBtn = document.getElementById('enter-map-btn');
+  if (enterBtn) {
+    enterBtn.addEventListener('click', () => {
       hideLanding();
       // Lance le splash après avoir caché la landing
       if (typeof DATA !== 'undefined' && DATA) runSplash();
     });
-  });
+  }
+}
+
+function showLandingStep(n) {
+  const s1 = document.getElementById('landing-step-1');
+  const s2 = document.getElementById('landing-step-2');
+  if (n === 1) {
+    if (s1) s1.classList.add('active');
+    if (s2) s2.classList.remove('active', 'fade-in');
+  } else {
+    if (s1) s1.classList.remove('active');
+    if (s2) {
+      s2.classList.add('active', 'fade-in');
+    }
+  }
+}
+
+function transitionToStep2() {
+  const s1 = document.getElementById('landing-step-1');
+  if (!s1) { showLandingStep(2); return; }
+  s1.classList.add('fade-out');
+  setTimeout(() => {
+    showLandingStep(2);
+  }, 320);
 }
 
 function hideLanding() {
