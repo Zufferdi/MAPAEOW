@@ -164,6 +164,34 @@
     color: var(--accent);
   }
 
+  .header-lang-switch {
+    display: flex;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .header-lang-switch button {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--text-faint);
+    padding: 8px 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .header-lang-switch button:hover {
+    color: var(--text);
+  }
+  .header-lang-switch button.active {
+    color: var(--accent);
+    background: var(--accent-soft);
+  }
+  .header-lang-switch button + button {
+    border-left: 1px solid var(--border);
+  }
+
   /* ============= FILTERBAR ============= */
   .filterbar {
     flex-shrink: 0;
@@ -671,8 +699,12 @@
   </div>
 
   <div class="header-actions">
+    <div class="header-lang-switch" role="group" aria-label="Langue / Language">
+      <button data-set-lang="fr" id="set-lang-fr">FR</button>
+      <button data-set-lang="en" id="set-lang-en">EN</button>
+    </div>
     <a href="../" class="header-link">
-      <span>Carte</span>
+      <span id="header-link-map-label">Carte</span>
       <span class="arrow">↗</span>
     </a>
   </div>
@@ -727,6 +759,13 @@ const state = {
 let articlesById = {};         // chargé depuis ../data.json pour avoir les titres/dates
 let placesById = {};
 let entitySummaries = {};      // chargé depuis ../entity_summaries.json (résumés Claude API)
+
+// Langue active (synchronisée avec la carte via localStorage)
+let LANG = 'fr';
+try {
+  const stored = localStorage.getItem('inpact_lang');
+  if (stored === 'fr' || stored === 'en') LANG = stored;
+} catch (e) {}
 
 // ============================================================
 // LOAD
@@ -1002,11 +1041,13 @@ function renderDetail() {
       ${(() => {
         const sum = entitySummaries[ent.key];
         if (!sum) return '';
-        const text = sum.fr || sum.en;
+        // Récupère le résumé dans la langue active, fallback sur l'autre
+        const text = sum[LANG] || sum.fr || sum.en;
         if (!text) return '';
+        const label = LANG === 'en' ? 'Contextual summary' : 'Synthèse contextuelle';
         return `
         <div class="detail-section">
-          <div class="detail-section-title">Synthèse contextuelle</div>
+          <div class="detail-section-title">${label}</div>
           <div class="detail-summary">${escapeHtml(text)}</div>
         </div>`;
       })()}
@@ -1123,9 +1164,55 @@ function readUrlHash() {
 }
 
 // ============================================================
+// LANGUAGE SWITCH (synchronisé avec la carte via localStorage)
+// ============================================================
+function applyLanguageSwitch() {
+  // Met à jour les boutons du switch
+  document.querySelectorAll('[data-set-lang]').forEach(b => {
+    b.classList.toggle('active', b.dataset.setLang === LANG);
+  });
+
+  // Met à jour le label "Carte" en EN
+  const mapLabel = document.getElementById('header-link-map-label');
+  if (mapLabel) mapLabel.textContent = LANG === 'en' ? 'Map' : 'Carte';
+
+  // Place les chips Type/Statut en EN si besoin (basique, pour le switch initial)
+  document.querySelectorAll('.filter-label').forEach(el => {
+    const txt = el.textContent.trim();
+    if (LANG === 'en') {
+      if (txt === 'Type') el.textContent = 'Type';
+      else if (txt === 'Langue') el.textContent = 'Language';
+      else if (txt === 'Statut') el.textContent = 'Status';
+    } else {
+      if (txt === 'Type') el.textContent = 'Type';
+      else if (txt === 'Language') el.textContent = 'Langue';
+      else if (txt === 'Status') el.textContent = 'Statut';
+    }
+  });
+
+  // Mémorise dans localStorage (sera lu par la carte)
+  try { localStorage.setItem('inpact_lang', LANG); } catch (e) {}
+
+  // Document lang attribute
+  document.documentElement.lang = LANG;
+}
+
+function setupLanguageSwitch() {
+  document.querySelectorAll('[data-set-lang]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      LANG = btn.dataset.setLang;
+      applyLanguageSwitch();
+      render();  // re-render pour mettre à jour les résumés
+    });
+  });
+  applyLanguageSwitch();
+}
+
+// ============================================================
 // BOOT
 // ============================================================
 readUrlHash();
+setupLanguageSwitch();
 loadAll();
 </script>
 </body>
