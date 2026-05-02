@@ -81,6 +81,7 @@ jobs:
           [ -f data.json ] && git add data.json
           [ -f entities.json ] && git add entities.json
           [ -f entities_curation.json ] && git add entities_curation.json
+          [ -f place_summaries.json ] && git add place_summaries.json
           [ -d cache ] && git ls-files --others --exclude-standard cache/ | xargs -r git add
           [ -d cache ] && git add -u cache/
           [ -f place_aliases.json ] && git add place_aliases.json
