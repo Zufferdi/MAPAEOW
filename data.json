@@ -15,7 +15,7 @@
       "type_filter": true
     },
     "filter_stats": {
-      "dropped_by_frequency": 1369,
+      "dropped_by_frequency": 1368,
       "dropped_by_type": 20
     },
     "reports": {
@@ -2013,8 +2013,8 @@
       "id": "paris",
       "name": "Paris",
       "country": "France",
-      "lat": 48.8588897,
-      "lng": 2.320041,
+      "lat": 48.8534951,
+      "lng": 2.3483915,
       "articles": [
         "africa-politology-loffensive-feutree-de-moscou",
         "car-prigozhins-blood-diamonds",
@@ -2490,8 +2490,8 @@
       "id": "hong-kong",
       "name": "Hong Kong",
       "country": "Chine",
-      "lat": 22.2792968,
-      "lng": 114.1628907,
+      "lat": 22.3492155,
+      "lng": 114.1857978,
       "articles": [
         "car-prigozhins-blood-diamonds",
         "china-gets-nvidia-gpu-for-the-ai-race-through-vietnam-and-malaysia",
@@ -3020,6 +3020,18 @@
       ]
     },
     {
+      "id": "georgie",
+      "name": "Géorgie",
+      "country": "Géorgie",
+      "lat": 42.3154,
+      "lng": 43.3569,
+      "articles": [
+        "global-kombat",
+        "le-reseau-catrosa-des-societes-europeennes-liees-aux-developpeurs-darmes-chimiques-russes",
+        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers"
+      ]
+    },
+    {
       "id": "johannesburg",
       "name": "Johannesburg",
       "country": "Afrique du Sud",
@@ -3502,17 +3514,6 @@
       ]
     },
     {
-      "id": "georgia",
-      "name": "Georgia",
-      "country": "États-Unis d'Amérique",
-      "lat": 32.3293809,
-      "lng": -83.1137366,
-      "articles": [
-        "global-kombat",
-        "the-catrosa-network-eu-companies-linked-to-russian-chemical-weapons-developers"
-      ]
-    },
-    {
       "id": "golfe",
       "name": "Golfe",
       "country": "—",
@@ -3560,8 +3561,8 @@
       "id": "izhevsk",
       "name": "Izhevsk",
       "country": "Russie",
-      "lat": 56.8605175,
-      "lng": 53.1977307,
+      "lat": 56.8529729,
+      "lng": 53.2103071,
       "articles": [
         "alabuga-noeud-central-de-la-menace-hybride-russe",
         "alabuga-the-central-hub-of-the-russian-hybrid-threat"
@@ -3868,8 +3869,8 @@
       "id": "segou",
       "name": "Segou",
       "country": "Mali",
-      "lat": 14.0487608,
-      "lng": -6.0047091,
+      "lat": 13.441518,
+      "lng": -6.268147,
       "articles": [
         "one-year-of-wagner-in-mali",
         "un-an-de-wagner-au-mali"
@@ -3945,8 +3946,8 @@
       "id": "taraz",
       "name": "Taraz",
       "country": "Kazakhstan",
-      "lat": 42.8778381,
-      "lng": 71.3519903,
+      "lat": 42.9015945,
+      "lng": 71.3769302,
       "articles": [
         "alabuga-noeud-central-de-la-menace-hybride-russe",
         "alabuga-the-central-hub-of-the-russian-hybrid-threat"

@@ -96,7 +96,7 @@
     "lat": 31.9515694,
     "lng": 35.9239625,
     "country": "Jordanie",
-    "display": "Amman, Amman Sub-District, Amman Qasabah District, Gouvernorat d'Amman, 11118, Jordanie",
+    "display": "Amman, Amman Sub-District, Amman Qasabah District, Gouvernorat d'Amman, 11110, Jordanie",
     "type": "city",
     "class": "place"
   },
@@ -226,8 +226,8 @@
     "lng": 20.0812174,
     "country": "Libye",
     "display": "Benghazi, Libye",
-    "type": "administrative",
-    "class": "boundary"
+    "type": "city",
+    "class": "place"
   },
   "berlin": {
     "lat": 52.5173885,
@@ -478,7 +478,7 @@
     "lat": 44.8689683,
     "lng": -91.4855007,
     "country": "États-Unis d'Amérique",
-    "display": "Chippewa Valley Regional Airport, 3800, Starr Avenue, Eau Claire, Eau Claire County, Wisconsin, 54703, États-Unis d'Amérique",
+    "display": "Chippewa Valley Regional Airport, 3800, Starr Avenue, Eau Claire, Chippewa County, Wisconsin, 54703, États-Unis d'Amérique",
     "type": "aerodrome",
     "class": "aeroway"
   },
@@ -512,14 +512,6 @@
     "lng": -15.4900464,
     "country": "Gambie",
     "display": "Gambie",
-    "type": "administrative",
-    "class": "boundary"
-  },
-  "georgia": {
-    "lat": 32.3293809,
-    "lng": -83.1137366,
-    "country": "États-Unis d'Amérique",
-    "display": "Géorgie, États-Unis d'Amérique",
     "type": "administrative",
     "class": "boundary"
   },
@@ -599,8 +591,8 @@
     "class": "place"
   },
   "hong kong": {
-    "lat": 22.2792968,
-    "lng": 114.1628907,
+    "lat": 22.3492155,
+    "lng": 114.1857978,
     "country": "Chine",
     "display": "Hong Kong, Chine",
     "type": "administrative",
@@ -649,12 +641,12 @@
     "class": "boundary"
   },
   "izhevsk": {
-    "lat": 56.8605175,
-    "lng": 53.1977307,
+    "lat": 56.8529729,
+    "lng": 53.2103071,
     "country": "Russie",
-    "display": "Izhevsk, Oudmourtie, District fédéral de la Volga, Russie",
-    "type": "city",
-    "class": "place"
+    "display": "Ijevsk, Oudmourtie, District fédéral de la Volga, Russie",
+    "type": "administrative",
+    "class": "boundary"
   },
   "japon": {
     "lat": 36.5748441,
@@ -872,7 +864,7 @@
     "lat": 14.7306634,
     "lng": -3.0589227,
     "country": "Mali",
-    "display": "building?, I think its a trail, Berda, Berdosso, Cercle de Koro, Mopti, Mali",
+    "display": "building?, I think its a trail, Berdosso, Cercle de Koro, Mopti, Mali",
     "type": "yes",
     "class": "building"
   },
@@ -994,7 +986,7 @@
     "lat": 13.524834,
     "lng": 2.109823,
     "country": "Niger",
-    "display": "Niamey, Kollo, Niger",
+    "display": "Niamey, Niger",
     "type": "administrative",
     "class": "boundary"
   },
@@ -1047,16 +1039,16 @@
     "class": "tourism"
   },
   "pantsir": {
-    "lat": 57.9539183,
-    "lng": 33.2788178,
+    "lat": 58.02638,
+    "lng": 33.3027331,
     "country": "Russie",
-    "display": "Pantsir-S1 96K6 (SA-22 Greyhound), Зимогорье, Валдайский муниципальный округ, Oblast de Novgorod, District fédéral du Nord-Ouest, 175419, Russie",
+    "display": "Pantsir-S1 96K6 (SA-22 Greyhound), Долгие Бороды, Валдайский муниципальный округ, Oblast de Novgorod, District fédéral du Nord-Ouest, Russie",
     "type": "military",
     "class": "landuse"
   },
   "paris": {
-    "lat": 48.8588897,
-    "lng": 2.320041,
+    "lat": 48.8534951,
+    "lng": 2.3483915,
     "country": "France",
     "display": "Paris, Île-de-France, France métropolitaine, France",
     "type": "administrative",
@@ -1195,12 +1187,12 @@
     "class": "boundary"
   },
   "segou": {
-    "lat": 14.0487608,
-    "lng": -6.0047091,
+    "lat": 13.441518,
+    "lng": -6.268147,
     "country": "Mali",
-    "display": "Ségou, Mali",
-    "type": "administrative",
-    "class": "boundary"
+    "display": "Ségou, Cercle de Ségou, Ségou, Mali",
+    "type": "city",
+    "class": "place"
   },
   "seychelles": {
     "lat": -4.6574977,
@@ -1323,12 +1315,12 @@
     "class": "boundary"
   },
   "taraz": {
-    "lat": 42.8778381,
-    "lng": 71.3519903,
+    "lat": 42.9015945,
+    "lng": 71.3769302,
     "country": "Kazakhstan",
-    "display": "Taraz, Oblys de Djamboul, 080000, Kazakhstan",
-    "type": "city",
-    "class": "place"
+    "display": "Taraz, Oblys de Djamboul, Kazakhstan",
+    "type": "administrative",
+    "class": "boundary"
   },
   "tartous": {
     "lat": 34.8936225,
@@ -1446,7 +1438,7 @@
     "lat": 43.8244074,
     "lng": 87.6139038,
     "country": "Chine",
-    "display": "Ürümqi, Xinjiang, Chine",
+    "display": "Ürümqi, Saybagh, Xinjiang, Chine",
     "type": "administrative",
     "class": "boundary"
   },
@@ -1479,8 +1471,8 @@
     "lng": 7.2726667,
     "country": "Allemagne",
     "display": "Komplizierte Verbindungen, Römerstraße, Braschoß, Kaldauen, Siegburg, Rhein-Sieg-Kreis, Rhénanie-du-Nord-Westphalie, 53721, Allemagne",
-    "type": "information",
-    "class": "tourism"
+    "type": "board",
+    "class": "information"
   },
   "vienne": {
     "lat": 48.2083537,
@@ -1535,11 +1527,11 @@
   },
   "the russian houses": null,
   "the united kingdom": {
-    "lat": 52.4577754,
-    "lng": -1.8692099,
+    "lat": 51.5115165,
+    "lng": -0.0012658,
     "country": "Royaume-Uni",
-    "display": "The (Oval) Banqueting Suite, 372, Stratford Road, Sparkhill, Sparkbrook, Birmingham, West Midlands, Angleterre, B11 4AB, Royaume-Uni",
-    "type": "retail",
+    "display": "Telehouse East, Coriander Avenue, Telehouse Docklands Campus, Blackwall, London Borough of Tower Hamlets, Grand Londres, Angleterre, E14 2AA, Royaume-Uni",
+    "type": "data_center",
     "class": "building"
   },
   "égypte": {
