@@ -457,6 +457,17 @@
     letter-spacing: 0.08em;
   }
 
+  .detail-summary {
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-dim);
+    padding: 14px 16px;
+    background: var(--bg);
+    border-radius: 6px;
+    border: 1px solid var(--border);
+  }
+
   .detail-articles { display: flex; flex-direction: column; gap: 8px; }
   .article-card {
     display: block;
@@ -637,6 +648,7 @@
     .detail-section-title { color: #666; }
     .detail-section-title::after { background: #ddd; }
     .detail-notes { color: #222; border-color: #ff5500; }
+    .detail-summary { color: #444; background: white; border-color: #ccc; }
     .article-card { border-color: #ccc; background: white; page-break-inside: avoid; }
     .article-title { color: black; }
     .related-pill { background: white; border-color: #ccc; color: #444; }
@@ -714,16 +726,18 @@ const state = {
 
 let articlesById = {};         // chargé depuis ../data.json pour avoir les titres/dates
 let placesById = {};
+let entitySummaries = {};      // chargé depuis ../entity_summaries.json (résumés Claude API)
 
 // ============================================================
 // LOAD
 // ============================================================
 async function loadAll() {
   try {
-    // Charge en parallèle entities.json et data.json (pour titres articles + lieux)
-    const [entitiesResp, dataResp] = await Promise.all([
+    // Charge en parallèle : entities.json, data.json (titres articles + lieux), entity_summaries.json (résumés Claude API)
+    const [entitiesResp, dataResp, summariesResp] = await Promise.all([
       fetch('../entities.json').catch(() => null),
       fetch('../data.json').catch(() => null),
+      fetch('../entity_summaries.json').catch(() => null),
     ]);
     if (!entitiesResp || !entitiesResp.ok) {
       throw new Error("entities.json introuvable. Lance d'abord pipeline.py.");
@@ -736,6 +750,11 @@ async function loadAll() {
       const data = await dataResp.json();
       articlesById = Object.fromEntries((data.articles || []).map(a => [a.id, a]));
       placesById = Object.fromEntries((data.places || []).map(p => [p.id, p]));
+    }
+
+    if (summariesResp && summariesResp.ok) {
+      const sumData = await summariesResp.json();
+      entitySummaries = sumData.summaries || {};
     }
 
     initFilters();
@@ -979,6 +998,18 @@ function renderDetail() {
           : `<div class="detail-notes-empty">Pas de note rédigée. Édite <code>entities_curation.json</code> pour en ajouter.</div>`
         }
       </div>
+
+      ${(() => {
+        const sum = entitySummaries[ent.key];
+        if (!sum) return '';
+        const text = sum.fr || sum.en;
+        if (!text) return '';
+        return `
+        <div class="detail-section">
+          <div class="detail-section-title">Synthèse contextuelle</div>
+          <div class="detail-summary">${escapeHtml(text)}</div>
+        </div>`;
+      })()}
 
       ${langPills ? `
       <div class="detail-section">
