@@ -96,7 +96,7 @@
     "lat": 31.9515694,
     "lng": 35.9239625,
     "country": "Jordanie",
-    "display": "Amman, Amman Sub-District, Amman Qasabah District, Gouvernorat d'Amman, 11110, Jordanie",
+    "display": "Amman, Amman Sub-District, Amman Qasabah District, Gouvernorat d'Amman, 11118, Jordanie",
     "type": "city",
     "class": "place"
   },
@@ -174,8 +174,8 @@
     "class": "boundary"
   },
   "bamako": {
-    "lat": 12.6132656,
-    "lng": -7.9847391,
+    "lat": 12.649319,
+    "lng": -8.000337,
     "country": "Mali",
     "display": "Bamako, Mali",
     "type": "administrative",
@@ -226,8 +226,8 @@
     "lng": 20.0812174,
     "country": "Libye",
     "display": "Benghazi, Libye",
-    "type": "city",
-    "class": "place"
+    "type": "administrative",
+    "class": "boundary"
   },
   "berlin": {
     "lat": 52.5173885,
@@ -478,7 +478,7 @@
     "lat": 44.8689683,
     "lng": -91.4855007,
     "country": "États-Unis d'Amérique",
-    "display": "Chippewa Valley Regional Airport, 3800, Starr Avenue, Eau Claire, Chippewa County, Wisconsin, 54703, États-Unis d'Amérique",
+    "display": "Chippewa Valley Regional Airport, 3800, Starr Avenue, Eau Claire, Eau Claire County, Wisconsin, 54703, États-Unis d'Amérique",
     "type": "aerodrome",
     "class": "aeroway"
   },
@@ -641,12 +641,12 @@
     "class": "boundary"
   },
   "izhevsk": {
-    "lat": 56.8529729,
-    "lng": 53.2103071,
+    "lat": 56.8605175,
+    "lng": 53.1977307,
     "country": "Russie",
-    "display": "Ijevsk, Oudmourtie, District fédéral de la Volga, Russie",
-    "type": "administrative",
-    "class": "boundary"
+    "display": "Izhevsk, Oudmourtie, District fédéral de la Volga, Russie",
+    "type": "city",
+    "class": "place"
   },
   "japon": {
     "lat": 36.5748441,
@@ -864,7 +864,7 @@
     "lat": 14.7306634,
     "lng": -3.0589227,
     "country": "Mali",
-    "display": "building?, I think its a trail, Berdosso, Cercle de Koro, Mopti, Mali",
+    "display": "building?, I think its a trail, Berda, Berdosso, Cercle de Koro, Mopti, Mali",
     "type": "yes",
     "class": "building"
   },
@@ -951,20 +951,20 @@
     "class": "boundary"
   },
   "ménaka": {
-    "lat": 16.6516783,
-    "lng": 2.8263136,
+    "lat": 15.9167,
+    "lng": 2.4,
     "country": "Mali",
     "display": "Ménaka, Mali",
-    "type": "administrative",
-    "class": "boundary"
-  },
-  "nairobi": {
-    "lat": -1.302398,
-    "lng": 36.8288509,
-    "country": "Kenya",
-    "display": "Nairobi, Comté de Nairobi, Kenya",
     "type": "city",
     "class": "place"
+  },
+  "nairobi": {
+    "lat": -1.2890006,
+    "lng": 36.8172812,
+    "country": "Kenya",
+    "display": "Nairobi, Comté de Nairobi, Kenya",
+    "type": "administrative",
+    "class": "boundary"
   },
   "namibie": {
     "lat": -23.2335499,
@@ -986,7 +986,7 @@
     "lat": 13.524834,
     "lng": 2.109823,
     "country": "Niger",
-    "display": "Niamey, Niger",
+    "display": "Niamey, Kollo, Niger",
     "type": "administrative",
     "class": "boundary"
   },
@@ -1034,7 +1034,7 @@
     "lat": 34.5526608,
     "lng": 38.259261,
     "country": "Syrie",
-    "display": "Palmyre, Paradeplatz, Hayy Al Qal'ah, Palmyre, Sous-district de Palmyre, District de Palmyre, Gouvernorat de Homs, Syrie",
+    "display": "Palmyre, M 20, Ḩayy aḑ Ḑāhirīyah, Palmyre, Sous-district de Palmyre, District de Palmyre, Gouvernorat de Homs, Syrie",
     "type": "attraction",
     "class": "tourism"
   },
@@ -1047,8 +1047,8 @@
     "class": "landuse"
   },
   "paris": {
-    "lat": 48.8534951,
-    "lng": 2.3483915,
+    "lat": 48.8588897,
+    "lng": 2.320041,
     "country": "France",
     "display": "Paris, Île-de-France, France métropolitaine, France",
     "type": "administrative",
@@ -1315,12 +1315,12 @@
     "class": "boundary"
   },
   "taraz": {
-    "lat": 42.9015945,
-    "lng": 71.3769302,
+    "lat": 42.8778381,
+    "lng": 71.3519903,
     "country": "Kazakhstan",
-    "display": "Taraz, Oblys de Djamboul, Kazakhstan",
-    "type": "administrative",
-    "class": "boundary"
+    "display": "Taraz, Oblys de Djamboul, 080000, Kazakhstan",
+    "type": "city",
+    "class": "place"
   },
   "tartous": {
     "lat": 34.8936225,
@@ -1521,7 +1521,7 @@
     "lat": 38.9040127,
     "lng": -77.0407249,
     "country": "États-Unis d'Amérique",
-    "display": "Ambassade de la République démocratique du Congo, 1100, Connecticut Avenue Northwest, Golden Triangle, Dupont Circle, Ward 2, Washington, District de Columbia, 20036, États-Unis d'Amérique",
+    "display": "Ambassade de la République démocratique du Congo, 1100, Connecticut Avenue Northwest, Golden Triangle, Downtown, Ward 2, Washington, District de Columbia, 20036, États-Unis d'Amérique",
     "type": "diplomatic",
     "class": "office"
   },

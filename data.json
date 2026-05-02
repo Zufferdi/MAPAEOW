@@ -1534,8 +1534,8 @@
       "id": "bamako",
       "name": "Bamako",
       "country": "Mali",
-      "lat": 12.6132656,
-      "lng": -7.9847391,
+      "lat": 12.649319,
+      "lng": -8.000337,
       "articles": [
         "a-new-chef-in-the-kitchen-the-svr-takes-control-of-the-wagners-influence-branch-for-offensive-operations-in-the-global-south",
         "a-niamey-lattaque-nocturne-qui-revele-lengagement-russe",
@@ -2013,8 +2013,8 @@
       "id": "paris",
       "name": "Paris",
       "country": "France",
-      "lat": 48.8534951,
-      "lng": 2.3483915,
+      "lat": 48.8588897,
+      "lng": 2.320041,
       "articles": [
         "africa-politology-loffensive-feutree-de-moscou",
         "car-prigozhins-blood-diamonds",
@@ -3131,8 +3131,8 @@
       "id": "nairobi",
       "name": "Nairobi",
       "country": "Kenya",
-      "lat": -1.302398,
-      "lng": 36.8288509,
+      "lat": -1.2890006,
+      "lng": 36.8172812,
       "articles": [
         "le-business-du-desespoir",
         "recruitment-of-africans-in-ukraine-governments-act-in-the-face-of-growing-evidence",
@@ -3561,8 +3561,8 @@
       "id": "izhevsk",
       "name": "Izhevsk",
       "country": "Russie",
-      "lat": 56.8529729,
-      "lng": 53.2103071,
+      "lat": 56.8605175,
+      "lng": 53.1977307,
       "articles": [
         "alabuga-noeud-central-de-la-menace-hybride-russe",
         "alabuga-the-central-hub-of-the-russian-hybrid-threat"
@@ -3715,8 +3715,8 @@
       "id": "menaka",
       "name": "Ménaka",
       "country": "Mali",
-      "lat": 16.6516783,
-      "lng": 2.8263136,
+      "lat": 15.9167,
+      "lng": 2.4,
       "articles": [
         "africa-flop",
         "un-an-de-wagner-au-mali"
@@ -3946,8 +3946,8 @@
       "id": "taraz",
       "name": "Taraz",
       "country": "Kazakhstan",
-      "lat": 42.9015945,
-      "lng": 71.3769302,
+      "lat": 42.8778381,
+      "lng": 71.3519903,
       "articles": [
         "alabuga-noeud-central-de-la-menace-hybride-russe",
         "alabuga-the-central-hub-of-the-russian-hybrid-threat"
