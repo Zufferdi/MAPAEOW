@@ -67,6 +67,8 @@ jobs:
           ls -la
           echo "=== data.json _meta ==="
           [ -f data.json ] && python -c "import json; print(json.dumps(json.load(open('data.json'))['_meta'], indent=2))" || echo "data.json absent"
+          echo "=== entities.json _meta ==="
+          [ -f entities.json ] && python -c "import json; print(json.dumps(json.load(open('entities.json'))['_meta'], indent=2))" || echo "entities.json absent"
           echo "=== cache/ ==="
           [ -d cache ] && ls -la cache/ || echo "cache/ absent"
 
@@ -77,6 +79,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           [ -f data.json ] && git add data.json
+          [ -f entities.json ] && git add entities.json
+          [ -f entities_curation.json ] && git add entities_curation.json
           [ -d cache ] && git ls-files --others --exclude-standard cache/ | xargs -r git add
           [ -d cache ] && git add -u cache/
           [ -f place_aliases.json ] && git add place_aliases.json
@@ -84,6 +88,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "Pas de changement, rien à commiter."
           else
-            git commit -m "🌍 Mise à jour data.json ($(date -u +%Y-%m-%d))"
+            git commit -m "🌍 Mise à jour data ($(date -u +%Y-%m-%d))"
             git push
           fi
