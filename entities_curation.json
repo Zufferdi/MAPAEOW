@@ -1,0 +1,14 @@
+{
+  "_doc": "Curation manuelle des entités (γ-light). Format : key -> {keep, aliases, canonical_name, type, notes}. Une entité absente de ce fichier est gérée en mode auto.",
+  "_example_prigozhin": {
+    "keep": true,
+    "aliases": [
+      "Yevgeny Prigozhin",
+      "Evgueni Prigojine",
+      "Пригожин"
+    ],
+    "canonical_name": "Yevgeny Prigozhin",
+    "type": "PERSON",
+    "notes": "Fondateur de Wagner Group, mort en août 2023."
+  }
+}
