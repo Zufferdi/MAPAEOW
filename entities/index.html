@@ -139,6 +139,79 @@
   .header-search-clear.visible { display: block; }
   .header-search-clear:hover { color: var(--text); }
 
+  /* === Dropdown de recherche unifiée === */
+  .search-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    max-height: 380px;
+    overflow-y: auto;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    z-index: 50;
+    display: none;
+  }
+  .search-dropdown.open { display: block; }
+  .search-section-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    padding: 10px 14px 6px;
+    border-top: 1px solid var(--border);
+  }
+  .search-section-label:first-child { border-top: none; }
+  .search-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px;
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 13px;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.1s;
+  }
+  .search-item:hover { background: var(--bg-row-hover); }
+  .search-item-icon {
+    width: 14px;
+    flex-shrink: 0;
+    color: var(--accent);
+    font-family: var(--mono);
+    font-size: 12px;
+    text-align: center;
+  }
+  .search-item-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .search-item-dot.person { background: var(--person); }
+  .search-item-dot.org { background: var(--org); }
+  .search-item-name {
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .search-item-meta {
+    flex-shrink: 0;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-faint);
+  }
+
   .header-actions {
     display: flex;
     align-items: center;
@@ -758,6 +831,8 @@ const state = {
 
 let articlesById = {};         // chargé depuis ../data.json pour avoir les titres/dates
 let placesById = {};
+let allPlaces = [];            // array de tous les lieux (pour recherche unifiée)
+let allArticles = [];          // array de tous les articles (pour recherche unifiée)
 let entitySummaries = {};      // chargé depuis ../entity_summaries.json (résumés Claude API)
 
 // Langue active (synchronisée avec la carte via localStorage)
@@ -787,8 +862,10 @@ async function loadAll() {
 
     if (dataResp && dataResp.ok) {
       const data = await dataResp.json();
-      articlesById = Object.fromEntries((data.articles || []).map(a => [a.id, a]));
-      placesById = Object.fromEntries((data.places || []).map(p => [p.id, p]));
+      allArticles = data.articles || [];
+      allPlaces = data.places || [];
+      articlesById = Object.fromEntries(allArticles.map(a => [a.id, a]));
+      placesById = Object.fromEntries(allPlaces.map(p => [p.id, p]));
     }
 
     if (summariesResp && summariesResp.ok) {
@@ -860,17 +937,91 @@ function initFilters() {
   // Search
   const searchInput = document.getElementById('search-input');
   const searchClear = document.getElementById('search-clear');
+  // Initialise depuis l'URL (permaliens)
+  if (state.filters.search) {
+    searchInput.value = state.filters.search;
+    searchClear.classList.add('visible');
+  }
+
+  // Crée le dropdown unifié sous le champ de recherche
+  let searchDropdown = document.getElementById('search-dropdown-unified');
+  if (!searchDropdown) {
+    searchDropdown = document.createElement('div');
+    searchDropdown.id = 'search-dropdown-unified';
+    searchDropdown.className = 'search-dropdown';
+    searchInput.parentElement.appendChild(searchDropdown);
+  }
+
+  function buildUnifiedResults(query) {
+    const q = query.toLowerCase().trim();
+    if (q.length < 2) return { places: [], articles: [] };
+
+    // Lieux : nom / pays
+    const places = allPlaces
+      .filter(p => p.name.toLowerCase().includes(q) || (p.country || '').toLowerCase().includes(q))
+      .sort((a, b) => (b.articles?.length || 0) - (a.articles?.length || 0))
+      .slice(0, 5);
+
+    // Articles : titre / excerpt
+    const articles = allArticles
+      .filter(a => (a.title || '').toLowerCase().includes(q) || (a.excerpt || '').toLowerCase().includes(q))
+      .slice(0, 4);
+
+    return { places, articles };
+  }
+
+  function renderUnifiedDropdown(query) {
+    const { places, articles } = buildUnifiedResults(query);
+    if (places.length === 0 && articles.length === 0) {
+      searchDropdown.classList.remove('open');
+      searchDropdown.innerHTML = '';
+      return;
+    }
+    let html = '';
+    if (places.length) {
+      const label = LANG === 'en' ? 'Places (open in map)' : 'Lieux (ouvrir sur la carte)';
+      html += `<div class="search-section-label">${label}</div>`;
+      html += places.map(p => `<a class="search-item" href="../#place=${encodeURIComponent(p.id)}" target="_blank" rel="noopener">
+        <span class="search-item-icon">●</span>
+        <span class="search-item-name">${escapeHtml(p.name)}</span>
+        <span class="search-item-meta">${escapeHtml(p.country || '')} · ${p.articles?.length || 0}</span>
+      </a>`).join('');
+    }
+    if (articles.length) {
+      const label = LANG === 'en' ? 'Investigations' : 'Enquêtes';
+      html += `<div class="search-section-label">${label}</div>`;
+      html += articles.map(a => `<a class="search-item" href="${escapeHtml(a.url)}" target="_blank" rel="noopener">
+        <span class="search-item-icon">▢</span>
+        <span class="search-item-name">${escapeHtml(a.title || '')}</span>
+        <span class="search-item-meta">${escapeHtml((a.lang || '').toUpperCase())} · ${escapeHtml((a.date || '').slice(0, 7))}</span>
+      </a>`).join('');
+    }
+    searchDropdown.innerHTML = html;
+    searchDropdown.classList.add('open');
+  }
+
   searchInput.addEventListener('input', e => {
     state.filters.search = e.target.value.toLowerCase();
     searchClear.classList.toggle('visible', state.filters.search.length > 0);
     render();
+    renderUnifiedDropdown(e.target.value);
+  });
+  searchInput.addEventListener('focus', e => {
+    if (e.target.value.length >= 2) renderUnifiedDropdown(e.target.value);
   });
   searchClear.addEventListener('click', () => {
     searchInput.value = '';
     state.filters.search = '';
     searchClear.classList.remove('visible');
+    searchDropdown.classList.remove('open');
     searchInput.focus();
     render();
+  });
+  // Click outside : ferme dropdown (sans vider la recherche)
+  document.addEventListener('click', e => {
+    if (!searchInput.parentElement.contains(e.target)) {
+      searchDropdown.classList.remove('open');
+    }
   });
   // Slash pour focus search
   document.addEventListener('keydown', e => {
@@ -879,6 +1030,10 @@ function initFilters() {
       searchInput.focus();
     }
     if (e.key === 'Escape') {
+      if (searchDropdown.classList.contains('open')) {
+        searchDropdown.classList.remove('open');
+        return;
+      }
       if (state.selectedKey) {
         state.selectedKey = null;
         render();
@@ -925,6 +1080,7 @@ function render() {
 
   renderList(filtered);
   renderDetail();
+  writeUrlState();
 }
 
 function renderList(entities) {
@@ -1154,13 +1310,55 @@ function formatDate(iso) {
 }
 
 // ============================================================
-// URL HASH SYNC
+// URL STATE SYNC (lecture / écriture pour permaliens)
 // ============================================================
-function readUrlHash() {
+function readUrlState() {
+  // Hash : entity sélectionnée (utilise # pour ne pas casser le partage)
   const params = new URLSearchParams(window.location.hash.slice(1));
   if (params.has('entity')) {
     state.selectedKey = params.get('entity');
   }
+  // Query string : filtres
+  const qparams = new URLSearchParams(window.location.search);
+  if (qparams.has('type')) {
+    qparams.get('type').split(',').forEach(t => {
+      if (t === 'PERSON' || t === 'ORG') state.filters.types.add(t);
+    });
+  }
+  if (qparams.has('lang')) {
+    qparams.get('lang').split(',').forEach(l => {
+      if (l) state.filters.langs.add(l);
+    });
+  }
+  if (qparams.has('curated') && qparams.get('curated') === '1') {
+    state.filters.onlyCurated = true;
+  }
+  if (qparams.has('q')) {
+    state.filters.search = qparams.get('q').toLowerCase();
+  }
+}
+
+function writeUrlState() {
+  const qparams = new URLSearchParams();
+  if (state.filters.types.size) {
+    qparams.set('type', [...state.filters.types].join(','));
+  }
+  if (state.filters.langs.size) {
+    qparams.set('lang', [...state.filters.langs].join(','));
+  }
+  if (state.filters.onlyCurated) {
+    qparams.set('curated', '1');
+  }
+  if (state.filters.search) {
+    qparams.set('q', state.filters.search);
+  }
+  const search = qparams.toString();
+  const hash = state.selectedKey ? `#entity=${encodeURIComponent(state.selectedKey)}` : '';
+  const newUrl = window.location.pathname
+    + (search ? '?' + search : '')
+    + hash;
+  // Évite les history.pushState qui spam l'historique du browser
+  window.history.replaceState(null, '', newUrl);
 }
 
 // ============================================================
@@ -1211,7 +1409,7 @@ function setupLanguageSwitch() {
 // ============================================================
 // BOOT
 // ============================================================
-readUrlHash();
+readUrlState();
 setupLanguageSwitch();
 loadAll();
 </script>
