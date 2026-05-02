@@ -103,7 +103,8 @@
     "canonical_name": "Africa Politology",
     "aliases": [
       "Africa Politology's",
-      "Africa Politologie"
+      "Africa Politologie",
+      "Politology"
     ],
     "notes": "Société écran liée à l'écosystème Prigozhin / Concord, active en Centrafrique et au Mali pour des opérations d'influence."
   },
@@ -111,6 +112,10 @@
     "keep": true,
     "type": "ORG",
     "canonical_name": "Lobaye Invest",
+    "aliases": [
+      "Lobaye Invest SARLU",
+      "Lobaye"
+    ],
     "notes": "Société d'extraction d'or et de diamants en Centrafrique, vitrine économique du dispositif Prigozhin / Wagner en RCA."
   },
   "diamville": {
@@ -127,7 +132,9 @@
     "type": "PERSON",
     "canonical_name": "Andrey Averyanov",
     "aliases": [
-      "Averyanov"
+      "Averyanov",
+      "Andrei Averyanov",
+      "Andreï Averyanov"
     ],
     "notes": "Général russe du GRU, dirigeant présumé de l'unité 29155 et coordinateur de l'Africa Corps depuis 2023."
   },
@@ -157,7 +164,8 @@
     "aliases": [
       "Touadéra",
       "Touadera",
-      "Faustin Archange Touadéra"
+      "Faustin Archange Touadéra",
+      "Président Touadéra"
     ],
     "notes": "Président de la République centrafricaine depuis 2016, allié majeur de Wagner / Africa Corps."
   },
@@ -210,7 +218,10 @@
     "keep": true,
     "type": "PERSON",
     "canonical_name": "Kemi Seba",
-    "notes": "Activiste panafricaniste pro-russe, conseiller de plusieurs juntes ouest-africaines."
+    "aliases": [
+      "Kémi Seba"
+    ],
+    "notes": "Activiste panafricaniste pro-russe, conseiller de plusieurs juntes ouest-africaines, basé à Moscou depuis 2024."
   },
   "africa initiative": {
     "keep": true,
@@ -256,6 +267,9 @@
     "keep": true,
     "type": "ORG",
     "canonical_name": "Midas Resources",
+    "aliases": [
+      "Midas Ressources"
+    ],
     "notes": "Société minière liée au dispositif Wagner / Prigozhin, active en Centrafrique."
   },
   "ndassima": {
@@ -424,7 +438,9 @@
       "Russian House",
       "the Russian House",
       "the \"Russian House",
-      "Maison russe"
+      "Maison russe",
+      "Russian Houses",
+      "the Russian House's"
     ],
     "notes": "Réseau de centres culturels russes utilisés comme vecteurs d'influence et de propagande, particulièrement actifs en Afrique francophone (Bangui, Bamako, etc.)."
   },
@@ -439,5 +455,820 @@
     "type": "ORG",
     "canonical_name": "KGB",
     "notes": "Comité pour la sécurité de l'État de l'Union soviétique (1954-1991), ancêtre du FSB et du SVR."
+  },
+  "maxim shugaley": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Maxim Shugaley",
+    "aliases": [
+      "Shugaley"
+    ],
+    "notes": "Sociologue russe lié à l'écosystème Prigozhin, arrêté en Libye en 2019 pour ingérence électorale, libéré en 2020. Cadre des opérations d'influence russes en Afrique."
+  },
+  "heavy industrial sarl": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Heavy Industrial SARL",
+    "aliases": [
+      "HEAVY INDUSTRIAL",
+      "Heavy Industrial"
+    ]
+  },
+  "evro polis": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Evro Polis",
+    "aliases": [
+      "Evro Polis LLC",
+      "Evropolis LLC",
+      "Evropolis"
+    ],
+    "notes": "Société écran liée à Prigozhin, identifiée dans les contrats pétroliers et gaziers en Syrie (paiement Wagner en cash récupéré sur les champs reconquis)."
+  },
+  "mercury": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Mercury",
+    "aliases": [
+      "Mercury LLC",
+      "Mercury Retail"
+    ],
+    "notes": "Réseau de sociétés russes liées à l'écosystème Prigozhin / sphère financière proche du Kremlin."
+  },
+  "m finance": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "M-Finance",
+    "aliases": [
+      "M Finance",
+      "● M-Finance"
+    ]
+  },
+  "houthis": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Houthis",
+    "aliases": [
+      "Houthi"
+    ],
+    "notes": "Mouvement Ansar Allah ('partisans de Dieu') : groupe armé chiite zaïdite contrôlant le nord-ouest du Yémen depuis 2014. Soutenu par l'Iran, ses opérations maritimes en mer Rouge depuis 2023 ont attiré l'intérêt opérationnel russe."
+  },
+  "donald trump": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Donald Trump",
+    "aliases": [
+      "Trump"
+    ],
+    "notes": "47e président des États-Unis (élu novembre 2024). Mentionné dans le contexte des relations US-Russie et Mercosur."
+  },
+  "afric": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "AFRIC",
+    "notes": "Association of Free Research and International Cooperation : think tank pro-russe basé à Bruxelles, lié à l'écosystème Prigozhin, actif dans la production de discours pseudo-académiques pro-Wagner en Afrique."
+  },
+  "yandex": {
+    "keep": false
+  },
+  "brics": {
+    "keep": false
+  },
+  "\"brics": {
+    "keep": false
+  },
+  "service k llc": {
+    "keep": false
+  },
+  "lakhta plaza llc": {
+    "keep": false
+  },
+  "kapital llc": {
+    "keep": false
+  },
+  "velada llc": {
+    "keep": false
+  },
+  "morgan llc": {
+    "keep": false
+  },
+  "\"miron": {
+    "keep": false
+  },
+  "bois rouge": {
+    "keep": false
+  },
+  "the russian embassy": {
+    "keep": false
+  },
+  "the libyan national army": {
+    "keep": false
+  },
+  "the malian armed forces": {
+    "keep": false
+  },
+  "the ministry of defence": {
+    "keep": false
+  },
+  "the russian orthodox church": {
+    "keep": false
+  },
+  "the elections and good governance": {
+    "keep": false
+  },
+  "the all eyes": {
+    "keep": false
+  },
+  "the malian national transition council": {
+    "keep": false
+  },
+  "the council of malians": {
+    "keep": false
+  },
+  "the malian patriotic group": {
+    "keep": false
+  },
+  "the russian ministry of foreign affairs": {
+    "keep": false
+  },
+  "the russian cultural centre": {
+    "keep": false
+  },
+  "general ressource": {
+    "keep": false
+  },
+  "groupe": {
+    "keep": false
+  },
+  "house": {
+    "keep": false
+  },
+  "niamey": {
+    "keep": false
+  },
+  "bangui": {
+    "keep": false
+  },
+  "benghazi": {
+    "keep": false
+  },
+  "gao": {
+    "keep": false
+  },
+  "tin zaouatine": {
+    "keep": false
+  },
+  "pavel": {
+    "keep": false
+  },
+  "ahmed": {
+    "keep": false
+  },
+  "alexander": {
+    "keep": false
+  },
+  "général": {
+    "keep": false
+  },
+  "boni": {
+    "keep": false
+  },
+  "premier ministre": {
+    "keep": false
+  },
+  "ibac": {
+    "keep": false
+  },
+  "anacom": {
+    "keep": false
+  },
+  "nigerien": {
+    "keep": false
+  },
+  "chadian": {
+    "keep": false
+  },
+  "africanrepublic": {
+    "keep": false
+  },
+  "société": {
+    "keep": false
+  },
+  "société”": {
+    "keep": false
+  },
+  "toyota": {
+    "keep": false
+  },
+  "wagner legion istra": {
+    "keep": false
+  },
+  "jules duhamel27 wagner": {
+    "keep": false
+  },
+  "malianforceswhere wagner": {
+    "keep": false
+  },
+  "eyeson wagnervon": {
+    "keep": false
+  },
+  "samotlorneftepromkhim": {
+    "keep": false
+  },
+  "casusbelliintel/twitter26": {
+    "keep": false
+  },
+  "between27and31march2022": {
+    "keep": false
+  },
+  "lescorpsétaientétendusen": {
+    "keep": false
+  },
+  "dansuneinterviewaccordéeparhimbakarembé": {
+    "keep": false
+  },
+  "unefuiteenlignearévéléquecertainsmercenaireswagner": {
+    "keep": false
+  },
+  "menschenrechtsverletzungen": {
+    "keep": false
+  },
+  "einzeugeberichtetehumanrightswatch": {
+    "keep": false
+  },
+  "anti-terror-operation": {
+    "keep": false
+  },
+  "undwagner-söldneringergossi-basisnieder": {
+    "keep": false
+  },
+  "undwagner-söldnerindergossi-basisnieder": {
+    "keep": false
+  },
+  "casusbelliinteltwitter26": {
+    "keep": false
+  },
+  "söldner": {
+    "keep": false
+  },
+  "undwagner-söldnerinderegossi-basisnieder": {
+    "keep": false
+  },
+  "rajaonarimampianina": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Hery Rajaonarimampianina",
+    "aliases": [
+      "Hery Rajaonarimampianina"
+    ],
+    "notes": "Président de Madagascar de 2014 à 2018, prédécesseur d'Andry Rajoelina."
+  },
+  "rybar": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Rybar",
+    "aliases": [
+      "RYBAR"
+    ],
+    "notes": "Chaîne Telegram pro-russe d'analyses militaires (700 000+ abonnés). Reflète et amplifie les positions du ministère de la Défense et des forces Wagner."
+  },
+  "jnim": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "JNIM",
+    "notes": "Jamaat Nusrat al-Islam wal-Muslimin (Groupe de soutien à l'islam et aux musulmans), coalition djihadiste affiliée à Al-Qaïda active au Sahel depuis 2017."
+  },
+  "gatia": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "GATIA",
+    "notes": "Groupe d'Auto-Défense Touareg Imghad et Alliés : milice malienne pro-gouvernementale fondée en 2014 par le général Gamou."
+  },
+  "fama": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "FAMA",
+    "notes": "Forces Armées Maliennes, formées et encadrées par les instructeurs Wagner depuis 2021."
+  },
+  "lna": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Libyan National Army (LNA)",
+    "aliases": [
+      "LNA",
+      "ANL",
+      "Armée Nationale Libyenne",
+      "the Libyan National Army"
+    ],
+    "notes": "Armée nationale libyenne dirigée par le maréchal Khalifa Haftar, basée en Cyrénaïque. Soutenue par la Russie via Wagner depuis 2018."
+  },
+  "eigs": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "EIGS",
+    "notes": "État islamique au Grand Sahara (ISGS), branche du groupe État islamique active au Niger, Mali et Burkina Faso depuis 2015."
+  },
+  "fla": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "FLA",
+    "notes": "Front de Libération de l'Azawad : coalition de groupes armés touaregs au nord du Mali, en conflit ouvert avec la junte de Bamako et Wagner depuis 2023."
+  },
+  "dirpa": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "DIRPA",
+    "notes": "Direction de l'Information et des Relations Publiques de l'Armée malienne, principal canal de communication officielle de la junte sur les opérations militaires."
+  },
+  "msf": {
+    "keep": false
+  },
+  "orano": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Orano",
+    "aliases": [
+      "ORANO",
+      "AREVA",
+      "Areva"
+    ],
+    "notes": "Groupe nucléaire français (ex-Areva), exploitant historique des mines d'uranium d'Arlit et Imouraren au Niger. Ses concessions ont été suspendues par la junte nigérienne en 2024."
+  },
+  "vtb": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "VTB",
+    "notes": "VTB Bank : deuxième plus grande banque russe, propriété de l'État, sanctionnée par l'UE et les États-Unis depuis 2022."
+  },
+  "occrp": {
+    "keep": false
+  },
+  "rsf": {
+    "keep": false
+  },
+  "rusi": {
+    "keep": false
+  },
+  "fbi": {
+    "keep": false
+  },
+  "nrc": {
+    "keep": false
+  },
+  "sbs": {
+    "keep": false
+  },
+  "сми": {
+    "keep": false
+  },
+  "ltd": {
+    "keep": false
+  },
+  "apl": {
+    "keep": false
+  },
+  "apc": {
+    "keep": false
+  },
+  "nmp": {
+    "keep": false
+  },
+  "area": {
+    "keep": false
+  },
+  "cae": {
+    "keep": false
+  },
+  "bic": {
+    "keep": false
+  },
+  "ciso": {
+    "keep": false
+  },
+  "hocc": {
+    "keep": false
+  },
+  "igl": {
+    "keep": false
+  },
+  "adc": {
+    "keep": false
+  },
+  "aci": {
+    "keep": false
+  },
+  "ifb": {
+    "keep": false
+  },
+  "cosi": {
+    "keep": false
+  },
+  "gat": {
+    "keep": false
+  },
+  "fpnv": {
+    "keep": false
+  },
+  "smp": {
+    "keep": false
+  },
+  "sgs": {
+    "keep": false
+  },
+  "psb": {
+    "keep": false
+  },
+  "aruci": {
+    "keep": false
+  },
+  "hesco": {
+    "keep": false
+  },
+  "cndh": {
+    "keep": false
+  },
+  "ipis": {
+    "keep": false
+  },
+  "ciam": {
+    "keep": false
+  },
+  "lfa": {
+    "keep": false
+  },
+  "heavy industrial": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Heavy Industrial",
+    "aliases": [
+      "Heavy Industrial SARL",
+      "HEAVY INDUSTRIAL"
+    ],
+    "notes": "Société liée à l'écosystème Wagner, identifiée dans plusieurs montages en Afrique centrale."
+  },
+  "m-finance": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "M-Finance",
+    "aliases": [
+      "M Finance",
+      "● M-Finance"
+    ],
+    "notes": "Société financière liée au dispositif Wagner / Prigozhin."
+  },
+  "abdelmalek al-houthi": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Abdelmalek al-Houthi",
+    "notes": "Chef actuel du mouvement Houthis depuis 2004, après la mort de son frère fondateur."
+  },
+  "hussein badr al-din al-houthi": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Hussein Badr al-Din al-Houthi",
+    "notes": "Père fondateur du mouvement Houthis, tué par les forces yéménites en 2004."
+  },
+  "ivanov": {
+    "keep": false
+  },
+  "timur ivanov": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Timur Ivanov",
+    "notes": "Vice-ministre russe de la Défense (2016-2024), arrêté en avril 2024 pour corruption, allié historique de Sergueï Choïgou."
+  },
+  "rajoelina": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Andry Rajoelina",
+    "aliases": [
+      "Rajoelina"
+    ],
+    "notes": "Président de Madagascar depuis 2019, élections 2018 marquées par l'ingérence Wagner et les opérations d'influence Africa Politology."
+  },
+  "politology": {
+    "keep": false
+  },
+  "jalel harchaoui": {
+    "keep": false
+  },
+  "luke harding": {
+    "keep": false
+  },
+  "mathieu olivier": {
+    "keep": false
+  },
+  "david baché": {
+    "keep": false
+  },
+  "dan kaszeta": {
+    "keep": false
+  },
+  "marc-andré boisvert": {
+    "keep": false
+  },
+  "andré boisvert": {
+    "keep": false
+  },
+  "nick roll": {
+    "keep": false
+  },
+  "ivan klyszcz": {
+    "keep": false
+  },
+  "werner scharlau": {
+    "keep": false
+  },
+  "al khadim": {
+    "keep": false
+  },
+  "adama ben diarra": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Adama Ben Diarra",
+    "aliases": [
+      "Ben le Cerveau"
+    ],
+    "notes": "Activiste panafricaniste malien pro-junte ('Ben le Cerveau'), figure de l'écosystème pro-russe à Bamako."
+  },
+  "mali kibarou tv": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Mali Kibarou TV",
+    "aliases": [
+      "Kibarou TV",
+      "Mali Kibarou"
+    ],
+    "notes": "Chaîne de télévision malienne pro-junte créée en 2022, principal relais médiatique du pouvoir militaire et de la coopération avec la Russie."
+  },
+  "yulia afanasyeva berg": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Yulia Afanasyeva Berg",
+    "notes": "Cadre des opérations d'influence russes en Afrique liée à l'écosystème Prigozhin."
+  },
+  "vitali perfilev": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Vitali Perfilev",
+    "notes": "Conseiller à la sécurité du président centrafricain Touadéra, cadre Wagner / Africa Corps en RCA."
+  },
+  "valery chekalov": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Valery Chekalov",
+    "notes": "Cadre logistique de Wagner, mort dans le crash d'avion du 23 août 2023 avec Yevgeny Prigozhin et Dmitri Utkin."
+  },
+  "ivan maslov": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Ivan Maslov",
+    "notes": "Commandant Wagner au Mali à partir de 2021, sanctionné par le Trésor américain en 2023."
+  },
+  "mikhail potepkin": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Mikhail Potepkin",
+    "notes": "Cadre Wagner / Prigozhin au Soudan, géré M-Invest pour les opérations aurifères."
+  },
+  "evgeny primakov": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Evgeny Primakov",
+    "aliases": [
+      "Evgueny Primakov"
+    ],
+    "notes": "Petit-fils du Premier ministre russe Yevgeny Primakov, à la tête de Rossotrudnichestvo (agence de coopération internationale russe) depuis 2020."
+  },
+  "nathalie yamb": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Nathalie Yamb",
+    "notes": "Activiste suisso-camerounaise pro-russe, sanctionnée par l'UE en 2023 pour des activités d'influence pro-Wagner / pro-Russie en Afrique."
+  },
+  "artem kureev": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Artem Kureev",
+    "notes": "Cadre russe d'Africa Politology / écosystème Prigozhin en Centrafrique."
+  },
+  "afrique media": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Afrique Media",
+    "notes": "Chaîne TV pan-africaine basée à Yaoundé (Cameroun), reconnue pour ses positions pro-russes et anti-occidentales. Principal relais audiovisuel du discours pro-Wagner en Afrique francophone."
+  },
+  "patriot media": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Patriot Media",
+    "notes": "Holding média de Yevgeny Prigozhin, regroupant RIA FAN ('Federal News Agency') et plusieurs sites de désinformation. Fermé après la mort de Prigozhin en 2023."
+  },
+  "sahel liberty news": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Sahel Liberty News",
+    "notes": "Média pan-sahélien pro-junte, vitrine médiatique de l'Alliance des États du Sahel (Mali, Burkina, Niger)."
+  },
+  "sahel maghreb tv": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Sahel Maghreb TV",
+    "notes": "Chaîne TV pro-junte sahélienne, relais des positions pro-russes dans la région."
+  },
+  "fawasel media": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Fawasel Media",
+    "notes": "Réseau médiatique en arabe lié à l'écosystème d'influence russe au Moyen-Orient et en Afrique du Nord."
+  },
+  "sana news": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "SANA News",
+    "notes": "Agence de presse officielle syrienne (Syrian Arab News Agency), propriété de l'État, principal canal de communication du régime Assad."
+  },
+  "agence malagasy de presse": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Agence Malagasy de Presse",
+    "notes": "Agence de presse malgache, mentionnée dans les enquêtes sur les opérations d'influence russes lors des élections 2018 à Madagascar."
+  },
+  "methe media": {
+    "keep": true,
+    "type": "ORG",
+    "canonical_name": "Methè Media",
+    "aliases": [
+      "MethèMedia"
+    ],
+    "notes": "Média identifié dans l'écosystème d'influence pro-russe en Afrique."
+  },
+  "média": {
+    "keep": false
+  },
+  "post facebook": {
+    "keep": false
+  },
+  "facebook-post": {
+    "keep": false
+  },
+  "médias africains": {
+    "keep": false
+  },
+  "la voix": {
+    "keep": false
+  },
+  "mouvement coeurs": {
+    "keep": false
+  },
+  "cndh press": {
+    "keep": false
+  },
+  "uranium express": {
+    "keep": false
+  },
+  "maxar": {
+    "keep": false
+  },
+  "flightradar": {
+    "keep": false
+  },
+  "jeune afrique": {
+    "keep": false
+  },
+  "radio france": {
+    "keep": false
+  },
+  "zam magazine": {
+    "keep": false
+  },
+  "radio svoboda": {
+    "keep": false
+  },
+  "sergey lavrov": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Sergueï Lavrov",
+    "aliases": [
+      "Sergey Lavrov",
+      "Lavrov"
+    ],
+    "notes": "Ministre russe des Affaires étrangères depuis 2004. Architecte officiel de la diplomatie russe en Afrique post-Wagner."
+  },
+  "sergey naryshkin": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Sergueï Narychkine",
+    "aliases": [
+      "Sergey Naryshkin",
+      "Sergueï Narychkine",
+      "Naryshkin"
+    ],
+    "notes": "Directeur du Service de renseignement extérieur russe (SVR) depuis 2016."
+  },
+  "mikhail bogdanov": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Mikhail Bogdanov",
+    "notes": "Vice-ministre russe des Affaires étrangères et représentant spécial du président pour le Moyen-Orient et l'Afrique. 'Monsieur Afrique' de la diplomatie russe."
+  },
+  "boris titov": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Boris Titov",
+    "notes": "Ombudsman des entrepreneurs russes auprès du Kremlin, lien entre milieux d'affaires russes et coopération économique avec les juntes africaines."
+  },
+  "oleg deripaska": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Oleg Deripaska",
+    "notes": "Oligarque russe, propriétaire de Rusal et En+. Sanctionné par l'OFAC en 2018, identifié dans plusieurs montages liés à Wagner et aux opérations d'influence russes."
+  },
+  "viktor bout": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Viktor Bout",
+    "notes": "Trafiquant d'armes russe surnommé le 'marchand de mort', condamné aux États-Unis en 2011, libéré dans un échange de prisonniers en 2022. De retour en Russie il s'est rapproché de la sphère politique pro-Kremlin."
+  },
+  "alexander dugin": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Alexander Dugin",
+    "notes": "Idéologue russe de l'eurasisme, figure intellectuelle proche du Kremlin, mentor revendiqué de plusieurs cadres du discours pro-russe en Afrique et en Europe."
+  },
+  "bashar al-assad": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Bachar el-Assad",
+    "aliases": [
+      "Bashar Al-Assad",
+      "Bachar al-Assad"
+    ],
+    "notes": "Président de la République arabe syrienne de 2000 à décembre 2024, allié majeur de la Russie qui est intervenue militairement à ses côtés à partir de 2015 (avec engagement de Wagner)."
+  },
+  "alexander lukashenko": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Alexandre Loukachenko",
+    "aliases": [
+      "Alexander Lukashenko",
+      "Loukachenko"
+    ],
+    "notes": "Président de Biélorussie depuis 1994, principal allié de Vladimir Poutine en Europe orientale. A médié l'arrêt de la mutinerie Wagner en juin 2023."
+  },
+  "francois bozize": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "François Bozizé",
+    "notes": "Président de la République centrafricaine de 2003 à 2013, renversé par les rebelles Séléka. Tente un retour politique dans un pays désormais sous influence Wagner."
+  },
+  "omar bashir": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Omar el-Béchir",
+    "aliases": [
+      "Omar Bashir",
+      "Omar al-Bashir"
+    ],
+    "notes": "Président du Soudan de 1989 à 2019, sous mandat d'arrêt de la CPI pour génocide au Darfour. Renversé par un coup d'État. Sa période a vu l'arrivée des opérations Wagner aurifères au Soudan."
+  },
+  "hamadoun kouffa": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Hamadoun Kouffa",
+    "notes": "Prédicateur peul malien, fondateur du Front de Libération du Macina (intégré au JNIM), chef djihadiste majeur dans le centre du Mali."
+  },
+  "abdoulaye maiga": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Abdoulaye Maïga",
+    "aliases": [
+      "Abdoulaye Maiga"
+    ],
+    "notes": "Premier ministre du Mali depuis 2024 sous la junte d'Assimi Goïta, ancien ministre porte-parole connu pour ses discours anti-occidentaux."
+  },
+  "abdourahamane tchiani": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Abdourahamane Tchiani",
+    "notes": "Général nigérien, chef de la junte militaire issue du coup d'État du 26 juillet 2023, président du Conseil National pour la Sauvegarde de la Patrie (CNSP)."
+  },
+  "mikhail khodorkovsky": {
+    "keep": true,
+    "type": "PERSON",
+    "canonical_name": "Mikhail Khodorkovsky",
+    "notes": "Ex-PDG de Yukos, ex-oligarque russe en exil depuis 2013, principal financier de l'opposition à Vladimir Poutine. Le Dossier Center qu'il finance a publié plusieurs enquêtes sur Wagner."
+  },
+  "emmanuel macron": {
+    "keep": false
+  },
+  "luis arce": {
+    "keep": false
+  },
+  "laurent gbagbo": {
+    "keep": false
+  },
+  "eric danon": {
+    "keep": false
   }
 }
