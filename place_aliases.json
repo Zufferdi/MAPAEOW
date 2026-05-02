@@ -151,7 +151,9 @@
     "Faso": "Burkina Faso",
     "ukraine": "Ukraine",
     "Region Mopti": "Mopti",
-    "Méditerranée": "Mer Méditerranée"
+    "Méditerranée": "Mer Méditerranée",
+    "Bois Rouge": "Bangui",
+    "bois rouge": "Bangui"
   },
   "blacklist": [
     "afp",
@@ -170,6 +172,7 @@
     "ap",
     "aqim",
     "asie centrale",
+    "atlantique",
     "avril",
     "balkans",
     "bittou",
@@ -218,14 +221,20 @@
     "l'afrique",
     "latin america",
     "l’afrique",
+    "maghreb",
     "mai",
     "maison russe",
     "maisons",
     "maliens",
     "marran",
     "mars",
+    "mediterranean",
+    "mediterranean sea",
+    "mer méditerranée",
+    "mer rouge",
     "mines",
     "minusma",
+    "méditerranée",
     "nato",
     "nord",
     "nord-ouest",
@@ -241,11 +250,13 @@
     "ouest",
     "poblenou",
     "radio svoboda",
+    "red sea",
     "reuters",
     "rfi",
     "russes",
     "russians",
     "russie afrique",
+    "sahel",
     "schengen",
     "septembre",
     "south",
@@ -256,6 +267,9 @@
     "tass",
     "telegram",
     "the global south",
+    "the mediterranean",
+    "the mediterranean sea",
+    "the red sea",
     "tiktok",
     "touaregs",
     "twitter",
@@ -327,21 +341,6 @@
       "lng": 8.0817,
       "country": "Niger"
     },
-    "Sahel": {
-      "lat": 15.5,
-      "lng": 0.0,
-      "country": "—"
-    },
-    "Mer Méditerranée": {
-      "lat": 35.0,
-      "lng": 18.0,
-      "country": "—"
-    },
-    "Mer Rouge": {
-      "lat": 22.0,
-      "lng": 38.0,
-      "country": "—"
-    },
     "RDC": {
       "lat": -4.038,
       "lng": 21.7587,
@@ -412,21 +411,6 @@
       "lng": 38.0,
       "country": "Ukraine"
     },
-    "Maghreb": {
-      "lat": 32.0,
-      "lng": 0.0,
-      "country": "—"
-    },
-    "Méditerranée": {
-      "lat": 35.0,
-      "lng": 18.0,
-      "country": "—"
-    },
-    "Atlantique": {
-      "lat": 30.0,
-      "lng": -40.0,
-      "country": "—"
-    },
     "Golfe": {
       "lat": 26.5,
       "lng": 51.5,
@@ -451,6 +435,16 @@
       "lat": 14.65,
       "lng": -4.68,
       "country": "Mali"
+    },
+    "Genève": {
+      "lat": 46.2044,
+      "lng": 6.1432,
+      "country": "Suisse"
+    },
+    "Geneva": {
+      "lat": 46.2044,
+      "lng": 6.1432,
+      "country": "Suisse"
     }
   }
 }
